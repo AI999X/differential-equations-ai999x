@@ -1061,6 +1061,10 @@ $$
 - **Assumes:** f defined at the point
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Slope field of y′ = y*(1 - y) (direction at 187 grid points, each slope from the package) with five solutions integrated by its fourth-order Runge–Kutta solver (step 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/slope-field-phase.svg)
+
+*Slope field of y′ = y*(1 - y) (direction at 187 grid points, each slope from the package) with five solutions integrated by its fourth-order Runge–Kutta solver (step 0.05); equilibria found by the package: y = 0 (unstable), y = 1 (stable).*
+
 ```python
 differential_equations_ai999x.solve('slope_field', f='t + y', t=1, y=2)
 # -> slope = 3, angle_deg = 71.5651   (SOLVED)
@@ -1430,6 +1434,10 @@ $$
 - **Method:** $y = e$^{mt}[y0 C($t) + (v_{0} - m$ y0) S(t)], $m = -b/(2a)$, C, S = cosh/sinh, $1/t$ or cos/sin by the sign of the discriminant
 - **Assumes:** $a  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solutions of y″ + b y′ + y = 0 with y(0) = 1, y′(0) = 0, evaluated by the package at 121 times each: b = 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/second-order-homogeneous-ivp-curve.svg)
+
+*Solutions of y″ + b y′ + y = 0 with y(0) = 1, y′(0) = 0, evaluated by the package at 121 times each: b = 0.4 (underdamped, y(12) = 0.0492303); b = 2 (critically damped, y(12) = 7.9875e-05); b = 4 (overdamped, y(12) = 0.0432445).*
 
 ```python
 differential_equations_ai999x.solve('second_order_homogeneous_ivp', a=1, b=3, c=2, y0=1, v0=0, t=1)
@@ -2164,6 +2172,10 @@ $$
 - **Assumes:** A real 2x2
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Eight 2×2 systems x′ = A x placed by trace and determinant, each classified by the package: [[0, 1], [-2, -3]]: stable node (trace -3, det 2); [[-1, 2], [-2, -1]]: stable spiral (trace -2, det 5); [[1, 2], [-2, 1]]: unstable spiral (trace 2, det 5); [[2, 1], [0, 3]]: unstable node (trace 5, det 6); [[0, 1], [-4, 0]]: center (trace 0, det 4); [[1, 0], [0, -2]]: saddle (trace -1, det -2); [[-1, 3], [1, 1]]: saddle (trace 0, det -4); [[0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/phase-portrait-2x2-stability.svg)
+
+*Eight 2×2 systems x′ = A x placed by trace and determinant, each classified by the package: [[0, 1], [-2, -3]]: stable node (trace -3, det 2); [[-1, 2], [-2, -1]]: stable spiral (trace -2, det 5); [[1, 2], [-2, 1]]: unstable spiral (trace 2, det 5); [[2, 1], [0, 3]]: unstable node (trace 5, det 6); [[0, 1], [-4, 0]]: center (trace 0, det 4); [[1, 0], [0, -2]]: saddle (trace -1, det -2); [[-1, 3], [1, 1]]: saddle (trace 0, det -4); [[0.5, 3], [-3, 0.5]]: unstable spiral (trace 1, det 9.25).*
+
 ```python
 differential_equations_ai999x.solve('phase_portrait_2x2', A='[[0, 1], [-2, -3]]')
 # -> type = stable node, stability = asymptotically stable, lambda1 = -2, lambda2 = -1, trace = -3, det = 2   (SOLVED)
@@ -2459,6 +2471,10 @@ $$
 - **Assumes:** (x0, y0) is an equilibrium
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Phase portrait of the damped pendulum x′ = y, y′ = -sin(x) - 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/nonlinear-equilibrium-type-phase.svg)
+
+*Phase portrait of the damped pendulum x′ = y, y′ = -sin(x) - 0.5*y: 12 trajectories integrated by the package's fourth-order Runge–Kutta system solver (step 0.05, t = 0 … 16), equilibria classified by it from the Jacobian (x = 0: stable spiral; x = 3.14159: saddle; the pattern repeats every 2π).*
+
 ```python
 differential_equations_ai999x.solve('nonlinear_equilibrium_type', f='y', g='-sin(x) - 0.5*y', x0=0, y0=0)
 # -> type = stable spiral, stability = asymptotically stable, jacobian = [[0.0, 1.0], [-1.0, -0.5]], trace = -0.5, det = 1   (SOLVED)
@@ -2662,6 +2678,10 @@ $$
 - **Method:** forward time, centred space
 - **Assumes:** Dirichlet ends (held fixed); $r > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Temperatures along a rod (9 nodes, ends held at 0) from the explicit heat-equation scheme with r = 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/heat-ftcs-steps-heatmap.svg)
+
+*Temperatures along a rod (9 nodes, ends held at 0) from the explicit heat-equation scheme with r = 0.25, starting from 0, 0, 20, 60, 100, 60, 20, 0, 0: row k is the state after k steps, each computed by the package; the peak spreads and decays (100 → 47.79 at the centre after 7 steps).*
 
 ```python
 differential_equations_ai999x.solve('heat_ftcs_steps', u='0, 50, 100, 50, 0', r=0.25, n=1)
@@ -3060,6 +3080,10 @@ $$
 - **Method:** roots of f(f(x)) = x other than the fixed points
 - **Assumes:** $3 < r  \leq  4$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/logistic-map-two-cycle-bifurcation.svg)
+
+*Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0.05 to 3.45, with their stability, all from the package; the fixed point loses stability at r = 3 where a stable 2-cycle appears — marked: r = 3.2, cycle 0.513045 ↔ 0.799455 (multiplier 0.16).*
 
 ```python
 differential_equations_ai999x.solve('logistic_map_two_cycle', r=3.2)

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "differential-equations-ai999x"
-version = "1.0.0"
+version = "1.0.1"
 description = "Offline differential equations solver: first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
