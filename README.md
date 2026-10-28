@@ -4,7 +4,7 @@
 
 **[Install](https://pypi.org/project/differential-equations-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.1
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.2
 
 Field: **Mathematics & Statistics** · Tasks: Question Answering, Token Classification, Text Classification, Sentence Similarity, Feature Extraction
 
@@ -27,7 +27,7 @@ differential-equations-ai999x is an offline, deterministic Python solver that an
 
 | Property | Value |
 |---|---|
-| Package | `differential-equations-ai999x` 1.0.1 (import `differential_equations_ai999x`) |
+| Package | `differential-equations-ai999x` 1.0.2 (import `differential_equations_ai999x`) |
 | Type | Deterministic neuro-symbolic differential equations engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 77 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -61,7 +61,7 @@ differential_equations.ask("Who created you?").message
 # -> differential-equations-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `differential-equations-ai999x "<question>"`, `differential-equations-ai999x --capabilities`. The outputs above were produced by running this exact code on differential-equations-ai999x 1.0.1.
+Command line: `differential-equations-ai999x "<question>"`, `differential-equations-ai999x --capabilities`. The outputs above were produced by running this exact code on differential-equations-ai999x 1.0.2.
 
 ## Find the right capability, and draw it
 
@@ -222,10 +222,10 @@ _Solutions of y″ + b y′ + y = 0 with y(0) = 1, y′(0) = 0, evaluated by the
 ## Citation
 
 ```bibtex
-@software{differential_equations_ai999x_1_0_1,
+@software{differential_equations_ai999x_1_0_2,
   title  = {differential-equations-ai999x: an offline, verified differential equations solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.0.1},
+  year   = {2026}, version = {1.0.2},
   url    = {https://huggingface.co/AI999X/differential-equations-ai999x}
 }
 ```

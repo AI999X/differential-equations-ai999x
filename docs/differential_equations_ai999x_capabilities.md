@@ -199,6 +199,10 @@ $$
 - **Assumes:** $k > 0$ growth, $k < 0$ decay
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![y(t) = y₀ e^{kt}, evaluated by the package at 101 times from t = 0 to 50 for the worked example (y0 = 100, k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/exponential-growth-value-curve)
+
+*y(t) = y₀ e^{kt}, evaluated by the package at 101 times from t = 0 to 50 for the worked example (y0 = 100, k = 0.03) and for k = k = 0.05, k = -0.03; marked: t = 10, y = 134.986.*
+
 ```python
 differential_equations_ai999x.solve('exponential_growth_value', y0=100, k=0.03, t=10)
 # -> y = 134.986   (SOLVED)
@@ -242,6 +246,10 @@ $$
 - **Assumes:** $T > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Exponential decay N(t) with N₀ = 80 and half-life T = 3, evaluated by the package at 101 times; dashed guides at t = T, 2T, 3T, 4T and N₀/2, N₀/4 … (derived from the stated inputs) meet the curve; marked: N(9) = 10, decay constant k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/half-life-decay-curve)
+
+*Exponential decay N(t) with N₀ = 80 and half-life T = 3, evaluated by the package at 101 times; dashed guides at t = T, 2T, 3T, 4T and N₀/2, N₀/4 … (derived from the stated inputs) meet the curve; marked: N(9) = 10, decay constant k = 0.231049.*
+
 ```python
 differential_equations_ai999x.solve('half_life_decay', N0=80, T=3, t=9)
 # -> N = 10, k = 0.231049   (SOLVED)
@@ -283,6 +291,10 @@ $$
 - **Assumes:** $k  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Exponential growth with rate k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/doubling-time-curve)
+
+*Exponential growth with rate k = 0.07 (values of e^(kt) from the package's growth capability, 101 times): the package's doubling time is 9.9021; the guides at 1, 2 and 3 doubling times (multiples of the returned value) meet the curve at 2, 4 and 8; marked: t = 9.9021.*
+
 ```python
 differential_equations_ai999x.solve('doubling_time', k=0.07)
 # -> t_char = 9.9021, kind = doubling time   (SOLVED)
@@ -323,6 +335,10 @@ $$
 - **Method:** $t = ln$(y1/y0)/k
 - **Assumes:** $k  \neq  0$; $y_{1}/y_{0} > 0$; the target lies ahead $(t  \geq  0)$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Growth from y₀ = 100 at rate k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/exponential-time-to-reach-curve)
+
+*Growth from y₀ = 100 at rate k = 0.05 (values from the package's growth capability at 101 times): the package's time to reach 300 is t = 21.9722, where the curve meets the target; marked: t = 21.9722.*
 
 ```python
 differential_equations_ai999x.solve('exponential_time_to_reach', y0=100, y1=300, k=0.05)
@@ -367,6 +383,10 @@ $$
 - **Assumes:** $t_{1}  \neq  t_{2}$; y1, y2 nonzero, same sign
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The exponential through the two stated points (2, 100) and (5, 300): the package returns k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/exponential-from-two-points-curve)
+
+*The exponential through the two stated points (2, 100) and (5, 300): the package returns k = 0.366204 and y₀ = 48.075, and the curve with those values (from its growth capability, 101 times) passes through both; marked: y₀.*
+
 ```python
 differential_equations_ai999x.solve('exponential_from_two_points', t1=2, y1=100, t2=5, y2=300)
 # -> k = 0.366204, y0 = 48.075   (SOLVED)
@@ -406,6 +426,10 @@ $$
 - **Method:** $t = T$ ln(1/p) / ln 2
 - **Assumes:** $T > 0$; $0 < p  \leq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Decay of an isotope with half-life T = 5730 years (fraction remaining from the package's decay capability at 101 ages): a sample retaining 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/radiometric-age-curve)
+
+*Decay of an isotope with half-life T = 5730 years (fraction remaining from the package's decay capability at 101 ages): a sample retaining 0.25 of its isotope is, by the package, 11460 years old; marked: that age on the decay curve.*
 
 ```python
 differential_equations_ai999x.solve('radiometric_age', T=5730, p=0.25)
@@ -449,6 +473,10 @@ $$
 - **Assumes:** $k > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Temperature T(t) of a body cooling towards its surroundings, evaluated by the package at 101 times from t = 0 to 40 for the worked example (T0 = 90, Ta = 20, k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/newton-cooling-temperature-curve)
+
+*Temperature T(t) of a body cooling towards its surroundings, evaluated by the package at 101 times from t = 0 to 40 for the worked example (T0 = 90, Ta = 20, k = 0.1) and for k = k = 0.05, k = 0.2; marked: t = 5, T = 62.4571.*
+
 ```python
 differential_equations_ai999x.solve('newton_cooling_temperature', T0=90, Ta=20, k=0.1, t=5)
 # -> T = 62.4571   (SOLVED)
@@ -485,6 +513,10 @@ $$
 - **Method:** $t = ln$($(T_{0} - Ta)/(T_{1} - Ta)$)/k
 - **Assumes:** $k > 0$; T1 between Ta and T0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Cooling curve with T0 = 90, Ta = 20, k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/newton-cooling-time-curve)
+
+*Cooling curve with T0 = 90, Ta = 20, k = 0.1 (temperatures from the package's cooling-temperature capability at 101 times); the package's time to reach T1 = 40 is t = 12.5276, where the curve crosses the target line; marked: t = 12.5276.*
 
 ```python
 differential_equations_ai999x.solve('newton_cooling_time', T0=90, Ta=20, k=0.1, T1=40)
@@ -523,6 +555,10 @@ $$
 - **Assumes:** $t_{1} > 0$; T1 strictly between Ta and T0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Two readings of a cooling body, T(0) = 90 and T(5) = 60 in surroundings at 20: the package's cooling constant k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/newton-cooling-constant-curve)
+
+*Two readings of a cooling body, T(0) = 90 and T(5) = 60 in surroundings at 20: the package's cooling constant k = 0.111923, and the cooling curve with that k (from the package's cooling-temperature capability, 101 times) passing through both readings.*
+
 ```python
 differential_equations_ai999x.solve('newton_cooling_constant', T0=90, Ta=20, T1=60, t1=5)
 # -> k = 0.111923   (SOLVED)
@@ -559,6 +595,10 @@ $$
 - **Method:** P = K / (1 + (K/P0 - 1) e^{-r t})
 - **Assumes:** $P_{0} > 0$; $r > 0$; $K > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Logistic population P(t), evaluated by the package at 101 times from t = 0 to 30 for the worked example (P0 = 10, r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-value-curve)
+
+*Logistic population P(t), evaluated by the package at 101 times from t = 0 to 30 for the worked example (P0 = 10, r = 0.5, K = 1000) and for r = r = 0.25, r = 1; marked: t = 8, P = 355.461.*
 
 ```python
 differential_equations_ai999x.solve('logistic_value', P0=10, r=0.5, K=1000, t=8)
@@ -597,6 +637,10 @@ $$
 - **Method:** P'' = 0 at $P = K/2$; t* = ln(K/P0 - 1)/r
 - **Assumes:** $r > 0$; $0 < P_{0} < K/2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Logistic growth with P0 = 10, r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-inflection-curve)
+
+*Logistic growth with P0 = 10, r = 0.5, K = 1000 (P(t) from the package's logistic-value capability at 121 times): the package's inflection point t = 9.19024, P = 500 = K/2, where the curve is steepest; the green segment has the returned maximum rate 125; marked: the inflection point.*
 
 ```python
 differential_equations_ai999x.solve('logistic_inflection', P0=10, r=0.5, K=1000)
@@ -638,6 +682,10 @@ $$
 - **Assumes:** r, $K > 0$; $0  \leq  H  \leq  rK/4$ (otherwise the population collapses)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Logistic growth with constant harvesting, y′ = r y (1 − y/K) − H, r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-harvesting-phase-line)
+
+*Logistic growth with constant harvesting, y′ = r y (1 − y/K) − H, r = 0.5, K = 1000: the growth rate evaluated by the package at 81 populations for H = 100 (solid, with direction arrows), no harvest and the package's critical harvest 125; marked: equilibria y = 276.393 (unstable) and y = 723.607 (stable).*
+
 ```python
 differential_equations_ai999x.solve('logistic_harvesting', r=0.5, K=1000, H=100)
 # -> y_high = 723.607, y_low = 276.393, H_critical = 125, stability_high = stable, stability_low = unstable   (SOLVED)
@@ -675,6 +723,10 @@ $$
 - **Method:** integrating factor e^{a t}: $y = b/a + (y_{0} - b/a)$ e^{-a t}
 - **Assumes:** $a  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solutions of y′ + a y = b, evaluated by the package at 101 times from t = 0 to 3 for the worked example (a = 2, b = 6, y0 = 1) and for y0 = y0 = 0, y0 = 5; marked: t = 1, y = 2](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-first-order-curve)
+
+*Solutions of y′ + a y = b, evaluated by the package at 101 times from t = 0 to 3 for the worked example (a = 2, b = 6, y0 = 1) and for y0 = y0 = 0, y0 = 5; marked: t = 1, y = 2.72933.*
 
 ```python
 differential_equations_ai999x.solve('linear_first_order', a=2, b=6, y0=1, t=1)
@@ -714,6 +766,10 @@ $$
 - **Method:** integrating factor: $y = b/(a+c)$ e^{ct} + (y0 - b/(a+c)) e^{-at}; $c = -a$: (y0 + b t) e^{-at}
 - **Assumes:** any real a, b, c
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solutions of y′ + a y = b e^{ct}, evaluated by the package at 101 times from t = 0 to 4 for the worked example (a = 1, b = 2, c = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-first-order-exponential-forcing-curve)
+
+*Solutions of y′ + a y = b e^{ct}, evaluated by the package at 101 times from t = 0 to 4 for the worked example (a = 1, b = 2, c = 0.5, y0 = 0) and for c = c = -0.5, c = 1.5; marked: t = 2, y = 3.44393.*
 
 ```python
 differential_equations_ai999x.solve('linear_first_order_exponential_forcing', a=1, b=2, c=0.5, y0=0, t=2)
@@ -760,6 +816,10 @@ $$
 - **Assumes:** $V > 0$; $r > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Amount of solute A(t) in a well-stirred tank, evaluated by the package at 101 times from t = 0 to 100 for the worked example (V = 100, r = 5, c_in = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/mixing-tank-curve)
+
+*Amount of solute A(t) in a well-stirred tank, evaluated by the package at 101 times from t = 0 to 100 for the worked example (V = 100, r = 5, c_in = 0.2, A0 = 0) and for A0 = A0 = 30; marked: t = 10, A = 7.86939.*
+
 ```python
 differential_equations_ai999x.solve('mixing_tank', V=100, r=5, c_in=0.2, A0=0, t=10)
 # -> A = 7.86939, A_limit = 20, concentration = 0.0786939   (SOLVED)
@@ -796,6 +856,10 @@ $$
 - **Method:** separate: $dy/y = a$ $t^{n}$ dt, ln(y/y0) = a t^{$n+1$}/$(n+1)$
 - **Assumes:** $n  \geq  0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solutions y(t) of y′ = a yⁿ, evaluated by the package at 101 times from t = 0 to 1 for the worked example (a = 2, n = 1, y0 = 3) and for n = n = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/separable-power-curve)
+
+*Solutions y(t) of y′ = a yⁿ, evaluated by the package at 101 times from t = 0 to 1 for the worked example (a = 2, n = 1, y0 = 3) and for n = n = 0.5, n = 1.2; marked: t = 1, y = 8.15485.*
 
 ```python
 differential_equations_ai999x.solve('separable_power', a=2, n=1, y0=3, t=1)
@@ -834,6 +898,10 @@ $$
 - **Assumes:** t before the blow-up time
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Solution of y′ = k y² with k = 1, y0 = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/quadratic-ode-blowup-curve)
+
+*Solution of y′ = k y² with k = 1, y0 = 0.5, evaluated by the package at 101 times up to 97 % of its blow-up time; the solution grows without bound as t approaches the package's blow-up time 2; marked: y(1) = 1.*
+
 ```python
 differential_equations_ai999x.solve('quadratic_ode_blowup', k=1, y0=0.5, t=1)
 # -> y = 1, blowup_time = 2   (SOLVED)
@@ -871,6 +939,10 @@ $$
 - **Method:** $v = y$^{$1-n$}: v' + $(1-n)$ p $v = (1-n)$ q, linear
 - **Assumes:** $p  \neq  0$; $n  \neq  1$; $y_{0} > 0$; solution stays positive
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solutions y(t) of y′ + p y = q yⁿ, evaluated by the package at 101 times from t = 0 to 5 for the worked example (p = 1, q = 1, n = 2, y0 = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/bernoulli-equation-curve)
+
+*Solutions y(t) of y′ + p y = q yⁿ, evaluated by the package at 101 times from t = 0 to 5 for the worked example (p = 1, q = 1, n = 2, y0 = 0.5) and for y0 = y0 = 0.25, y0 = 1.5; marked: t = 1, y = 0.268941.*
 
 ```python
 differential_equations_ai999x.solve('bernoulli_equation', p=1, q=1, n=2, y0=0.5, t=1)
@@ -911,6 +983,10 @@ $$
 - **Assumes:** $m > 0$; $c > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Velocity of a falling body with linear air drag, m = 2, c = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-drag-velocity-curve)
+
+*Velocity of a falling body with linear air drag, m = 2, c = 0.5, g = 9.81, from rest (the example) and from v₀ = 1.5 × the terminal velocity, evaluated by the package at 101 times; both approach the package's terminal velocity 39.24 m/s; marked: v(3 s) = 20.7043 m/s.*
+
 ```python
 differential_equations_ai999x.solve('linear_drag_velocity', m=2, c=0.5, g=9.81, v0=0, t=3)
 # -> v = 20.7043, v_terminal = 39.24   (SOLVED)
@@ -950,6 +1026,10 @@ $$
 - **Assumes:** m, c, $g > 0$; $v_{0}  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![v (velocity v(t)) against g (gravitational acceleration (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/quadratic-drag-velocity-curve)
+
+*v (velocity v(t)) against g (gravitational acceleration (> 0)) from 0.981 to 98.1 on a logarithmic axis. One curve for each value of t (time (>= 0)): 5, 2.5, 10. Other inputs as in the worked example: m = 80, c = 0.25, v0 = 0. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, g = 9.81, v = 39.4514.*
+
 ```python
 differential_equations_ai999x.solve('quadratic_drag_velocity', m=80, c=0.25, g=9.81, v0=0, t=5)
 # -> v = 39.4514, v_terminal = 56.0286   (SOLVED)
@@ -987,6 +1067,10 @@ $$
 - **Assumes:** $h_{0} > 0$; $k > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Depth h(t) of a draining tank (Torricelli, dh/dt = −k √h) from h₀ = 4, evaluated by the package at 81 times up to its emptying time: k = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/torricelli-draining-curve)
+
+*Depth h(t) of a draining tank (Torricelli, dh/dt = −k √h) from h₀ = 4, evaluated by the package at 81 times up to its emptying time: k = 0.2: empty at t = 20; k = 0.4: empty at t = 10; marked: h(5) = 2.25.*
+
 ```python
 differential_equations_ai999x.solve('torricelli_draining', h0=4, k=0.2, t=5)
 # -> h = 2.25, t_empty = 20   (SOLVED)
@@ -1023,6 +1107,10 @@ $$
 - **Method:** $u = ln$(y/K) satisfies u' = -r u
 - **Assumes:** $y_{0} > 0$; $K > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Gompertz growth y(t) with y0 = 10, r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/gompertz-growth-curve)
+
+*Gompertz growth y(t) with y0 = 10, r = 0.3, K = 1000, evaluated by the package at 121 times (t = 0 … 30), beside the logistic curve with the same starting value, rate and carrying capacity (also from the package); marked: y(5) = 357.882.*
 
 ```python
 differential_equations_ai999x.solve('gompertz_growth', y0=10, r=0.3, K=1000, t=5)
@@ -1104,6 +1192,14 @@ $$
 - **Assumes:** $h > 0$; $1  \leq  n  \leq  10000$; f defined along the steps
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Steps of the Euler's method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-method-steps)
+
+*Steps of the Euler's method for y′ = t + y, y(0) = 1 with step h = 0.1 — each point one run of the package with n = 1 … 10 — a fourth-order solution with 100 small steps (also the package); at t = 1: Euler's method y(1) = 3.18748, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.22.*
+
+![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-method-curve)
+
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.22.*
+
 ```python
 differential_equations_ai999x.solve('euler_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
 # -> y_n = 1.22, t_n = 0.2   (SOLVED)
@@ -1142,6 +1238,14 @@ $$
 - **Method:** Heun predictor-corrector: average the slopes at both ends
 - **Assumes:** $h > 0$; $1  \leq  n  \leq  10000$; f defined along the steps
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Steps of the improved Euler method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/improved-euler-method-steps)
+
+*Steps of the improved Euler method for y′ = t + y, y(0) = 1 with step h = 0.2 — each point one run of the package with n = 1 … 5 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: improved Euler method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
+
+![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/improved-euler-method-curve)
+
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
 
 ```python
 differential_equations_ai999x.solve('improved_euler_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1182,6 +1286,14 @@ $$
 - **Assumes:** $h > 0$; $1  \leq  n  \leq  10000$; f defined along the steps
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Steps of the midpoint method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/midpoint-method-steps)
+
+*Steps of the midpoint method for y′ = t + y, y(0) = 1 with step h = 0.2 — each point one run of the package with n = 1 … 5 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: midpoint method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
+
+![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/midpoint-method-curve)
+
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
+
 ```python
 differential_equations_ai999x.solve('midpoint_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
 # -> y_n = 1.24205, t_n = 0.2   (SOLVED)
@@ -1220,6 +1332,14 @@ $$
 - **Method:** classical RK4 with four slope evaluations per step
 - **Assumes:** $h > 0$; $1  \leq  n  \leq  10000$; f defined along the steps
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Steps of the fourth-order Runge–Kutta method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-steps)
+
+*Steps of the fourth-order Runge–Kutta method for y′ = t + y, y(0) = 1 with step h = 0.25 — each point one run of the package with n = 1 … 4 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: fourth-order Runge–Kutta method y(1) = 3.43642, Euler's method 2.88281, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24281.*
+
+![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-curve)
+
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24281.*
 
 ```python
 differential_equations_ai999x.solve('runge_kutta_4', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1260,6 +1380,10 @@ $$
 - **Assumes:** $h > 0$; h*|df/dy| < 1 at each step (unique step)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/backward-euler-method-curve)
+
+*y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = -2*y + t, t0 = 0, h = 0.1. 10 points per curve computed by differential-equations-ai999x; marked: the worked example, n = 2, y_n = 0.718056.*
+
 ```python
 differential_equations_ai999x.solve('backward_euler_method', f='-2*y + t', t0=0, y0=1, h=0.1, n=2)
 # -> y_n = 0.718056, t_n = 0.2   (SOLVED)
@@ -1299,6 +1423,10 @@ $$
 - **Method:** Euler on a linear equation multiplies by $(1 + hk)$ per step
 - **Assumes:** $h > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Euler's method on y′ = k y with k = 1, y₀ = 1, h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-error-exponential-steps)
+
+*Euler's method on y′ = k y with k = 1, y₀ = 1, h = 0.1: the package's Euler value and exact value after n = 1 … 10 steps; marked: after 10 steps Euler gives 2.59374 against 2.71828 (error 0.124539, relative 0.0458155).*
 
 ```python
 differential_equations_ai999x.solve('euler_error_exponential', k=1, y0=1, h=0.1, n=10)
@@ -1342,6 +1470,10 @@ $$
 - **Assumes:** $h > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The system x′ = y, y′ = -x from (x, y) = (1, 0) stepped by the package's fourth-order Runge–Kutta system solver: with h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-system-phase)
+
+*The system x′ = y, y′ = -x from (x, y) = (1, 0) stepped by the package's fourth-order Runge–Kutta system solver: with h = 0.1 the orbit stays on the unit circle; with h = 0.8 it spirals slowly inwards (h = 0.1: after 63 steps (0.999858, -0.0168087); h = 0.8: after 40 steps (0.821229, -0.447203)); marked: the worked example's state at t = 1, (0.540303, -0.84147).*
+
 ```python
 differential_equations_ai999x.solve('runge_kutta_4_system', f='y', g='-x', t0=0, x0=1, y0=0, h=0.1, n=10)
 # -> x_n = 0.540303, y_n = -0.84147, t_n = 1   (SOLVED)
@@ -1382,6 +1514,14 @@ $$
 - **Method:** a $r^{2} + b$ $r + c = 0$ (stable quadratic formula); case from the exact sign of $b^{2} - 4ac$
 - **Assumes:** $a  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Roots of the characteristic equation a r² + b r + c = 0 with a = 1, c = 2 for 81 values of b from 0 to 4, all from the package: a complex pair moving round a circle until they meet at b = 2√(ac) and split along the real axis; marked: the worked example b = 3, roots -2 and -1 (two distinct real roots, overdamped)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/characteristic-roots-complex)
+
+*Roots of the characteristic equation a r² + b r + c = 0 with a = 1, c = 2 for 81 values of b from 0 to 4, all from the package: a complex pair moving round a circle until they meet at b = 2√(ac) and split along the real axis; marked: the worked example b = 3, roots -2 and -1 (two distinct real roots, overdamped).*
+
+![distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/characteristic-roots-decision)
+
+*distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — complex conjugate roots: 320 cells, two distinct real roots: 331 cells. Other inputs as in the worked example: c = 2. Marked: the worked example, a = 1, b = 3 → two distinct real roots.*
 
 ```python
 differential_equations_ai999x.solve('characteristic_roots', a=1, b=3, c=2)
@@ -1439,6 +1579,14 @@ $$
 
 *Solutions of y″ + b y′ + y = 0 with y(0) = 1, y′(0) = 0, evaluated by the package at 121 times each: b = 0.4 (underdamped, y(12) = 0.0492303); b = 2 (critically damped, y(12) = 7.9875e-05); b = 4 (overdamped, y(12) = 0.0432445).*
 
+![damping case (damping) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-decision)
+
+*damping case (damping) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — overdamped: 331 cells, underdamped: 320 cells. Other inputs as in the worked example: c = 2, y0 = 1, v0 = 0, t = 1. Marked: the worked example, a = 1, b = 3 → overdamped.*
+
+![y (value y(t)) against c (coefficient of y) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-curve-2)
+
+*y (value y(t)) against c (coefficient of y) from 0.2 to 20 on a logarithmic axis. One curve for each value of y0 (initial value y(0)): 1, 0.5, 2. Other inputs as in the worked example: a = 1, b = 3, v0 = 0, t = 1. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, c = 2, y = 0.600424.*
+
 ```python
 differential_equations_ai999x.solve('second_order_homogeneous_ivp', a=1, b=3, c=2, y0=1, v0=0, t=1)
 # -> y = 0.600424, damping = overdamped   (SOLVED)
@@ -1488,6 +1636,10 @@ $$
 - **Assumes:** $a  \neq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Solution y(t) of a y″ + b y′ + c y = F e^{st}, evaluated by the package at 101 times from t = 0 to 1](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/undetermined-coefficients-exponential-curve)
+
+*Solution y(t) of a y″ + b y′ + c y = F e^{st}, evaluated by the package at 101 times from t = 0 to 1.5 for the worked example (a = 1, b = 3, c = 2, F = 4, s = 3, y0 = 0, v0 = 0); marked: t = 1, y = 3.7575.*
+
 ```python
 differential_equations_ai999x.solve('undetermined_coefficients_exponential', a=1, b=3, c=2, F=4, s=3, y0=0, v0=0, t=1)
 # -> y = 3.7575, A = 0.2, resonance_multiplicity = 0   (SOLVED)
@@ -1534,6 +1686,10 @@ $$
 - **Assumes:** $a  \neq  0$; $c  \neq  0$; degree <= 4
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Solution y(t) of a y″ + b y′ + c y = p(t), evaluated by the package at 121 times from t = 0 to 6 for the worked example (a = 1, b = 0, c = 4, p = 0, 8, y0 = 1, v0 = 0); marked: t = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/undetermined-coefficients-polynomial-curve)
+
+*Solution y(t) of a y″ + b y′ + c y = p(t), evaluated by the package at 121 times from t = 0 to 6 for the worked example (a = 1, b = 0, c = 4, p = 0, 8, y0 = 1, v0 = 0); marked: t = 0.5, y = 0.698831.*
+
 ```python
 differential_equations_ai999x.solve('undetermined_coefficients_polynomial', a=1, b=0, c=4, p='0, 8', y0=1, v0=0, t=0.5)
 # -> y = 0.698831, particular = [0.0, 2.0]   (SOLVED)
@@ -1576,6 +1732,10 @@ $$
 - **Assumes:** $a  \neq  0$; $w > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Response y(t) of a y″ + b y′ + c y = F₀ cos(w t), evaluated by the package at 201 times from t = 0 to 20 for the worked example (a = 1, b = 0, c = 4, F0 = 1, w = 2, y0 = 0, v0 = 0) and for w = w = 1](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/forced-oscillator-ivp-curve)
+
+*Response y(t) of a y″ + b y′ + c y = F₀ cos(w t), evaluated by the package at 201 times from t = 0 to 20 for the worked example (a = 1, b = 0, c = 4, F0 = 1, w = 2, y0 = 0, v0 = 0) and for w = w = 1.5 (w = 2 is the natural frequency √(c/a): the response grows linearly); marked: t = 3, y = -0.209562.*
+
 ```python
 differential_equations_ai999x.solve('forced_oscillator_ivp', a=1, b=0, c=4, F0=1, w=2, y0=0, v0=0, t=3)
 # -> y = -0.209562, resonant = True   (SOLVED)
@@ -1616,6 +1776,10 @@ $$
 - **Assumes:** a, b, $c > 0$; $w > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Steady-state response of a y″ + b y′ + c y = F₀ cos(w t) with a = 1, c = 4, F₀ = 2: amplitude and phase lag from the package at 100 forcing frequencies for four damping coefficients b; marked: the worked example w = 1](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/steady-state-amplitude-response)
+
+*Steady-state response of a y″ + b y′ + c y = F₀ cos(w t) with a = 1, c = 4, F₀ = 2: amplitude and phase lag from the package at 100 forcing frequencies for four damping coefficients b; marked: the worked example w = 1.5, amplitude 1.05045, phase lag 0.404892 rad, gain 0.525226.*
+
 ```python
 differential_equations_ai999x.solve('steady_state_amplitude', a=1, b=0.5, c=4, F0=2, w=1.5)
 # -> amplitude = 1.05045, phase_lag = 0.404892, gain = 0.525226   (SOLVED)
@@ -1654,6 +1818,10 @@ $$
 - **Method:** minimise (k - m $w^{2})^{2} + (c$ w)^2 over w: $w_r^{2} = k/m - c^{2}/(2m^{2})$
 - **Assumes:** m, c, $k > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Steady-state amplitude of m y″ + c y′ + k y = F₀ cos ωt with m = 1, c = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/practical-resonance-response)
+
+*Steady-state amplitude of m y″ + c y′ + k y = F₀ cos ωt with m = 1, c = 0.4, k = 4, F0 = 2 (amplitudes from the package's steady-state capability at 120 frequencies); marked: the package's practical-resonance frequency ω_r = 1.9799 and peak amplitude 2.51259, at the top of the curve.*
 
 ```python
 differential_equations_ai999x.solve('practical_resonance', m=1, c=0.4, k=4, F0=2)
@@ -1694,6 +1862,10 @@ $$
 - **Assumes:** m, $k > 0$; y(0) = y'$(0) = 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Undamped forcing at the natural frequency, m = 1, k = 4, F0 = 2 (ω₀ = 2): the package's displacement and its linearly growing envelope at 241 times; marked: y(3) = -0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/undamped-resonance-curve)
+
+*Undamped forcing at the natural frequency, m = 1, k = 4, F0 = 2 (ω₀ = 2): the package's displacement and its linearly growing envelope at 241 times; marked: y(3) = -0.419123, envelope 1.5.*
+
 ```python
 differential_equations_ai999x.solve('undamped_resonance', m=1, k=4, F0=2, t=3)
 # -> y = -0.419123, envelope = 1.5, omega0 = 2   (SOLVED)
@@ -1730,6 +1902,10 @@ $$
 - **Method:** the impulse gives y(0+) = 0, y'(0+) = $1/a$; then the homogeneous solution
 - **Assumes:** $a  \neq  0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Impulse response h(t) of a y″ + b y′ + c y, evaluated by the package at 121 times from t = 0 to 8 for the worked example (a = 1, b = 2, c = 5) and for c = c = 2, c = 10; marked: t = 1, h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/ode-impulse-response-curve)
+
+*Impulse response h(t) of a y″ + b y′ + c y, evaluated by the package at 121 times from t = 0 to 8 for the worked example (a = 1, b = 2, c = 5) and for c = c = 2, c = 10; marked: t = 1, h = 0.167256.*
 
 ```python
 differential_equations_ai999x.solve('ode_impulse_response', a=1, b=2, c=5, t=1)
@@ -1768,6 +1944,10 @@ $$
 - **Method:** Y($s) = 1/(s$(as^2 + bs + c)): constant $1/c$ plus the homogeneous solution with y(0) = -1/c, y'$(0) = 0$
 - **Assumes:** a, $c  \neq  0$; $t  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Unit-step response y(t) of a y″ + b y′ + c y = 1, evaluated by the package at 121 times from t = 0 to 8 for the worked example (a = 1, b = 2, c = 5) and for b = b = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/ode-step-response-curve)
+
+*Unit-step response y(t) of a y″ + b y′ + c y = 1, evaluated by the package at 121 times from t = 0 to 8 for the worked example (a = 1, b = 2, c = 5) and for b = b = 0.8, b = 5; marked: t = 1, y = 0.197167.*
 
 ```python
 differential_equations_ai999x.solve('ode_step_response', a=1, b=2, c=5, t=1)
@@ -1808,6 +1988,14 @@ $$
 - **Method:** $w_{0} = \sqrt{\frac{k}{m}}$, zeta = c/(2 sqrt(mk)), $w_d = w_{0}$ sqrt(1 - zeta^2)
 - **Assumes:** $m > 0$; $c  \geq  0$; $k > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![A damped oscillator m y″ + c y′ + k y = 0 with m = 2, c = 1, k = 8: the package returns ω₀ = 2, ζ = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/damped-oscillator-parameters-curve)
+
+*A damped oscillator m y″ + c y′ + k y = 0 with m = 2, c = 1, k = 8: the package returns ω₀ = 2, ζ = 0.125 (underdamped), ω_d = 1.98431 and damped period T_d = 3.16643; the motion from y(0) = 1 (161 values from the package's second-order solver) peaks once per T_d — dashed lines at multiples of the returned period.*
+
+![damping case (damping) over c (damping coefficient (>= 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/damped-oscillator-parameters-decision)
+
+*damping case (damping) over c (damping coefficient (>= 0)) from 0.1 to 10 and m (mass (> 0)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — overdamped: 63 cells, underdamped: 588 cells. Other inputs as in the worked example: k = 8. Marked: the worked example, c = 1, m = 2 → underdamped.*
 
 ```python
 differential_equations_ai999x.solve('damped_oscillator_parameters', m=2, c=1, k=8)
@@ -1850,6 +2038,10 @@ $$
 - **Assumes:** m, $k > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Simple harmonic motion of a mass on a spring, m = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/simple-harmonic-motion-curve)
+
+*Simple harmonic motion of a mass on a spring, m = 0.5, k = 8, x0 = 0.1, v0 = 0: displacement from the package at 151 times; its amplitude 0.1 m, angular frequency 4 rad/s and period 1.5708 s (the bar spans one period); marked: x(1 s) = -0.0653644 m.*
+
 ```python
 differential_equations_ai999x.solve('simple_harmonic_motion', m=0.5, k=8, x0=0.1, v0=0, t=1)
 # -> x = -0.0653644, amplitude = 0.1, omega = 4, period = 1.5708   (SOLVED)
@@ -1890,6 +2082,10 @@ $$
 - **Method:** $t = e^{x}$ turns it into a Y'' + (b - a) Y' + c $Y = 0$; indicial a m(m-1) + b $m + c = 0$
 - **Assumes:** $a  \neq  0$; $t > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Solution of the Cauchy–Euler equation a t² y″ + b t y′ + c y = 0 with a = 1, b = 2, c = -6, y1 = 1, v1 = 0 (initial values at t = 1), evaluated by the package at 105 times from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/cauchy-euler-ivp-curve)
+
+*Solution of the Cauchy–Euler equation a t² y″ + b t y′ + c y = 0 with a = 1, b = 2, c = -6, y1 = 1, v1 = 0 (initial values at t = 1), evaluated by the package at 105 times from 0.4 to 3; the package's indicial roots are m₁ = -3, m₂ = 2; marked: y(1) = 1 and y(2) = 2.45.*
 
 ```python
 differential_equations_ai999x.solve('cauchy_euler_ivp', a=1, b=2, c=-6, y1=1, v1=0, t=2)
@@ -1933,6 +2129,10 @@ $$
 - **Assumes:** $xa < xb$; unique solution (not an eigenvalue case)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Solution of the boundary-value problem y″ + p y′ + q y = r with p = 0, q = -1, r = 0, xa = 0, xb = 1, ya = 0, yb = 1: y(x) from the package at 81 points between the two boundary values; the short segment has the returned slope at the left end, 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/boundary-value-problem-curve)
+
+*Solution of the boundary-value problem y″ + p y′ + q y = r with p = 0, q = -1, r = 0, xa = 0, xb = 1, ya = 0, yb = 1: y(x) from the package at 81 points between the two boundary values; the short segment has the returned slope at the left end, 0.850918; marked: y(0.5) = 0.443409.*
+
 ```python
 differential_equations_ai999x.solve('boundary_value_problem', p=0, q=-1, r=0, xa=0, xb=1, ya=0, yb=1, x=0.5)
 # -> y = 0.443409, slope_a = 0.850918   (SOLVED)
@@ -1968,6 +2168,10 @@ $$
 - **Method:** table: L{$t^{n}$ e^{zt}} = n!/(s - z)^{$n+1$}, with sin and cos written through complex exponentials
 - **Assumes:** f a sum of $t^{n}$ e^{at} sin/cos(bt) terms; $s > \sigma$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Laplace transform F(s) of f(t) = t^2*exp(3*t), evaluated by the package at 96 points to the right of its abscissa of convergence σ = 3; F grows without bound as s → σ; marked: F(5) = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/laplace-transform-curve)
+
+*Laplace transform F(s) of f(t) = t^2*exp(3*t), evaluated by the package at 96 points to the right of its abscissa of convergence σ = 3; F grows without bound as s → σ; marked: F(5) = 0.25.*
 
 ```python
 differential_equations_ai999x.solve('laplace_transform', f='t^2*exp(3*t)', s=5)
@@ -2013,6 +2217,10 @@ $$
 - **Assumes:** $c  \geq  0$; s > abscissa of f
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The time-shift rule: the transform G(s) of f(t) = t and the transform F(s) of the same function delayed by c = 2 (switched on at t = c), both from the package at 77 values of s; the delay multiplies the transform by e^(−cs); marked: F(1) = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/laplace-time-shift-curve)
+
+*The time-shift rule: the transform G(s) of f(t) = t and the transform F(s) of the same function delayed by c = 2 (switched on at t = c), both from the package at 77 values of s; the delay multiplies the transform by e^(−cs); marked: F(1) = 0.135335, G = 1.*
+
 ```python
 differential_equations_ai999x.solve('laplace_time_shift', f='t', c=2, s=1)
 # -> F = 0.135335, G = 1   (SOLVED)
@@ -2048,6 +2256,10 @@ $$
 - **Method:** f(t) = sum over poles p (order m) of the residue of F(s) e^{st}: e^{pt} sum_k g_k t^{$m-1-k$}/$(m-1-k)$!
 - **Assumes:** F strictly proper with rational coefficients; denominator degree <= 10
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom) — real negative poles give decaying exponentials; marked: f(1) = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/inverse-laplace-transform-curve)
+
+*The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom) — real negative poles give decaying exponentials; marked: f(1) = 0.600424.*
 
 ```python
 differential_equations_ai999x.solve('inverse_laplace_transform', F='(s + 3)/(s^2 + 3s + 2)', t=1)
@@ -2092,6 +2304,10 @@ $$
 - **Assumes:** strictly proper; simple (distinct) poles
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![poles p_i (real ascending, then complex) (poles) returned by differential-equations-ai999x for the worked example (F = (s + 3)/(s^2 + 3s + 2)), drawn in the complex plane: -2 + 0i, -1 + 0i](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/partial-fraction-residues-complex)
+
+*poles p_i (real ascending, then complex) (poles) returned by differential-equations-ai999x for the worked example (F = (s + 3)/(s^2 + 3s + 2)), drawn in the complex plane: -2 + 0i, -1 + 0i.*
+
 ```python
 differential_equations_ai999x.solve('partial_fraction_residues', F='(s + 3)/(s^2 + 3s + 2)')
 # -> poles = [-2.0, -1.0], residues = [-1.0, 2.0], count = 2   (SOLVED)
@@ -2127,6 +2343,10 @@ $$
 - **Method:** adaptive tanh-sinh quadrature of the convolution integral at 20 digits
 - **Assumes:** f, g integrable on [0, t]
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![value ((f * g)(t)) against t (time (>= 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/convolution-integral-curve)
+
+*value ((f * g)(t)) against t (time (>= 0)) from 0.2 to 15.8866 on a logarithmic axis. Other inputs as in the worked example: f = exp(-t), g = sin(t). 39 points computed by differential-equations-ai999x; marked: the worked example, t = 2, value = 0.73039.*
 
 ```python
 differential_equations_ai999x.solve('convolution_integral', f='exp(-t)', g='sin(t)', t=2)
@@ -2175,6 +2395,10 @@ $$
 ![Eight 2×2 systems x′ = A x placed by trace and determinant, each classified by the package: [[0, 1], [-2, -3]]: stable node (trace -3, det 2); [[-1, 2], [-2, -1]]: stable spiral (trace -2, det 5); [[1, 2], [-2, 1]]: unstable spiral (trace 2, det 5); [[2, 1], [0, 3]]: unstable node (trace 5, det 6); [[0, 1], [-4, 0]]: center (trace 0, det 4); [[1, 0], [0, -2]]: saddle (trace -1, det -2); [[-1, 3], [1, 1]]: saddle (trace 0, det -4); [[0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/phase-portrait-2x2-stability.svg)
 
 *Eight 2×2 systems x′ = A x placed by trace and determinant, each classified by the package: [[0, 1], [-2, -3]]: stable node (trace -3, det 2); [[-1, 2], [-2, -1]]: stable spiral (trace -2, det 5); [[1, 2], [-2, 1]]: unstable spiral (trace 2, det 5); [[2, 1], [0, 3]]: unstable node (trace 5, det 6); [[0, 1], [-4, 0]]: center (trace 0, det 4); [[1, 0], [0, -2]]: saddle (trace -1, det -2); [[-1, 3], [1, 1]]: saddle (trace 0, det -4); [[0.5, 3], [-3, 0.5]]: unstable spiral (trace 1, det 9.25).*
+
+![Trajectories of x′ = A x with A = [[0, 1], [-2, -3]], from 10 starting points on the unit circle, each state x(t) for t = 0 … 6 computed by the package's linear-system solver; the package classifies the origin as a stable node (asymptotically stable), eigenvalues λ₁ = -2, λ₂ = -1](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/phase-portrait-2x2-phase)
+
+*Trajectories of x′ = A x with A = [[0, 1], [-2, -3]], from 10 starting points on the unit circle, each state x(t) for t = 0 … 6 computed by the package's linear-system solver; the package classifies the origin as a stable node (asymptotically stable), eigenvalues λ₁ = -2, λ₂ = -1.*
 
 ```python
 differential_equations_ai999x.solve('phase_portrait_2x2', A='[[0, 1], [-2, -3]]')
@@ -2229,6 +2453,14 @@ $$
 - **Assumes:** A square, $n  \leq  6$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The plane vectors of the worked example as arrows from the origin: input x0 = (1, 0); returned by differential-equations-ai999x: x = (0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-solution-vectors)
+
+*The plane vectors of the worked example as arrows from the origin: input x0 = (1, 0); returned by differential-equations-ai999x: x = (0.600424, -0.465088); also returned x1 = 0.600424. Other inputs: A = [[0, 1], [-2, -3]], t = 1. Marked: the tip of each returned vector.*
+
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input); x (returned)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-solution-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input); x (returned). Returned with them by differential-equations-ai999x: x1 = 0.600424. Other inputs: x0 = 1, 0, t = 1.*
+
 ```python
 differential_equations_ai999x.solve('linear_system_solution', A='[[0, 1], [-2, -3]]', x0='1, 0', t=1)
 # -> x = [0.600423599106, -0.46508831587], x1 = 0.600424   (SOLVED)
@@ -2264,6 +2496,10 @@ $$
 - **Method:** Routh array; sign changes in the first column
 - **Assumes:** regular Routh array (no zero in the first column)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![first column of the Routh array (first_column) returned by differential-equations-ai999x for the worked example, one value for each position in the list (4 values, first 1, last 6, largest 10)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/routh-hurwitz-series)
+
+*first column of the Routh array (first_column) returned by differential-equations-ai999x for the worked example, one value for each position in the list (4 values, first 1, last 6, largest 10). Inputs: coeffs = 1, 6, 11, 6.*
 
 ```python
 differential_equations_ai999x.solve('routh_hurwitz', coeffs='1, 6, 11, 6')
@@ -2307,6 +2543,14 @@ $$
 - **Assumes:** regular Routh array (no eigenvalue on the imaginary axis)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![characteristic polynomial coefficients (char_poly) returned by differential-equations-ai999x for the worked example, one value for each position in the list (4 values, first 1, last 4, largest 11)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-stability-series)
+
+*characteristic polynomial coefficients (char_poly) returned by differential-equations-ai999x for the worked example, one value for each position in the list (4 values, first 1, last 4, largest 11). Inputs: A = [[-1, 2, 0], [0, -3, 1], [1, 0, -2]].*
+
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-stability-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input). Returned with them by differential-equations-ai999x: unstable_eigenvalues = 0.*
+
 ```python
 differential_equations_ai999x.solve('linear_system_stability', A='[[-1, 2, 0], [0, -3, 1], [1, 0, -2]]')
 # -> stable = True, unstable_eigenvalues = 0, char_poly = [1.0, 6.0, 11.0, 4.0]   (SOLVED)
@@ -2342,6 +2586,10 @@ $$
 - **Method:** exact real roots of f; the sign of f between consecutive roots (phase line)
 - **Assumes:** f a polynomial in y with rational coefficients, degree <= 8
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Phase line of the autonomous equation y′ = y*(1 - y): f(y) evaluated by the package at 101 points; arrows on the axis show the sign of f between equilibria (y grows where f > 0); marked: the package's equilibria y = 0 (unstable), y = 1 (stable)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/autonomous-equilibria-phase-line)
+
+*Phase line of the autonomous equation y′ = y*(1 - y): f(y) evaluated by the package at 101 points; arrows on the axis show the sign of f between equilibria (y grows where f > 0); marked: the package's equilibria y = 0 (unstable), y = 1 (stable).*
 
 ```python
 differential_equations_ai999x.solve('autonomous_equilibria', f='y*(1 - y)')
@@ -2388,6 +2636,10 @@ $$
 - **Assumes:** a, b, c, $d > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Predator–prey cycles x′ = 1*x - 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/lotka-volterra-equilibrium-phase)
+
+*Predator–prey cycles x′ = 1*x - 0.1*x*y, y′ = -1.5*y + 0.075*x*y from four starting states, integrated by the package's fourth-order Runge–Kutta system solver (step 0.02, t = 0 … 6.4); marked: the coexistence equilibrium (20, 10) the package returns, around which small cycles have period 5.1302.*
+
 ```python
 differential_equations_ai999x.solve('lotka_volterra_equilibrium', a=1, b=0.1, c=1.5, d=0.075)
 # -> x_eq = 20, y_eq = 10, omega = 1.22474, period = 5.1302   (SOLVED)
@@ -2429,6 +2681,10 @@ $$
 - **Method:** solve the linear nullcline equations exactly; classify the Jacobian there by trace and determinant
 - **Assumes:** both coexistence values positive; nullclines not parallel
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Competing species x′ = x*(3 - 1*x - 1*y), y′ = y*(2 - 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/competing-species-equilibrium-phase)
+
+*Competing species x′ = x*(3 - 1*x - 1*y), y′ = y*(2 - 0.5*x - 1*y): trajectories from 7 starts integrated by the package (RK4, step 0.05) and the two straight nullclines drawn from the stated coefficients; marked: the package's coexistence equilibrium (2, 1), a stable node (asymptotically stable).*
 
 ```python
 differential_equations_ai999x.solve('competing_species_equilibrium', a1=3, b11=1, b12=1, a2=2, b21=0.5, b22=1)
@@ -2475,6 +2731,10 @@ $$
 
 *Phase portrait of the damped pendulum x′ = y, y′ = -sin(x) - 0.5*y: 12 trajectories integrated by the package's fourth-order Runge–Kutta system solver (step 0.05, t = 0 … 16), equilibria classified by it from the Jacobian (x = 0: stable spiral; x = 3.14159: saddle; the pattern repeats every 2π).*
 
+![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): jacobian (returned)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/nonlinear-equilibrium-type-matrix)
+
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): jacobian (returned). Returned with them by differential-equations-ai999x: trace = -0.5, det = 1. Other inputs: f = y, g = -sin(x) - 0.5*y, x0 = 0, y0 = 0.*
+
 ```python
 differential_equations_ai999x.solve('nonlinear_equilibrium_type', f='y', g='-sin(x) - 0.5*y', x0=0, y0=0)
 # -> type = stable spiral, stability = asymptotically stable, jacobian = [[0.0, 1.0], [-1.0, -0.5]], trace = -0.5, det = 1   (SOLVED)
@@ -2519,6 +2779,14 @@ $$
 - **Assumes:** $h > 0$; real lambda
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Amplification factor |R(z)| of four one-step methods on y′ = λy along the real axis z = λh from −4 to 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/amplification-factor-curve)
+
+*Amplification factor |R(z)| of four one-step methods on y′ = λy along the real axis z = λh from −4 to 0.5 (h = 1, λ = z; 91 runs of the package per method); a step is stable where |R| ≤ 1; marked: the worked example (method = rk4, lam = -10, h = 0.2), z = -2, |R| = 0.333333 (stable).*
+
+![|R| <= 1 (stable) over lam (lambda (real)) from -15 to -5 and h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/amplification-factor-decision)
+
+*|R| <= 1 (stable) over lam (lambda (real)) from -15 to -5 and h (step size (> 0)) from 0.02 to 2 (logarithmic vertical axis): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 376 cells, no: 275 cells. Other inputs as in the worked example: method = rk4. Marked: the worked example, lam = -10, h = 0.2 → yes.*
+
 ```python
 differential_equations_ai999x.solve('amplification_factor', method='rk4', lam=-10, h=0.2)
 # -> R = 0.333333, abs_R = 0.333333, stable = True, z = -2   (SOLVED)
@@ -2560,6 +2828,10 @@ $$
 - **Method:** bisection for |R(-x)| = 1 on the stability polynomial
 - **Assumes:** $\lambda < 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![h_max (largest stable step) against lam (lambda (< 0)) from -30 to -10](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/explicit-step-limit-curve)
+
+*h_max (largest stable step) against lam (lambda (< 0)) from -30 to -10. One curve for each value of method (explicit method): euler, rk4. 31 points per curve computed by differential-equations-ai999x; marked: the worked example, lam = -20, h_max = 0.1.*
 
 ```python
 differential_equations_ai999x.solve('explicit_step_limit', method='euler', lam=-20)
@@ -2604,6 +2876,14 @@ $$
 - **Assumes:** $c  \neq  0$; dt, $dx > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![C <= 1 (stable) over c (advection speed) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/cfl-condition-decision)
+
+*C <= 1 (stable) over c (advection speed) from 0.2 to 20 and dt (time step (> 0)) from 0.001 to 0.1 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 434 cells, no: 217 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, c = 2, dt = 0.01 → yes.*
+
+![courant (Courant number |c| dt / dx) against dx (grid spacing (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/cfl-condition-curve)
+
+*courant (Courant number |c| dt / dx) against dx (grid spacing (> 0)) from 0.025 to 0.075. One curve for each value of c (advection speed): 2, 1, 4. Other inputs as in the worked example: dt = 0.01. 31 points per curve computed by differential-equations-ai999x; marked: the worked example, dx = 0.05, courant = 0.4.*
+
 ```python
 differential_equations_ai999x.solve('cfl_condition', c=2, dt=0.01, dx=0.05)
 # -> courant = 0.4, stable = True, dt_max = 0.025   (SOLVED)
@@ -2641,6 +2921,14 @@ $$
 - **Method:** von Neumann: $G = 1 - 4$ r $sin^{2}$(theta/2), |G| <= 1 iff $r  \leq  1/2$
 - **Assumes:** alpha, dt, $dx > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![r <= 1/2 (stable) over alpha (diffusivity (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/explicit-heat-stability-decision)
+
+*r <= 1/2 (stable) over alpha (diffusivity (> 0)) from 0.1 to 10 and dt (time step (> 0)) from 0.0001 to 0.01 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 351 cells, no: 300 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, alpha = 1, dt = 0.001 → yes.*
+
+![r (mesh ratio alpha dt / dx^2) against dx (grid spacing (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/explicit-heat-stability-curve)
+
+*r (mesh ratio alpha dt / dx^2) against dx (grid spacing (> 0)) from 0.025 to 0.075. One curve for each value of alpha (diffusivity (> 0)): 1, 0.5, 2. Other inputs as in the worked example: dt = 0.001. 31 points per curve computed by differential-equations-ai999x; marked: the worked example, dx = 0.05, r = 0.4.*
 
 ```python
 differential_equations_ai999x.solve('explicit_heat_stability', alpha=1, dt=0.001, dx=0.05)
@@ -2683,6 +2971,14 @@ $$
 
 *Temperatures along a rod (9 nodes, ends held at 0) from the explicit heat-equation scheme with r = 0.25, starting from 0, 0, 20, 60, 100, 60, 20, 0, 0: row k is the state after k steps, each computed by the package; the peak spreads and decays (100 → 47.79 at the centre after 7 steps).*
 
+![The explicit heat-equation scheme on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0, six steps each computed by the package: with r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-ftcs-steps-profiles)
+
+*The explicit heat-equation scheme on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0, six steps each computed by the package: with r = 0.25 the peak spreads smoothly; with r = 0.6 (above ½) the profile develops a growing sawtooth; centre node after 6 steps: 50.5859 and 56.0627.*
+
+![r <= 1/2 (stable_ratio) over r (mesh ratio alpha dt / dx^2 (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-ftcs-steps-decision)
+
+*r <= 1/2 (stable_ratio) over r (mesh ratio alpha dt / dx^2 (> 0)) from 0.02 to 0.98 and n (number of time steps) from 1 to 9: each of the 31 × 9 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 144 cells, no: 135 cells. Other inputs as in the worked example: u = 0, 50, 100, 50, 0. Marked: the worked example, r = 0.25, n = 1 → yes.*
+
 ```python
 differential_equations_ai999x.solve('heat_ftcs_steps', u='0, 50, 100, 50, 0', r=0.25, n=1)
 # -> u = [0.0, 50.0, 75.0, 50.0, 0.0], stable_ratio = True   (SOLVED)
@@ -2719,6 +3015,10 @@ $$
 - **Assumes:** Dirichlet ends; $r > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Crank–Nicolson steps of the heat equation on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0 with r = 1 (twice the explicit limit): six steps, each computed by the package, spread the peak smoothly without oscillation (centre node 23](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/crank-nicolson-steps-profiles)
+
+*Crank–Nicolson steps of the heat equation on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0 with r = 1 (twice the explicit limit): six steps, each computed by the package, spread the peak smoothly without oscillation (centre node 23.9503 after 6 steps). Worked example (u = 0, 50, 100, 50, 0, r = 1, n = 1): u = 0, 35.7143, 42.8571, 35.7143, 0.*
+
 ```python
 differential_equations_ai999x.solve('crank_nicolson_steps', u='0, 50, 100, 50, 0', r=1, n=1)
 # -> u = [0.0, 35.7142857143, 42.8571428571, 35.7142857143, 0.0]   (SOLVED)
@@ -2754,6 +3054,10 @@ $$
 - **Method:** exact integration by parts of $x^{k}$ sin(n pi x / L)
 - **Assumes:** f a polynomial; $L > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Fourier sine coefficients bₙ of f(x) = x*(1 - x) on 0 ≤ x ≤ 1, n = 1 … 12, each computed by the package; the even coefficients vanish and the odd ones fall off quickly; marked: b₁ = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/fourier-sine-coefficient-stems)
+
+*Fourier sine coefficients bₙ of f(x) = x*(1 - x) on 0 ≤ x ≤ 1, n = 1 … 12, each computed by the package; the even coefficients vanish and the odd ones fall off quickly; marked: b₁ = 0.258012.*
 
 ```python
 differential_equations_ai999x.solve('fourier_sine_coefficient', f='x*(1 - x)', L=1, n=1)
@@ -2800,6 +3104,10 @@ $$
 - **Assumes:** f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Temperature profiles u(x, t) of the heat equation on 0 ≤ x ≤ 1 with ends held at 0, initial profile f(x) = x*(1 - x), α = 1, 10 series terms: the package's series evaluated at 61 positions for t = 0, 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-equation-series-profiles)
+
+*Temperature profiles u(x, t) of the heat equation on 0 ≤ x ≤ 1 with ends held at 0, initial profile f(x) = x*(1 - x), α = 1, 10 series terms: the package's series evaluated at 61 positions for t = 0, 0.02, 0.05, 0.1, 0.2; marked: u(0.5, 0.1) = 0.0961619 (first coefficient b₁ = 0.258012).*
+
 ```python
 differential_equations_ai999x.solve('heat_equation_series', f='x*(1 - x)', L=1, alpha=1, N=10, x=0.5, t=0.1)
 # -> u = 0.0961619, b_1 = 0.258012   (SOLVED)
@@ -2840,6 +3148,10 @@ $$
 - **Assumes:** polynomial f, g; fixed ends; N terms (stated)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Snapshots of a plucked string u(x, t), fixed ends, length L = 1, wave speed c = 2, initial shape f(x) = x*(1 - x) released at rest, 20 series terms: the package's series at 61 positions for t = 0 to half the period 2L/c = 1 (the shape inverts); marked: u(0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/wave-equation-string-series-profiles)
+
+*Snapshots of a plucked string u(x, t), fixed ends, length L = 1, wave speed c = 2, initial shape f(x) = x*(1 - x) released at rest, 20 series terms: the package's series at 61 positions for t = 0 to half the period 2L/c = 1 (the shape inverts); marked: u(0.25, 0.3) = -0.0499929.*
+
 ```python
 differential_equations_ai999x.solve('wave_equation_string_series', f='x*(1 - x)', L=1, c=2, N=20, x=0.25, t=0.3)
 # -> u = -0.0499929   (SOLVED)
@@ -2877,6 +3189,10 @@ $$
 - **Method:** u = [f(x - ct) + f(x + ct)]/2 + (1/2c) * integral of g over [x - ct, x + ct] (tanh-sinh quadrature)
 - **Assumes:** $c > 0$; g integrable
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0) — an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/dalembert-solution-profiles)
+
+*D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0) — an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0.5, 1 and 2; the bump splits into two halves moving at ±c; marked: u(2, 1) = 0.5.*
 
 ```python
 differential_equations_ai999x.solve('dalembert_solution', f='sin(x)', g='0', c=2, x=1, t=0.5)
@@ -2922,6 +3238,10 @@ $$
 - **Assumes:** polynomial f; zero on three edges; N terms (stated)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Steady temperature u(x, y) in the rectangle 0 ≤ x ≤ 1, 0 ≤ y ≤ 1 with one edge held at f = 100 and the others at 0 (50 series terms): the package's solution at 400 points (shade from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/laplace-equation-rectangle-field)
+
+*Steady temperature u(x, y) in the rectangle 0 ≤ x ≤ 1, 0 ≤ y ≤ 1 with one edge held at f = 100 and the others at 0 (50 series terms): the package's solution at 400 points (shade from 0.0683887 to 94.9348); marked: u(0.5, 0.5) = 25.*
+
 ```python
 differential_equations_ai999x.solve('laplace_equation_rectangle', f='100', a=1, b=1, N=50, x=0.5, y=0.5)
 # -> u = 25   (SOLVED)
@@ -2959,6 +3279,10 @@ $$
 - **Method:** sin/cos solutions; the boundary conditions quantise sqrt(lambda)
 - **Assumes:** $L > 0$; $n  \geq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Eigenvalues λₙ of y″ + λ y = 0 on 0 ≤ x ≤ 1 for n = 1 … 6 under four pairs of end conditions, each from the package (dirichlet-dirichlet: λ₁ = 9](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/sturm-liouville-eigenvalues-stems)
+
+*Eigenvalues λₙ of y″ + λ y = 0 on 0 ≤ x ≤ 1 for n = 1 … 6 under four pairs of end conditions, each from the package (dirichlet-dirichlet: λ₁ = 9.8696; dirichlet-neumann: λ₁ = 2.4674; neumann-dirichlet: λ₁ = 2.4674; neumann-neumann: λ₁ = 9.8696); worked example (bc = dirichlet-dirichlet, L = 1, n = 2): λ = 39.4784, eigenfunction sin(6.28318530718 x).*
 
 ```python
 differential_equations_ai999x.solve('sturm_liouville_eigenvalues', bc='dirichlet-dirichlet', L=1, n=2)
@@ -3002,6 +3326,10 @@ $$
 - **Assumes:** $L > 0$; $h > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Eigenvalues λₙ of y″ + λ y = 0 on 0 ≤ x ≤ 1 with a fixed end and a convective (Robin) end with coefficient h, n = 1 … 6, from the package for three values of h (h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/robin-eigenvalues-stems)
+
+*Eigenvalues λₙ of y″ + λ y = 0 on 0 ≤ x ≤ 1 with a fixed end and a convective (Robin) end with coefficient h, n = 1 … 6, from the package for three values of h (h = 0.1: λ₁ = 2.66341; h = 1: λ₁ = 4.11586; h = 10: λ₁ = 8.19547); larger h moves them up towards the fixed–fixed values; worked example: λ₁ = 4.11586.*
+
 ```python
 differential_equations_ai999x.solve('robin_eigenvalues', L=1, h=1, n=1)
 # -> lambda_n = 4.11586, sqrt_lambda = 2.02876   (SOLVED)
@@ -3038,6 +3366,10 @@ $$
 - **Method:** x* = 0 and $1 - 1/r$; multipliers r and $2 - r$
 - **Assumes:** $0 < r  \leq  4$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![Cobweb diagram of the logistic map x → r x(1 − x) at r = 2](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-map-fixed-points-cobweb)
+
+*Cobweb diagram of the logistic map x → r x(1 − x) at r = 2.5: the map's values from the package (its right-hand-side evaluator, 101 points and one value per iterate) and 14 iterates from x₀ = 0.08 converging; marked: the package's fixed points 0 (unstable, multiplier 2.5), 0.6 (stable, multiplier -0.5).*
 
 ```python
 differential_equations_ai999x.solve('logistic_map_fixed_points', r=2.5)
@@ -3085,6 +3417,10 @@ $$
 
 *Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0.05 to 3.45, with their stability, all from the package; the fixed point loses stability at r = 3 where a stable 2-cycle appears — marked: r = 3.2, cycle 0.513045 ↔ 0.799455 (multiplier 0.16).*
 
+![Cobweb diagram of the logistic map at r = 3](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-map-two-cycle-cobweb)
+
+*Cobweb diagram of the logistic map at r = 3.2: map values from the package's right-hand-side evaluator, 24 iterates from x₀ = 0.3 settling onto the square p → q → p; marked: the package's 2-cycle p = 0.513045, q = 0.799455 (stable, multiplier 0.16).*
+
 ```python
 differential_equations_ai999x.solve('logistic_map_two_cycle', r=3.2)
 # -> p = 0.513045, q = 0.799455, multiplier = 0.16, stability = stable   (SOLVED)
@@ -3121,6 +3457,10 @@ $$
 - **Method:** iterate until settled, then average ln|r (1 - 2 x_k)| over n iterations
 - **Assumes:** the orbit settles on a fixed point or 2-cycle (|x_{$k+2$} - x_k| < 1e-14); n even
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![attractor reached (attractor) over r (parameter (0 < r <= 4)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-map-lyapunov-decision)
+
+*attractor reached (attractor) over r (parameter (0 < r <= 4)) from 0.25 to 25 and x0 (initial value in (0, 1)) from 0.03 to 3 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — 2-cycle: 16 cells, fixed point: 112 cells, fixed point 0: 160 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: n = 1000. Marked: the worked example, r = 2.5, x0 = 0.3 → fixed point.*
 
 ```python
 differential_equations_ai999x.solve('logistic_map_lyapunov', r=2.5, x0=0.3, n=1000)
@@ -3161,6 +3501,10 @@ $$
 - **Assumes:** sigma, rho, $\beta > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Equilibria of the Lorenz system (σ = 10, β = 2](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/lorenz-equilibria-bifurcation)
+
+*Equilibria of the Lorenz system (σ = 10, β = 2.66667) for 160 values of ρ from 0.05 to 40, from the package: the origin (stable below ρ = 1, unstable above) and the pair C± at x = ±x_c that appears at ρ = 1; the package's Hopf threshold ρ_H = 24.7368 is where C± lose stability; marked: the example ρ = 28, x_c = 8.48528, z_c = 27 (3 equilibria, origin unstable).*
+
 ```python
 differential_equations_ai999x.solve('lorenz_equilibria', sigma=10, rho=28, beta=2.6666666666666665)
 # -> origin_stability = unstable, count = 3, x_c = 8.48528, z_c = 27   (SOLVED)
@@ -3195,6 +3539,14 @@ $$
 - **Method:** Routh-Hurwitz on the characteristic cubic at C+-
 - **Assumes:** $\sigma > \beta + 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![rho_H (Hopf threshold) against sigma (Prandtl number (> beta + 1)) from 5 to 15](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/lorenz-hopf-threshold-curve)
+
+*rho_H (Hopf threshold) against sigma (Prandtl number (> beta + 1)) from 5 to 15. One curve for each value of beta (geometric factor (> 0)): 2.66667, 1.33333, 5.33333. 31 points per curve computed by differential-equations-ai999x; marked: the worked example, sigma = 10, rho_H = 24.7368.*
+
+![rho_H (Hopf threshold) over beta (geometric factor (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/lorenz-hopf-threshold-field)
+
+*rho_H (Hopf threshold) over beta (geometric factor (> 0)) from 0.266667 to 26.6667 and sigma (Prandtl number (> beta + 1)) from 5 to 15 (logarithmic horizontal axis): each of the 21 × 15 cells is one run of differential-equations-ai999x, shaded by its value (light 11.0714 to dark 878.975); iso-lines at rho_H = 200; blank cells: inputs the capability refuses. Marked: the worked example, beta = 2.66667, sigma = 10, rho_H = 24.7368.*
 
 ```python
 differential_equations_ai999x.solve('lorenz_hopf_threshold', sigma=10, beta=2.6666666666666665)
@@ -3235,6 +3587,14 @@ $$
 - **Assumes:** a, $b > 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![The Brusselator x′ = 1 - 4*x + x^2*y, y′ = 3*x - x^2*y (a = 1, b = 3): two trajectories integrated by the package (RK4, step 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/brusselator-hopf-phase)
+
+*The Brusselator x′ = 1 - 4*x + x^2*y, y′ = 3*x - x^2*y (a = 1, b = 3): two trajectories integrated by the package (RK4, step 0.02, t = 0 … 24), one spiralling out of the equilibrium and one in from outside, both onto the same limit cycle; the package classifies the equilibrium (1, 3) as an unstable spiral — b exceeds its Hopf value b_c = 2.*
+
+![equilibrium type (type) over a (parameter a (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/brusselator-hopf-decision)
+
+*equilibrium type (type) over a (parameter a (> 0)) from 0.1 to 10 and b (parameter b (> 0)) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — stable node: 214 cells, stable spiral: 136 cells, unstable node: 244 cells, unstable spiral: 57 cells. Marked: the worked example, a = 1, b = 3 → unstable spiral.*
+
 ```python
 differential_equations_ai999x.solve('brusselator_hopf', a=1, b=3)
 # -> x_eq = 1, y_eq = 3, b_critical = 2, type = unstable spiral, stability = unstable   (SOLVED)
@@ -3274,6 +3634,10 @@ $$
 - **Method:** first integrals: I + S - ln(S)/R0 is conserved; peak at $S = 1/R_{0}$; final size from ln(S/S0) = R0 $(S - S_{0} - I_{0})$
 - **Assumes:** S0, $I_{0} > 0$; $S_{0} + I_{0}  \leq  1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![The SIR epidemic S′ = −βSI, I′ = βSI − γI with β = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/sir-epidemic-curve)
+
+*The SIR epidemic S′ = −βSI, I′ = βSI − γI with β = 0.3, γ = 0.1, S₀ = 0.99, I₀ = 0.01, integrated by the package (RK4, step 0.25, t = 0 … 40); the package returns R₀ = 3, peak infected fraction 0.303813 and final susceptible fraction 0.0587974 (attack rate 0.931203), drawn as guides.*
 
 ```python
 differential_equations_ai999x.solve('sir_epidemic', beta=0.3, gamma=0.1, S0=0.99, I0=0.01)

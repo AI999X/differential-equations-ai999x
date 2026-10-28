@@ -1,5 +1,5 @@
 {
- "package": "1.0.1",
+ "package": "1.0.2",
  "pack": "1.0.0",
  "knowledge_db": null,
  "files": {
@@ -9,7 +9,7 @@
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
   "capabilities/procedures.py": "9b3bf2e69a454dc6513435a25d4f43626435f86e89d9c6d34a64d370ef77ef69",
   "capabilities/procedures_certified.json": "e778fbd51ce4f554c69798f6287689261efe567ea58bce5f13e35e08a4244f9b",
-  "differential_equations_knowledge_public.sqlite": "5c2f79af9ca1f2a3e989538149b225909182264e946c549a821e2b4388f7b234",
+  "differential_equations_knowledge_public.sqlite": "adbc796a5c161eeb27b0c13a529ccbbfd67cfd12efcf8436217145488e1771c1",
   "search/encoder.int8.onnx": "521452d928a72da4d241b1835ab0f46b0e81ff58ffff0367b9a7029bd129fbd9",
   "search/tokenizer.json": "b2f2deb461e6ad672b8e42aac29773e7a9be77d582cdf58808113ea43fda565e",
   "search/index.json": "d8f81d9706c9a0efa7d9643bcec3d39a6c3500766ce0f44937d85ad90f772507",
