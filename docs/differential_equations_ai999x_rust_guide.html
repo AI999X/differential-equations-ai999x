@@ -21,30 +21,30 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>differential-equations: the Differential Equations program — user guide</h1>
-<p><strong>differential-equations-ai999x 1.0.3</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p><strong>differential-equations-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
 <p>Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. This guide is about <code>differential-equations</code>, the model as a self-contained program for Windows and Linux: 77 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/differential-equations-ai999x/); the Python package (<code>pip install differential-equations-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
 <h2>1. Get it</h2>
-<p>Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
-<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Differential Equations</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Differential Equations</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
+<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Differential Equations</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Differential Equations</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz</td></tr></tbody></table>
 <h3>Desktop app</h3>
 <p>Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
 ./ai999x-differential-equations-1.4.0-linux-x86_64/ai999x-differential-equations</code></pre>
 <p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x</code></pre>
 <h3>Command line — Linux</h3>
 <p>The bundle holds one program per model; <code>differential-equations</code> is this one. The checksum line should print OK.</p>
-<pre><code class="shell">curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
@@ -52,8 +52,8 @@ differential-equations --version</code></pre>
 <h3>Command line — Windows (PowerShell)</h3>
 <p>The fourth line should print True.</p>
 <pre><code class="powershell">$F = &quot;ai999x-cli-1.4.0-windows-x86_64.zip&quot;
-Invoke-WebRequest &quot;https://www.ai999x.com/downloads/desktop/1.4.0/$F&quot; -OutFile $F
-Invoke-WebRequest &quot;https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS&quot; -OutFile SHA256SUMS
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.4.0/$F&quot; -OutFile $F
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS&quot; -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split &#x27; &#x27;)[0]
 Expand-Archive $F -DestinationPath &quot;$env:LOCALAPPDATA\AI999X&quot; -Force
 $D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
@@ -68,33 +68,7 @@ differential-equations --version</code></pre>
 <p>Prints the model, its version and that this is the Rust build.</p>
 <pre><code class="shell">$ differential-equations --version
 differential-equations-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)</code></pre>
-<h3>2.2 Ask in words</h3>
-<p>Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.</p>
-<pre><code class="shell">$ differential-equations ask &quot;Solve y&#x27;&#x27; + 3y&#x27; + 2y = 0 with y(0) = 1, y&#x27;(0) = 0; find y(1).&quot;
-Read as: Second-order homogeneous linear ODE: initial value problem
-y = 0.6004235991
-damping = overdamped
-  by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  t = 1
-  v0 = 0
-  y0 = 1
-  assumes: a != 0</code></pre>
-<h3>2.3 Find a capability</h3>
-<p>Search the capabilities by what you want to know; the first column is the id to pass to info and solve.</p>
-<pre><code class="shell">$ differential-equations search &quot;second-order homogeneous linear ode: initial value problem&quot;
-second_order_homogeneous_ivp         Second-order homogeneous linear ODE: initial value problem  (second-order ODEs / homogeneous)
-forced_oscillator_ivp                Sinusoidally forced linear oscillator: initial value problem  (second-order ODEs / forced equations)
-boundary_value_problem               Linear two-point boundary value problem (constant coefficients)  (second-order ODEs / boundary value problems)
-characteristic_roots                 Second-order constant-coefficient ODE: characteristic roots  (second-order ODEs / homogeneous)
-ode_impulse_response                 Impulse response of a second-order ODE  (Laplace transforms / impulse and step)
-cauchy_euler_ivp                     Cauchy-Euler (equidimensional) equation: initial value problem  (second-order ODEs / variable coefficients)
-ode_step_response                    Unit-step response of a second-order ODE  (Laplace transforms / impulse and step)
-linear_first_order_exponential_forcing First-order linear ODE with exponential forcing  (first-order ODEs / linear equations)
-… 12 more</code></pre>
-<h3>2.4 List the capabilities</h3>
+<h3>2.2 List the capabilities</h3>
 <p>Every capability the program answers: its id (what you pass to solve) and its name.</p>
 <pre><code class="shell">$ differential-equations list
 amplification_factor                     Stability function (amplification factor) of a one-step method
@@ -105,8 +79,8 @@ boundary_value_problem                   Linear two-point boundary value problem
 brusselator_hopf                         Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2
 cauchy_euler_ivp                         Cauchy-Euler (equidimensional) equation: initial value problem
 cfl_condition                            CFL condition for the advection equation (upwind scheme)
-… 69 more</code></pre>
-<h3>2.5 What a capability needs</h3>
+… 67 more</code></pre>
+<h3>2.3 What a capability needs</h3>
 <p>The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.</p>
 <pre><code class="shell">$ differential-equations info second_order_homogeneous_ivp
 Second-order homogeneous linear ODE: initial value problem
@@ -119,57 +93,28 @@ Second-order homogeneous linear ODE: initial value problem
   in   t        time [1]
   out  y        value y(t) [1]
   out  damping  damping case []</code></pre>
-<h3>2.6 Solve</h3>
+<h3>2.4 Solve</h3>
 <p>Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.</p>
 <pre><code class="shell">$ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  y0 = 1
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0</code></pre>
-<h3>2.7 Machine-readable answer</h3>
+<h3>2.5 Machine-readable answer</h3>
 <p>--json prints the same answer as one line of JSON (values in SI): for scripts and other programs.</p>
 <pre><code class="shell">$ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --json
 {&quot;outcome&quot;:&quot;SOLVED&quot;,&quot;message&quot;:&quot;&quot;,&quot;value&quot;:0.600423599106,&quot;unit&quot;:&quot;&quot;,&quot;solved_for&quot;:&quot;y&quot;,&quot;si&quot;:[[&quot;a&quot;,1.0],[&quot;b&quot;,3.0],[&quot;c&quot;,2.0],[&quot;y0&quot;,1.0],[&quot;v0&quot;,0.0],[&quot;t&quot;,1.0]],&quot;values&quot;:[[&quot;y&quot;,0.600423599106,&quot;&quot;],[&quot;damping&quot;,&quot;overdamped&quot;,&quot;&quot;]],&quot;target&quot;:&quot;y&quot;,&quot;phrase&quot;:&quot;value y(t)&quot;,&quot;assumptions&quot;:[&quot;a != 0&quot;],&quot;name&quot;:&quot;Second-order homogeneous linear ODE: initial value problem&quot;,&quot;equation&quot;:&quot;y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant&quot;}</code></pre>
-<h3>2.8 When an input is missing</h3>
+<h3>2.6 When an input is missing</h3>
 <p>No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.</p>
 <pre><code class="shell">$ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0
 NEEDS_INPUT: second_order_homogeneous_ivp needs t (time). Example: solve(&#x27;second_order_homogeneous_ivp&#x27;, a=1, b=3, c=2, y0=1, v0=0, t=1).</code></pre>
-<h3>2.9 Draw the figures</h3>
-<p>The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.</p>
-<pre><code class="shell">$ differential-equations figures second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --out .
-[
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-curve-2&quot;,
-    &quot;title&quot;: &quot;Value at time t against the coefficient c, for three initial values&quot;,
-    &quot;caption&quot;: &quot;y(t) against c from 0.2 to 20 on a logarithmic axis, one curve for each initial value y0 (1, 0.5, 2), 31 points per curve computed by the model, other inputs as entered. Marked: the request, c = 2, y = 0.6004. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-curve-2.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-1&quot;,
-    &quot;title&quot;: &quot;Value y(t) as coefficient of y varies&quot;,
-    &quot;caption&quot;: &quot;Value y(t) as c runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your c = 2 gives y = 0.6004. Shaded by damping case: overdamped, underdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-1.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-2&quot;,
-    &quot;title&quot;: &quot;Damping case over c and b&quot;,
-    &quot;caption&quot;: &quot;Damping case for 121 11 x 11 combinations of c and b around your inputs (the other inputs as entered); the ring marks your inputs, which give overdamped. Blank cells admit no answer. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-2.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-3&quot;,
-    &quot;title&quot;: &quot;Value y(t) as coefficient of y&#x27; varies&quot;,
-    &quot;caption&quot;: &quot;Value y(t) as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives y = 0.6004. Shaded by damping case: underdamped, overdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-3.svg&quot;
-  }
-]</code></pre>
-<h3>2.10 Many questions at once</h3>
+<h3>2.7 Many questions at once</h3>
 <p>One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | differential-equations batch</p>
 <p><code>cases.jsonl</code>:</p>
 <pre><code class="json">{&quot;key&quot;: &quot;second_order_homogeneous_ivp&quot;, &quot;inputs&quot;: {&quot;a&quot;: 1.0, &quot;b&quot;: 3.0, &quot;c&quot;: 2.0, &quot;y0&quot;: 1.0, &quot;v0&quot;: 0.0, &quot;t&quot;: 1.0}}
@@ -195,33 +140,6 @@ out = subprocess.run([&quot;differential-equations&quot;, &quot;batch&quot;], in
 answers = [json.loads(line) for line in out.splitlines()]</code></pre>
 <h2>6. Figures</h2>
 <p><code>differential-equations figures &lt;capability&gt; name=value ... --out DIR</code> draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without <code>--out</code> the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.</p>
-<pre><code class="shell">$ differential-equations figures second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --out .
-[
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-curve-2&quot;,
-    &quot;title&quot;: &quot;Value at time t against the coefficient c, for three initial values&quot;,
-    &quot;caption&quot;: &quot;y(t) against c from 0.2 to 20 on a logarithmic axis, one curve for each initial value y0 (1, 0.5, 2), 31 points per curve computed by the model, other inputs as entered. Marked: the request, c = 2, y = 0.6004. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-curve-2.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-1&quot;,
-    &quot;title&quot;: &quot;Value y(t) as coefficient of y varies&quot;,
-    &quot;caption&quot;: &quot;Value y(t) as c runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your c = 2 gives y = 0.6004. Shaded by damping case: overdamped, underdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-1.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-2&quot;,
-    &quot;title&quot;: &quot;Damping case over c and b&quot;,
-    &quot;caption&quot;: &quot;Damping case for 121 11 x 11 combinations of c and b around your inputs (the other inputs as entered); the ring marks your inputs, which give overdamped. Blank cells admit no answer. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-2.svg&quot;
-  },
-  {
-    &quot;slug&quot;: &quot;second-order-homogeneous-ivp-live-3&quot;,
-    &quot;title&quot;: &quot;Value y(t) as coefficient of y&#x27; varies&quot;,
-    &quot;caption&quot;: &quot;Value y(t) as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives y = 0.6004. Shaded by damping case: underdamped, overdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.&quot;,
-    &quot;file&quot;: &quot;.\\second-order-homogeneous-ivp-live-3.svg&quot;
-  }
-]</code></pre>
 <h2>7. In a web page or Node.js: WebAssembly</h2>
 <p>The same model is a WebAssembly module, <code>differential_equations_ai999x.wasm</code> (https://www.ai999x.com/compute/rust/differential_equations_ai999x.wasm), with a small loader, <code>ax-wasm.js</code> (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.</p>
 <pre><code class="html">&lt;script src=&quot;ax-wasm.js&quot;&gt;&lt;/script&gt;
@@ -245,7 +163,7 @@ lambda_n = 39.4784176
 sqrt_lambda = 6.283185307
 eigenfunction = sin(6.28318530718 x)
   by: Eigenvalues of y&#x27;&#x27; + lambda y = 0 with Dirichlet/Neumann ends  (sin/cos solutions; the boundary conditions quantise sqrt(lambda))
-  L = 1
+  L = 1   []
   bc = dirichlet-dirichlet
   assumes: L &gt; 0; n &gt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation finds the specific energy levels for a vibrating string or heat distribution on an interval of length 1. Applying boundary conditions at both ends shows that the n-th mode has an eigenvalue of 39.4784. The corresponding spatial pattern, known as the eigenfunction, oscillates with a frequency proportional to 6.28319, which dictates how many half-waves fit within the domain.</p>
@@ -258,8 +176,8 @@ eigenfunction = sin(6.28318530718 x)
 lambda_n = 4.115858366
 sqrt_lambda = 2.028757838
   by: Eigenvalues with a Robin (convective) end condition  (bisection for mu cos(mu L) + h sin(mu L) = 0 in ((n - 1/2) pi/L, n pi/L))
-  L = 1
-  h = 1
+  L = 1   []
+  h = 1   []
   assumes: L &gt; 0; h &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation finds the nth eigenvalue for a rod of length 1 losing heat at one end with coefficient 1. The result 4.11586 corresponds to the frequency parameter 2.02876, derived from the transcendental equation governing convective boundary conditions.</p>
 <h4 id="fourier_sine_coefficient">Fourier sine series coefficient (half-range expansion) — <code>fourier_sine_coefficient</code></h4>
@@ -270,7 +188,7 @@ sqrt_lambda = 2.028757838
 <pre><code class="shell">$ differential-equations solve fourier_sine_coefficient &quot;f=x*(1 - x)&quot; L=1 n=1
 b_n = 0.2580122755
   by: Fourier sine series coefficient (half-range expansion)  (exact integration by parts of x^k sin(n pi x / L))
-  L = 1
+  L = 1   []
   f = x*(1 - x)
   assumes: f a polynomial; L &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the Fourier sine series coefficient, denoted as 0.258012, by integrating the product of the initial profile x*(1 - x) and the sine basis function over the domain defined by length 1. The result represents the amplitude of the nth mode in the half-range expansion, which is crucial for solving boundary value problems such as the heat or wave equations with fixed ends. The computation assumes that x*(1 - x) is a polynomial and 1 is strictly positive.</p>
@@ -283,10 +201,10 @@ b_n = 0.2580122755
 u = 0.09616187143
 b_1 = 0.2580122755
   by: Heat equation on a rod with ends at zero: Fourier series value  (separation of variables: u = sum b_n e^{-alpha (n pi/L)^2 t} sin(n pi x/L))
-  L = 1
-  alpha = 1
-  x = 0.5
-  t = 0.1
+  L = 1   []
+  alpha = 1   []
+  x = 0.5   []
+  t = 0.1   []
   f = x*(1 - x)
   assumes: f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the temperature distribution along a rod of length 1 with diffusivity 1, given an initial polynomial profile. By applying separation of variables, the solution is expressed as a truncated Fourier sine series with 10 terms. The resulting temperature value at the specified location and time is 0.0961619, while the first coefficient in this series expansion is 0.258012. This method assumes both ends of the rod are held at zero temperature throughout the process.</p>
@@ -298,10 +216,10 @@ b_1 = 0.2580122755
 <pre><code class="shell">$ differential-equations solve laplace_equation_rectangle f=100 a=1 b=1 N=50 x=0.5 y=0.5
 u = 25
   by: Laplace&#x27;s equation on a rectangle: series value  (u = sum b_n sinh(n pi y/a)/sinh(n pi b/a) sin(n pi x/a))
-  a = 1
-  b = 1
-  x = 0.5
-  y = 0.5
+  a = 1   []
+  b = 1   []
+  x = 0.5   []
+  y = 0.5   []
   f = 100
   assumes: polynomial f; zero on three edges; N terms (stated)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the potential field inside a rectangular domain with width 1 and height 1. The top edge has a specified polynomial profile, while the other three edges are held at zero. Using a truncated series of 50 terms, the resulting value at the specific coordinates x equal to 0.5 and y equal to 0.5 is calculated as 25. This represents the equilibrium state of the system under these boundary conditions.</p>
@@ -313,10 +231,10 @@ u = 25
 <pre><code class="shell">$ differential-equations solve wave_equation_string_series &quot;f=x*(1 - x)&quot; L=1 c=2 N=20 x=0.25 t=0.3
 u = -0.04999289963
   by: Vibrating string with fixed ends: Fourier series value  (u = sum [b_n cos(n pi c t/L) + B_n L/(n pi c) sin(n pi c t/L)] sin(n pi x/L))
-  L = 1
-  c = 2
-  x = 0.25
-  t = 0.3
+  L = 1   []
+  c = 2   []
+  x = 0.25   []
+  t = 0.3   []
   f = x*(1 - x)
   assumes: polynomial f, g; fixed ends; N terms (stated)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the vertical displacement of a string fixed at both ends, given its length 1, wave speed 2, and initial conditions defined by polynomials. The result uses a truncated Fourier series with 20 terms to approximate the motion, yielding a displacement value of -0.0499929 at the specified location 0.25 and moment 0.3. This method ensures that the boundary conditions are met while capturing the oscillatory behavior driven by the initial shape and velocity.</p>
@@ -328,9 +246,9 @@ u = -0.04999289963
 <pre><code class="shell">$ differential-equations solve dalembert_solution &quot;f=sin(x)&quot; g=0 c=2 x=1 t=0.5
 u = 0.4546487134
   by: Wave equation on the whole line: d&#x27;Alembert&#x27;s formula  (u = [f(x - ct) + f(x + ct)]/2 + (1/2c) * integral of g over [x - ct, x + ct] (tanh-sinh quadrature))
-  c = 2
-  x = 1
-  t = 0.5
+  c = 2   []
+  x = 1   []
+  t = 0.5   []
   g = 0
   f = sin(x)
   assumes: c &gt; 0; g integrable</code></pre>
@@ -348,8 +266,8 @@ b_critical = 2
 type = unstable spiral
 stability = unstable
   by: Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2  (Jacobian [[b - 1, a^2], [-b, -a^2]]: trace b - 1 - a^2 changes sign at the Hopf point)
-  a = 1
-  b = 3
+  a = 1   []
+  b = 3   []
   assumes: a, b &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the steady state of the Brusselator system for given parameters a and b. The equilibrium concentrations are found to be 1 for x and 3 for y. The type of this equilibrium is classified as unstable spiral with stability status unstable. A critical threshold for the parameter b is identified at 2, marking the point where a limit cycle emerges through a Hopf bifurcation.</p>
 <h4 id="competing_species_equilibrium">Competing species: coexistence equilibrium and its stability — <code>competing_species_equilibrium</code></h4>
@@ -363,12 +281,12 @@ y_eq = 1
 type = stable node
 stability = asymptotically stable
   by: Competing species: coexistence equilibrium and its stability  (solve the linear nullcline equations exactly; classify the Jacobian there by trace and determinant)
-  a1 = 3
-  b11 = 1
-  b12 = 1
-  a2 = 2
-  b21 = 0.5
-  b22 = 1
+  a1 = 3   []
+  b11 = 1   []
+  b12 = 1   []
+  a2 = 2   []
+  b21 = 0.5   []
+  b22 = 1   []
   assumes: both coexistence values positive; nullclines not parallel</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the population levels where two competing species can stably coexist by solving the linear equations derived from their nullclines. The resulting equilibrium values are 2 for the first species and 1 for the second. Evaluating the Jacobian matrix at this point classifies the stability of this state, which is determined to be asymptotically stable. This indicates whether the system returns to these population levels after small disturbances or diverges away.</p>
 <h4 id="logistic_map_fixed_points">Logistic map: fixed points and their stability — <code>logistic_map_fixed_points</code></h4>
@@ -382,7 +300,7 @@ multipliers = [2.5,-0.5]
 stability = [&quot;unstable&quot;,&quot;stable&quot;]
 count = 2
   by: Logistic map: fixed points and their stability  (x* = 0 and 1 - 1/r; multipliers r and 2 - r)
-  r = 2.5
+  r = 2.5   []
   assumes: 0 &lt; r &lt;= 4</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the equilibrium states of the logistic population model for a specific growth rate. Using the input parameter 2.5, the system identifies the fixed points located at zero and one minus the reciprocal of r. The stability of each point is assessed by evaluating the derivative multiplier, which equals two minus r for the non-zero fixed point. The resulting output [unstable, stable] indicates whether nearby trajectories converge to or diverge from these equilibria, while 2 reports the total number of valid fixed points within the unit interval.</p>
 <h4 id="logistic_map_two_cycle">Logistic map: period-2 cycle and its stability — <code>logistic_map_two_cycle</code></h4>
@@ -396,7 +314,7 @@ q = 0.7994554905
 multiplier = 0.16
 stability = stable
   by: Logistic map: period-2 cycle and its stability  (roots of f(f(x)) = x other than the fixed points)
-  r = 3.2
+  r = 3.2   []
   assumes: 3 &lt; r &lt;= 4</code></pre>
 <p><strong>What the worked example means:</strong> The period-two orbit of the logistic map is computed for parameter r = 3.2. The lower state is p = 0.513045 and the upper state is q = 0.799455. The stability is determined by the multiplier, calculated as f prime at p times f prime at q, which equals 0.16. This value indicates whether the oscillation between these two states persists or decays.</p>
 <h4 id="lorenz_equilibria">Lorenz system: equilibria and stability of the origin — <code>lorenz_equilibria</code></h4>
@@ -410,9 +328,9 @@ count = 3
 x_c = 8.485281375
 z_c = 27
   by: Lorenz system: equilibria and stability of the origin  (nullclines; the origin&#x27;s Jacobian has eigenvalue signs set by rho - 1)
-  sigma = 10
-  rho = 28
-  beta = 2.666666667
+  sigma = 10   []
+  rho = 28   []
+  beta = 2.666666667   []
   assumes: sigma, rho, beta &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the equilibrium states of the Lorenz system using the Prandtl number, Rayleigh parameter, and geometric factor. The number of equilibria found is 3. For the symmetric non-zero equilibria, the horizontal coordinate x is 8.48528 and the vertical coordinate z is 27. The stability of the origin is classified as unstable, which depends on whether the Rayleigh parameter exceeds one.</p>
 <h4 id="lorenz_hopf_threshold">Lorenz system: Hopf threshold rho_H (loss of stability of C+-) — <code>lorenz_hopf_threshold</code></h4>
@@ -423,8 +341,8 @@ z_c = 27
 <pre><code class="shell">$ differential-equations solve lorenz_hopf_threshold sigma=10 beta=2.666666667
 rho_H = 24.73684211
   by: Lorenz system: Hopf threshold rho_H (loss of stability of C+-)  (Routh-Hurwitz on the characteristic cubic at C+-)
-  sigma = 10
-  beta = 2.666666667
+  sigma = 10   []
+  beta = 2.666666667   []
   assumes: sigma &gt; beta + 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the specific value of the Rayleigh parameter at which the non-zero equilibria of the Lorenz system undergo a subcritical Hopf bifurcation. Using the Prandtl number and geometric factor as inputs, the method applies Routh-Hurwitz criteria to the characteristic cubic equation. The resulting threshold, 24.7368, marks the boundary beyond which these fixed points become unstable, leading to complex dynamics and potential chaos.</p>
 <h4 id="lotka_volterra_equilibrium">Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period — <code>lotka_volterra_equilibrium</code></h4>
@@ -438,10 +356,10 @@ y_eq = 10
 omega = 1.224744871
 period = 5.130199321
   by: Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period  (equilibrium of the nullclines; the Jacobian there has eigenvalues +- i sqrt(ac))
-  a = 1
-  b = 0.1
-  c = 1.5
-  d = 0.075
+  a = 1   []
+  b = 0.1   []
+  c = 1.5   []
+  d = 0.075   []
   assumes: a, b, c, d &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the steady state where predator and prey populations balance each other out. Given positive growth, predation, death, and efficiency rates, the equilibrium number of prey is found by dividing the predator death rate by the predator efficiency, resulting in 20. The equilibrium number of predators is the prey growth rate divided by the predation rate, yielding 10. Around this balance point, the system exhibits cyclic behavior. The angular frequency of these small oscillations is 1.22474, which leads to a full cycle duration of 5.1302. This period represents the time it takes for the population dynamics to complete one typical rise and fall cycle near the equilibrium.</p>
 <h4 id="logistic_map_lyapunov">Lyapunov exponent of the logistic map (periodic regime) — <code>logistic_map_lyapunov</code></h4>
@@ -453,8 +371,8 @@ period = 5.130199321
 lyapunov = -0.6931471806
 attractor = fixed point
   by: Lyapunov exponent of the logistic map (periodic regime)  (iterate until settled, then average ln|r (1 - 2 x_k)| over n iterations)
-  r = 2.5
-  x0 = 0.3
+  r = 2.5   []
+  x0 = 0.3   []
   assumes: the orbit settles on a fixed point or 2-cycle (|x_{k+2} - x_k| &lt; 1e-14); n even</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the Lyapunov exponent for the logistic map using parameter 2.5 and initial value 0.3. The method iterates the map until the orbit settles, then averages the natural logarithm of the absolute derivative over 1000 steps. The resulting value of -0.693147 quantifies the average rate at which nearby trajectories converge or diverge. A negative value signifies that the system is stable and attracted to the cycle identified as fixed point.</p>
 <h4 id="nonlinear_equilibrium_type">Nonlinear 2-D system: type of an equilibrium by linearization — <code>nonlinear_equilibrium_type</code></h4>
@@ -469,10 +387,10 @@ jacobian = [[0.0,1.0],[-1.0,-0.5]]
 trace = -0.5
 det = 1
   by: Nonlinear 2-D system: type of an equilibrium by linearization  (exact symbolic Jacobian at the point; trace-determinant classification)
-  x0 = 0
-  y0 = 0
-  f = y
+  x0 = 0   []
+  y0 = 0   []
   g = -sin(x) - 0.5*y
+  f = y
   assumes: (x0, y0) is an equilibrium</code></pre>
 <p><strong>What the worked example means:</strong> For the system defined by y and -sin(x) - 0.5*y, the Jacobian matrix is evaluated at the equilibrium point 0, 0. The resulting matrix has a trace of -0.5 and a determinant of 1. Based on these values, the linearized system exhibits behavior characteristic of a stable spiral. Consequently, the nonlinear system near this point is deemed asymptotically stable, provided the equilibrium is hyperbolic.</p>
 <h4 id="sir_epidemic">SIR epidemic: R0, peak infections and final size — <code>sir_epidemic</code></h4>
@@ -486,10 +404,10 @@ I_max = 0.3038126824
 S_inf = 0.0587973648
 attack_rate = 0.9312026352
   by: SIR epidemic: R0, peak infections and final size  (first integrals: I + S - ln(S)/R0 is conserved; peak at S = 1/R0; final size from ln(S/S0) = R0 (S - S0 - I0))
-  beta = 0.3
-  gamma = 0.1
-  S0 = 0.99
-  I0 = 0.01
+  beta = 0.3   []
+  gamma = 0.1   []
+  S0 = 0.99   []
+  I0 = 0.01   []
   assumes: S0, I0 &gt; 0; S0 + I0 &lt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines key metrics for a Susceptible-Infected-Recovered epidemic model using initial transmission and recovery rates along with starting population fractions. The basic reproduction number, which indicates how many secondary infections one case causes in a fully susceptible population, is computed as 3. Using conservation laws, the maximum proportion of the population that becomes infected simultaneously is found to be 0.303813. Finally, the model solves for the remaining susceptible fraction after the epidemic subsides, yielding 0.0587974, from which the total attack rate is derived.</p>
 <h3>First-order ODES (24)</h3>
@@ -501,8 +419,8 @@ attack_rate = 0.9312026352
 <pre><code class="shell">$ differential-equations solve radiometric_age T=5730 p=0.25
 t = 11460
   by: Age from the fraction remaining (radioactive dating)  (t = T ln(1/p) / ln 2)
-  T = 5730
-  p = 0.25
+  T = 5730   []
+  p = 0.25   []
   assumes: T &gt; 0; 0 &lt; p &lt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the age of a sample by measuring how much radioactive material remains. Given a half-life of 5730 and a remaining fraction of 0.25, the model computes that the elapsed time is 11460. This result indicates how long ago the substance was in its initial state, assuming standard exponential decay behavior.</p>
 <h4 id="bernoulli_equation">Bernoulli equation y&#x27; + p y = q y^n — <code>bernoulli_equation</code></h4>
@@ -513,11 +431,11 @@ t = 11460
 <pre><code class="shell">$ differential-equations solve bernoulli_equation p=1 q=1 n=2 y0=0.5 t=1
 y = 0.2689414214
   by: Bernoulli equation y&#x27; + p y = q y^n  (v = y^{1-n}: v&#x27; + (1-n) p v = (1-n) q, linear)
-  p = 1
-  q = 1
-  n = 2
-  y0 = 0.5
-  t = 1
+  p = 1   []
+  q = 1   []
+  n = 2   []
+  y0 = 0.5   []
+  t = 1   []
   assumes: p != 0; n != 1; y0 &gt; 0; solution stays positive</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value of y(t) for a Bernoulli differential equation using the substitution method. Given the initial condition y0 = 0.5, coefficient p = 1, coefficient q = 1, and exponent n = 2, the model computes the state at time t = 1. The resulting value is 0.268941. This approach converts the nonlinear problem into a linear one, allowing for an explicit solution that describes how the system evolves over time under these specific constant parameters.</p>
 <h4 id="doubling_time">Doubling time or half-life from a rate constant — <code>doubling_time</code></h4>
@@ -529,7 +447,7 @@ y = 0.2689414214
 t_char = 9.902102579
 kind = doubling time
   by: Doubling time or half-life from a rate constant  (solve e^{k t} = 2 (or 1/2): t = ln 2 / |k|)
-  k = 0.07
+  k = 0.07   []
   assumes: k != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the doubling time or half-life from the rate constant. Given a rate constant of 0.07, the resulting characteristic time is 9.9021. This value represents the duration required for the quantity to double if the rate is positive, or to halve if the rate is negative.</p>
 <h4 id="torricelli_draining">Draining tank (Torricelli&#x27;s law): height and emptying time — <code>torricelli_draining</code></h4>
@@ -541,9 +459,9 @@ kind = doubling time
 h = 2.25
 t_empty = 20
   by: Draining tank (Torricelli&#x27;s law): height and emptying time  (separable: sqrt(h) = sqrt(h0) - k t / 2)
-  h0 = 4
-  k = 0.2
-  t = 5
+  h0 = 4   []
+  k = 0.2   []
+  t = 5   []
   assumes: h0 &gt; 0; k &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the remaining water height in a draining tank at a specific moment. Starting from an initial height of 4 and using a drain constant of 0.2, the model predicts that at time 5, the height will be 2.25. It also computes the total duration required for the tank to completely empty, which is 20. These values rely on Torricelli&#x27;s law, assuming the flow rate is proportional to the square root of the current water height.</p>
 <h4 id="quadratic_ode_blowup">Equation y&#x27; = k y^2: solution and blow-up time — <code>quadratic_ode_blowup</code></h4>
@@ -555,9 +473,9 @@ t_empty = 20
 y = 1
 blowup_time = 2
   by: Equation y&#x27; = k y^2: solution and blow-up time  (separate: -1/y = k t - 1/y0)
-  k = 1
-  y0 = 0.5
-  t = 1
+  k = 1   []
+  y0 = 0.5   []
+  t = 1   []
   assumes: t before the blow-up time</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value of the function at a specific time using the formula for this type of growth. The result, 1, represents the state after evolving from the initial condition 0.5 with coefficient 1 over duration 1. Additionally, it identifies the critical moment when the value becomes infinite, known as the blow-up time, which is calculated as 2. This time is valid only if the product of the coefficient and initial value is positive.</p>
 <h4 id="autonomous_equilibria">Equilibria of y&#x27; = f(y) and their stability (phase line) — <code>autonomous_equilibria</code></h4>
@@ -581,9 +499,9 @@ count = 2
 <pre><code class="shell">$ differential-equations solve exponential_growth_value y0=100 k=0.03 t=10
 y = 134.9858808
   by: Exponential growth or decay: value at a time  (separation of variables: y = y0*exp(k*t))
-  y0 = 100
-  k = 0.03
-  t = 10
+  y0 = 100   []
+  k = 0.03   []
+  t = 10   []
   assumes: k &gt; 0 growth, k &lt; 0 decay</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the quantity&#x27;s size at a specific moment by applying exponential growth or decay principles. It uses the initial value 100 and the constant rate parameter 0.03 to compute the result 134.986 after a duration of 10. If the rate is positive, the system grows; if negative, it shrinks. The final figure represents the accumulated change relative to the starting point under these proportional conditions.</p>
 <h4 id="exponential_from_two_points">Exponential model through two measurements — <code>exponential_from_two_points</code></h4>
@@ -595,10 +513,10 @@ y = 134.9858808
 k = 0.3662040962
 y0 = 48.07498568
   by: Exponential model through two measurements  (k = ln(y2/y1)/(t2 - t1), y0 = y1 e^{-k t1})
-  y1 = 100
-  t1 = 2
-  y2 = 300
-  t2 = 5
+  y1 = 100   []
+  t1 = 2   []
+  y2 = 300   []
+  t2 = 5   []
   assumes: t1 != t2; y1, y2 nonzero, same sign</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the parameters of an exponential model that passes exactly through two measured data points. Using the first time 2 with value 100 and the second time 5 with value 300, it computes the growth or decay rate 0.366204 and the theoretical starting value at zero time, 48.075. These outputs allow you to predict the system&#x27;s behavior at any other time based on the assumption of pure exponential change.</p>
 <h4 id="linear_drag_velocity">Falling body with linear drag: velocity — <code>linear_drag_velocity</code></h4>
@@ -610,11 +528,11 @@ y0 = 48.07498568
 v = 20.70433647
 v_terminal = 39.24
   by: Falling body with linear drag: velocity  (linear first-order ODE: v = mg/c + (v0 - mg/c) e^{-ct/m})
-  m = 2
-  c = 0.5
-  g = 9.81
-  v0 = 0
-  t = 3
+  m = 2   []
+  c = 0.5   []
+  g = 9.81   []
+  v0 = 0   []
+  t = 3   []
   assumes: m &gt; 0; c &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the velocity of a falling body at time 3, given its mass 2, drag coefficient 0.5, gravitational acceleration 9.81, and initial velocity 0. The result shows that the current velocity is 20.7043, which approaches the terminal velocity of 39.24 as time increases. This value represents the speed where the downward force of gravity balances the upward drag force.</p>
 <h4 id="quadratic_drag_velocity">Falling body with quadratic drag: velocity — <code>quadratic_drag_velocity</code></h4>
@@ -626,11 +544,11 @@ v_terminal = 39.24
 v = 39.45143246
 v_terminal = 56.02856414
   by: Falling body with quadratic drag: velocity  (separable: v = v_t tanh(g t / v_t + artanh(v0/v_t)) (coth form when v0 &gt; v_t))
-  m = 80
-  c = 0.25
-  g = 9.81
-  v0 = 0
-  t = 5
+  m = 80   []
+  c = 0.25   []
+  g = 9.81   []
+  v0 = 0   []
+  t = 5   []
   assumes: m, c, g &gt; 0; v0 &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the downward velocity of a falling object subject to quadratic air resistance. Given a mass of 80, a drag coefficient of 0.25, and gravitational acceleration of 9.81, the model solves the differential equation for motion starting with an initial velocity of 0. The result, 39.4514, represents the instantaneous speed at time 5, while 56.0286 indicates the maximum constant speed the object will eventually reach as drag balances gravity.</p>
 <h4 id="linear_first_order">First-order linear ODE with constant coefficients (integrating factor) — <code>linear_first_order</code></h4>
@@ -642,10 +560,10 @@ v_terminal = 56.02856414
 y = 2.729329434
 y_steady = 3
   by: First-order linear ODE with constant coefficients (integrating factor)  (integrating factor e^{a t}: y = b/a + (y0 - b/a) e^{-a t})
-  a = 2
-  b = 6
-  y0 = 1
-  t = 1
+  a = 2   []
+  b = 6   []
+  y0 = 1   []
+  t = 1   []
   assumes: a != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value of the dependent variable y at a specific time t using the integrating factor method for a first-order linear ordinary differential equation. The result, 2.72933, reflects the system&#x27;s evolution from its initial condition 1 toward the equilibrium value 3, which is determined by the ratio of the constant forcing b to the coefficient a.</p>
 <h4 id="linear_first_order_exponential_forcing">First-order linear ODE with exponential forcing — <code>linear_first_order_exponential_forcing</code></h4>
@@ -657,11 +575,11 @@ y_steady = 3
 y = 3.443928727
 resonant = false
   by: First-order linear ODE with exponential forcing  (integrating factor: y = b/(a+c) e^{ct} + (y0 - b/(a+c)) e^{-at}; c = -a: (y0 + b t) e^{-at})
-  a = 1
-  b = 2
-  c = 0.5
-  y0 = 0
-  t = 2
+  a = 1   []
+  b = 2   []
+  c = 0.5   []
+  y0 = 0   []
+  t = 2   []
   assumes: any real a, b, c</code></pre>
 <p>In the worked example, a = 1, b = 2, c = 0.5, y0 = 0, t = 2 go through the equation above and give y = 3.443928727, resonant = False. It applies only when any real a, b, c: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="gompertz_growth">Gompertz growth: value at a time — <code>gompertz_growth</code></h4>
@@ -672,10 +590,10 @@ resonant = false
 <pre><code class="shell">$ differential-equations solve gompertz_growth y0=10 r=0.3 K=1000 t=5
 y = 357.881855
   by: Gompertz growth: value at a time  (u = ln(y/K) satisfies u&#x27; = -r u)
-  y0 = 10
-  r = 0.3
-  K = 1000
-  t = 5
+  y0 = 10   []
+  r = 0.3   []
+  K = 1000   []
+  t = 5   []
   assumes: y0 &gt; 0; K &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the population or tumor size y at a specific time t, starting from an initial value y0. It uses the Gompertz growth model where growth slows as the size approaches the carrying capacity K. The result shows that with a growth rate r, the value reaches 357.882 after time t.</p>
 <h4 id="logistic_harvesting">Logistic growth with constant harvesting: equilibria — <code>logistic_harvesting</code></h4>
@@ -690,9 +608,9 @@ H_critical = 125
 stability_high = stable
 stability_low = unstable
   by: Logistic growth with constant harvesting: equilibria  (roots of r y (1 - y/K) = H; sign of f&#x27; at each)
-  r = 0.5
-  K = 1000
-  H = 100
+  r = 0.5   []
+  K = 1000   []
+  H = 100   []
   assumes: r, K &gt; 0; 0 &lt;= H &lt;= rK/4 (otherwise the population collapses)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation finds the population levels where growth balances constant harvesting. The upper stable equilibrium is 723.607, meaning the population tends toward this size if it starts above the lower unstable equilibrium of 276.393. The critical harvest rate, which is the maximum amount that can be taken without causing extinction, is 125. If the actual harvest exceeds this value, the population will collapse to zero.</p>
 <h4 id="logistic_inflection">Logistic growth: inflection time and maximum growth rate — <code>logistic_inflection</code></h4>
@@ -705,9 +623,9 @@ t_inflection = 9.1902397
 P_inflection = 500
 max_rate = 125
   by: Logistic growth: inflection time and maximum growth rate  (P&#x27;&#x27; = 0 at P = K/2; t* = ln(K/P0 - 1)/r)
-  P0 = 10
-  r = 0.5
-  K = 1000
+  P0 = 10   []
+  r = 0.5   []
+  K = 1000   []
   assumes: r &gt; 0; 0 &lt; P0 &lt; K/2</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the inflection point of a logistic growth curve, identifying when the population accelerates most rapidly before deceleration begins. Using the initial population 10, growth rate 0.5, and carrying capacity 1000 shows that the peak growth occurs at time 9.19024. At this specific moment, the population size is exactly half the carrying capacity, or 500, and the rate of change in population is 125. This result assumes standard logistic dynamics where the starting population is below half the carrying capacity.</p>
 <h4 id="logistic_value">Logistic growth: population at a time — <code>logistic_value</code></h4>
@@ -718,10 +636,10 @@ max_rate = 125
 <pre><code class="shell">$ differential-equations solve logistic_value P0=10 r=0.5 K=1000 t=8
 P = 355.4609871
   by: Logistic growth: population at a time  (P = K / (1 + (K/P0 - 1) e^{-r t}))
-  P0 = 10
-  r = 0.5
-  K = 1000
-  t = 8
+  P0 = 10   []
+  r = 0.5   []
+  K = 1000   []
+  t = 8   []
   assumes: P0 &gt; 0; r &gt; 0; K &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the population size at a specific time using the logistic growth model. It takes the initial population 10, the intrinsic growth rate 0.5, and the carrying capacity 1000 to solve for the current population 355.461. The result represents how many individuals exist in the system after time 8 has passed, assuming resources are limited and growth slows as the population nears the maximum sustainable level.</p>
 <h4 id="mixing_tank">Mixing tank (brine): amount of salt at a time — <code>mixing_tank</code></h4>
@@ -734,11 +652,11 @@ A = 7.869386806
 A_limit = 20
 concentration = 0.07869386806
   by: Mixing tank (brine): amount of salt at a time  (A&#x27; = r c_in - (r/V) A: A = c_in V + (A0 - c_in V) e^{-r t/V})
-  V = 100
-  r = 5
-  c_in = 0.2
-  A0 = 0
-  t = 10
+  V = 100   []
+  r = 5   []
+  c_in = 0.2   []
+  A0 = 0   []
+  t = 10   []
   assumes: V &gt; 0; r &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the total mass of solute, denoted as 7.86939, present in a well-stirred tank of constant volume 100 after a duration of 10. The result is derived from the initial amount of solute 0, the constant inflow concentration 0.2, and the flow rate 5. As time progresses, the system moves toward an equilibrium state where the amount of salt stabilizes near the long-run value 20, which represents the product of the tank volume and the inflow concentration.</p>
 <h4 id="newton_cooling_constant">Newton&#x27;s law of cooling: cooling constant from a measurement — <code>newton_cooling_constant</code></h4>
@@ -749,10 +667,10 @@ concentration = 0.07869386806
 <pre><code class="shell">$ differential-equations solve newton_cooling_constant T0=90 Ta=20 T1=60 t1=5
 k = 0.1119231576
   by: Newton&#x27;s law of cooling: cooling constant from a measurement  (k = ln((T0 - Ta)/(T1 - Ta))/t1)
-  T0 = 90
-  Ta = 20
-  T1 = 60
-  t1 = 5
+  T0 = 90   []
+  Ta = 20   []
+  T1 = 60   []
+  t1 = 5   []
   assumes: t1 &gt; 0; T1 strictly between Ta and T0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the cooling constant k for an object using Newton&#x27;s law of cooling. It uses the initial temperature 90, the ambient temperature 20, the temperature read at a later time 60, and the elapsed time 5. The result, 0.111923, quantifies how rapidly the object approaches the surrounding temperature, allowing prediction of future thermal states.</p>
 <h4 id="newton_cooling_temperature">Newton&#x27;s law of cooling: temperature at a time — <code>newton_cooling_temperature</code></h4>
@@ -763,10 +681,10 @@ k = 0.1119231576
 <pre><code class="shell">$ differential-equations solve newton_cooling_temperature T0=90 Ta=20 k=0.1 t=5
 T = 62.45714618
   by: Newton&#x27;s law of cooling: temperature at a time  (T = Ta + (T0 - Ta) e^{-k t})
-  T0 = 90
-  Ta = 20
-  k = 0.1
-  t = 5
+  T0 = 90   []
+  Ta = 20   []
+  k = 0.1   []
+  t = 5   []
   assumes: k &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the object&#x27;s temperature at a specific moment using Newton&#x27;s Law of Cooling. It combines the initial temperature 90, the constant ambient temperature 20, and the cooling rate 0.1 to predict how heat dissipates over time 5. The resulting temperature 62.4571 indicates the object&#x27;s thermal state relative to its surroundings, showing that it moves closer to the ambient level as time progresses.</p>
 <h4 id="newton_cooling_time">Newton&#x27;s law of cooling: time to reach a temperature — <code>newton_cooling_time</code></h4>
@@ -777,10 +695,10 @@ T = 62.45714618
 <pre><code class="shell">$ differential-equations solve newton_cooling_time T1=40 T0=90 Ta=20 k=0.1
 t = 12.52762969
   by: Newton&#x27;s law of cooling: time to reach a temperature  (t = ln((T0 - Ta)/(T1 - Ta))/k)
-  T1 = 40
-  T0 = 90
-  Ta = 20
-  k = 0.1
+  T1 = 40   []
+  T0 = 90   []
+  Ta = 20   []
+  k = 0.1   []
   assumes: k &gt; 0; T1 between Ta and T0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the duration needed for an object to cool or warm from its starting temperature of 90 to a target temperature of 40, given that the surrounding environment maintains a constant ambient temperature of 20. The result relies on a cooling constant of 0.1, which dictates the rate of heat transfer. By applying Newton&#x27;s law of cooling, the model computes that the specific time elapsed is 12.5276. This outcome assumes the process follows standard exponential decay principles where the temperature difference drives the change over time.</p>
 <h4 id="half_life_decay">Radioactive decay from a half-life — <code>half_life_decay</code></h4>
@@ -792,9 +710,9 @@ t = 12.52762969
 N = 10
 k = 0.2310490602
   by: Radioactive decay from a half-life  (N = N0 * 2^(-t/T), k = ln 2 / T)
-  N0 = 80
-  T = 3
-  t = 9
+  N0 = 80   []
+  T = 3   []
+  t = 9   []
   assumes: T &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the quantity of a radioactive substance remaining after a specific elapsed time, given its initial amount and half-life. Using the exponential decay model, the result shows that starting with 80, after 9 has passed with a half-life of 3, the remaining amount is 10. Additionally, the decay constant, which represents the probability of decay per unit time, is calculated as 0.231049.</p>
 <h4 id="separable_power">Separable equation y&#x27; = a t^n y — <code>separable_power</code></h4>
@@ -805,10 +723,10 @@ k = 0.2310490602
 <pre><code class="shell">$ differential-equations solve separable_power a=2 n=1 y0=3 t=1
 y = 8.154845485
   by: Separable equation y&#x27; = a t^n y  (separate: dy/y = a t^n dt, ln(y/y0) = a t^{n+1}/(n+1))
-  a = 2
-  n = 1
-  y0 = 3
-  t = 1
+  a = 2   []
+  n = 1   []
+  y0 = 3   []
+  t = 1   []
   assumes: n &gt;= 0; t &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value of y at time t by solving a separable differential equation where the rate of change depends on a power of time. Starting from the initial condition 3, the method integrates the growth factor over time, resulting in an exponential expression involving the coefficient 2 and the power 1. The final computed value is 8.15485, which represents the state of the system after evolving according to these parameters.</p>
 <h4 id="slope_field">Slope (direction) field value — <code>slope_field</code></h4>
@@ -820,8 +738,8 @@ y = 8.154845485
 slope = 3
 angle_deg = 71.56505118
   by: Slope (direction) field value  (evaluate f; angle = atan(slope))
-  t = 1
-  y = 2
+  t = 1   []
+  y = 2   []
   f = t + y
   assumes: f defined at the point</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the local behavior of solution curves for a first-order differential equation at a specific point. Evaluating the right-hand side function f at the given coordinates t and y gives the instantaneous rate of change, which is the slope 3. This value corresponds to an angle of 71.5651 degrees relative to the horizontal axis. These values help visualize how solutions behave near that point without needing to solve the equation analytically.</p>
@@ -833,9 +751,9 @@ angle_deg = 71.56505118
 <pre><code class="shell">$ differential-equations solve exponential_time_to_reach y0=100 k=0.05 y1=300
 t = 21.97224577
   by: Time for exponential growth or decay to reach a value  (t = ln(y1/y0)/k)
-  y0 = 100
-  k = 0.05
-  y1 = 300
+  y0 = 100   []
+  k = 0.05   []
+  y1 = 300   []
   assumes: k != 0; y1/y0 &gt; 0; the target lies ahead (t &gt;= 0)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the specific moment when an exponentially changing quantity reaches a desired level. Using the initial value 100, the target value 300, and the rate constant 0.05 gives the elapsed time 21.9722. This result represents the duration required for the system to transition from its starting state to the specified endpoint, assuming the growth or decay follows the model dy/dt = k*y.</p>
 <h3>Laplace transforms (7)</h3>
@@ -847,9 +765,9 @@ t = 21.97224577
 <pre><code class="shell">$ differential-equations solve convolution_integral &quot;f=exp(-t)&quot; &quot;g=sin(t)&quot; t=2
 value = 0.7303897733
   by: Convolution integral (f * g)(t)  (adaptive tanh-sinh quadrature of the convolution integral at 20 digits)
-  t = 2
-  f = exp(-t)
+  t = 2   []
   g = sin(t)
+  f = exp(-t)
   assumes: f, g integrable on [0, t]</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the convolution of two functions, f and g, at a specific time t. The method involves integrating the product of one function shifted by the other over the interval from zero to t. For the inputs provided, where the first function is exp(-t) and the second is sin(t), the resulting value of the convolution integral is 0.73039. This quantity represents the combined effect of the two functions up to that moment in time.</p>
 <h4 id="ode_impulse_response">Impulse response of a second-order ODE — <code>ode_impulse_response</code></h4>
@@ -860,10 +778,10 @@ value = 0.7303897733
 <pre><code class="shell">$ differential-equations solve ode_impulse_response a=1 b=2 c=5 t=1
 h = 0.1672559146
   by: Impulse response of a second-order ODE  (the impulse gives y(0+) = 0, y&#x27;(0+) = 1/a; then the homogeneous solution)
-  a = 1
-  b = 2
-  c = 5
-  t = 1
+  a = 1   []
+  b = 2   []
+  c = 5   []
+  t = 1   []
   assumes: a != 0; t &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the impulse response of a second-order linear differential equation. Given the coefficient of the second derivative 1, the coefficient of the first derivative 2, and the constant term 5, the system&#x27;s reaction to an instantaneous unit input is evaluated at time 1. The resulting value 0.167256 represents the magnitude of the system output at that specific moment, characterizing how energy from the impulse dissipates or oscillates over time.</p>
 <h4 id="inverse_laplace_transform">Inverse Laplace transform of a rational function — <code>inverse_laplace_transform</code></h4>
@@ -871,40 +789,21 @@ h = 0.1672559146
 <div class="math">\[f(t) = \sum_{p}\operatorname{Res}_{s=p}\,F(s)e^{st}\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>F</code></td><td>in</td><td>F(s), a rational function of s</td><td>—</td></tr><tr><td><code>t</code></td><td>in</td><td>time (&gt;= 0)</td><td>—</td></tr><tr><td><code>f</code></td><td>out</td><td>value f(t)</td><td>—</td></tr><tr><td><code>poles</code></td><td>out</td><td>poles of F(s) (canonical order)</td><td>—</td></tr></tbody></table>
 <p><strong>Applies when:</strong> F strictly proper with rational coefficients; denominator degree &lt;= 10.</p>
-<pre><code class="shell">$ differential-equations solve inverse_laplace_transform &quot;F=(s + 3)/(s^2 + 3s + 2)&quot; t=1
-f = 0.6004235991
-poles = [-2.0,-1.0]
-  by: Inverse Laplace transform of a rational function  (f(t) = sum over poles p (order m) of the residue of F(s) e^{st}: e^{pt} sum_k g_k t^{m-1-k}/(m-1-k)!)
-  t = 1
-  F = (s + 3)/(s^2 + 3s + 2)
-  assumes: F strictly proper with rational coefficients; denominator degree &lt;= 10</code></pre>
+<p>Run <code>differential-equations info inverse_laplace_transform</code> for its inputs, then <code>differential-equations solve inverse_laplace_transform name=value ...</code>.</p>
 <p><strong>What the worked example means:</strong> This calculation determines the time-domain function f(t) from its Laplace transform F(s). By applying residue calculus to the poles of (s + 3)/(s^2 + 3s + 2), the method computes the value 0.600424 at the specific time 1. The result represents the system&#x27;s response in the time domain, derived from the frequency-domain representation provided by the input function.</p>
 <h4 id="laplace_time_shift">Laplace transform of a delayed function u(t - c) f(t - c) — <code>laplace_time_shift</code></h4>
 <p>Second shifting theorem: the transform of u(t - c) f(t - c) is e^{-cs} F(s).</p>
 <div class="math">\[\mathcal{L}\{u(t - c) f(t - c)\} = e^{-cs}F(s)\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>f</code></td><td>in</td><td>function f(t)</td><td>—</td></tr><tr><td><code>c</code></td><td>in</td><td>delay (&gt;= 0)</td><td>—</td></tr><tr><td><code>s</code></td><td>in</td><td>transform variable</td><td>—</td></tr><tr><td><code>F</code></td><td>out</td><td>transform of the delayed function</td><td>—</td></tr><tr><td><code>G</code></td><td>out</td><td>transform of f itself</td><td>—</td></tr></tbody></table>
 <p><strong>Applies when:</strong> c &gt;= 0; s &gt; abscissa of f.</p>
-<pre><code class="shell">$ differential-equations solve laplace_time_shift f=t c=2 s=1
-F = 0.1353352832
-G = 1
-  by: Laplace transform of a delayed function u(t - c) f(t - c)  (e^{-cs} times the table transform of f)
-  c = 2
-  s = 1
-  f = t
-  assumes: c &gt;= 0; s &gt; abscissa of f</code></pre>
+<p>*Not in <code>differential-equations</code> 1.1.0 yet:* use the Python package or the model&#x27;s page in the browser.</p>
 <p><strong>What the worked example means:</strong> This calculation applies the second shifting theorem to determine the Laplace transform of a function that begins after a delay. Multiplying the transform of the base function, denoted as 1, by an exponential term involving the delay time 2 and the frequency variable 1 gives the final result 0.135335. This method allows practitioners to handle piecewise continuous inputs or signals that are switched on at a specific time.</p>
 <h4 id="laplace_transform">Laplace transform of a function at a point — <code>laplace_transform</code></h4>
 <p>F(s) = integral from 0 to infinity of e^{-st} f(t) dt for sums of t^n e^{at} sin/cos(bt) (also sinh, cosh), and the abscissa of convergence.</p>
 <div class="math">\[\mathcal{L}\{t^n e^{zt}\}(s) = \frac{n!}{(s - z)^{n+1}}\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>f</code></td><td>in</td><td>function f(t)</td><td>—</td></tr><tr><td><code>s</code></td><td>in</td><td>transform variable (s &gt; abscissa)</td><td>—</td></tr><tr><td><code>F</code></td><td>out</td><td>transform value F(s)</td><td>—</td></tr><tr><td><code>sigma</code></td><td>out</td><td>abscissa of convergence (F exists for s &gt; sigma)</td><td>—</td></tr></tbody></table>
 <p><strong>Applies when:</strong> f a sum of t^n e^{at} sin/cos(bt) terms; s &gt; sigma.</p>
-<pre><code class="shell">$ differential-equations solve laplace_transform &quot;f=t^2 e^(3t)&quot; s=5
-F = 0.25
-sigma = 3
-  by: Laplace transform of a function at a point  (table: L{t^n e^{zt}} = n!/(s - z)^{n+1}, with sin and cos written through complex exponentials)
-  s = 5
-  f = t^2 e^(3t)
-  assumes: f a sum of t^n e^{at} sin/cos(bt) terms; s &gt; sigma</code></pre>
+<p>*Not in <code>differential-equations</code> 1.1.0 yet:* use the Python package or the model&#x27;s page in the browser.</p>
 <p><strong>What the worked example means:</strong> This calculation determines the Laplace transform, denoted as F(s), for a function composed of polynomial, exponential, and trigonometric terms. By applying the table formula involving factorials and powers of the difference between s and the complex exponent, the integral from zero to infinity is converted into an algebraic expression. The result, 0.25, represents the frequency-domain equivalent of the time-domain signal t^2 e^(3t) at the specific transform variable value 5. The computed abscissa of convergence, 3, indicates that this transform exists and is valid only when s exceeds this threshold.</p>
 <h4 id="partial_fraction_residues">Partial fractions of a rational function (simple poles) — <code>partial_fraction_residues</code></h4>
 <p>F(s) = sum r_i/(s - p_i): the poles and residues of a strictly proper rational function with simple poles.</p>
@@ -928,10 +827,10 @@ count = 2
 y = 0.1971671902
 final_value = 0.2
   by: Unit-step response of a second-order ODE  (Y(s) = 1/(s(as^2 + bs + c)): constant 1/c plus the homogeneous solution with y(0) = -1/c, y&#x27;(0) = 0)
-  a = 1
-  b = 2
-  c = 5
-  t = 1
+  a = 1   []
+  b = 2   []
+  c = 5   []
+  t = 1   []
   assumes: a, c != 0; t &gt;= 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the time-domain output of a second-order linear system starting from rest when subjected to a constant unit step input. The resulting response, denoted as 0.197167, describes how the system state evolves over time t = 1. For stable systems, this trajectory converges to a steady-state value of 0.2, which represents the long-term effect of the input scaled by the system&#x27;s static gain.</p>
 <h3>Linear systems (4)</h3>
@@ -955,12 +854,7 @@ det = 2
 <div class="math">\[\mathbf{x}(t) = e^{At}\mathbf{x}_0\]</div>
 <table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>A</code></td><td>in</td><td>n x n coefficient matrix</td><td>—</td></tr><tr><td><code>x0</code></td><td>in</td><td>initial vector x(0)</td><td>—</td></tr><tr><td><code>t</code></td><td>in</td><td>time</td><td>—</td></tr><tr><td><code>x</code></td><td>out</td><td>state x(t)</td><td>—</td></tr><tr><td><code>x1</code></td><td>out</td><td>first component of x(t)</td><td>—</td></tr></tbody></table>
 <p><strong>Applies when:</strong> A square, n &lt;= 6.</p>
-<pre><code class="shell">$ differential-equations solve linear_system_solution &quot;A=[[0, 1], [-2, -3]]&quot; &quot;x0=[1, 0]&quot; t=1
-x = [0.600423599106,-0.46508831587]
-x1 = 0.6004235991
-  by: Linear system x&#x27; = A x: solution at a time  (matrix exponential at 30 digits (scaling and squaring of the Taylor series))
-  t = 1
-  assumes: A square, n &lt;= 6</code></pre>
+<p>Run <code>differential-equations info linear_system_solution</code> for its inputs, then <code>differential-equations solve linear_system_solution name=value ...</code>.</p>
 <p><strong>What the worked example means:</strong> This calculation determines the state vector of a linear system at a specific future time. It applies the matrix exponential to the coefficient matrix and initial vector provided as inputs. The resulting state [0.600424, -0.465088] represents the system&#x27;s configuration, where the first component 0.600424 indicates the value of that specific variable at time 1.</p>
 <h4 id="routh_hurwitz">Routh-Hurwitz stability test of a characteristic polynomial — <code>routh_hurwitz</code></h4>
 <p>How many roots of a polynomial lie in the right half plane (Routh array), hence whether the system is asymptotically stable.</p>
@@ -996,9 +890,9 @@ char_poly = [1.0,6.0,11.0,4.0]
 y_n = 0.7180555556
 t_n = 0.2
   by: Backward (implicit) Euler method  (each step solved by Newton&#x27;s method from the explicit Euler predictor)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = -2*y + t
   assumes: h &gt; 0; h*|df/dy| &lt; 1 at each step (unique step)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the approximate state of a system described by a differential equation after a series of implicit steps. It begins with the initial condition 1 at time 0 and advances through 2 steps of size 0.1. The final computed state is 0.718056 at the end time 0.2. Unlike explicit methods, each step requires solving an equation for the future state using Newton&#x27;s method, which provides stability for stiff problems where rapid changes occur.</p>
@@ -1012,9 +906,9 @@ courant = 0.4
 stable = true
 dt_max = 0.025
   by: CFL condition for the advection equation (upwind scheme)  (Courant-Friedrichs-Lewy condition (von Neumann: |1 - C(1 - e^{-i theta})| &lt;= 1))
-  c = 2
-  dt = 0.01
-  dx = 0.05
+  c = 2   []
+  dt = 0.01   []
+  dx = 0.05   []
   assumes: c != 0; dt, dx &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the stability of the explicit upwind finite difference scheme for the advection equation by computing the Courant number from the advection speed, time step, and grid spacing. The resulting Courant number of 0.4 indicates whether the chosen time step satisfies the condition that this value must be less than or equal to one. Since the computed state is yes, the simulation parameters are within the safe range, and the largest permissible time step before instability occurs is calculated as 0.025.</p>
 <h4 id="runge_kutta_4">Classical Runge-Kutta method (RK4) — <code>runge_kutta_4</code></h4>
@@ -1026,9 +920,9 @@ dt_max = 0.025
 y_n = 1.242805142
 t_n = 0.2
   by: Classical Runge-Kutta method (RK4)  (classical RK4 with four slope evaluations per step)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h &gt; 0; 1 &lt;= n &lt;= 10000; f defined along the steps</code></pre>
 <p><strong>What the worked example means:</strong> This calculation uses the classical fourth-order Runge-Kutta method to approximate the solution of a differential equation. Starting from an initial value of 1 at time 0, it advances through 2 steps of size 0.1. The resulting estimate for the dependent variable at the end of the interval is 1.24281, which corresponds to the time 0.2. This method combines four slope evaluations per step to achieve high accuracy while balancing computational effort.</p>
@@ -1040,7 +934,7 @@ t_n = 0.2
 <pre><code class="shell">$ differential-equations solve crank_nicolson_steps &quot;u=[0, 50, 100, 50, 0]&quot; r=1 n=1
 u = [0.0,35.7142857143,42.8571428571,35.7142857143,0.0]
   by: Crank-Nicolson steps for the heat equation  (average of explicit and implicit steps; each step a tridiagonal solve (Thomas algorithm))
-  r = 1
+  r = 1   []
   assumes: Dirichlet ends; r &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the temperature distribution along a rod after a specific number of time intervals. It takes the starting grid values [0, 50, 100, 50, 0], applies the Crank-Nicolson method for 1 steps using the stability parameter 1, and produces the final grid values [0, 35.7143, 42.8571, 35.7143, 0]. The method averages explicit and implicit finite difference schemes to ensure numerical stability regardless of the step size, making it suitable for long-term simulations of heat diffusion.</p>
 <h4 id="euler_method">Euler&#x27;s method — <code>euler_method</code></h4>
@@ -1052,9 +946,9 @@ u = [0.0,35.7142857143,42.8571428571,35.7142857143,0.0]
 y_n = 1.22
 t_n = 0.2
   by: Euler&#x27;s method  (explicit Euler: y_{k+1} = y_k + h f(t_k, y_k))
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h &gt; 0; 1 &lt;= n &lt;= 10000; f defined along the steps</code></pre>
 <p><strong>What the worked example means:</strong> Euler&#x27;s method computes an approximate solution to the differential equation defined by the right-hand side function. Starting from the initial value 1 at time 0, the algorithm advances the solution in discrete steps of size 0.1. After performing 2 such steps, the final time reached is 0.2, and the corresponding estimated value of the dependent variable is 1.22. This result represents a tangent-line approximation that accumulates error over each step but provides a straightforward numerical estimate for the system&#x27;s state.</p>
@@ -1069,9 +963,9 @@ y_exact = 2.718281828
 error = 0.1245393684
 relative_error = 0.04581547324
   by: Euler&#x27;s method error for exponential growth  (Euler on a linear equation multiplies by (1 + hk) per step)
-  k = 1
-  y0 = 1
-  h = 0.1
+  k = 1   []
+  y0 = 1   []
+  h = 0.1   []
   assumes: h &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the numerical solution to an exponential growth equation using Euler&#x27;s method. Given a rate constant of 1 and an initial value of 1, the method advances the solution by a step size of 0.1 for 10 steps. The resulting approximate value is 2.59374, which is compared to the exact analytical result of 2.71828. The difference between these values, known as the global error, is 0.124539, while the relative error is 0.0458155. This comparison quantifies how much the discrete stepping process deviates from the true continuous curve.</p>
 <h4 id="heat_ftcs_steps">Explicit finite-difference (FTCS) steps for the heat equation — <code>heat_ftcs_steps</code></h4>
@@ -1083,7 +977,7 @@ relative_error = 0.04581547324
 u = [0.0,50.0,75.0,50.0,0.0]
 stable_ratio = true
   by: Explicit finite-difference (FTCS) steps for the heat equation  (forward time, centred space)
-  r = 0.25
+  r = 0.25   []
   assumes: Dirichlet ends (held fixed); r &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation advances the solution of the heat equation using the explicit forward-time centered-space method. Starting from initial grid values [0, 50, 100, 50, 0], it applies 1 time steps with a mesh ratio of 0.25. The resulting grid values [0, 50, 75, 50, 0] represent the temperature distribution at the final time step, provided the stability condition yes is met.</p>
 <h4 id="midpoint_method">Explicit midpoint method (RK2) — <code>midpoint_method</code></h4>
@@ -1095,9 +989,9 @@ stable_ratio = true
 y_n = 1.24205
 t_n = 0.2
   by: Explicit midpoint method (RK2)  (second-order Runge-Kutta, slope at the midpoint)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h &gt; 0; 1 &lt;= n &lt;= 10000; f defined along the steps</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines an approximation for the solution of a differential equation using the explicit midpoint method. Starting from the initial condition defined by time 0 and value 1, the algorithm advances through n steps of size h. The resulting estimate for the dependent variable is 1.24205, which represents the solution at the computed final time 0.2. This method improves upon basic Euler approaches by evaluating the slope at the midpoint of each interval, providing a more accurate representation of the curve&#x27;s behavior over the step.</p>
@@ -1110,9 +1004,9 @@ t_n = 0.2
 y_n = 1.24205
 t_n = 0.2
   by: Improved Euler (Heun) method  (Heun predictor-corrector: average the slopes at both ends)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h &gt; 0; 1 &lt;= n &lt;= 10000; f defined along the steps</code></pre>
 <p><strong>What the worked example means:</strong> Using the Improved Euler method approximates the solution to the differential equation by averaging slopes. Starting from initial value 1 at time 0, after taking steps of size 0.1 for a total of 2 iterations, the estimated function value reaches 1.24205 at the final time 0.2. This result reflects how the system evolves under the given derivative rule.</p>
@@ -1125,7 +1019,7 @@ t_n = 0.2
 h_max = 0.1392646782
 z_boundary = -2.785293563
   by: Largest stable step of an explicit method for y&#x27; = lambda y  (bisection for |R(-x)| = 1 on the stability polynomial)
-  lam = -20
+  lam = -20   []
   method = rk4
   assumes: lambda &lt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the maximum time step size, 0.139265, that an explicit numerical method can use while maintaining absolute stability when solving a decaying linear differential equation. The result is derived from the specific stability polynomial of the selected method and the decay rate -20. The intermediate value -2.78529 represents the product of this maximum step and the decay rate, marking the point where the magnitude of the stability function equals one. For standard methods like Euler or RK4, this boundary lies on the negative real axis, ensuring that the numerical solution does not grow unbounded despite the physical decay.</p>
@@ -1139,12 +1033,12 @@ x_n = 0.5403029671
 y_n = -0.8414704778
 t_n = 1
   by: RK4 for a system of two first-order equations  (classical RK4 applied to the vector (x, y))
-  x0 = 1
-  y0 = 0
-  t0 = 0
-  h = 0.1
-  g = -x
+  x0 = 1   []
+  y0 = 0   []
+  t0 = 0   []
+  h = 0.1   []
   f = y
+  g = -x
   assumes: h &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation uses the fourth-order Runge-Kutta method to approximate the solution of a system of two coupled first-order differential equations. Starting from initial values at time 0, it advances through n steps of size 0.1 to compute the state variables x and y. The resulting approximation for x at the final time is 0.540303, and for y it is -0.84147, representing the estimated trajectory of the system.</p>
 <h4 id="amplification_factor">Stability function (amplification factor) of a one-step method — <code>amplification_factor</code></h4>
@@ -1158,8 +1052,8 @@ abs_R = 0.3333333333
 stable = true
 z = -2
   by: Stability function (amplification factor) of a one-step method  (R(z): 1 + z (Euler), 1 + z + z^2/2 (Heun, midpoint), Taylor to z^4/24 (RK4), 1/(1 - z), (1 + z/2)/(1 - z/2))
-  lam = -10
-  h = 0.2
+  lam = -10   []
+  h = 0.2   []
   method = rk4
   assumes: h &gt; 0; real lambda</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the stability function value for the specified one-step method applied to the linear test equation. Substituting the product of the step size and the rate constant into the method&#x27;s specific polynomial or rational form gives the amplification factor 0.333333. The absolute value 0.333333 indicates whether the numerical solution grows or decays per step, while the boolean flag yes confirms if the step remains within the stability region where the magnitude does not exceed unity.</p>
@@ -1173,9 +1067,9 @@ r = 0.4
 stable = true
 dt_max = 0.00125
   by: Stability of the explicit (FTCS) scheme for the heat equation  (von Neumann: G = 1 - 4 r sin^2(theta/2), |G| &lt;= 1 iff r &lt;= 1/2)
-  alpha = 1
-  dt = 0.001
-  dx = 0.05
+  alpha = 1   []
+  dt = 0.001   []
+  dx = 0.05   []
   assumes: alpha, dt, dx &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the stability of the explicit finite difference scheme for the heat equation. It computes the mesh ratio r from the diffusivity, time step, and grid spacing to check if it satisfies the condition that r must be less than or equal to one half. The resulting value of 0.4 indicates whether the numerical solution will remain bounded, while 0.00125 represents the largest time step allowed before instability occurs.</p>
 <h3>Second-order ODES (12)</h3>
@@ -1189,12 +1083,12 @@ y = 2.45
 m1 = -3
 m2 = 2
   by: Cauchy-Euler (equidimensional) equation: initial value problem  (t = e^x turns it into a Y&#x27;&#x27; + (b - a) Y&#x27; + c Y = 0; indicial a m(m-1) + b m + c = 0)
-  a = 1
-  b = 2
-  c = -6
-  y1 = 1
-  v1 = 0
-  t = 2
+  a = 1   []
+  b = 2   []
+  c = -6   []
+  y1 = 1   []
+  v1 = 0   []
+  t = 2   []
   assumes: a != 0; t &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the specific solution for a homogeneous Cauchy-Euler differential equation defined by coefficients 1, 2, and -6. By applying the substitution method, it finds the indicial roots -3 and 2, which characterize the exponential behavior of the system. Using these roots along with the initial conditions 1 for position and 0 for velocity at time one, the model computes the exact state 2.45 at the specified time 2. This result represents the trajectory of the system under the given constraints.</p>
 <h4 id="practical_resonance">Damped oscillator: resonance frequency and peak amplitude — <code>practical_resonance</code></h4>
@@ -1207,10 +1101,10 @@ omega_r = 1.979898987
 amplitude_max = 2.512594538
 has_peak = true
   by: Damped oscillator: resonance frequency and peak amplitude  (minimise (k - m w^2)^2 + (c w)^2 over w: w_r^2 = k/m - c^2/(2m^2))
-  m = 1
-  c = 0.4
-  k = 4
-  F0 = 2
+  m = 1   []
+  c = 0.4   []
+  k = 4   []
+  F0 = 2   []
   assumes: m, c, k &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the forcing frequency that produces the largest steady-state vibration in a damped oscillator. Using the mass, damping coefficient, spring constant, and forcing amplitude, it finds that the resonance occurs at 1.9799, where the system responds with a maximum amplitude of 2.51259. This point represents the optimal energy transfer from the external force to the mechanical system.</p>
 <h4 id="steady_state_amplitude">Forced damped oscillator: steady-state amplitude and phase — <code>steady_state_amplitude</code></h4>
@@ -1223,11 +1117,11 @@ amplitude = 1.050451463
 phase_lag = 0.4048917863
 gain = 0.5252257314
   by: Forced damped oscillator: steady-state amplitude and phase  (|F0| / sqrt((c - a w^2)^2 + (b w)^2), lag atan2(b w, c - a w^2))
-  a = 1
-  b = 0.5
-  c = 4
-  F0 = 2
-  w = 1.5
+  a = 1   []
+  b = 0.5   []
+  c = 4   []
+  F0 = 2   []
+  w = 1.5   []
   assumes: a, b, c &gt; 0; w &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the long-term response of a damped oscillator to a sinusoidal force. Given mass-like coefficient 1, damping 0.5, stiffness 4, forcing amplitude 2, and angular frequency 1.5, it computes the resulting steady-state amplitude as 1.05045 and the phase lag as 0.404892. The gain, representing amplitude per unit force, is 0.525226. These values describe how much the system oscillates and by how much it trails behind the driving force once initial transients have faded.</p>
 <h4 id="boundary_value_problem">Linear two-point boundary value problem (constant coefficients) — <code>boundary_value_problem</code></h4>
@@ -1239,14 +1133,14 @@ gain = 0.5252257314
 y = 0.443409442
 slope_a = 0.8509181282
   by: Linear two-point boundary value problem (constant coefficients)  (particular + homogeneous basis; boundary conditions fix the two constants)
-  p = 0
-  q = -1
-  r = 0
-  xa = 0
-  xb = 1
-  ya = 0
-  yb = 1
-  x = 0.5
+  p = 0   []
+  q = -1   []
+  r = 0   []
+  xa = 0   []
+  xb = 1   []
+  ya = 0   []
+  yb = 1   []
+  x = 0.5   []
   assumes: xa &lt; xb; unique solution (not an eigenvalue case)</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the unique function satisfying the linear boundary value problem across the interval. It combines a particular solution for the non-homogeneous term with homogeneous basis functions to meet the endpoint constraints. The resulting curve passes through the fixed boundaries, yielding a specific height of 0.443409 at the evaluation location and an initial gradient of 0.850918 at the left edge.</p>
 <h4 id="damped_oscillator_parameters">Mass-spring-damper: natural frequency, damping ratio, damped frequency — <code>damped_oscillator_parameters</code></h4>
@@ -1261,9 +1155,9 @@ damping = underdamped
 omega_d = 1.984313483
 period_d = 3.166427765
   by: Mass-spring-damper: natural frequency, damping ratio, damped frequency  (w0 = sqrt(k/m), zeta = c/(2 sqrt(mk)), w_d = w0 sqrt(1 - zeta^2))
-  m = 2
-  c = 1
-  k = 8
+  m = 2   []
+  c = 1   []
+  k = 8   []
   assumes: m &gt; 0; c &gt;= 0; k &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the dynamic characteristics of a mass-spring-damper system using the given mass, damping coefficient, and spring constant. The undamped natural frequency, calculated as the square root of the stiffness divided by the mass, is 2. The damping ratio, which compares the actual damping to the critical damping value, is 0.125. Based on this ratio, the system is classified as underdamped. If the system is underdamped, the damped natural frequency is 1.98431 and the corresponding period is 3.16643.</p>
 <h4 id="characteristic_roots">Second-order constant-coefficient ODE: characteristic roots — <code>characteristic_roots</code></h4>
@@ -1279,9 +1173,9 @@ roots_type = two distinct real roots
 damping = overdamped
 solution_form = y = C1 e^(r1 t) + C2 e^(r2 t)
   by: Second-order constant-coefficient ODE: characteristic roots  (a r^2 + b r + c = 0 (stable quadratic formula); case from the exact sign of b^2 - 4ac)
-  a = 1
-  b = 3
-  c = 2
+  a = 1   []
+  b = 3   []
+  c = 2   []
   assumes: a != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the roots of the characteristic equation for a second-order linear homogeneous differential equation with constant coefficients. Using the input coefficients 1, 3, and 2, the method computes the discriminant 1 to classify the system&#x27;s response. The resulting roots, -2 and -1, define the form of the general solution as y = C1 e^(r1 t) + C2 e^(r2 t). Based on these values, the physical system is identified as overdamped, which describes how the motion or state evolves over time without external forcing.</p>
 <h4 id="second_order_homogeneous_ivp">Second-order homogeneous linear ODE: initial value problem — <code>second_order_homogeneous_ivp</code></h4>
@@ -1293,12 +1187,12 @@ solution_form = y = C1 e^(r1 t) + C2 e^(r2 t)
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  y0 = 1
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the value of the dependent variable y at a specific time t, given the initial position y0 and initial velocity v0. The result 0.600424 reflects the system&#x27;s evolution under the coefficients a, b, and c. The behavior is categorized as overdamped, indicating whether the system returns to equilibrium without oscillation, with oscillation, or in a critical state.</p>
 <h4 id="simple_harmonic_motion">Simple harmonic motion: position, amplitude, period — <code>simple_harmonic_motion</code></h4>
@@ -1312,11 +1206,11 @@ amplitude = 0.1
 omega = 4
 period = 1.570796327
   by: Simple harmonic motion: position, amplitude, period  (x = x0 cos(wt) + (v0/w) sin(wt), w = sqrt(k/m))
-  m = 0.5
-  k = 8
-  x0 = 0.1
-  v0 = 0
-  t = 1
+  m = 0.5   []
+  k = 8   []
+  x0 = 0.1   []
+  v0 = 0   []
+  t = 1   []
   assumes: m, k &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the motion of a simple harmonic oscillator using its mass, spring constant, initial position, and initial velocity. The angular frequency is found to be 4, which leads to a period of 1.5708. At time 1, the position is -0.0653644, while the total energy corresponds to an amplitude of 0.1. These values describe how far the object moves from equilibrium and how quickly it completes one cycle.</p>
 <h4 id="forced_oscillator_ivp">Sinusoidally forced linear oscillator: initial value problem — <code>forced_oscillator_ivp</code></h4>
@@ -1328,14 +1222,14 @@ period = 1.570796327
 y = -0.2095616236
 resonant = true
   by: Sinusoidally forced linear oscillator: initial value problem  (complex amplitude Z = F0/(c - a w^2 + i b w); resonance: y_p = F0/(2aw) t sin(wt); plus homogeneous part)
-  a = 1
-  b = 0
-  c = 4
-  F0 = 1
-  w = 2
-  y0 = 0
-  v0 = 0
-  t = 3
+  a = 1   []
+  b = 0   []
+  c = 4   []
+  F0 = 1   []
+  w = 2   []
+  y0 = 0   []
+  v0 = 0   []
+  t = 3   []
   assumes: a != 0; w &gt; 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the complete time-dependent displacement y of a linear oscillator driven by a sinusoidal force. The result, -0.209562, reflects the balance between the inertial term scaled by coefficient 1, the damping effect from coefficient 0, and the restoring force governed by coefficient 4. The forcing amplitude 1 and angular frequency 2 drive the steady-state component, while initial conditions 0 and 0 shape the transient homogeneous part. If the output flag for resonance is active, it signifies that undamped forcing at the natural frequency causes the amplitude to grow linearly with time t.</p>
 <h4 id="undamped_resonance">Undamped resonance: growing response — <code>undamped_resonance</code></h4>
@@ -1348,10 +1242,10 @@ y = -0.4191232473
 envelope = 1.5
 omega0 = 2
   by: Undamped resonance: growing response  (particular solution t sin(w0 t)/(2 m w0) (secular term))
-  m = 1
-  k = 4
-  F0 = 2
-  t = 3
+  m = 1   []
+  k = 4   []
+  F0 = 2   []
+  t = 3   []
   assumes: m, k &gt; 0; y(0) = y&#x27;(0) = 0</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the response of an undamped oscillator forced at its natural frequency. Starting from rest, the system accumulates energy without dissipation, causing the amplitude to grow linearly over time. The resulting displacement is -0.419123, while the peak amplitude follows an envelope of 1.5. This behavior highlights the instability of resonant systems when damping is absent.</p>
 <h4 id="undetermined_coefficients_exponential">Undetermined coefficients: exponential forcing — <code>undetermined_coefficients_exponential</code></h4>
@@ -1364,14 +1258,14 @@ y = 3.75749617
 A = 0.2
 resonance_multiplicity = 0
   by: Undetermined coefficients: exponential forcing  (y_p = A t^m e^{st}, A = F/P(s), F/P&#x27;(s) or F/(2a); plus the homogeneous solution fitted to the initial values)
-  a = 1
-  b = 3
-  c = 2
-  F = 4
-  s = 3
-  y0 = 0
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  F = 4   []
+  s = 3   []
+  y0 = 0   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0</code></pre>
 <p>In the worked example, a = 1, b = 3, c = 2, F = 4, s = 3, y0 = 0, v0 = 0, t = 1 go through the equation above and give y = 3.75749617, A = 0.2, resonance_multiplicity = 0. It applies only when a != 0: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="undetermined_coefficients_polynomial">Undetermined coefficients: polynomial forcing — <code>undetermined_coefficients_polynomial</code></h4>
@@ -1383,12 +1277,12 @@ resonance_multiplicity = 0
 y = 0.6988313211
 particular = [0.0,2.0]
   by: Undetermined coefficients: polynomial forcing  (match powers of t from the top: c q_k + b (k+1) q_{k+1} + a (k+2)(k+1) q_{k+2} = p_k)
-  a = 1
-  b = 0
-  c = 4
-  y0 = 1
-  v0 = 0
-  t = 0.5
+  a = 1   []
+  b = 0   []
+  c = 4   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 0.5   []
   assumes: a != 0; c != 0; degree &lt;= 4</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines the particular polynomial solution for a linear differential equation with constant coefficients driven by a polynomial forcing term. By matching powers of time, it solves for the coefficients q0 through q4 that satisfy the equation. The resulting general solution combines this particular part with the homogeneous solution to meet initial conditions. For the given inputs, the computed value of y at time t is 0.698831, derived from the coefficient set [0, 2]. This method assumes the leading coefficient a and the constant term c are non-zero, ensuring the system can be solved uniquely for these specific polynomial degrees.</p>
 <p>Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.</p></body></html>

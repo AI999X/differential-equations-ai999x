@@ -1,6 +1,6 @@
 # differential-equations: the Differential Equations program — user guide
 
-**differential-equations-ai999x 1.0.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**differential-equations-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. This guide is about `differential-equations`, the model as a self-contained program for Windows and Linux: 77 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/differential-equations-ai999x/); the Python package (`pip install differential-equations-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -17,24 +17,24 @@ Differential Equations covers first- and second-order ODEs, linear systems, Lapl
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS; the newest version is always under https://www.ai999x.com/downloads/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Differential Equations | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-windows-x86_64.zip |
-| Desktop app: Differential Equations | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Differential Equations | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-windows-x86_64.zip |
+| Desktop app: Differential Equations | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
 Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
 ./ai999x-differential-equations-1.4.0-linux-x86_64/ai999x-differential-equations
@@ -43,8 +43,8 @@ tar xzf ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
 It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 ./ai999x-1.4.0-linux-x86_64/ai999x
@@ -55,8 +55,8 @@ tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
 The bundle holds one program per model; `differential-equations` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
 mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
 echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
@@ -69,8 +69,8 @@ The fourth line should print True.
 
 ```powershell
 $F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
 $D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
@@ -99,43 +99,7 @@ $ differential-equations --version
 differential-equations-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
 ```
 
-### 2.2 Ask in words
-
-Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
-
-```shell
-$ differential-equations ask "Solve y'' + 3y' + 2y = 0 with y(0) = 1, y'(0) = 0; find y(1)."
-Read as: Second-order homogeneous linear ODE: initial value problem
-y = 0.6004235991
-damping = overdamped
-  by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  t = 1
-  v0 = 0
-  y0 = 1
-  assumes: a != 0
-```
-
-### 2.3 Find a capability
-
-Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
-
-```shell
-$ differential-equations search "second-order homogeneous linear ode: initial value problem"
-second_order_homogeneous_ivp         Second-order homogeneous linear ODE: initial value problem  (second-order ODEs / homogeneous)
-forced_oscillator_ivp                Sinusoidally forced linear oscillator: initial value problem  (second-order ODEs / forced equations)
-boundary_value_problem               Linear two-point boundary value problem (constant coefficients)  (second-order ODEs / boundary value problems)
-characteristic_roots                 Second-order constant-coefficient ODE: characteristic roots  (second-order ODEs / homogeneous)
-ode_impulse_response                 Impulse response of a second-order ODE  (Laplace transforms / impulse and step)
-cauchy_euler_ivp                     Cauchy-Euler (equidimensional) equation: initial value problem  (second-order ODEs / variable coefficients)
-ode_step_response                    Unit-step response of a second-order ODE  (Laplace transforms / impulse and step)
-linear_first_order_exponential_forcing First-order linear ODE with exponential forcing  (first-order ODEs / linear equations)
-… 12 more
-```
-
-### 2.4 List the capabilities
+### 2.2 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -149,10 +113,10 @@ boundary_value_problem                   Linear two-point boundary value problem
 brusselator_hopf                         Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2
 cauchy_euler_ivp                         Cauchy-Euler (equidimensional) equation: initial value problem
 cfl_condition                            CFL condition for the advection equation (upwind scheme)
-… 69 more
+… 67 more
 ```
 
-### 2.5 What a capability needs
+### 2.3 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -170,7 +134,7 @@ Second-order homogeneous linear ODE: initial value problem
   out  damping  damping case []
 ```
 
-### 2.6 Solve
+### 2.4 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -179,16 +143,16 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  y0 = 1
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0
 ```
 
-### 2.7 Machine-readable answer
+### 2.5 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -197,7 +161,7 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 {"outcome":"SOLVED","message":"","value":0.600423599106,"unit":"","solved_for":"y","si":[["a",1.0],["b",3.0],["c",2.0],["y0",1.0],["v0",0.0],["t",1.0]],"values":[["y",0.600423599106,""],["damping","overdamped",""]],"target":"y","phrase":"value y(t)","assumptions":["a != 0"],"name":"Second-order homogeneous linear ODE: initial value problem","equation":"y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant"}
 ```
 
-### 2.8 When an input is missing
+### 2.6 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -206,41 +170,7 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 NEEDS_INPUT: second_order_homogeneous_ivp needs t (time). Example: solve('second_order_homogeneous_ivp', a=1, b=3, c=2, y0=1, v0=0, t=1).
 ```
 
-### 2.9 Draw the figures
-
-The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
-
-```shell
-$ differential-equations figures second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --out .
-[
-  {
-    "slug": "second-order-homogeneous-ivp-curve-2",
-    "title": "Value at time t against the coefficient c, for three initial values",
-    "caption": "y(t) against c from 0.2 to 20 on a logarithmic axis, one curve for each initial value y0 (1, 0.5, 2), 31 points per curve computed by the model, other inputs as entered. Marked: the request, c = 2, y = 0.6004. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-curve-2.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-1",
-    "title": "Value y(t) as coefficient of y varies",
-    "caption": "Value y(t) as c runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your c = 2 gives y = 0.6004. Shaded by damping case: overdamped, underdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-1.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-2",
-    "title": "Damping case over c and b",
-    "caption": "Damping case for 121 11 x 11 combinations of c and b around your inputs (the other inputs as entered); the ring marks your inputs, which give overdamped. Blank cells admit no answer. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-2.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-3",
-    "title": "Value y(t) as coefficient of y' varies",
-    "caption": "Value y(t) as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives y = 0.6004. Shaded by damping case: underdamped, overdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-3.svg"
-  }
-]
-```
-
-### 2.10 Many questions at once
+### 2.7 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | differential-equations batch
 
@@ -313,36 +243,6 @@ answers = [json.loads(line) for line in out.splitlines()]
 
 `differential-equations figures <capability> name=value ... --out DIR` draws the live figures for those inputs and writes each as an SVG file into DIR (an existing folder); without `--out` the SVG text comes back as JSON. The desktop app and the model page draw the same figures as soon as you press Compute.
 
-```shell
-$ differential-equations figures second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --out .
-[
-  {
-    "slug": "second-order-homogeneous-ivp-curve-2",
-    "title": "Value at time t against the coefficient c, for three initial values",
-    "caption": "y(t) against c from 0.2 to 20 on a logarithmic axis, one curve for each initial value y0 (1, 0.5, 2), 31 points per curve computed by the model, other inputs as entered. Marked: the request, c = 2, y = 0.6004. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-curve-2.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-1",
-    "title": "Value y(t) as coefficient of y varies",
-    "caption": "Value y(t) as c runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your c = 2 gives y = 0.6004. Shaded by damping case: overdamped, underdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-1.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-2",
-    "title": "Damping case over c and b",
-    "caption": "Damping case for 121 11 x 11 combinations of c and b around your inputs (the other inputs as entered); the ring marks your inputs, which give overdamped. Blank cells admit no answer. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-2.svg"
-  },
-  {
-    "slug": "second-order-homogeneous-ivp-live-3",
-    "title": "Value y(t) as coefficient of y' varies",
-    "caption": "Value y(t) as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives y = 0.6004. Shaded by damping case: underdamped, overdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
-    "file": ".\\second-order-homogeneous-ivp-live-3.svg"
-  }
-]
-```
-
 ## 7. In a web page or Node.js: WebAssembly
 
 The same model is a WebAssembly module, `differential_equations_ai999x.wasm` (https://www.ai999x.com/compute/rust/differential_equations_ai999x.wasm), with a small loader, `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js). It runs in a browser, a Web Worker or Node.js, with no server.
@@ -391,7 +291,7 @@ lambda_n = 39.4784176
 sqrt_lambda = 6.283185307
 eigenfunction = sin(6.28318530718 x)
   by: Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends  (sin/cos solutions; the boundary conditions quantise sqrt(lambda))
-  L = 1
+  L = 1   []
   bc = dirichlet-dirichlet
   assumes: L > 0; n >= 1
 ```
@@ -423,8 +323,8 @@ $ differential-equations solve robin_eigenvalues L=1 h=1 n=1
 lambda_n = 4.115858366
 sqrt_lambda = 2.028757838
   by: Eigenvalues with a Robin (convective) end condition  (bisection for mu cos(mu L) + h sin(mu L) = 0 in ((n - 1/2) pi/L, n pi/L))
-  L = 1
-  h = 1
+  L = 1   []
+  h = 1   []
   assumes: L > 0; h > 0
 ```
 
@@ -453,7 +353,7 @@ $$
 $ differential-equations solve fourier_sine_coefficient "f=x*(1 - x)" L=1 n=1
 b_n = 0.2580122755
   by: Fourier sine series coefficient (half-range expansion)  (exact integration by parts of x^k sin(n pi x / L))
-  L = 1
+  L = 1   []
   f = x*(1 - x)
   assumes: f a polynomial; L > 0
 ```
@@ -488,10 +388,10 @@ $ differential-equations solve heat_equation_series "f=x*(1 - x)" L=1 alpha=1 N=
 u = 0.09616187143
 b_1 = 0.2580122755
   by: Heat equation on a rod with ends at zero: Fourier series value  (separation of variables: u = sum b_n e^{-alpha (n pi/L)^2 t} sin(n pi x/L))
-  L = 1
-  alpha = 1
-  x = 0.5
-  t = 0.1
+  L = 1   []
+  alpha = 1   []
+  x = 0.5   []
+  t = 0.1   []
   f = x*(1 - x)
   assumes: f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated)
 ```
@@ -524,10 +424,10 @@ $$
 $ differential-equations solve laplace_equation_rectangle f=100 a=1 b=1 N=50 x=0.5 y=0.5
 u = 25
   by: Laplace's equation on a rectangle: series value  (u = sum b_n sinh(n pi y/a)/sinh(n pi b/a) sin(n pi x/a))
-  a = 1
-  b = 1
-  x = 0.5
-  y = 0.5
+  a = 1   []
+  b = 1   []
+  x = 0.5   []
+  y = 0.5   []
   f = 100
   assumes: polynomial f; zero on three edges; N terms (stated)
 ```
@@ -561,10 +461,10 @@ $$
 $ differential-equations solve wave_equation_string_series "f=x*(1 - x)" L=1 c=2 N=20 x=0.25 t=0.3
 u = -0.04999289963
   by: Vibrating string with fixed ends: Fourier series value  (u = sum [b_n cos(n pi c t/L) + B_n L/(n pi c) sin(n pi c t/L)] sin(n pi x/L))
-  L = 1
-  c = 2
-  x = 0.25
-  t = 0.3
+  L = 1   []
+  c = 2   []
+  x = 0.25   []
+  t = 0.3   []
   f = x*(1 - x)
   assumes: polynomial f, g; fixed ends; N terms (stated)
 ```
@@ -596,9 +496,9 @@ $$
 $ differential-equations solve dalembert_solution "f=sin(x)" g=0 c=2 x=1 t=0.5
 u = 0.4546487134
   by: Wave equation on the whole line: d'Alembert's formula  (u = [f(x - ct) + f(x + ct)]/2 + (1/2c) * integral of g over [x - ct, x + ct] (tanh-sinh quadrature))
-  c = 2
-  x = 1
-  t = 0.5
+  c = 2   []
+  x = 1   []
+  t = 0.5   []
   g = 0
   f = sin(x)
   assumes: c > 0; g integrable
@@ -638,8 +538,8 @@ b_critical = 2
 type = unstable spiral
 stability = unstable
   by: Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2  (Jacobian [[b - 1, a^2], [-b, -a^2]]: trace b - 1 - a^2 changes sign at the Hopf point)
-  a = 1
-  b = 3
+  a = 1   []
+  b = 3   []
   assumes: a, b > 0
 ```
 
@@ -677,12 +577,12 @@ y_eq = 1
 type = stable node
 stability = asymptotically stable
   by: Competing species: coexistence equilibrium and its stability  (solve the linear nullcline equations exactly; classify the Jacobian there by trace and determinant)
-  a1 = 3
-  b11 = 1
-  b12 = 1
-  a2 = 2
-  b21 = 0.5
-  b22 = 1
+  a1 = 3   []
+  b11 = 1   []
+  b12 = 1   []
+  a2 = 2   []
+  b21 = 0.5   []
+  b22 = 1   []
   assumes: both coexistence values positive; nullclines not parallel
 ```
 
@@ -715,7 +615,7 @@ multipliers = [2.5,-0.5]
 stability = ["unstable","stable"]
 count = 2
   by: Logistic map: fixed points and their stability  (x* = 0 and 1 - 1/r; multipliers r and 2 - r)
-  r = 2.5
+  r = 2.5   []
   assumes: 0 < r <= 4
 ```
 
@@ -748,7 +648,7 @@ q = 0.7994554905
 multiplier = 0.16
 stability = stable
   by: Logistic map: period-2 cycle and its stability  (roots of f(f(x)) = x other than the fixed points)
-  r = 3.2
+  r = 3.2   []
   assumes: 3 < r <= 4
 ```
 
@@ -783,9 +683,9 @@ count = 3
 x_c = 8.485281375
 z_c = 27
   by: Lorenz system: equilibria and stability of the origin  (nullclines; the origin's Jacobian has eigenvalue signs set by rho - 1)
-  sigma = 10
-  rho = 28
-  beta = 2.666666667
+  sigma = 10   []
+  rho = 28   []
+  beta = 2.666666667   []
   assumes: sigma, rho, beta > 0
 ```
 
@@ -813,8 +713,8 @@ $$
 $ differential-equations solve lorenz_hopf_threshold sigma=10 beta=2.666666667
 rho_H = 24.73684211
   by: Lorenz system: Hopf threshold rho_H (loss of stability of C+-)  (Routh-Hurwitz on the characteristic cubic at C+-)
-  sigma = 10
-  beta = 2.666666667
+  sigma = 10   []
+  beta = 2.666666667   []
   assumes: sigma > beta + 1
 ```
 
@@ -850,10 +750,10 @@ y_eq = 10
 omega = 1.224744871
 period = 5.130199321
   by: Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period  (equilibrium of the nullclines; the Jacobian there has eigenvalues +- i sqrt(ac))
-  a = 1
-  b = 0.1
-  c = 1.5
-  d = 0.075
+  a = 1   []
+  b = 0.1   []
+  c = 1.5   []
+  d = 0.075   []
   assumes: a, b, c, d > 0
 ```
 
@@ -884,8 +784,8 @@ $ differential-equations solve logistic_map_lyapunov r=2.5 x0=0.3 n=1000
 lyapunov = -0.6931471806
 attractor = fixed point
   by: Lyapunov exponent of the logistic map (periodic regime)  (iterate until settled, then average ln|r (1 - 2 x_k)| over n iterations)
-  r = 2.5
-  x0 = 0.3
+  r = 2.5   []
+  x0 = 0.3   []
   assumes: the orbit settles on a fixed point or 2-cycle (|x_{k+2} - x_k| < 1e-14); n even
 ```
 
@@ -923,10 +823,10 @@ jacobian = [[0.0,1.0],[-1.0,-0.5]]
 trace = -0.5
 det = 1
   by: Nonlinear 2-D system: type of an equilibrium by linearization  (exact symbolic Jacobian at the point; trace-determinant classification)
-  x0 = 0
-  y0 = 0
-  f = y
+  x0 = 0   []
+  y0 = 0   []
   g = -sin(x) - 0.5*y
+  f = y
   assumes: (x0, y0) is an equilibrium
 ```
 
@@ -962,10 +862,10 @@ I_max = 0.3038126824
 S_inf = 0.0587973648
 attack_rate = 0.9312026352
   by: SIR epidemic: R0, peak infections and final size  (first integrals: I + S - ln(S)/R0 is conserved; peak at S = 1/R0; final size from ln(S/S0) = R0 (S - S0 - I0))
-  beta = 0.3
-  gamma = 0.1
-  S0 = 0.99
-  I0 = 0.01
+  beta = 0.3   []
+  gamma = 0.1   []
+  S0 = 0.99   []
+  I0 = 0.01   []
   assumes: S0, I0 > 0; S0 + I0 <= 1
 ```
 
@@ -995,8 +895,8 @@ $$
 $ differential-equations solve radiometric_age T=5730 p=0.25
 t = 11460
   by: Age from the fraction remaining (radioactive dating)  (t = T ln(1/p) / ln 2)
-  T = 5730
-  p = 0.25
+  T = 5730   []
+  p = 0.25   []
   assumes: T > 0; 0 < p <= 1
 ```
 
@@ -1027,11 +927,11 @@ $$
 $ differential-equations solve bernoulli_equation p=1 q=1 n=2 y0=0.5 t=1
 y = 0.2689414214
   by: Bernoulli equation y' + p y = q y^n  (v = y^{1-n}: v' + (1-n) p v = (1-n) q, linear)
-  p = 1
-  q = 1
-  n = 2
-  y0 = 0.5
-  t = 1
+  p = 1   []
+  q = 1   []
+  n = 2   []
+  y0 = 0.5   []
+  t = 1   []
   assumes: p != 0; n != 1; y0 > 0; solution stays positive
 ```
 
@@ -1060,7 +960,7 @@ $ differential-equations solve doubling_time k=0.07
 t_char = 9.902102579
 kind = doubling time
   by: Doubling time or half-life from a rate constant  (solve e^{k t} = 2 (or 1/2): t = ln 2 / |k|)
-  k = 0.07
+  k = 0.07   []
   assumes: k != 0
 ```
 
@@ -1091,9 +991,9 @@ $ differential-equations solve torricelli_draining h0=4 k=0.2 t=5
 h = 2.25
 t_empty = 20
   by: Draining tank (Torricelli's law): height and emptying time  (separable: sqrt(h) = sqrt(h0) - k t / 2)
-  h0 = 4
-  k = 0.2
-  t = 5
+  h0 = 4   []
+  k = 0.2   []
+  t = 5   []
   assumes: h0 > 0; k > 0
 ```
 
@@ -1124,9 +1024,9 @@ $ differential-equations solve quadratic_ode_blowup k=1 y0=0.5 t=1
 y = 1
 blowup_time = 2
   by: Equation y' = k y^2: solution and blow-up time  (separate: -1/y = k t - 1/y0)
-  k = 1
-  y0 = 0.5
-  t = 1
+  k = 1   []
+  y0 = 0.5   []
+  t = 1   []
   assumes: t before the blow-up time
 ```
 
@@ -1186,9 +1086,9 @@ $$
 $ differential-equations solve exponential_growth_value y0=100 k=0.03 t=10
 y = 134.9858808
   by: Exponential growth or decay: value at a time  (separation of variables: y = y0*exp(k*t))
-  y0 = 100
-  k = 0.03
-  t = 10
+  y0 = 100   []
+  k = 0.03   []
+  t = 10   []
   assumes: k > 0 growth, k < 0 decay
 ```
 
@@ -1220,10 +1120,10 @@ $ differential-equations solve exponential_from_two_points y1=100 t1=2 y2=300 t2
 k = 0.3662040962
 y0 = 48.07498568
   by: Exponential model through two measurements  (k = ln(y2/y1)/(t2 - t1), y0 = y1 e^{-k t1})
-  y1 = 100
-  t1 = 2
-  y2 = 300
-  t2 = 5
+  y1 = 100   []
+  t1 = 2   []
+  y2 = 300   []
+  t2 = 5   []
   assumes: t1 != t2; y1, y2 nonzero, same sign
 ```
 
@@ -1256,11 +1156,11 @@ $ differential-equations solve linear_drag_velocity m=2 c=0.5 g=9.81 v0=0 t=3
 v = 20.70433647
 v_terminal = 39.24
   by: Falling body with linear drag: velocity  (linear first-order ODE: v = mg/c + (v0 - mg/c) e^{-ct/m})
-  m = 2
-  c = 0.5
-  g = 9.81
-  v0 = 0
-  t = 3
+  m = 2   []
+  c = 0.5   []
+  g = 9.81   []
+  v0 = 0   []
+  t = 3   []
   assumes: m > 0; c > 0
 ```
 
@@ -1293,11 +1193,11 @@ $ differential-equations solve quadratic_drag_velocity m=80 c=0.25 g=9.81 v0=0 t
 v = 39.45143246
 v_terminal = 56.02856414
   by: Falling body with quadratic drag: velocity  (separable: v = v_t tanh(g t / v_t + artanh(v0/v_t)) (coth form when v0 > v_t))
-  m = 80
-  c = 0.25
-  g = 9.81
-  v0 = 0
-  t = 5
+  m = 80   []
+  c = 0.25   []
+  g = 9.81   []
+  v0 = 0   []
+  t = 5   []
   assumes: m, c, g > 0; v0 >= 0
 ```
 
@@ -1329,10 +1229,10 @@ $ differential-equations solve linear_first_order a=2 b=6 y0=1 t=1
 y = 2.729329434
 y_steady = 3
   by: First-order linear ODE with constant coefficients (integrating factor)  (integrating factor e^{a t}: y = b/a + (y0 - b/a) e^{-a t})
-  a = 2
-  b = 6
-  y0 = 1
-  t = 1
+  a = 2   []
+  b = 6   []
+  y0 = 1   []
+  t = 1   []
   assumes: a != 0
 ```
 
@@ -1365,11 +1265,11 @@ $ differential-equations solve linear_first_order_exponential_forcing a=1 b=2 c=
 y = 3.443928727
 resonant = false
   by: First-order linear ODE with exponential forcing  (integrating factor: y = b/(a+c) e^{ct} + (y0 - b/(a+c)) e^{-at}; c = -a: (y0 + b t) e^{-at})
-  a = 1
-  b = 2
-  c = 0.5
-  y0 = 0
-  t = 2
+  a = 1   []
+  b = 2   []
+  c = 0.5   []
+  y0 = 0   []
+  t = 2   []
   assumes: any real a, b, c
 ```
 
@@ -1399,10 +1299,10 @@ $$
 $ differential-equations solve gompertz_growth y0=10 r=0.3 K=1000 t=5
 y = 357.881855
   by: Gompertz growth: value at a time  (u = ln(y/K) satisfies u' = -r u)
-  y0 = 10
-  r = 0.3
-  K = 1000
-  t = 5
+  y0 = 10   []
+  r = 0.3   []
+  K = 1000   []
+  t = 5   []
   assumes: y0 > 0; K > 0
 ```
 
@@ -1439,9 +1339,9 @@ H_critical = 125
 stability_high = stable
 stability_low = unstable
   by: Logistic growth with constant harvesting: equilibria  (roots of r y (1 - y/K) = H; sign of f' at each)
-  r = 0.5
-  K = 1000
-  H = 100
+  r = 0.5   []
+  K = 1000   []
+  H = 100   []
   assumes: r, K > 0; 0 <= H <= rK/4 (otherwise the population collapses)
 ```
 
@@ -1474,9 +1374,9 @@ t_inflection = 9.1902397
 P_inflection = 500
 max_rate = 125
   by: Logistic growth: inflection time and maximum growth rate  (P'' = 0 at P = K/2; t* = ln(K/P0 - 1)/r)
-  P0 = 10
-  r = 0.5
-  K = 1000
+  P0 = 10   []
+  r = 0.5   []
+  K = 1000   []
   assumes: r > 0; 0 < P0 < K/2
 ```
 
@@ -1506,10 +1406,10 @@ $$
 $ differential-equations solve logistic_value P0=10 r=0.5 K=1000 t=8
 P = 355.4609871
   by: Logistic growth: population at a time  (P = K / (1 + (K/P0 - 1) e^{-r t}))
-  P0 = 10
-  r = 0.5
-  K = 1000
-  t = 8
+  P0 = 10   []
+  r = 0.5   []
+  K = 1000   []
+  t = 8   []
   assumes: P0 > 0; r > 0; K > 0
 ```
 
@@ -1544,11 +1444,11 @@ A = 7.869386806
 A_limit = 20
 concentration = 0.07869386806
   by: Mixing tank (brine): amount of salt at a time  (A' = r c_in - (r/V) A: A = c_in V + (A0 - c_in V) e^{-r t/V})
-  V = 100
-  r = 5
-  c_in = 0.2
-  A0 = 0
-  t = 10
+  V = 100   []
+  r = 5   []
+  c_in = 0.2   []
+  A0 = 0   []
+  t = 10   []
   assumes: V > 0; r > 0
 ```
 
@@ -1578,10 +1478,10 @@ $$
 $ differential-equations solve newton_cooling_constant T0=90 Ta=20 T1=60 t1=5
 k = 0.1119231576
   by: Newton's law of cooling: cooling constant from a measurement  (k = ln((T0 - Ta)/(T1 - Ta))/t1)
-  T0 = 90
-  Ta = 20
-  T1 = 60
-  t1 = 5
+  T0 = 90   []
+  Ta = 20   []
+  T1 = 60   []
+  t1 = 5   []
   assumes: t1 > 0; T1 strictly between Ta and T0
 ```
 
@@ -1611,10 +1511,10 @@ $$
 $ differential-equations solve newton_cooling_temperature T0=90 Ta=20 k=0.1 t=5
 T = 62.45714618
   by: Newton's law of cooling: temperature at a time  (T = Ta + (T0 - Ta) e^{-k t})
-  T0 = 90
-  Ta = 20
-  k = 0.1
-  t = 5
+  T0 = 90   []
+  Ta = 20   []
+  k = 0.1   []
+  t = 5   []
   assumes: k > 0
 ```
 
@@ -1644,10 +1544,10 @@ $$
 $ differential-equations solve newton_cooling_time T1=40 T0=90 Ta=20 k=0.1
 t = 12.52762969
   by: Newton's law of cooling: time to reach a temperature  (t = ln((T0 - Ta)/(T1 - Ta))/k)
-  T1 = 40
-  T0 = 90
-  Ta = 20
-  k = 0.1
+  T1 = 40   []
+  T0 = 90   []
+  Ta = 20   []
+  k = 0.1   []
   assumes: k > 0; T1 between Ta and T0
 ```
 
@@ -1678,9 +1578,9 @@ $ differential-equations solve half_life_decay N0=80 T=3 t=9
 N = 10
 k = 0.2310490602
   by: Radioactive decay from a half-life  (N = N0 * 2^(-t/T), k = ln 2 / T)
-  N0 = 80
-  T = 3
-  t = 9
+  N0 = 80   []
+  T = 3   []
+  t = 9   []
   assumes: T > 0
 ```
 
@@ -1710,10 +1610,10 @@ $$
 $ differential-equations solve separable_power a=2 n=1 y0=3 t=1
 y = 8.154845485
   by: Separable equation y' = a t^n y  (separate: dy/y = a t^n dt, ln(y/y0) = a t^{n+1}/(n+1))
-  a = 2
-  n = 1
-  y0 = 3
-  t = 1
+  a = 2   []
+  n = 1   []
+  y0 = 3   []
+  t = 1   []
   assumes: n >= 0; t >= 0
 ```
 
@@ -1744,8 +1644,8 @@ $ differential-equations solve slope_field "f=t + y" t=1 y=2
 slope = 3
 angle_deg = 71.56505118
   by: Slope (direction) field value  (evaluate f; angle = atan(slope))
-  t = 1
-  y = 2
+  t = 1   []
+  y = 2   []
   f = t + y
   assumes: f defined at the point
 ```
@@ -1775,9 +1675,9 @@ $$
 $ differential-equations solve exponential_time_to_reach y0=100 k=0.05 y1=300
 t = 21.97224577
   by: Time for exponential growth or decay to reach a value  (t = ln(y1/y0)/k)
-  y0 = 100
-  k = 0.05
-  y1 = 300
+  y0 = 100   []
+  k = 0.05   []
+  y1 = 300   []
   assumes: k != 0; y1/y0 > 0; the target lies ahead (t >= 0)
 ```
 
@@ -1808,9 +1708,9 @@ $$
 $ differential-equations solve convolution_integral "f=exp(-t)" "g=sin(t)" t=2
 value = 0.7303897733
   by: Convolution integral (f * g)(t)  (adaptive tanh-sinh quadrature of the convolution integral at 20 digits)
-  t = 2
-  f = exp(-t)
+  t = 2   []
   g = sin(t)
+  f = exp(-t)
   assumes: f, g integrable on [0, t]
 ```
 
@@ -1840,10 +1740,10 @@ $$
 $ differential-equations solve ode_impulse_response a=1 b=2 c=5 t=1
 h = 0.1672559146
   by: Impulse response of a second-order ODE  (the impulse gives y(0+) = 0, y'(0+) = 1/a; then the homogeneous solution)
-  a = 1
-  b = 2
-  c = 5
-  t = 1
+  a = 1   []
+  b = 2   []
+  c = 5   []
+  t = 1   []
   assumes: a != 0; t >= 0
 ```
 
@@ -1868,15 +1768,7 @@ $$
 
 **Applies when:** F strictly proper with rational coefficients; denominator degree <= 10.
 
-```shell
-$ differential-equations solve inverse_laplace_transform "F=(s + 3)/(s^2 + 3s + 2)" t=1
-f = 0.6004235991
-poles = [-2.0,-1.0]
-  by: Inverse Laplace transform of a rational function  (f(t) = sum over poles p (order m) of the residue of F(s) e^{st}: e^{pt} sum_k g_k t^{m-1-k}/(m-1-k)!)
-  t = 1
-  F = (s + 3)/(s^2 + 3s + 2)
-  assumes: F strictly proper with rational coefficients; denominator degree <= 10
-```
+Run `differential-equations info inverse_laplace_transform` for its inputs, then `differential-equations solve inverse_laplace_transform name=value ...`.
 
 **What the worked example means:** This calculation determines the time-domain function f(t) from its Laplace transform F(s). By applying residue calculus to the poles of (s + 3)/(s^2 + 3s + 2), the method computes the value 0.600424 at the specific time 1. The result represents the system's response in the time domain, derived from the frequency-domain representation provided by the input function.
 
@@ -1900,16 +1792,7 @@ $$
 
 **Applies when:** c >= 0; s > abscissa of f.
 
-```shell
-$ differential-equations solve laplace_time_shift f=t c=2 s=1
-F = 0.1353352832
-G = 1
-  by: Laplace transform of a delayed function u(t - c) f(t - c)  (e^{-cs} times the table transform of f)
-  c = 2
-  s = 1
-  f = t
-  assumes: c >= 0; s > abscissa of f
-```
+*Not in `differential-equations` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation applies the second shifting theorem to determine the Laplace transform of a function that begins after a delay. Multiplying the transform of the base function, denoted as 1, by an exponential term involving the delay time 2 and the frequency variable 1 gives the final result 0.135335. This method allows practitioners to handle piecewise continuous inputs or signals that are switched on at a specific time.
 
@@ -1932,15 +1815,7 @@ $$
 
 **Applies when:** f a sum of t^n e^{at} sin/cos(bt) terms; s > sigma.
 
-```shell
-$ differential-equations solve laplace_transform "f=t^2 e^(3t)" s=5
-F = 0.25
-sigma = 3
-  by: Laplace transform of a function at a point  (table: L{t^n e^{zt}} = n!/(s - z)^{n+1}, with sin and cos written through complex exponentials)
-  s = 5
-  f = t^2 e^(3t)
-  assumes: f a sum of t^n e^{at} sin/cos(bt) terms; s > sigma
-```
+*Not in `differential-equations` 1.1.0 yet:* use the Python package or the model's page in the browser.
 
 **What the worked example means:** This calculation determines the Laplace transform, denoted as F(s), for a function composed of polynomial, exponential, and trigonometric terms. By applying the table formula involving factorials and powers of the difference between s and the complex exponent, the integral from zero to infinity is converted into an algebraic expression. The result, 0.25, represents the frequency-domain equivalent of the time-domain signal t^2 e^(3t) at the specific transform variable value 5. The computed abscissa of convergence, 3, indicates that this transform exists and is valid only when s exceeds this threshold.
 
@@ -2001,10 +1876,10 @@ $ differential-equations solve ode_step_response a=1 b=2 c=5 t=1
 y = 0.1971671902
 final_value = 0.2
   by: Unit-step response of a second-order ODE  (Y(s) = 1/(s(as^2 + bs + c)): constant 1/c plus the homogeneous solution with y(0) = -1/c, y'(0) = 0)
-  a = 1
-  b = 2
-  c = 5
-  t = 1
+  a = 1   []
+  b = 2   []
+  c = 5   []
+  t = 1   []
   assumes: a, c != 0; t >= 0
 ```
 
@@ -2068,14 +1943,7 @@ $$
 
 **Applies when:** A square, n <= 6.
 
-```shell
-$ differential-equations solve linear_system_solution "A=[[0, 1], [-2, -3]]" "x0=[1, 0]" t=1
-x = [0.600423599106,-0.46508831587]
-x1 = 0.6004235991
-  by: Linear system x' = A x: solution at a time  (matrix exponential at 30 digits (scaling and squaring of the Taylor series))
-  t = 1
-  assumes: A square, n <= 6
-```
+Run `differential-equations info linear_system_solution` for its inputs, then `differential-equations solve linear_system_solution name=value ...`.
 
 **What the worked example means:** This calculation determines the state vector of a linear system at a specific future time. It applies the matrix exponential to the coefficient matrix and initial vector provided as inputs. The resulting state [0.600424, -0.465088] represents the system's configuration, where the first component 0.600424 indicates the value of that specific variable at time 1.
 
@@ -2168,9 +2036,9 @@ $ differential-equations solve backward_euler_method "f=-2*y + t" y0=1 h=0.1 n=2
 y_n = 0.7180555556
 t_n = 0.2
   by: Backward (implicit) Euler method  (each step solved by Newton's method from the explicit Euler predictor)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = -2*y + t
   assumes: h > 0; h*|df/dy| < 1 at each step (unique step)
 ```
@@ -2204,9 +2072,9 @@ courant = 0.4
 stable = true
 dt_max = 0.025
   by: CFL condition for the advection equation (upwind scheme)  (Courant-Friedrichs-Lewy condition (von Neumann: |1 - C(1 - e^{-i theta})| <= 1))
-  c = 2
-  dt = 0.01
-  dx = 0.05
+  c = 2   []
+  dt = 0.01   []
+  dx = 0.05   []
   assumes: c != 0; dt, dx > 0
 ```
 
@@ -2239,9 +2107,9 @@ $ differential-equations solve runge_kutta_4 "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.242805142
 t_n = 0.2
   by: Classical Runge-Kutta method (RK4)  (classical RK4 with four slope evaluations per step)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2271,7 +2139,7 @@ $$
 $ differential-equations solve crank_nicolson_steps "u=[0, 50, 100, 50, 0]" r=1 n=1
 u = [0.0,35.7142857143,42.8571428571,35.7142857143,0.0]
   by: Crank-Nicolson steps for the heat equation  (average of explicit and implicit steps; each step a tridiagonal solve (Thomas algorithm))
-  r = 1
+  r = 1   []
   assumes: Dirichlet ends; r > 0
 ```
 
@@ -2304,9 +2172,9 @@ $ differential-equations solve euler_method "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.22
 t_n = 0.2
   by: Euler's method  (explicit Euler: y_{k+1} = y_k + h f(t_k, y_k))
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2343,9 +2211,9 @@ y_exact = 2.718281828
 error = 0.1245393684
 relative_error = 0.04581547324
   by: Euler's method error for exponential growth  (Euler on a linear equation multiplies by (1 + hk) per step)
-  k = 1
-  y0 = 1
-  h = 0.1
+  k = 1   []
+  y0 = 1   []
+  h = 0.1   []
   assumes: h > 0
 ```
 
@@ -2376,7 +2244,7 @@ $ differential-equations solve heat_ftcs_steps "u=[0, 50, 100, 50, 0]" r=0.25 n=
 u = [0.0,50.0,75.0,50.0,0.0]
 stable_ratio = true
   by: Explicit finite-difference (FTCS) steps for the heat equation  (forward time, centred space)
-  r = 0.25
+  r = 0.25   []
   assumes: Dirichlet ends (held fixed); r > 0
 ```
 
@@ -2409,9 +2277,9 @@ $ differential-equations solve midpoint_method "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.24205
 t_n = 0.2
   by: Explicit midpoint method (RK2)  (second-order Runge-Kutta, slope at the midpoint)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2445,9 +2313,9 @@ $ differential-equations solve improved_euler_method "f=t + y" y0=1 h=0.1 n=2 t0
 y_n = 1.24205
 t_n = 0.2
   by: Improved Euler (Heun) method  (Heun predictor-corrector: average the slopes at both ends)
-  y0 = 1
-  h = 0.1
-  t0 = 0
+  y0 = 1   []
+  h = 0.1   []
+  t0 = 0   []
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2478,7 +2346,7 @@ $ differential-equations solve explicit_step_limit lam=-20 method=rk4
 h_max = 0.1392646782
 z_boundary = -2.785293563
   by: Largest stable step of an explicit method for y' = lambda y  (bisection for |R(-x)| = 1 on the stability polynomial)
-  lam = -20
+  lam = -20   []
   method = rk4
   assumes: lambda < 0
 ```
@@ -2516,12 +2384,12 @@ x_n = 0.5403029671
 y_n = -0.8414704778
 t_n = 1
   by: RK4 for a system of two first-order equations  (classical RK4 applied to the vector (x, y))
-  x0 = 1
-  y0 = 0
-  t0 = 0
-  h = 0.1
-  g = -x
+  x0 = 1   []
+  y0 = 0   []
+  t0 = 0   []
+  h = 0.1   []
   f = y
+  g = -x
   assumes: h > 0
 ```
 
@@ -2556,8 +2424,8 @@ abs_R = 0.3333333333
 stable = true
 z = -2
   by: Stability function (amplification factor) of a one-step method  (R(z): 1 + z (Euler), 1 + z + z^2/2 (Heun, midpoint), Taylor to z^4/24 (RK4), 1/(1 - z), (1 + z/2)/(1 - z/2))
-  lam = -10
-  h = 0.2
+  lam = -10   []
+  h = 0.2   []
   method = rk4
   assumes: h > 0; real lambda
 ```
@@ -2591,9 +2459,9 @@ r = 0.4
 stable = true
 dt_max = 0.00125
   by: Stability of the explicit (FTCS) scheme for the heat equation  (von Neumann: G = 1 - 4 r sin^2(theta/2), |G| <= 1 iff r <= 1/2)
-  alpha = 1
-  dt = 0.001
-  dx = 0.05
+  alpha = 1   []
+  dt = 0.001   []
+  dx = 0.05   []
   assumes: alpha, dt, dx > 0
 ```
 
@@ -2631,12 +2499,12 @@ y = 2.45
 m1 = -3
 m2 = 2
   by: Cauchy-Euler (equidimensional) equation: initial value problem  (t = e^x turns it into a Y'' + (b - a) Y' + c Y = 0; indicial a m(m-1) + b m + c = 0)
-  a = 1
-  b = 2
-  c = -6
-  y1 = 1
-  v1 = 0
-  t = 2
+  a = 1   []
+  b = 2   []
+  c = -6   []
+  y1 = 1   []
+  v1 = 0   []
+  t = 2   []
   assumes: a != 0; t > 0
 ```
 
@@ -2670,10 +2538,10 @@ omega_r = 1.979898987
 amplitude_max = 2.512594538
 has_peak = true
   by: Damped oscillator: resonance frequency and peak amplitude  (minimise (k - m w^2)^2 + (c w)^2 over w: w_r^2 = k/m - c^2/(2m^2))
-  m = 1
-  c = 0.4
-  k = 4
-  F0 = 2
+  m = 1   []
+  c = 0.4   []
+  k = 4   []
+  F0 = 2   []
   assumes: m, c, k > 0
 ```
 
@@ -2708,11 +2576,11 @@ amplitude = 1.050451463
 phase_lag = 0.4048917863
 gain = 0.5252257314
   by: Forced damped oscillator: steady-state amplitude and phase  (|F0| / sqrt((c - a w^2)^2 + (b w)^2), lag atan2(b w, c - a w^2))
-  a = 1
-  b = 0.5
-  c = 4
-  F0 = 2
-  w = 1.5
+  a = 1   []
+  b = 0.5   []
+  c = 4   []
+  F0 = 2   []
+  w = 1.5   []
   assumes: a, b, c > 0; w > 0
 ```
 
@@ -2748,14 +2616,14 @@ $ differential-equations solve boundary_value_problem p=0 q=-1 r=0 xa=0 xb=1 ya=
 y = 0.443409442
 slope_a = 0.8509181282
   by: Linear two-point boundary value problem (constant coefficients)  (particular + homogeneous basis; boundary conditions fix the two constants)
-  p = 0
-  q = -1
-  r = 0
-  xa = 0
-  xb = 1
-  ya = 0
-  yb = 1
-  x = 0.5
+  p = 0   []
+  q = -1   []
+  r = 0   []
+  xa = 0   []
+  xb = 1   []
+  ya = 0   []
+  yb = 1   []
+  x = 0.5   []
   assumes: xa < xb; unique solution (not an eigenvalue case)
 ```
 
@@ -2792,9 +2660,9 @@ damping = underdamped
 omega_d = 1.984313483
 period_d = 3.166427765
   by: Mass-spring-damper: natural frequency, damping ratio, damped frequency  (w0 = sqrt(k/m), zeta = c/(2 sqrt(mk)), w_d = w0 sqrt(1 - zeta^2))
-  m = 2
-  c = 1
-  k = 8
+  m = 2   []
+  c = 1   []
+  k = 8   []
   assumes: m > 0; c >= 0; k > 0
 ```
 
@@ -2833,9 +2701,9 @@ roots_type = two distinct real roots
 damping = overdamped
 solution_form = y = C1 e^(r1 t) + C2 e^(r2 t)
   by: Second-order constant-coefficient ODE: characteristic roots  (a r^2 + b r + c = 0 (stable quadratic formula); case from the exact sign of b^2 - 4ac)
-  a = 1
-  b = 3
-  c = 2
+  a = 1   []
+  b = 3   []
+  c = 2   []
   assumes: a != 0
 ```
 
@@ -2869,12 +2737,12 @@ $ differential-equations solve second_order_homogeneous_ivp a=1 b=3 c=2 y0=1 v0=
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1
-  b = 3
-  c = 2
-  y0 = 1
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0
 ```
 
@@ -2911,11 +2779,11 @@ amplitude = 0.1
 omega = 4
 period = 1.570796327
   by: Simple harmonic motion: position, amplitude, period  (x = x0 cos(wt) + (v0/w) sin(wt), w = sqrt(k/m))
-  m = 0.5
-  k = 8
-  x0 = 0.1
-  v0 = 0
-  t = 1
+  m = 0.5   []
+  k = 8   []
+  x0 = 0.1   []
+  v0 = 0   []
+  t = 1   []
   assumes: m, k > 0
 ```
 
@@ -2951,14 +2819,14 @@ $ differential-equations solve forced_oscillator_ivp a=1 b=0 c=4 F0=1 w=2 y0=0 v
 y = -0.2095616236
 resonant = true
   by: Sinusoidally forced linear oscillator: initial value problem  (complex amplitude Z = F0/(c - a w^2 + i b w); resonance: y_p = F0/(2aw) t sin(wt); plus homogeneous part)
-  a = 1
-  b = 0
-  c = 4
-  F0 = 1
-  w = 2
-  y0 = 0
-  v0 = 0
-  t = 3
+  a = 1   []
+  b = 0   []
+  c = 4   []
+  F0 = 1   []
+  w = 2   []
+  y0 = 0   []
+  v0 = 0   []
+  t = 3   []
   assumes: a != 0; w > 0
 ```
 
@@ -2992,10 +2860,10 @@ y = -0.4191232473
 envelope = 1.5
 omega0 = 2
   by: Undamped resonance: growing response  (particular solution t sin(w0 t)/(2 m w0) (secular term))
-  m = 1
-  k = 4
-  F0 = 2
-  t = 3
+  m = 1   []
+  k = 4   []
+  F0 = 2   []
+  t = 3   []
   assumes: m, k > 0; y(0) = y'(0) = 0
 ```
 
@@ -3033,14 +2901,14 @@ y = 3.75749617
 A = 0.2
 resonance_multiplicity = 0
   by: Undetermined coefficients: exponential forcing  (y_p = A t^m e^{st}, A = F/P(s), F/P'(s) or F/(2a); plus the homogeneous solution fitted to the initial values)
-  a = 1
-  b = 3
-  c = 2
-  F = 4
-  s = 3
-  y0 = 0
-  v0 = 0
-  t = 1
+  a = 1   []
+  b = 3   []
+  c = 2   []
+  F = 4   []
+  s = 3   []
+  y0 = 0   []
+  v0 = 0   []
+  t = 1   []
   assumes: a != 0
 ```
 
@@ -3075,12 +2943,12 @@ $ differential-equations solve undetermined_coefficients_polynomial "p=[0, 8]" a
 y = 0.6988313211
 particular = [0.0,2.0]
   by: Undetermined coefficients: polynomial forcing  (match powers of t from the top: c q_k + b (k+1) q_{k+1} + a (k+2)(k+1) q_{k+2} = p_k)
-  a = 1
-  b = 0
-  c = 4
-  y0 = 1
-  v0 = 0
-  t = 0.5
+  a = 1   []
+  b = 0   []
+  c = 4   []
+  y0 = 1   []
+  v0 = 0   []
+  t = 0.5   []
   assumes: a != 0; c != 0; degree <= 4
 ```
 
