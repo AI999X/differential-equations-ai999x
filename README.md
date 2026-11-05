@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/AI999X/differential-equations-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/differential-equations-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/differential-equations-ai999x)](https://pypi.org/project/differential-equations-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/differential-equations-ai999x)
 
-**[Install](https://pypi.org/project/differential-equations-ai999x/)** · **[Capability guide](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
+**[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/differential-equations-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/differential-equations-ai999x/)** · **[Guides](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/differential-equations-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
 License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.0.3
 
@@ -12,7 +12,310 @@ differential-equations-ai999x is an offline, deterministic Python solver that an
 
 **differential-equations-ai999x** is a compact, deterministic differential equations engine for Python. It reads a question in plain English (or a typed call), picks a certified differential equations capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
+
+**Run it your way.** differential-equations-ai999x comes as the AI999X desktop app and as the command-line program `differential-equations` for Windows and Linux, runs in your browser as WebAssembly, and installs as a Python package. The desktop app, the command line and the browser run the same compiled Rust program on your own device: offline, no Python needed.
+
+## Get it
+
+| Way to run it | For | Get it |
+|---|---|---|
+| **AI999X Differential Equations desktop app** 1.2.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-differential-equations-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.2.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-1.2.0-linux-x86_64.tar.gz) |
+| **Command line** (`differential-equations`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) · [Linux (x86-64)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#try) |
+| **Python** | Python 3.10+ | `pip install differential-equations-ai999x` |
+
+Checksums: [SHA256SUMS](https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS) · every version: [https://www.ai999x.com/downloads/desktop/latest/](https://www.ai999x.com/downloads/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+
+## Rust versions
+
+Differential Equations also comes as native programs compiled from Rust, version 1.2.0 of the AI999X desktop app and command line: they run offline on your computer and need no Python. Each file is in this repository's `rust/` folder, on the [GitHub release v1.0.3](https://github.com/AI999X/differential-equations-ai999x/releases/tag/v1.0.3) and on the website.
+
+| Program | System | File | Size | Download | Use |
+|---|---|---|---|---|---|
+| Desktop app (Differential Equations) | Windows x86-64 | `ai999x-differential-equations-1.2.0-windows-x86_64.zip` | 7.7 MB | [Hub](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/rust/ai999x-differential-equations-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/differential-equations-ai999x/releases/download/v1.0.3/ai999x-differential-equations-1.2.0-windows-x86_64.zip) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-differential-equations-1.2.0-windows-x86_64.zip) | unzip, then double-click `ai999x-differential-equations.exe` (no installer) |
+| Desktop app (Differential Equations) | Linux x86-64 | `ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz` | 8.6 MB | [Hub](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/rust/ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/differential-equations-ai999x/releases/download/v1.0.3/ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz) · [website](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz) | extract, then run `./ai999x-differential-equations` (X11 or Wayland desktop) |
+| Command line (`differential-equations`) | Windows x86-64 | `ai999x-differential-equations-cli-1.2.0-windows-x86_64.zip` | 3.1 MB | [Hub](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/rust/ai999x-differential-equations-cli-1.2.0-windows-x86_64.zip) · [GitHub](https://github.com/AI999X/differential-equations-ai999x/releases/download/v1.0.3/ai999x-differential-equations-cli-1.2.0-windows-x86_64.zip) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-windows-x86_64.zip) | unzip, then `differential-equations.exe ask "<question>"` or `differential-equations.exe solve <capability> name=value` |
+| Command line (`differential-equations`) | Linux x86-64 | `ai999x-differential-equations-cli-1.2.0-linux-x86_64.tar.gz` | 3.1 MB | [Hub](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/rust/ai999x-differential-equations-cli-1.2.0-linux-x86_64.tar.gz) · [GitHub](https://github.com/AI999X/differential-equations-ai999x/releases/download/v1.0.3/ai999x-differential-equations-cli-1.2.0-linux-x86_64.tar.gz) · [website (all models)](https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz) | extract, then `./differential-equations ask "<question>"` or `./differential-equations solve <capability> name=value` |
+
+The command-line archive holds `differential-equations` with a README of its commands and examples, the licence and the notice. Checksums: [`rust/SHA256SUMS`](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/rust/SHA256SUMS) (`sha256sum -c SHA256SUMS`).
+
+## Quick start
+
+### Desktop app
+
+Download **AI999X Differential Equations** for your system (above), unpack it and start it; type a question in words or pick a capability, fill in the form and press Compute. Figures and an explanation of the answer appear beside it. The AI999X desktop app has the same, with Differential Equations among all AI999X models.
+
+Linux, from a terminal:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-differential-equations-1.2.0-linux-x86_64.tar.gz
+./ai999x-differential-equations-1.2.0-linux-x86_64/ai999x-differential-equations
+```
+
+### Command line
+
+Linux:
+
+```bash
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/ai999x-cli-1.2.0-linux-x86_64.tar.gz
+curl -LO https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.2.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.2.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+differential-equations --version
+```
+
+Windows (PowerShell):
+
+```powershell
+$F = "ai999x-cli-1.2.0-windows-x86_64.zip"
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/$F" -OutFile $F
+Invoke-WebRequest "https://www.ai999x.com/downloads/desktop/1.2.0/SHA256SUMS" -OutFile SHA256SUMS
+(Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
+Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.2.0-windows-x86_64"; $env:Path += ";$D"
+[Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
+differential-equations --version
+```
+
+Every command below was run as shown; the text under it is what the program printed.
+
+**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```console
+$ differential-equations ask "Solve y'' + 3y' + 2y = 0 with y(0) = 1, y'(0) = 0; find y(1)."
+Read as: Second-order homogeneous linear ODE: initial value problem
+y = 0.6004235991
+damping = overdamped
+  by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
+  a = 1
+  b = 3
+  c = 2
+  t = 1
+  v0 = 0
+  y0 = 1
+  assumes: a != 0
+```
+
+**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+
+```console
+$ differential-equations info second_order_homogeneous_ivp
+Second-order homogeneous linear ODE: initial value problem
+  y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant
+  in   a        coefficient of y'' [1]
+  in   b        coefficient of y' [1]
+  in   c        coefficient of y [1]
+  in   y0       initial value y(0) [1]
+  in   v0       initial slope y'(0) [1]
+  in   t        time [1]
+  out  y        value y(t) [1]
+  out  damping  damping case []
+```
+
+**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+
+```console
+$ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0
+y = 0.6004235991
+damping = overdamped
+  by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
+  a = 1
+  b = 3
+  c = 2
+  y0 = 1
+  v0 = 0
+  t = 1
+  assumes: a != 0
+```
+
+**Draw the figures** — The live figures for your own inputs, written as SVG files into the folder given with --out (here the current folder); open them in any browser. Without --out the SVG text comes back as JSON.
+
+```console
+$ differential-equations figures second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0=1.0 v0=0.0 t=1.0 --out .
+[
+  {
+    "slug": "second-order-homogeneous-ivp-live-1",
+    "title": "Value y(t) as coefficient of y varies",
+    "caption": "Value y(t) as c runs from 0.5 to 3.5, every other input as you entered it (41 solutions). Marked: your c = 2 gives y = 0.6004. Shaded by damping case: overdamped, underdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
+    "file": "./second-order-homogeneous-ivp-live-1.svg"
+  },
+  {
+    "slug": "second-order-homogeneous-ivp-live-2",
+    "title": "Damping case over c and b",
+    "caption": "Damping case for 121 11 x 11 combinations of c and b around your inputs (the other inputs as entered); the ring marks your inputs, which give overdamped. Blank cells admit no answer. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
+    "file": "./second-order-homogeneous-ivp-live-2.svg"
+  },
+  {
+    "slug": "second-order-homogeneous-ivp-live-3",
+    "title": "Value y(t) as coefficient of y' varies",
+    "caption": "Value y(t) as b runs from 0.75 to 5.25, every other input as you entered it (29 solutions). Marked: your b = 3 gives y = 0.6004. Shaded by damping case: underdamped, overdamped. Your inputs: a = 1.0, b = 3.0, c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0.",
+    "file": "./second-order-homogeneous-ivp-live-3.svg"
+  }
+]
+```
+
+**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | differential-equations batch
+
+`cases.jsonl`:
+
+```json
+{"key": "second_order_homogeneous_ivp", "inputs": {"a": 1.0, "b": 3.0, "c": 2.0, "y0": 1.0, "v0": 0.0, "t": 1.0}}
+{"key": "logistic_value", "inputs": {"P0": 10.0, "r": 0.5, "K": 1000.0, "t": 8.0}}
+```
+
+```console
+$ differential-equations batch < cases.jsonl
+{"outcome":"SOLVED","message":"","value":0.600423599106,"unit":"","solved_for":"y","si":[["a",1.0],["b",3.0],["c",2.0],["y0",1.0],["v0",0.0],["t",1.0]],"values":[["y",0.600423599106,""],["damping","overdamped",""]],"target":"y","phrase":"value y(t)","assumptions":["a != 0"],"name":"Second-order homogeneous linear ODE: initial value problem","equation":"y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant"}
+{"outcome":"SOLVED","message":"","value":355.460987137,"unit":"","solved_for":"P","si":[["P0",10.0],["r",0.5],["K",1000.0],["t",8.0]],"values":[["P",355.460987137,""]],"target":"P","phrase":"population P(t)","assumptions":["P0 > 0","r > 0","K > 0"],"name":"Logistic growth: population at a time","equation":"P = K / (1 + (K/P0 - 1) e^{-r t})"}
+```
+
+### In your browser
+
+Open [Differential Equations on ai999x.com](https://www.ai999x.com/models/differential-equations-ai999x/#try), choose a capability and press **Compute**: the model runs on your own device as WebAssembly; nothing is sent anywhere. Change any input (any unit of the right kind) and the answer, its explanation and the figures follow.
+
+In your own page: `differential_equations_ai999x.wasm` and the loader `ax-wasm.js` (https://www.ai999x.com/compute/rust/ax-wasm.js).
+
+### Python
+
+```bash
+pip install differential-equations-ai999x
+```
+
+## Worked examples in every form
+
+The same worked example from the command line, from Python and in the browser. Each command-line output is what the program printed.
+
+### Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends
+
+The n-th eigenvalue and eigenfunction of y'' + lambda y = 0 on [0, L] with Dirichlet (y = 0) or Neumann (y' = 0) conditions at each end.
+
+Command line:
+
+```console
+$ differential-equations solve sturm_liouville_eigenvalues L=1 n=2 bc=dirichlet-dirichlet
+lambda_n = 39.4784176
+sqrt_lambda = 6.283185307
+eigenfunction = sin(6.28318530718 x)
+  by: Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends  (sin/cos solutions; the boundary conditions quantise sqrt(lambda))
+  L = 1
+  bc = dirichlet-dirichlet
+  assumes: L > 0; n >= 1
+```
+
+Python:
+
+```python
+import differential_equations_ai999x as m
+
+a = m.solve("sturm_liouville_eigenvalues", L="1", n="2", bc="dirichlet-dirichlet")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#cap-sturm_liouville_eigenvalues) and press **Compute in your browser**.
+
+_What this means:_ This calculation finds the specific energy levels for a vibrating string or heat distribution on an interval of length 1. Applying boundary conditions at both ends shows that the n-th mode has an eigenvalue of 39.4784. The corresponding spatial pattern, known as the eigenfunction, oscillates with a frequency proportional to 6.28319, which dictates how many half-waves fit within the domain.
+
+### Eigenvalues with a Robin (convective) end condition
+
+The n-th eigenvalue of y'' + lambda y = 0, y(0) = 0, y'(L) + h y(L) = 0 (heat loss at one end): root of tan(mu L) = -mu/h.
+
+Command line:
+
+```console
+$ differential-equations solve robin_eigenvalues L=1 h=1 n=1
+lambda_n = 4.115858366
+sqrt_lambda = 2.028757838
+  by: Eigenvalues with a Robin (convective) end condition  (bisection for mu cos(mu L) + h sin(mu L) = 0 in ((n - 1/2) pi/L, n pi/L))
+  L = 1
+  h = 1
+  assumes: L > 0; h > 0
+```
+
+Python:
+
+```python
+import differential_equations_ai999x as m
+
+a = m.solve("robin_eigenvalues", L="1", h="1", n="1")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#cap-robin_eigenvalues) and press **Compute in your browser**.
+
+_What this means:_ This calculation finds the nth eigenvalue for a rod of length 1 losing heat at one end with coefficient 1. The result 4.11586 corresponds to the frequency parameter 2.02876, derived from the transcendental equation governing convective boundary conditions.
+
+### Fourier sine series coefficient (half-range expansion)
+
+The coefficient b_n of the sine series of f(x) on [0, L], used for the heat and wave equations with fixed ends.
+
+Command line:
+
+```console
+$ differential-equations solve fourier_sine_coefficient "f=x*(1 - x)" L=1 n=1
+b_n = 0.2580122755
+  by: Fourier sine series coefficient (half-range expansion)  (exact integration by parts of x^k sin(n pi x / L))
+  L = 1
+  f = x*(1 - x)
+  assumes: f a polynomial; L > 0
+```
+
+Python:
+
+```python
+import differential_equations_ai999x as m
+
+a = m.solve("fourier_sine_coefficient", f="x*(1 - x)", L="1", n="1")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#cap-fourier_sine_coefficient) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the Fourier sine series coefficient, denoted as 0.258012, by integrating the product of the initial profile x*(1 - x) and the sine basis function over the domain defined by length 1. The result represents the amplitude of the nth mode in the half-range expansion, which is crucial for solving boundary value problems such as the heat or wave equations with fixed ends. The computation assumes that x*(1 - x) is a polynomial and 1 is strictly positive.
+
+### Heat equation on a rod with ends at zero: Fourier series value
+
+u(x, t) for u_t = alpha u_xx, u(0, t) = u(L, t) = 0, u(x, 0) = f(x) (a polynomial), summed over the first N series terms.
+
+Command line:
+
+```console
+$ differential-equations solve heat_equation_series "f=x*(1 - x)" L=1 alpha=1 N=10 x=0.5 t=0.1
+u = 0.09616187143
+b_1 = 0.2580122755
+  by: Heat equation on a rod with ends at zero: Fourier series value  (separation of variables: u = sum b_n e^{-alpha (n pi/L)^2 t} sin(n pi x/L))
+  L = 1
+  alpha = 1
+  x = 0.5
+  t = 0.1
+  f = x*(1 - x)
+  assumes: f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated)
+```
+
+Python:
+
+```python
+import differential_equations_ai999x as m
+
+a = m.solve("heat_equation_series", f="x*(1 - x)", L="1", alpha="1", N="10", x="0.5", t="0.1")
+print(a.values or (a.value, a.unit))
+```
+
+Browser: [open this capability on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#cap-heat_equation_series) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the temperature distribution along a rod of length 1 with diffusivity 1, given an initial polynomial profile. By applying separation of variables, the solution is expressed as a truncated Fourier sine series with 10 terms. The resulting temperature value at the specified location and time is 0.0961619, while the first coefficient in this series expansion is 0.258012. This method assumes both ends of the rod are held at zero temperature throughout the process.
+
+## Documentation
+
+- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_rust_guide.md)
+- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_capabilities.md)
+- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/differential-equations-ai999x/
 
 ## Highlights
 
@@ -20,6 +323,7 @@ differential-equations-ai999x is an offline, deterministic Python solver that an
 - **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 269 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `differential-equations` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** first- and second-order ODEs, Laplace transforms, linear systems and phase portraits, stability, numerical methods, heat/wave/Laplace equations and dynamical systems.
 
@@ -38,7 +342,7 @@ differential-equations-ai999x is an offline, deterministic Python solver that an
 | Creator / engineer | Ibnul Jaif Farabi |
 | Organization | AI999X |
 
-## Quickstart
+## Python quick start
 
 ```bash
 pip install differential-equations-ai999x
@@ -61,7 +365,7 @@ differential_equations.ask("Who created you?").message
 # -> differential-equations-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-Command line: `differential-equations-ai999x "<question>"`, `differential-equations-ai999x --capabilities`. The outputs above were produced by running this exact code on differential-equations-ai999x 1.0.3.
+The Python package also installs a Python command, `differential-equations-ai999x "<question>"`; for the native program use `differential-equations` (above). The outputs above were produced by running this exact code on differential-equations-ai999x 1.0.3.
 
 ## Find the right capability, and draw it
 
@@ -83,7 +387,7 @@ differential_equations.search("Solve x^2 - 5x + 6 = 0", k=2)
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
-## Worked examples
+## Python worked examples, with their steps
 
 Each question was put to `differential-equations-ai999x`; the answer is the one it returned, with the steps it took.
 
