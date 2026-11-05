@@ -1,4 +1,4 @@
-# differential-equations: the Differential Equations program — user guide
+# differential-equations: the Differential Equations program, user guide
 
 **differential-equations-ai999x 1.1.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
@@ -17,63 +17,63 @@ Differential Equations covers first- and second-order ODEs, linear systems, Lapl
 
 ## 1. Get it
 
-Version 1.4.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
+Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/
 
 | what | system | download |
 |---|---|---|
-| Desktop app: Differential Equations | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-windows-x86_64.zip |
-| Desktop app: Differential Equations | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz |
-| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip |
-| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz |
-| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip |
-| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz |
+| Desktop app: Differential Equations | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-windows-x86_64.zip |
+| Desktop app: Differential Equations | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz |
+| Desktop app: all models | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip |
+| Desktop app: all models | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz |
+| Command line | Windows x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip |
+| Command line | Linux x86-64 | https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz |
 
 ### Desktop app
 
-Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-differential-equations-1.4.0-linux-x86_64.tar.gz
-./ai999x-differential-equations-1.4.0-linux-x86_64/ai999x-differential-equations
+tar xzf ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz
+./ai999x-differential-equations-1.5.0-linux-x86_64/ai999x-differential-equations
 ```
 
-It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.4.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
+It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.4.0-linux-x86_64.tar.gz
-./ai999x-1.4.0-linux-x86_64/ai999x
+tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
+./ai999x-1.5.0-linux-x86_64/ai999x
 ```
 
-### Command line — Linux
+### Command line: Linux
 
 The bundle holds one program per model; `differential-equations` is this one. The checksum line should print OK.
 
 ```shell
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 differential-equations --version
 ```
 
-### Command line — Windows (PowerShell)
+### Command line: Windows (PowerShell)
 
 The fourth line should print True.
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 differential-equations --version
 ```
@@ -96,10 +96,46 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ differential-equations --version
-differential-equations-ai999x 1.0.3 (Rust build, ax-engine 0.1.0)
+differential-equations-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)
 ```
 
-### 2.2 List the capabilities
+### 2.2 Ask in words
+
+Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+
+```shell
+$ differential-equations ask "Solve y'' + 3y' + 2y = 0 with y(0) = 1, y'(0) = 0; find y(1)."
+Read as: Second-order homogeneous linear ODE: initial value problem
+y = 0.6004235991
+damping = overdamped
+  by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
+  a = 1
+  b = 3
+  c = 2
+  t = 1
+  v0 = 0
+  y0 = 1
+  assumes: a != 0
+```
+
+### 2.3 Find a capability
+
+Search the capabilities by what you want to know; the first column is the id to pass to info and solve.
+
+```shell
+$ differential-equations search "second-order homogeneous linear ode: initial value problem"
+second_order_homogeneous_ivp         Second-order homogeneous linear ODE: initial value problem  (second-order ODEs / homogeneous)
+forced_oscillator_ivp                Sinusoidally forced linear oscillator: initial value problem  (second-order ODEs / forced equations)
+boundary_value_problem               Linear two-point boundary value problem (constant coefficients)  (second-order ODEs / boundary value problems)
+characteristic_roots                 Second-order constant-coefficient ODE: characteristic roots  (second-order ODEs / homogeneous)
+ode_impulse_response                 Impulse response of a second-order ODE  (Laplace transforms / impulse and step)
+cauchy_euler_ivp                     Cauchy-Euler (equidimensional) equation: initial value problem  (second-order ODEs / variable coefficients)
+ode_step_response                    Unit-step response of a second-order ODE  (Laplace transforms / impulse and step)
+linear_first_order_exponential_forcing First-order linear ODE with exponential forcing  (first-order ODEs / linear equations)
+… 12 more
+```
+
+### 2.4 List the capabilities
 
 Every capability the program answers: its id (what you pass to solve) and its name.
 
@@ -113,10 +149,10 @@ boundary_value_problem                   Linear two-point boundary value problem
 brusselator_hopf                         Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2
 cauchy_euler_ivp                         Cauchy-Euler (equidimensional) equation: initial value problem
 cfl_condition                            CFL condition for the advection equation (upwind scheme)
-… 67 more
+… 69 more
 ```
 
-### 2.3 What a capability needs
+### 2.5 What a capability needs
 
 The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
@@ -134,7 +170,7 @@ Second-order homogeneous linear ODE: initial value problem
   out  damping  damping case []
 ```
 
-### 2.4 Solve
+### 2.6 Solve
 
 Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
@@ -143,16 +179,16 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1   []
-  b = 3   []
-  c = 2   []
-  y0 = 1   []
-  v0 = 0   []
-  t = 1   []
+  a = 1
+  b = 3
+  c = 2
+  y0 = 1
+  v0 = 0
+  t = 1
   assumes: a != 0
 ```
 
-### 2.5 Machine-readable answer
+### 2.7 Machine-readable answer
 
 --json prints the same answer as one line of JSON (values in SI): for scripts and other programs.
 
@@ -161,7 +197,7 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 {"outcome":"SOLVED","message":"","value":0.600423599106,"unit":"","solved_for":"y","si":[["a",1.0],["b",3.0],["c",2.0],["y0",1.0],["v0",0.0],["t",1.0]],"values":[["y",0.600423599106,""],["damping","overdamped",""]],"target":"y","phrase":"value y(t)","assumptions":["a != 0"],"name":"Second-order homogeneous linear ODE: initial value problem","equation":"y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant"}
 ```
 
-### 2.6 When an input is missing
+### 2.8 When an input is missing
 
 No number is guessed: the answer names what is missing, shows a complete call, and the program exits with status 1.
 
@@ -170,7 +206,7 @@ $ differential-equations solve second_order_homogeneous_ivp a=1.0 b=3.0 c=2.0 y0
 NEEDS_INPUT: second_order_homogeneous_ivp needs t (time). Example: solve('second_order_homogeneous_ivp', a=1, b=3, c=2, y0=1, v0=0, t=1).
 ```
 
-### 2.7 Many questions at once
+### 2.9 Many questions at once
 
 One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | differential-equations batch
 
@@ -266,7 +302,7 @@ By topic. For each: what it does, what it needs and gives, when it applies, and 
 
 <a id="sturm_liouville_eigenvalues"></a>
 
-#### Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends — `sturm_liouville_eigenvalues`
+#### Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends, `sturm_liouville_eigenvalues`
 
 The n-th eigenvalue and eigenfunction of y'' + lambda y = 0 on [0, L] with Dirichlet (y = 0) or Neumann (y' = 0) conditions at each end.
 
@@ -276,12 +312,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `bc` | in | boundary conditions at x = 0 and x = L | — |
-| `L` | in | interval length (> 0) | — |
-| `n` | in | index n >= 1 (Neumann-Neumann also has lambda_0 = 0) | — |
-| `lambda_n` | out | n-th eigenvalue | — |
-| `sqrt_lambda` | out | sqrt(lambda_n) | — |
-| `eigenfunction` | out | eigenfunction | — |
+| `bc` | in | boundary conditions at x = 0 and x = L | - |
+| `L` | in | interval length (> 0) | - |
+| `n` | in | index n >= 1 (Neumann-Neumann also has lambda_0 = 0) | - |
+| `lambda_n` | out | n-th eigenvalue | - |
+| `sqrt_lambda` | out | sqrt(lambda_n) | - |
+| `eigenfunction` | out | eigenfunction | - |
 
 **Applies when:** L > 0; n >= 1.
 
@@ -291,7 +327,7 @@ lambda_n = 39.4784176
 sqrt_lambda = 6.283185307
 eigenfunction = sin(6.28318530718 x)
   by: Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends  (sin/cos solutions; the boundary conditions quantise sqrt(lambda))
-  L = 1   []
+  L = 1
   bc = dirichlet-dirichlet
   assumes: L > 0; n >= 1
 ```
@@ -300,7 +336,7 @@ eigenfunction = sin(6.28318530718 x)
 
 <a id="robin_eigenvalues"></a>
 
-#### Eigenvalues with a Robin (convective) end condition — `robin_eigenvalues`
+#### Eigenvalues with a Robin (convective) end condition, `robin_eigenvalues`
 
 The n-th eigenvalue of y'' + lambda y = 0, y(0) = 0, y'(L) + h y(L) = 0 (heat loss at one end): root of tan(mu L) = -mu/h.
 
@@ -310,11 +346,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `L` | in | interval length (> 0) | — |
-| `h` | in | Robin coefficient (> 0) | — |
-| `n` | in | index n >= 1 | — |
-| `lambda_n` | out | n-th eigenvalue mu_n^2 | — |
-| `sqrt_lambda` | out | mu_n | — |
+| `L` | in | interval length (> 0) | - |
+| `h` | in | Robin coefficient (> 0) | - |
+| `n` | in | index n >= 1 | - |
+| `lambda_n` | out | n-th eigenvalue mu_n^2 | - |
+| `sqrt_lambda` | out | mu_n | - |
 
 **Applies when:** L > 0; h > 0.
 
@@ -323,8 +359,8 @@ $ differential-equations solve robin_eigenvalues L=1 h=1 n=1
 lambda_n = 4.115858366
 sqrt_lambda = 2.028757838
   by: Eigenvalues with a Robin (convective) end condition  (bisection for mu cos(mu L) + h sin(mu L) = 0 in ((n - 1/2) pi/L, n pi/L))
-  L = 1   []
-  h = 1   []
+  L = 1
+  h = 1
   assumes: L > 0; h > 0
 ```
 
@@ -332,7 +368,7 @@ sqrt_lambda = 2.028757838
 
 <a id="fourier_sine_coefficient"></a>
 
-#### Fourier sine series coefficient (half-range expansion) — `fourier_sine_coefficient`
+#### Fourier sine series coefficient (half-range expansion), `fourier_sine_coefficient`
 
 The coefficient b_n of the sine series of f(x) on [0, L], used for the heat and wave equations with fixed ends.
 
@@ -342,10 +378,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | initial profile f(x), a polynomial | — |
-| `L` | in | length of the interval (> 0) | — |
-| `n` | in | index n >= 1 | — |
-| `b_n` | out | sine coefficient b_n | — |
+| `f` | in | initial profile f(x), a polynomial | - |
+| `L` | in | length of the interval (> 0) | - |
+| `n` | in | index n >= 1 | - |
+| `b_n` | out | sine coefficient b_n | - |
 
 **Applies when:** f a polynomial; L > 0.
 
@@ -353,7 +389,7 @@ $$
 $ differential-equations solve fourier_sine_coefficient "f=x*(1 - x)" L=1 n=1
 b_n = 0.2580122755
   by: Fourier sine series coefficient (half-range expansion)  (exact integration by parts of x^k sin(n pi x / L))
-  L = 1   []
+  L = 1
   f = x*(1 - x)
   assumes: f a polynomial; L > 0
 ```
@@ -362,7 +398,7 @@ b_n = 0.2580122755
 
 <a id="heat_equation_series"></a>
 
-#### Heat equation on a rod with ends at zero: Fourier series value — `heat_equation_series`
+#### Heat equation on a rod with ends at zero: Fourier series value, `heat_equation_series`
 
 u(x, t) for u_t = alpha u_xx, u(0, t) = u(L, t) = 0, u(x, 0) = f(x) (a polynomial), summed over the first N series terms.
 
@@ -372,14 +408,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | initial profile f(x), a polynomial | — |
-| `L` | in | rod length (> 0) | — |
-| `alpha` | in | diffusivity (> 0) | — |
-| `N` | in | number of series terms (1 to 500) | — |
-| `x` | in | position (0 <= x <= L) | — |
-| `t` | in | time (>= 0) | — |
-| `u` | out | temperature u(x, t) from N terms | — |
-| `b_1` | out | first sine coefficient | — |
+| `f` | in | initial profile f(x), a polynomial | - |
+| `L` | in | rod length (> 0) | - |
+| `alpha` | in | diffusivity (> 0) | - |
+| `N` | in | number of series terms (1 to 500) | - |
+| `x` | in | position (0 <= x <= L) | - |
+| `t` | in | time (>= 0) | - |
+| `u` | out | temperature u(x, t) from N terms | - |
+| `b_1` | out | first sine coefficient | - |
 
 **Applies when:** f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated).
 
@@ -388,10 +424,10 @@ $ differential-equations solve heat_equation_series "f=x*(1 - x)" L=1 alpha=1 N=
 u = 0.09616187143
 b_1 = 0.2580122755
   by: Heat equation on a rod with ends at zero: Fourier series value  (separation of variables: u = sum b_n e^{-alpha (n pi/L)^2 t} sin(n pi x/L))
-  L = 1   []
-  alpha = 1   []
-  x = 0.5   []
-  t = 0.1   []
+  L = 1
+  alpha = 1
+  x = 0.5
+  t = 0.1
   f = x*(1 - x)
   assumes: f a polynomial; Dirichlet ends at 0; series truncated after N terms (stated)
 ```
@@ -400,7 +436,7 @@ b_1 = 0.2580122755
 
 <a id="laplace_equation_rectangle"></a>
 
-#### Laplace's equation on a rectangle: series value — `laplace_equation_rectangle`
+#### Laplace's equation on a rectangle: series value, `laplace_equation_rectangle`
 
 Steady state u_xx + u_yy = 0 on [0, a] x [0, b] with u = f(x) on the top edge y = b and 0 on the other three edges, from N terms.
 
@@ -410,13 +446,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | top-edge values f(x), a polynomial | — |
-| `a` | in | width (> 0) | — |
-| `b` | in | height (> 0) | — |
-| `N` | in | number of series terms | — |
-| `x` | in | x in [0, a] | — |
-| `y` | in | y in [0, b] | — |
-| `u` | out | u(x, y) from N terms | — |
+| `f` | in | top-edge values f(x), a polynomial | - |
+| `a` | in | width (> 0) | - |
+| `b` | in | height (> 0) | - |
+| `N` | in | number of series terms | - |
+| `x` | in | x in [0, a] | - |
+| `y` | in | y in [0, b] | - |
+| `u` | out | u(x, y) from N terms | - |
 
 **Applies when:** polynomial f; zero on three edges; N terms (stated).
 
@@ -424,10 +460,10 @@ $$
 $ differential-equations solve laplace_equation_rectangle f=100 a=1 b=1 N=50 x=0.5 y=0.5
 u = 25
   by: Laplace's equation on a rectangle: series value  (u = sum b_n sinh(n pi y/a)/sinh(n pi b/a) sin(n pi x/a))
-  a = 1   []
-  b = 1   []
-  x = 0.5   []
-  y = 0.5   []
+  a = 1
+  b = 1
+  x = 0.5
+  y = 0.5
   f = 100
   assumes: polynomial f; zero on three edges; N terms (stated)
 ```
@@ -436,7 +472,7 @@ u = 25
 
 <a id="wave_equation_string_series"></a>
 
-#### Vibrating string with fixed ends: Fourier series value — `wave_equation_string_series`
+#### Vibrating string with fixed ends: Fourier series value, `wave_equation_string_series`
 
 u(x, t) for u_tt = c^2 u_xx, u(0, t) = u(L, t) = 0, u(x, 0) = f(x), u_t(x, 0) = g(x) (polynomials), from N series terms.
 
@@ -446,14 +482,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | initial profile f(x), a polynomial | — |
-| `L` | in | string length (> 0) | — |
-| `c` | in | wave speed (> 0) | — |
-| `N` | in | number of series terms | — |
-| `x` | in | position (0 <= x <= L) | — |
-| `t` | in | time | — |
-| `g` | in | initial velocity g(x), a polynomial (default 0) (optional) | — |
-| `u` | out | displacement u(x, t) from N terms | — |
+| `f` | in | initial profile f(x), a polynomial | - |
+| `L` | in | string length (> 0) | - |
+| `c` | in | wave speed (> 0) | - |
+| `N` | in | number of series terms | - |
+| `x` | in | position (0 <= x <= L) | - |
+| `t` | in | time | - |
+| `g` | in | initial velocity g(x), a polynomial (default 0) (optional) | - |
+| `u` | out | displacement u(x, t) from N terms | - |
 
 **Applies when:** polynomial f, g; fixed ends; N terms (stated).
 
@@ -461,10 +497,10 @@ $$
 $ differential-equations solve wave_equation_string_series "f=x*(1 - x)" L=1 c=2 N=20 x=0.25 t=0.3
 u = -0.04999289963
   by: Vibrating string with fixed ends: Fourier series value  (u = sum [b_n cos(n pi c t/L) + B_n L/(n pi c) sin(n pi c t/L)] sin(n pi x/L))
-  L = 1   []
-  c = 2   []
-  x = 0.25   []
-  t = 0.3   []
+  L = 1
+  c = 2
+  x = 0.25
+  t = 0.3
   f = x*(1 - x)
   assumes: polynomial f, g; fixed ends; N terms (stated)
 ```
@@ -473,7 +509,7 @@ u = -0.04999289963
 
 <a id="dalembert_solution"></a>
 
-#### Wave equation on the whole line: d'Alembert's formula — `dalembert_solution`
+#### Wave equation on the whole line: d'Alembert's formula, `dalembert_solution`
 
 u(x, t) for u_tt = c^2 u_xx on the real line with u(x, 0) = f(x), u_t(x, 0) = g(x).
 
@@ -483,12 +519,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | initial displacement f(x) | — |
-| `g` | in | initial velocity g(x) | — |
-| `c` | in | wave speed (> 0) | — |
-| `x` | in | position | — |
-| `t` | in | time | — |
-| `u` | out | displacement u(x, t) | — |
+| `f` | in | initial displacement f(x) | - |
+| `g` | in | initial velocity g(x) | - |
+| `c` | in | wave speed (> 0) | - |
+| `x` | in | position | - |
+| `t` | in | time | - |
+| `u` | out | displacement u(x, t) | - |
 
 **Applies when:** c > 0; g integrable.
 
@@ -496,11 +532,11 @@ $$
 $ differential-equations solve dalembert_solution "f=sin(x)" g=0 c=2 x=1 t=0.5
 u = 0.4546487134
   by: Wave equation on the whole line: d'Alembert's formula  (u = [f(x - ct) + f(x + ct)]/2 + (1/2c) * integral of g over [x - ct, x + ct] (tanh-sinh quadrature))
-  c = 2   []
-  x = 1   []
-  t = 0.5   []
-  g = 0
+  c = 2
+  x = 1
+  t = 0.5
   f = sin(x)
+  g = 0
   assumes: c > 0; g integrable
 ```
 
@@ -510,7 +546,7 @@ u = 0.4546487134
 
 <a id="brusselator_hopf"></a>
 
-#### Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2 — `brusselator_hopf`
+#### Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2, `brusselator_hopf`
 
 For x' = a - (b + 1) x + x^2 y, y' = b x - x^2 y: the equilibrium (a, b/a), its type and the critical b where a limit cycle is born.
 
@@ -520,13 +556,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | parameter a (> 0) | — |
-| `b` | in | parameter b (> 0) | — |
-| `x_eq` | out | x at equilibrium | — |
-| `y_eq` | out | y at equilibrium | — |
-| `b_critical` | out | Hopf bifurcation value 1 + a^2 | — |
-| `type` | out | equilibrium type | — |
-| `stability` | out | stability | — |
+| `a` | in | parameter a (> 0) | - |
+| `b` | in | parameter b (> 0) | - |
+| `x_eq` | out | x at equilibrium | - |
+| `y_eq` | out | y at equilibrium | - |
+| `b_critical` | out | Hopf bifurcation value 1 + a^2 | - |
+| `type` | out | equilibrium type | - |
+| `stability` | out | stability | - |
 
 **Applies when:** a, b > 0.
 
@@ -538,8 +574,8 @@ b_critical = 2
 type = unstable spiral
 stability = unstable
   by: Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2  (Jacobian [[b - 1, a^2], [-b, -a^2]]: trace b - 1 - a^2 changes sign at the Hopf point)
-  a = 1   []
-  b = 3   []
+  a = 1
+  b = 3
   assumes: a, b > 0
 ```
 
@@ -547,7 +583,7 @@ stability = unstable
 
 <a id="competing_species_equilibrium"></a>
 
-#### Competing species: coexistence equilibrium and its stability — `competing_species_equilibrium`
+#### Competing species: coexistence equilibrium and its stability, `competing_species_equilibrium`
 
 For x' = x(a1 - b11 x - b12 y), y' = y(a2 - b21 x - b22 y): the coexistence equilibrium and its type (stable coexistence or saddle).
 
@@ -557,16 +593,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a1` | in | growth rate of x | — |
-| `b11` | in | self-limitation of x | — |
-| `b12` | in | effect of y on x | — |
-| `a2` | in | growth rate of y | — |
-| `b21` | in | effect of x on y | — |
-| `b22` | in | self-limitation of y | — |
-| `x_eq` | out | x at coexistence | — |
-| `y_eq` | out | y at coexistence | — |
-| `type` | out | equilibrium type | — |
-| `stability` | out | stability | — |
+| `a1` | in | growth rate of x | - |
+| `b11` | in | self-limitation of x | - |
+| `b12` | in | effect of y on x | - |
+| `a2` | in | growth rate of y | - |
+| `b21` | in | effect of x on y | - |
+| `b22` | in | self-limitation of y | - |
+| `x_eq` | out | x at coexistence | - |
+| `y_eq` | out | y at coexistence | - |
+| `type` | out | equilibrium type | - |
+| `stability` | out | stability | - |
 
 **Applies when:** both coexistence values positive; nullclines not parallel.
 
@@ -577,12 +613,12 @@ y_eq = 1
 type = stable node
 stability = asymptotically stable
   by: Competing species: coexistence equilibrium and its stability  (solve the linear nullcline equations exactly; classify the Jacobian there by trace and determinant)
-  a1 = 3   []
-  b11 = 1   []
-  b12 = 1   []
-  a2 = 2   []
-  b21 = 0.5   []
-  b22 = 1   []
+  a1 = 3
+  b11 = 1
+  b12 = 1
+  a2 = 2
+  b21 = 0.5
+  b22 = 1
   assumes: both coexistence values positive; nullclines not parallel
 ```
 
@@ -590,7 +626,7 @@ stability = asymptotically stable
 
 <a id="logistic_map_fixed_points"></a>
 
-#### Logistic map: fixed points and their stability — `logistic_map_fixed_points`
+#### Logistic map: fixed points and their stability, `logistic_map_fixed_points`
 
 Fixed points of x -> r x (1 - x) in [0, 1], their multipliers f'(x*) and stability.
 
@@ -600,11 +636,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | parameter (0 < r <= 4) | — |
-| `fixed_points` | out | fixed points in [0, 1] | — |
-| `multipliers` | out | f'(x*) at each | — |
-| `stability` | out | stable / unstable / neutral | — |
-| `count` | out | number of fixed points | — |
+| `r` | in | parameter (0 < r <= 4) | - |
+| `fixed_points` | out | fixed points in [0, 1] | - |
+| `multipliers` | out | f'(x*) at each | - |
+| `stability` | out | stable / unstable / neutral | - |
+| `count` | out | number of fixed points | - |
 
 **Applies when:** 0 < r <= 4.
 
@@ -615,7 +651,7 @@ multipliers = [2.5,-0.5]
 stability = ["unstable","stable"]
 count = 2
   by: Logistic map: fixed points and their stability  (x* = 0 and 1 - 1/r; multipliers r and 2 - r)
-  r = 2.5   []
+  r = 2.5
   assumes: 0 < r <= 4
 ```
 
@@ -623,7 +659,7 @@ count = 2
 
 <a id="logistic_map_two_cycle"></a>
 
-#### Logistic map: period-2 cycle and its stability — `logistic_map_two_cycle`
+#### Logistic map: period-2 cycle and its stability, `logistic_map_two_cycle`
 
 The 2-cycle {p, q} of x -> r x (1 - x) (3 < r <= 4), its multiplier f'(p) f'(q) and stability (stable for 3 < r < 1 + sqrt 6).
 
@@ -633,11 +669,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | parameter (3 < r <= 4) | — |
-| `p` | out | lower cycle point | — |
-| `q` | out | upper cycle point | — |
-| `multiplier` | out | f'(p) f'(q) = 4 + 2r - r^2 | — |
-| `stability` | out | stability | — |
+| `r` | in | parameter (3 < r <= 4) | - |
+| `p` | out | lower cycle point | - |
+| `q` | out | upper cycle point | - |
+| `multiplier` | out | f'(p) f'(q) = 4 + 2r - r^2 | - |
+| `stability` | out | stability | - |
 
 **Applies when:** 3 < r <= 4.
 
@@ -648,7 +684,7 @@ q = 0.7994554905
 multiplier = 0.16
 stability = stable
   by: Logistic map: period-2 cycle and its stability  (roots of f(f(x)) = x other than the fixed points)
-  r = 3.2   []
+  r = 3.2
   assumes: 3 < r <= 4
 ```
 
@@ -656,7 +692,7 @@ stability = stable
 
 <a id="lorenz_equilibria"></a>
 
-#### Lorenz system: equilibria and stability of the origin — `lorenz_equilibria`
+#### Lorenz system: equilibria and stability of the origin, `lorenz_equilibria`
 
 Equilibria of x' = sigma(y - x), y' = x(rho - z) - y, z' = xy - beta z: the origin and C+- = (+-sqrt(beta(rho-1)), same, rho - 1).
 
@@ -666,13 +702,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sigma` | in | Prandtl number (> 0) | — |
-| `rho` | in | Rayleigh parameter (> 0) | — |
-| `beta` | in | geometric factor (> 0) | — |
-| `count` | out | number of equilibria | — |
-| `x_c` | out | x (and y) of C+ | — |
-| `z_c` | out | z of C+- (rho - 1) | — |
-| `origin_stability` | out | stability of the origin | — |
+| `sigma` | in | Prandtl number (> 0) | - |
+| `rho` | in | Rayleigh parameter (> 0) | - |
+| `beta` | in | geometric factor (> 0) | - |
+| `count` | out | number of equilibria | - |
+| `x_c` | out | x (and y) of C+ | - |
+| `z_c` | out | z of C+- (rho - 1) | - |
+| `origin_stability` | out | stability of the origin | - |
 
 **Applies when:** sigma, rho, beta > 0.
 
@@ -683,9 +719,9 @@ count = 3
 x_c = 8.485281375
 z_c = 27
   by: Lorenz system: equilibria and stability of the origin  (nullclines; the origin's Jacobian has eigenvalue signs set by rho - 1)
-  sigma = 10   []
-  rho = 28   []
-  beta = 2.666666667   []
+  sigma = 10
+  rho = 28
+  beta = 2.666666667
   assumes: sigma, rho, beta > 0
 ```
 
@@ -693,7 +729,7 @@ z_c = 27
 
 <a id="lorenz_hopf_threshold"></a>
 
-#### Lorenz system: Hopf threshold rho_H (loss of stability of C+-) — `lorenz_hopf_threshold`
+#### Lorenz system: Hopf threshold rho_H (loss of stability of C+-), `lorenz_hopf_threshold`
 
 The Rayleigh parameter at which the equilibria C+- of the Lorenz system lose stability (subcritical Hopf; chaos follows).
 
@@ -703,9 +739,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `sigma` | in | Prandtl number (> beta + 1) | — |
-| `beta` | in | geometric factor (> 0) | — |
-| `rho_H` | out | Hopf threshold | — |
+| `sigma` | in | Prandtl number (> beta + 1) | - |
+| `beta` | in | geometric factor (> 0) | - |
+| `rho_H` | out | Hopf threshold | - |
 
 **Applies when:** sigma > beta + 1.
 
@@ -713,8 +749,8 @@ $$
 $ differential-equations solve lorenz_hopf_threshold sigma=10 beta=2.666666667
 rho_H = 24.73684211
   by: Lorenz system: Hopf threshold rho_H (loss of stability of C+-)  (Routh-Hurwitz on the characteristic cubic at C+-)
-  sigma = 10   []
-  beta = 2.666666667   []
+  sigma = 10
+  beta = 2.666666667
   assumes: sigma > beta + 1
 ```
 
@@ -722,7 +758,7 @@ rho_H = 24.73684211
 
 <a id="lotka_volterra_equilibrium"></a>
 
-#### Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period — `lotka_volterra_equilibrium`
+#### Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period, `lotka_volterra_equilibrium`
 
 For x' = a x - b x y (prey), y' = -c y + d x y (predator): the coexistence equilibrium and the period of small oscillations about it.
 
@@ -732,14 +768,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | prey growth rate (> 0) | — |
-| `b` | in | predation rate (> 0) | — |
-| `c` | in | predator death rate (> 0) | — |
-| `d` | in | predator efficiency (> 0) | — |
-| `x_eq` | out | prey at equilibrium c/d | — |
-| `y_eq` | out | predators at equilibrium a/b | — |
-| `omega` | out | small-oscillation angular frequency sqrt(ac) | — |
-| `period` | out | small-oscillation period 2 pi / sqrt(ac) | — |
+| `a` | in | prey growth rate (> 0) | - |
+| `b` | in | predation rate (> 0) | - |
+| `c` | in | predator death rate (> 0) | - |
+| `d` | in | predator efficiency (> 0) | - |
+| `x_eq` | out | prey at equilibrium c/d | - |
+| `y_eq` | out | predators at equilibrium a/b | - |
+| `omega` | out | small-oscillation angular frequency sqrt(ac) | - |
+| `period` | out | small-oscillation period 2 pi / sqrt(ac) | - |
 
 **Applies when:** a, b, c, d > 0.
 
@@ -750,10 +786,10 @@ y_eq = 10
 omega = 1.224744871
 period = 5.130199321
   by: Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period  (equilibrium of the nullclines; the Jacobian there has eigenvalues +- i sqrt(ac))
-  a = 1   []
-  b = 0.1   []
-  c = 1.5   []
-  d = 0.075   []
+  a = 1
+  b = 0.1
+  c = 1.5
+  d = 0.075
   assumes: a, b, c, d > 0
 ```
 
@@ -761,7 +797,7 @@ period = 5.130199321
 
 <a id="logistic_map_lyapunov"></a>
 
-#### Lyapunov exponent of the logistic map (periodic regime) — `logistic_map_lyapunov`
+#### Lyapunov exponent of the logistic map (periodic regime), `logistic_map_lyapunov`
 
 The Lyapunov exponent of x -> r x (1 - x): the average of ln|f'(x_k)| over n iterations after the orbit settles (fixed point or 2-cycle).
 
@@ -771,11 +807,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | parameter (0 < r <= 4) | — |
-| `x0` | in | initial value in (0, 1) | — |
-| `n` | in | iterations averaged (even) | — |
-| `lyapunov` | out | Lyapunov exponent (negative: stable periodic orbit) | — |
-| `attractor` | out | attractor reached | — |
+| `r` | in | parameter (0 < r <= 4) | - |
+| `x0` | in | initial value in (0, 1) | - |
+| `n` | in | iterations averaged (even) | - |
+| `lyapunov` | out | Lyapunov exponent (negative: stable periodic orbit) | - |
+| `attractor` | out | attractor reached | - |
 
 **Applies when:** the orbit settles on a fixed point or 2-cycle (|x_{k+2} - x_k| < 1e-14); n even.
 
@@ -784,8 +820,8 @@ $ differential-equations solve logistic_map_lyapunov r=2.5 x0=0.3 n=1000
 lyapunov = -0.6931471806
 attractor = fixed point
   by: Lyapunov exponent of the logistic map (periodic regime)  (iterate until settled, then average ln|r (1 - 2 x_k)| over n iterations)
-  r = 2.5   []
-  x0 = 0.3   []
+  r = 2.5
+  x0 = 0.3
   assumes: the orbit settles on a fixed point or 2-cycle (|x_{k+2} - x_k| < 1e-14); n even
 ```
 
@@ -793,7 +829,7 @@ attractor = fixed point
 
 <a id="nonlinear_equilibrium_type"></a>
 
-#### Nonlinear 2-D system: type of an equilibrium by linearization — `nonlinear_equilibrium_type`
+#### Nonlinear 2-D system: type of an equilibrium by linearization, `nonlinear_equilibrium_type`
 
 For x' = f(x, y), y' = g(x, y) and an equilibrium (x0, y0): the Jacobian there, the equilibrium type and stability (Hartman-Grobman).
 
@@ -803,15 +839,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | x' = f(x, y) | — |
-| `g` | in | y' = g(x, y) | — |
-| `x0` | in | equilibrium x | — |
-| `y0` | in | equilibrium y | — |
-| `type` | out | type of the linearization | — |
-| `stability` | out | stability (inconclusive for a center or a degenerate case) | — |
-| `jacobian` | out | Jacobian at the equilibrium | — |
-| `trace` | out | trace of the Jacobian | — |
-| `det` | out | determinant of the Jacobian | — |
+| `f` | in | x' = f(x, y) | - |
+| `g` | in | y' = g(x, y) | - |
+| `x0` | in | equilibrium x | - |
+| `y0` | in | equilibrium y | - |
+| `type` | out | type of the linearization | - |
+| `stability` | out | stability (inconclusive for a center or a degenerate case) | - |
+| `jacobian` | out | Jacobian at the equilibrium | - |
+| `trace` | out | trace of the Jacobian | - |
+| `det` | out | determinant of the Jacobian | - |
 
 **Applies when:** (x0, y0) is an equilibrium.
 
@@ -823,10 +859,10 @@ jacobian = [[0.0,1.0],[-1.0,-0.5]]
 trace = -0.5
 det = 1
   by: Nonlinear 2-D system: type of an equilibrium by linearization  (exact symbolic Jacobian at the point; trace-determinant classification)
-  x0 = 0   []
-  y0 = 0   []
-  g = -sin(x) - 0.5*y
+  x0 = 0
+  y0 = 0
   f = y
+  g = -sin(x) - 0.5*y
   assumes: (x0, y0) is an equilibrium
 ```
 
@@ -834,7 +870,7 @@ det = 1
 
 <a id="sir_epidemic"></a>
 
-#### SIR epidemic: R0, peak infections and final size — `sir_epidemic`
+#### SIR epidemic: R0, peak infections and final size, `sir_epidemic`
 
 For S' = -beta S I, I' = beta S I - gamma I (fractions of the population): R0, the peak infected fraction and the final susceptible fraction.
 
@@ -844,14 +880,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `beta` | in | transmission rate (> 0) | — |
-| `gamma` | in | recovery rate (> 0) | — |
-| `S0` | in | initial susceptible fraction | — |
-| `I0` | in | initial infected fraction | — |
-| `R0` | out | basic reproduction number beta/gamma | — |
-| `I_max` | out | peak infected fraction | — |
-| `S_inf` | out | final susceptible fraction | — |
-| `attack_rate` | out | fraction infected during the epidemic S0 - S_inf | — |
+| `beta` | in | transmission rate (> 0) | - |
+| `gamma` | in | recovery rate (> 0) | - |
+| `S0` | in | initial susceptible fraction | - |
+| `I0` | in | initial infected fraction | - |
+| `R0` | out | basic reproduction number beta/gamma | - |
+| `I_max` | out | peak infected fraction | - |
+| `S_inf` | out | final susceptible fraction | - |
+| `attack_rate` | out | fraction infected during the epidemic S0 - S_inf | - |
 
 **Applies when:** S0, I0 > 0; S0 + I0 <= 1.
 
@@ -862,10 +898,10 @@ I_max = 0.3038126824
 S_inf = 0.0587973648
 attack_rate = 0.9312026352
   by: SIR epidemic: R0, peak infections and final size  (first integrals: I + S - ln(S)/R0 is conserved; peak at S = 1/R0; final size from ln(S/S0) = R0 (S - S0 - I0))
-  beta = 0.3   []
-  gamma = 0.1   []
-  S0 = 0.99   []
-  I0 = 0.01   []
+  beta = 0.3
+  gamma = 0.1
+  S0 = 0.99
+  I0 = 0.01
   assumes: S0, I0 > 0; S0 + I0 <= 1
 ```
 
@@ -875,7 +911,7 @@ attack_rate = 0.9312026352
 
 <a id="radiometric_age"></a>
 
-#### Age from the fraction remaining (radioactive dating) — `radiometric_age`
+#### Age from the fraction remaining (radioactive dating), `radiometric_age`
 
 The elapsed time when a fraction p of a radioactive substance with half-life T remains.
 
@@ -885,9 +921,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T` | in | half-life (> 0) | — |
-| `p` | in | fraction remaining, 0 < p <= 1 | — |
-| `t` | out | age (elapsed time) | — |
+| `T` | in | half-life (> 0) | - |
+| `p` | in | fraction remaining, 0 < p <= 1 | - |
+| `t` | out | age (elapsed time) | - |
 
 **Applies when:** T > 0; 0 < p <= 1.
 
@@ -895,8 +931,8 @@ $$
 $ differential-equations solve radiometric_age T=5730 p=0.25
 t = 11460
   by: Age from the fraction remaining (radioactive dating)  (t = T ln(1/p) / ln 2)
-  T = 5730   []
-  p = 0.25   []
+  T = 5730
+  p = 0.25
   assumes: T > 0; 0 < p <= 1
 ```
 
@@ -904,7 +940,7 @@ t = 11460
 
 <a id="bernoulli_equation"></a>
 
-#### Bernoulli equation y' + p y = q y^n — `bernoulli_equation`
+#### Bernoulli equation y' + p y = q y^n, `bernoulli_equation`
 
 Solve the Bernoulli equation with constant p, q by the substitution v = y^{1-n}; give y(t).
 
@@ -914,12 +950,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `p` | in | coefficient of y | — |
-| `q` | in | coefficient of y^n | — |
-| `n` | in | exponent (n != 1) | — |
-| `y0` | in | initial value (> 0) | — |
-| `t` | in | time (>= 0) | — |
-| `y` | out | value y(t) | — |
+| `p` | in | coefficient of y | - |
+| `q` | in | coefficient of y^n | - |
+| `n` | in | exponent (n != 1) | - |
+| `y0` | in | initial value (> 0) | - |
+| `t` | in | time (>= 0) | - |
+| `y` | out | value y(t) | - |
 
 **Applies when:** p != 0; n != 1; y0 > 0; solution stays positive.
 
@@ -927,11 +963,11 @@ $$
 $ differential-equations solve bernoulli_equation p=1 q=1 n=2 y0=0.5 t=1
 y = 0.2689414214
   by: Bernoulli equation y' + p y = q y^n  (v = y^{1-n}: v' + (1-n) p v = (1-n) q, linear)
-  p = 1   []
-  q = 1   []
-  n = 2   []
-  y0 = 0.5   []
-  t = 1   []
+  p = 1
+  q = 1
+  n = 2
+  y0 = 0.5
+  t = 1
   assumes: p != 0; n != 1; y0 > 0; solution stays positive
 ```
 
@@ -939,7 +975,7 @@ y = 0.2689414214
 
 <a id="doubling_time"></a>
 
-#### Doubling time or half-life from a rate constant — `doubling_time`
+#### Doubling time or half-life from a rate constant, `doubling_time`
 
 For dy/dt = k*y: the doubling time (k > 0) or half-life (k < 0).
 
@@ -949,9 +985,9 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `k` | in | rate constant | — |
-| `t_char` | out | doubling time or half-life ln 2 / \|k\| | — |
-| `kind` | out | doubling time or half-life | — |
+| `k` | in | rate constant | - |
+| `t_char` | out | doubling time or half-life ln 2 / \|k\| | - |
+| `kind` | out | doubling time or half-life | - |
 
 **Applies when:** k != 0.
 
@@ -960,7 +996,7 @@ $ differential-equations solve doubling_time k=0.07
 t_char = 9.902102579
 kind = doubling time
   by: Doubling time or half-life from a rate constant  (solve e^{k t} = 2 (or 1/2): t = ln 2 / |k|)
-  k = 0.07   []
+  k = 0.07
   assumes: k != 0
 ```
 
@@ -968,7 +1004,7 @@ kind = doubling time
 
 <a id="torricelli_draining"></a>
 
-#### Draining tank (Torricelli's law): height and emptying time — `torricelli_draining`
+#### Draining tank (Torricelli's law): height and emptying time, `torricelli_draining`
 
 Solve dh/dt = -k sqrt(h), h(0) = h0: water height at time t and the time to empty.
 
@@ -978,11 +1014,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `h0` | in | initial height (> 0) | — |
-| `k` | in | drain constant (> 0) | — |
-| `t` | in | time (>= 0) | — |
-| `h` | out | height h(t) (0 once empty) | — |
-| `t_empty` | out | time to empty 2 sqrt(h0)/k | — |
+| `h0` | in | initial height (> 0) | - |
+| `k` | in | drain constant (> 0) | - |
+| `t` | in | time (>= 0) | - |
+| `h` | out | height h(t) (0 once empty) | - |
+| `t_empty` | out | time to empty 2 sqrt(h0)/k | - |
 
 **Applies when:** h0 > 0; k > 0.
 
@@ -991,9 +1027,9 @@ $ differential-equations solve torricelli_draining h0=4 k=0.2 t=5
 h = 2.25
 t_empty = 20
   by: Draining tank (Torricelli's law): height and emptying time  (separable: sqrt(h) = sqrt(h0) - k t / 2)
-  h0 = 4   []
-  k = 0.2   []
-  t = 5   []
+  h0 = 4
+  k = 0.2
+  t = 5
   assumes: h0 > 0; k > 0
 ```
 
@@ -1001,7 +1037,7 @@ t_empty = 20
 
 <a id="quadratic_ode_blowup"></a>
 
-#### Equation y' = k y^2: solution and blow-up time — `quadratic_ode_blowup`
+#### Equation y' = k y^2: solution and blow-up time, `quadratic_ode_blowup`
 
 Solve y' = k y^2, y(0) = y0; give y(t) and the finite blow-up time 1/(k y0) when k y0 > 0.
 
@@ -1011,11 +1047,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `k` | in | coefficient | — |
-| `y0` | in | initial value | — |
-| `t` | in | time (>= 0) | — |
-| `y` | out | value y(t) | — |
-| `blowup_time` | out | time at which y becomes infinite (k y0 > 0) | — |
+| `k` | in | coefficient | - |
+| `y0` | in | initial value | - |
+| `t` | in | time (>= 0) | - |
+| `y` | out | value y(t) | - |
+| `blowup_time` | out | time at which y becomes infinite (k y0 > 0) | - |
 
 **Applies when:** t before the blow-up time.
 
@@ -1024,9 +1060,9 @@ $ differential-equations solve quadratic_ode_blowup k=1 y0=0.5 t=1
 y = 1
 blowup_time = 2
   by: Equation y' = k y^2: solution and blow-up time  (separate: -1/y = k t - 1/y0)
-  k = 1   []
-  y0 = 0.5   []
-  t = 1   []
+  k = 1
+  y0 = 0.5
+  t = 1
   assumes: t before the blow-up time
 ```
 
@@ -1034,7 +1070,7 @@ blowup_time = 2
 
 <a id="autonomous_equilibria"></a>
 
-#### Equilibria of y' = f(y) and their stability (phase line) — `autonomous_equilibria`
+#### Equilibria of y' = f(y) and their stability (phase line), `autonomous_equilibria`
 
 All equilibrium solutions of an autonomous equation y' = f(y) with polynomial f and their stability from the sign of f.
 
@@ -1044,10 +1080,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(y), a polynomial | — |
-| `equilibria` | out | equilibrium values (ascending) | — |
-| `stability` | out | stable / unstable / semi-stable for each | — |
-| `count` | out | number of equilibria | — |
+| `f` | in | right-hand side f(y), a polynomial | - |
+| `equilibria` | out | equilibrium values (ascending) | - |
+| `stability` | out | stable / unstable / semi-stable for each | - |
+| `count` | out | number of equilibria | - |
 
 **Applies when:** f a polynomial in y with rational coefficients, degree <= 8.
 
@@ -1065,7 +1101,7 @@ count = 2
 
 <a id="exponential_growth_value"></a>
 
-#### Exponential growth or decay: value at a time — `exponential_growth_value`
+#### Exponential growth or decay: value at a time, `exponential_growth_value`
 
 Solve dy/dt = k*y with y(0) = y0 and give y(t).
 
@@ -1075,10 +1111,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y0` | in | initial value y(0) | — |
-| `k` | in | growth rate (negative for decay) | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
+| `y0` | in | initial value y(0) | - |
+| `k` | in | growth rate (negative for decay) | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
 
 **Applies when:** k > 0 growth, k < 0 decay.
 
@@ -1086,9 +1122,9 @@ $$
 $ differential-equations solve exponential_growth_value y0=100 k=0.03 t=10
 y = 134.9858808
   by: Exponential growth or decay: value at a time  (separation of variables: y = y0*exp(k*t))
-  y0 = 100   []
-  k = 0.03   []
-  t = 10   []
+  y0 = 100
+  k = 0.03
+  t = 10
   assumes: k > 0 growth, k < 0 decay
 ```
 
@@ -1096,7 +1132,7 @@ y = 134.9858808
 
 <a id="exponential_from_two_points"></a>
 
-#### Exponential model through two measurements — `exponential_from_two_points`
+#### Exponential model through two measurements, `exponential_from_two_points`
 
 The rate k and initial value y0 of y = y0*e^{k t} through (t1, y1) and (t2, y2).
 
@@ -1106,12 +1142,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `t1` | in | first time | — |
-| `y1` | in | value at t1 | — |
-| `t2` | in | second time | — |
-| `y2` | in | value at t2 | — |
-| `k` | out | rate constant | — |
-| `y0` | out | value at t = 0 | — |
+| `t1` | in | first time | - |
+| `y1` | in | value at t1 | - |
+| `t2` | in | second time | - |
+| `y2` | in | value at t2 | - |
+| `k` | out | rate constant | - |
+| `y0` | out | value at t = 0 | - |
 
 **Applies when:** t1 != t2; y1, y2 nonzero, same sign.
 
@@ -1120,10 +1156,10 @@ $ differential-equations solve exponential_from_two_points y1=100 t1=2 y2=300 t2
 k = 0.3662040962
 y0 = 48.07498568
   by: Exponential model through two measurements  (k = ln(y2/y1)/(t2 - t1), y0 = y1 e^{-k t1})
-  y1 = 100   []
-  t1 = 2   []
-  y2 = 300   []
-  t2 = 5   []
+  y1 = 100
+  t1 = 2
+  y2 = 300
+  t2 = 5
   assumes: t1 != t2; y1, y2 nonzero, same sign
 ```
 
@@ -1131,7 +1167,7 @@ y0 = 48.07498568
 
 <a id="linear_drag_velocity"></a>
 
-#### Falling body with linear drag: velocity — `linear_drag_velocity`
+#### Falling body with linear drag: velocity, `linear_drag_velocity`
 
 Solve m v' = m g - c v with v(0) = v0: velocity at time t and terminal velocity m g / c.
 
@@ -1141,13 +1177,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `c` | in | linear drag coefficient (> 0) | — |
-| `g` | in | gravitational acceleration | — |
-| `v0` | in | initial velocity (downward positive) | — |
-| `t` | in | time | — |
-| `v` | out | velocity v(t) | — |
-| `v_terminal` | out | terminal velocity m g / c | — |
+| `m` | in | mass (> 0) | - |
+| `c` | in | linear drag coefficient (> 0) | - |
+| `g` | in | gravitational acceleration | - |
+| `v0` | in | initial velocity (downward positive) | - |
+| `t` | in | time | - |
+| `v` | out | velocity v(t) | - |
+| `v_terminal` | out | terminal velocity m g / c | - |
 
 **Applies when:** m > 0; c > 0.
 
@@ -1156,11 +1192,11 @@ $ differential-equations solve linear_drag_velocity m=2 c=0.5 g=9.81 v0=0 t=3
 v = 20.70433647
 v_terminal = 39.24
   by: Falling body with linear drag: velocity  (linear first-order ODE: v = mg/c + (v0 - mg/c) e^{-ct/m})
-  m = 2   []
-  c = 0.5   []
-  g = 9.81   []
-  v0 = 0   []
-  t = 3   []
+  m = 2
+  c = 0.5
+  g = 9.81
+  v0 = 0
+  t = 3
   assumes: m > 0; c > 0
 ```
 
@@ -1168,7 +1204,7 @@ v_terminal = 39.24
 
 <a id="quadratic_drag_velocity"></a>
 
-#### Falling body with quadratic drag: velocity — `quadratic_drag_velocity`
+#### Falling body with quadratic drag: velocity, `quadratic_drag_velocity`
 
 Solve m v' = m g - c v^2 with v(0) = v0 >= 0: velocity at time t and terminal velocity sqrt(m g / c).
 
@@ -1178,13 +1214,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `c` | in | quadratic drag coefficient (> 0) | — |
-| `g` | in | gravitational acceleration (> 0) | — |
-| `v0` | in | initial downward velocity (>= 0) | — |
-| `t` | in | time (>= 0) | — |
-| `v` | out | velocity v(t) | — |
-| `v_terminal` | out | terminal velocity | — |
+| `m` | in | mass (> 0) | - |
+| `c` | in | quadratic drag coefficient (> 0) | - |
+| `g` | in | gravitational acceleration (> 0) | - |
+| `v0` | in | initial downward velocity (>= 0) | - |
+| `t` | in | time (>= 0) | - |
+| `v` | out | velocity v(t) | - |
+| `v_terminal` | out | terminal velocity | - |
 
 **Applies when:** m, c, g > 0; v0 >= 0.
 
@@ -1193,11 +1229,11 @@ $ differential-equations solve quadratic_drag_velocity m=80 c=0.25 g=9.81 v0=0 t
 v = 39.45143246
 v_terminal = 56.02856414
   by: Falling body with quadratic drag: velocity  (separable: v = v_t tanh(g t / v_t + artanh(v0/v_t)) (coth form when v0 > v_t))
-  m = 80   []
-  c = 0.25   []
-  g = 9.81   []
-  v0 = 0   []
-  t = 5   []
+  m = 80
+  c = 0.25
+  g = 9.81
+  v0 = 0
+  t = 5
   assumes: m, c, g > 0; v0 >= 0
 ```
 
@@ -1205,7 +1241,7 @@ v_terminal = 56.02856414
 
 <a id="linear_first_order"></a>
 
-#### First-order linear ODE with constant coefficients (integrating factor) — `linear_first_order`
+#### First-order linear ODE with constant coefficients (integrating factor), `linear_first_order`
 
 Solve y' + a y = b with y(0) = y0 and give y(t) and the equilibrium b/a.
 
@@ -1215,12 +1251,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y | — |
-| `b` | in | constant forcing | — |
-| `y0` | in | initial value | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `y_steady` | out | equilibrium b/a (the limit when a > 0) | — |
+| `a` | in | coefficient of y | - |
+| `b` | in | constant forcing | - |
+| `y0` | in | initial value | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `y_steady` | out | equilibrium b/a (the limit when a > 0) | - |
 
 **Applies when:** a != 0.
 
@@ -1229,10 +1265,10 @@ $ differential-equations solve linear_first_order a=2 b=6 y0=1 t=1
 y = 2.729329434
 y_steady = 3
   by: First-order linear ODE with constant coefficients (integrating factor)  (integrating factor e^{a t}: y = b/a + (y0 - b/a) e^{-a t})
-  a = 2   []
-  b = 6   []
-  y0 = 1   []
-  t = 1   []
+  a = 2
+  b = 6
+  y0 = 1
+  t = 1
   assumes: a != 0
 ```
 
@@ -1240,7 +1276,7 @@ y_steady = 3
 
 <a id="linear_first_order_exponential_forcing"></a>
 
-#### First-order linear ODE with exponential forcing — `linear_first_order_exponential_forcing`
+#### First-order linear ODE with exponential forcing, `linear_first_order_exponential_forcing`
 
 Solve y' + a y = b e^{c t}, y(0) = y0, and give y(t) (including the resonant case c = -a).
 
@@ -1250,13 +1286,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y | — |
-| `b` | in | forcing amplitude | — |
-| `c` | in | forcing exponent | — |
-| `y0` | in | initial value | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `resonant` | out | c = -a (secular term t e^{-a t}) | — |
+| `a` | in | coefficient of y | - |
+| `b` | in | forcing amplitude | - |
+| `c` | in | forcing exponent | - |
+| `y0` | in | initial value | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `resonant` | out | c = -a (secular term t e^{-a t}) | - |
 
 **Applies when:** any real a, b, c.
 
@@ -1265,11 +1301,11 @@ $ differential-equations solve linear_first_order_exponential_forcing a=1 b=2 c=
 y = 3.443928727
 resonant = false
   by: First-order linear ODE with exponential forcing  (integrating factor: y = b/(a+c) e^{ct} + (y0 - b/(a+c)) e^{-at}; c = -a: (y0 + b t) e^{-at})
-  a = 1   []
-  b = 2   []
-  c = 0.5   []
-  y0 = 0   []
-  t = 2   []
+  a = 1
+  b = 2
+  c = 0.5
+  y0 = 0
+  t = 2
   assumes: any real a, b, c
 ```
 
@@ -1277,7 +1313,7 @@ In the worked example, a = 1, b = 2, c = 0.5, y0 = 0, t = 2 go through the equat
 
 <a id="gompertz_growth"></a>
 
-#### Gompertz growth: value at a time — `gompertz_growth`
+#### Gompertz growth: value at a time, `gompertz_growth`
 
 Solve dy/dt = r y ln(K/y), y(0) = y0 (tumour and population growth) and give y(t).
 
@@ -1287,11 +1323,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y0` | in | initial value (> 0) | — |
-| `r` | in | growth rate | — |
-| `K` | in | carrying capacity (> 0) | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
+| `y0` | in | initial value (> 0) | - |
+| `r` | in | growth rate | - |
+| `K` | in | carrying capacity (> 0) | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
 
 **Applies when:** y0 > 0; K > 0.
 
@@ -1299,10 +1335,10 @@ $$
 $ differential-equations solve gompertz_growth y0=10 r=0.3 K=1000 t=5
 y = 357.881855
   by: Gompertz growth: value at a time  (u = ln(y/K) satisfies u' = -r u)
-  y0 = 10   []
-  r = 0.3   []
-  K = 1000   []
-  t = 5   []
+  y0 = 10
+  r = 0.3
+  K = 1000
+  t = 5
   assumes: y0 > 0; K > 0
 ```
 
@@ -1310,7 +1346,7 @@ y = 357.881855
 
 <a id="logistic_harvesting"></a>
 
-#### Logistic growth with constant harvesting: equilibria — `logistic_harvesting`
+#### Logistic growth with constant harvesting: equilibria, `logistic_harvesting`
 
 Equilibria of dy/dt = r y (1 - y/K) - H, their stability, and the critical (maximum sustainable) harvest.
 
@@ -1320,14 +1356,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `r` | in | growth rate (> 0) | — |
-| `K` | in | carrying capacity (> 0) | — |
-| `H` | in | harvest rate (>= 0) | — |
-| `y_high` | out | upper equilibrium (stable) | — |
-| `y_low` | out | lower equilibrium (unstable threshold) | — |
-| `H_critical` | out | maximum sustainable harvest rK/4 | — |
-| `stability_high` | out | stability | — |
-| `stability_low` | out | stability | — |
+| `r` | in | growth rate (> 0) | - |
+| `K` | in | carrying capacity (> 0) | - |
+| `H` | in | harvest rate (>= 0) | - |
+| `y_high` | out | upper equilibrium (stable) | - |
+| `y_low` | out | lower equilibrium (unstable threshold) | - |
+| `H_critical` | out | maximum sustainable harvest rK/4 | - |
+| `stability_high` | out | stability | - |
+| `stability_low` | out | stability | - |
 
 **Applies when:** r, K > 0; 0 <= H <= rK/4 (otherwise the population collapses).
 
@@ -1339,9 +1375,9 @@ H_critical = 125
 stability_high = stable
 stability_low = unstable
   by: Logistic growth with constant harvesting: equilibria  (roots of r y (1 - y/K) = H; sign of f' at each)
-  r = 0.5   []
-  K = 1000   []
-  H = 100   []
+  r = 0.5
+  K = 1000
+  H = 100
   assumes: r, K > 0; 0 <= H <= rK/4 (otherwise the population collapses)
 ```
 
@@ -1349,7 +1385,7 @@ stability_low = unstable
 
 <a id="logistic_inflection"></a>
 
-#### Logistic growth: inflection time and maximum growth rate — `logistic_inflection`
+#### Logistic growth: inflection time and maximum growth rate, `logistic_inflection`
 
 When a logistic population grows fastest: the inflection time, the population there (K/2) and the maximum rate rK/4.
 
@@ -1359,12 +1395,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `P0` | in | initial population (0 < P0 < K/2) | — |
-| `r` | in | growth rate (> 0) | — |
-| `K` | in | carrying capacity | — |
-| `t_inflection` | out | time of the inflection point | — |
-| `P_inflection` | out | population at the inflection (K/2) | — |
-| `max_rate` | out | largest growth rate dP/dt (rK/4) | — |
+| `P0` | in | initial population (0 < P0 < K/2) | - |
+| `r` | in | growth rate (> 0) | - |
+| `K` | in | carrying capacity | - |
+| `t_inflection` | out | time of the inflection point | - |
+| `P_inflection` | out | population at the inflection (K/2) | - |
+| `max_rate` | out | largest growth rate dP/dt (rK/4) | - |
 
 **Applies when:** r > 0; 0 < P0 < K/2.
 
@@ -1374,9 +1410,9 @@ t_inflection = 9.1902397
 P_inflection = 500
 max_rate = 125
   by: Logistic growth: inflection time and maximum growth rate  (P'' = 0 at P = K/2; t* = ln(K/P0 - 1)/r)
-  P0 = 10   []
-  r = 0.5   []
-  K = 1000   []
+  P0 = 10
+  r = 0.5
+  K = 1000
   assumes: r > 0; 0 < P0 < K/2
 ```
 
@@ -1384,7 +1420,7 @@ max_rate = 125
 
 <a id="logistic_value"></a>
 
-#### Logistic growth: population at a time — `logistic_value`
+#### Logistic growth: population at a time, `logistic_value`
 
 Solve dP/dt = r P (1 - P/K), P(0) = P0, and give P(t).
 
@@ -1394,11 +1430,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `P0` | in | initial population (> 0) | — |
-| `r` | in | intrinsic growth rate (> 0) | — |
-| `K` | in | carrying capacity (> 0) | — |
-| `t` | in | time | — |
-| `P` | out | population P(t) | — |
+| `P0` | in | initial population (> 0) | - |
+| `r` | in | intrinsic growth rate (> 0) | - |
+| `K` | in | carrying capacity (> 0) | - |
+| `t` | in | time | - |
+| `P` | out | population P(t) | - |
 
 **Applies when:** P0 > 0; r > 0; K > 0.
 
@@ -1406,10 +1442,10 @@ $$
 $ differential-equations solve logistic_value P0=10 r=0.5 K=1000 t=8
 P = 355.4609871
   by: Logistic growth: population at a time  (P = K / (1 + (K/P0 - 1) e^{-r t}))
-  P0 = 10   []
-  r = 0.5   []
-  K = 1000   []
-  t = 8   []
+  P0 = 10
+  r = 0.5
+  K = 1000
+  t = 8
   assumes: P0 > 0; r > 0; K > 0
 ```
 
@@ -1417,7 +1453,7 @@ P = 355.4609871
 
 <a id="mixing_tank"></a>
 
-#### Mixing tank (brine): amount of salt at a time — `mixing_tank`
+#### Mixing tank (brine): amount of salt at a time, `mixing_tank`
 
 A well-stirred tank of volume V with inflow = outflow rate r at concentration c_in: amount A(t) of solute.
 
@@ -1427,14 +1463,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `V` | in | volume (constant, > 0) | — |
-| `r` | in | flow rate in = out (> 0) | — |
-| `c_in` | in | inflow concentration (>= 0) | — |
-| `A0` | in | initial amount of solute | — |
-| `t` | in | time | — |
-| `A` | out | amount A(t) | — |
-| `A_limit` | out | long-run amount c_in V | — |
-| `concentration` | out | concentration A(t)/V | — |
+| `V` | in | volume (constant, > 0) | - |
+| `r` | in | flow rate in = out (> 0) | - |
+| `c_in` | in | inflow concentration (>= 0) | - |
+| `A0` | in | initial amount of solute | - |
+| `t` | in | time | - |
+| `A` | out | amount A(t) | - |
+| `A_limit` | out | long-run amount c_in V | - |
+| `concentration` | out | concentration A(t)/V | - |
 
 **Applies when:** V > 0; r > 0.
 
@@ -1444,11 +1480,11 @@ A = 7.869386806
 A_limit = 20
 concentration = 0.07869386806
   by: Mixing tank (brine): amount of salt at a time  (A' = r c_in - (r/V) A: A = c_in V + (A0 - c_in V) e^{-r t/V})
-  V = 100   []
-  r = 5   []
-  c_in = 0.2   []
-  A0 = 0   []
-  t = 10   []
+  V = 100
+  r = 5
+  c_in = 0.2
+  A0 = 0
+  t = 10
   assumes: V > 0; r > 0
 ```
 
@@ -1456,7 +1492,7 @@ concentration = 0.07869386806
 
 <a id="newton_cooling_constant"></a>
 
-#### Newton's law of cooling: cooling constant from a measurement — `newton_cooling_constant`
+#### Newton's law of cooling: cooling constant from a measurement, `newton_cooling_constant`
 
 The cooling constant k when a body at T0 in surroundings Ta reads T1 after time t1.
 
@@ -1466,11 +1502,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T0` | in | initial temperature | — |
-| `Ta` | in | ambient temperature | — |
-| `T1` | in | measured temperature | — |
-| `t1` | in | time of the measurement (> 0) | — |
-| `k` | out | cooling constant | — |
+| `T0` | in | initial temperature | - |
+| `Ta` | in | ambient temperature | - |
+| `T1` | in | measured temperature | - |
+| `t1` | in | time of the measurement (> 0) | - |
+| `k` | out | cooling constant | - |
 
 **Applies when:** t1 > 0; T1 strictly between Ta and T0.
 
@@ -1478,10 +1514,10 @@ $$
 $ differential-equations solve newton_cooling_constant T0=90 Ta=20 T1=60 t1=5
 k = 0.1119231576
   by: Newton's law of cooling: cooling constant from a measurement  (k = ln((T0 - Ta)/(T1 - Ta))/t1)
-  T0 = 90   []
-  Ta = 20   []
-  T1 = 60   []
-  t1 = 5   []
+  T0 = 90
+  Ta = 20
+  T1 = 60
+  t1 = 5
   assumes: t1 > 0; T1 strictly between Ta and T0
 ```
 
@@ -1489,7 +1525,7 @@ k = 0.1119231576
 
 <a id="newton_cooling_temperature"></a>
 
-#### Newton's law of cooling: temperature at a time — `newton_cooling_temperature`
+#### Newton's law of cooling: temperature at a time, `newton_cooling_temperature`
 
 Solve dT/dt = -k (T - Ta), T(0) = T0, and give T(t).
 
@@ -1499,11 +1535,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T0` | in | initial temperature | — |
-| `Ta` | in | ambient temperature | — |
-| `k` | in | cooling constant (> 0) | — |
-| `t` | in | time | — |
-| `T` | out | temperature T(t) | — |
+| `T0` | in | initial temperature | - |
+| `Ta` | in | ambient temperature | - |
+| `k` | in | cooling constant (> 0) | - |
+| `t` | in | time | - |
+| `T` | out | temperature T(t) | - |
 
 **Applies when:** k > 0.
 
@@ -1511,10 +1547,10 @@ $$
 $ differential-equations solve newton_cooling_temperature T0=90 Ta=20 k=0.1 t=5
 T = 62.45714618
   by: Newton's law of cooling: temperature at a time  (T = Ta + (T0 - Ta) e^{-k t})
-  T0 = 90   []
-  Ta = 20   []
-  k = 0.1   []
-  t = 5   []
+  T0 = 90
+  Ta = 20
+  k = 0.1
+  t = 5
   assumes: k > 0
 ```
 
@@ -1522,7 +1558,7 @@ T = 62.45714618
 
 <a id="newton_cooling_time"></a>
 
-#### Newton's law of cooling: time to reach a temperature — `newton_cooling_time`
+#### Newton's law of cooling: time to reach a temperature, `newton_cooling_time`
 
 With dT/dt = -k (T - Ta), T(0) = T0: when does the temperature reach T1?
 
@@ -1532,11 +1568,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `T0` | in | initial temperature | — |
-| `Ta` | in | ambient temperature | — |
-| `k` | in | cooling constant (> 0) | — |
-| `T1` | in | target temperature (between Ta and T0) | — |
-| `t` | out | time to reach T1 | — |
+| `T0` | in | initial temperature | - |
+| `Ta` | in | ambient temperature | - |
+| `k` | in | cooling constant (> 0) | - |
+| `T1` | in | target temperature (between Ta and T0) | - |
+| `t` | out | time to reach T1 | - |
 
 **Applies when:** k > 0; T1 between Ta and T0.
 
@@ -1544,10 +1580,10 @@ $$
 $ differential-equations solve newton_cooling_time T1=40 T0=90 Ta=20 k=0.1
 t = 12.52762969
   by: Newton's law of cooling: time to reach a temperature  (t = ln((T0 - Ta)/(T1 - Ta))/k)
-  T1 = 40   []
-  T0 = 90   []
-  Ta = 20   []
-  k = 0.1   []
+  T1 = 40
+  T0 = 90
+  Ta = 20
+  k = 0.1
   assumes: k > 0; T1 between Ta and T0
 ```
 
@@ -1555,7 +1591,7 @@ t = 12.52762969
 
 <a id="half_life_decay"></a>
 
-#### Radioactive decay from a half-life — `half_life_decay`
+#### Radioactive decay from a half-life: `half_life_decay`
 
 Amount left after time t when dN/dt = -k*N and the half-life is T; also the decay constant k.
 
@@ -1565,11 +1601,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `N0` | in | initial amount | — |
-| `T` | in | half-life (> 0) | — |
-| `t` | in | elapsed time | — |
-| `N` | out | amount remaining N(t) | — |
-| `k` | out | decay constant ln 2 / T | — |
+| `N0` | in | initial amount | - |
+| `T` | in | half-life (> 0) | - |
+| `t` | in | elapsed time | - |
+| `N` | out | amount remaining N(t) | - |
+| `k` | out | decay constant ln 2 / T | - |
 
 **Applies when:** T > 0.
 
@@ -1578,9 +1614,9 @@ $ differential-equations solve half_life_decay N0=80 T=3 t=9
 N = 10
 k = 0.2310490602
   by: Radioactive decay from a half-life  (N = N0 * 2^(-t/T), k = ln 2 / T)
-  N0 = 80   []
-  T = 3   []
-  t = 9   []
+  N0 = 80
+  T = 3
+  t = 9
   assumes: T > 0
 ```
 
@@ -1588,7 +1624,7 @@ k = 0.2310490602
 
 <a id="separable_power"></a>
 
-#### Separable equation y' = a t^n y — `separable_power`
+#### Separable equation y' = a t^n y, `separable_power`
 
 Solve the separable equation y' = a t^n y with y(0) = y0 and give y(t).
 
@@ -1598,11 +1634,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient | — |
-| `n` | in | power of t (>= 0) | — |
-| `y0` | in | initial value | — |
-| `t` | in | time (>= 0) | — |
-| `y` | out | value y(t) | — |
+| `a` | in | coefficient | - |
+| `n` | in | power of t (>= 0) | - |
+| `y0` | in | initial value | - |
+| `t` | in | time (>= 0) | - |
+| `y` | out | value y(t) | - |
 
 **Applies when:** n >= 0; t >= 0.
 
@@ -1610,10 +1646,10 @@ $$
 $ differential-equations solve separable_power a=2 n=1 y0=3 t=1
 y = 8.154845485
   by: Separable equation y' = a t^n y  (separate: dy/y = a t^n dt, ln(y/y0) = a t^{n+1}/(n+1))
-  a = 2   []
-  n = 1   []
-  y0 = 3   []
-  t = 1   []
+  a = 2
+  n = 1
+  y0 = 3
+  t = 1
   assumes: n >= 0; t >= 0
 ```
 
@@ -1621,7 +1657,7 @@ y = 8.154845485
 
 <a id="slope_field"></a>
 
-#### Slope (direction) field value — `slope_field`
+#### Slope (direction) field value: `slope_field`
 
 The slope dy/dt = f(t, y) of the direction field at a point, and its angle.
 
@@ -1631,11 +1667,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) | — |
-| `t` | in | t-coordinate | — |
-| `y` | in | y-coordinate | — |
-| `slope` | out | slope f(t, y) | — |
-| `angle_deg` | out | angle of the field line, degrees | — |
+| `f` | in | right-hand side f(t, y) | - |
+| `t` | in | t-coordinate | - |
+| `y` | in | y-coordinate | - |
+| `slope` | out | slope f(t, y) | - |
+| `angle_deg` | out | angle of the field line, degrees | - |
 
 **Applies when:** f defined at the point.
 
@@ -1644,8 +1680,8 @@ $ differential-equations solve slope_field "f=t + y" t=1 y=2
 slope = 3
 angle_deg = 71.56505118
   by: Slope (direction) field value  (evaluate f; angle = atan(slope))
-  t = 1   []
-  y = 2   []
+  t = 1
+  y = 2
   f = t + y
   assumes: f defined at the point
 ```
@@ -1654,7 +1690,7 @@ angle_deg = 71.56505118
 
 <a id="exponential_time_to_reach"></a>
 
-#### Time for exponential growth or decay to reach a value — `exponential_time_to_reach`
+#### Time for exponential growth or decay to reach a value, `exponential_time_to_reach`
 
 For dy/dt = k*y, y(0) = y0: the time at which y reaches y1.
 
@@ -1664,10 +1700,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `y0` | in | initial value | — |
-| `y1` | in | target value | — |
-| `k` | in | rate constant | — |
-| `t` | out | time to reach y1 | — |
+| `y0` | in | initial value | - |
+| `y1` | in | target value | - |
+| `k` | in | rate constant | - |
+| `t` | out | time to reach y1 | - |
 
 **Applies when:** k != 0; y1/y0 > 0; the target lies ahead (t >= 0).
 
@@ -1675,9 +1711,9 @@ $$
 $ differential-equations solve exponential_time_to_reach y0=100 k=0.05 y1=300
 t = 21.97224577
   by: Time for exponential growth or decay to reach a value  (t = ln(y1/y0)/k)
-  y0 = 100   []
-  k = 0.05   []
-  y1 = 300   []
+  y0 = 100
+  k = 0.05
+  y1 = 300
   assumes: k != 0; y1/y0 > 0; the target lies ahead (t >= 0)
 ```
 
@@ -1687,7 +1723,7 @@ t = 21.97224577
 
 <a id="convolution_integral"></a>
 
-#### Convolution integral (f * g)(t) — `convolution_integral`
+#### Convolution integral (f * g)(t), `convolution_integral`
 
 (f * g)(t) = integral from 0 to t of f(u) g(t - u) du, whose transform is F(s) G(s).
 
@@ -1697,10 +1733,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | function f(t) | — |
-| `g` | in | function g(t) | — |
-| `t` | in | time (>= 0) | — |
-| `value` | out | (f * g)(t) | — |
+| `f` | in | function f(t) | - |
+| `g` | in | function g(t) | - |
+| `t` | in | time (>= 0) | - |
+| `value` | out | (f * g)(t) | - |
 
 **Applies when:** f, g integrable on [0, t].
 
@@ -1708,9 +1744,9 @@ $$
 $ differential-equations solve convolution_integral "f=exp(-t)" "g=sin(t)" t=2
 value = 0.7303897733
   by: Convolution integral (f * g)(t)  (adaptive tanh-sinh quadrature of the convolution integral at 20 digits)
-  t = 2   []
-  g = sin(t)
+  t = 2
   f = exp(-t)
+  g = sin(t)
   assumes: f, g integrable on [0, t]
 ```
 
@@ -1718,7 +1754,7 @@ value = 0.7303897733
 
 <a id="ode_impulse_response"></a>
 
-#### Impulse response of a second-order ODE — `ode_impulse_response`
+#### Impulse response of a second-order ODE: `ode_impulse_response`
 
 The response h(t) of a y'' + b y' + c y = delta(t) from rest (the inverse Laplace transform of 1/(a s^2 + b s + c)).
 
@@ -1728,11 +1764,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `t` | in | time (>= 0) | — |
-| `h` | out | impulse response h(t) | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `t` | in | time (>= 0) | - |
+| `h` | out | impulse response h(t) | - |
 
 **Applies when:** a != 0; t >= 0.
 
@@ -1740,10 +1776,10 @@ $$
 $ differential-equations solve ode_impulse_response a=1 b=2 c=5 t=1
 h = 0.1672559146
   by: Impulse response of a second-order ODE  (the impulse gives y(0+) = 0, y'(0+) = 1/a; then the homogeneous solution)
-  a = 1   []
-  b = 2   []
-  c = 5   []
-  t = 1   []
+  a = 1
+  b = 2
+  c = 5
+  t = 1
   assumes: a != 0; t >= 0
 ```
 
@@ -1751,7 +1787,7 @@ h = 0.1672559146
 
 <a id="inverse_laplace_transform"></a>
 
-#### Inverse Laplace transform of a rational function — `inverse_laplace_transform`
+#### Inverse Laplace transform of a rational function, `inverse_laplace_transform`
 
 f(t) for a strictly proper rational F(s) (any poles, repeated or complex), by residues / partial fractions.
 
@@ -1761,20 +1797,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `F` | in | F(s), a rational function of s | — |
-| `t` | in | time (>= 0) | — |
-| `f` | out | value f(t) | — |
-| `poles` | out | poles of F(s) (canonical order) | — |
+| `F` | in | F(s), a rational function of s | - |
+| `t` | in | time (>= 0) | - |
+| `f` | out | value f(t) | - |
+| `poles` | out | poles of F(s) (canonical order) | - |
 
 **Applies when:** F strictly proper with rational coefficients; denominator degree <= 10.
 
-Run `differential-equations info inverse_laplace_transform` for its inputs, then `differential-equations solve inverse_laplace_transform name=value ...`.
+```shell
+$ differential-equations solve inverse_laplace_transform "F=(s + 3)/(s^2 + 3s + 2)" t=1
+f = 0.6004235991
+poles = [-2.0,-1.0]
+  by: Inverse Laplace transform of a rational function  (f(t) = sum over poles p (order m) of the residue of F(s) e^{st}: e^{pt} sum_k g_k t^{m-1-k}/(m-1-k)!)
+  t = 1
+  F = (s + 3)/(s^2 + 3s + 2)
+  assumes: F strictly proper with rational coefficients; denominator degree <= 10
+```
 
 **What the worked example means:** This calculation determines the time-domain function f(t) from its Laplace transform F(s). By applying residue calculus to the poles of (s + 3)/(s^2 + 3s + 2), the method computes the value 0.600424 at the specific time 1. The result represents the system's response in the time domain, derived from the frequency-domain representation provided by the input function.
 
 <a id="laplace_time_shift"></a>
 
-#### Laplace transform of a delayed function u(t - c) f(t - c) — `laplace_time_shift`
+#### Laplace transform of a delayed function u(t - c) f(t - c), `laplace_time_shift`
 
 Second shifting theorem: the transform of u(t - c) f(t - c) is e^{-cs} F(s).
 
@@ -1784,21 +1828,30 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | function f(t) | — |
-| `c` | in | delay (>= 0) | — |
-| `s` | in | transform variable | — |
-| `F` | out | transform of the delayed function | — |
-| `G` | out | transform of f itself | — |
+| `f` | in | function f(t) | - |
+| `c` | in | delay (>= 0) | - |
+| `s` | in | transform variable | - |
+| `F` | out | transform of the delayed function | - |
+| `G` | out | transform of f itself | - |
 
 **Applies when:** c >= 0; s > abscissa of f.
 
-*Not in `differential-equations` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ differential-equations solve laplace_time_shift f=t c=2 s=1
+F = 0.1353352832
+G = 1
+  by: Laplace transform of a delayed function u(t - c) f(t - c)  (e^{-cs} times the table transform of f)
+  c = 2
+  s = 1
+  f = t
+  assumes: c >= 0; s > abscissa of f
+```
 
 **What the worked example means:** This calculation applies the second shifting theorem to determine the Laplace transform of a function that begins after a delay. Multiplying the transform of the base function, denoted as 1, by an exponential term involving the delay time 2 and the frequency variable 1 gives the final result 0.135335. This method allows practitioners to handle piecewise continuous inputs or signals that are switched on at a specific time.
 
 <a id="laplace_transform"></a>
 
-#### Laplace transform of a function at a point — `laplace_transform`
+#### Laplace transform of a function at a point, `laplace_transform`
 
 F(s) = integral from 0 to infinity of e^{-st} f(t) dt for sums of t^n e^{at} sin/cos(bt) (also sinh, cosh), and the abscissa of convergence.
 
@@ -1808,20 +1861,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | function f(t) | — |
-| `s` | in | transform variable (s > abscissa) | — |
-| `F` | out | transform value F(s) | — |
-| `sigma` | out | abscissa of convergence (F exists for s > sigma) | — |
+| `f` | in | function f(t) | - |
+| `s` | in | transform variable (s > abscissa) | - |
+| `F` | out | transform value F(s) | - |
+| `sigma` | out | abscissa of convergence (F exists for s > sigma) | - |
 
 **Applies when:** f a sum of t^n e^{at} sin/cos(bt) terms; s > sigma.
 
-*Not in `differential-equations` 1.1.0 yet:* use the Python package or the model's page in the browser.
+```shell
+$ differential-equations solve laplace_transform "f=t^2 e^(3t)" s=5
+F = 0.25
+sigma = 3
+  by: Laplace transform of a function at a point  (table: L{t^n e^{zt}} = n!/(s - z)^{n+1}, with sin and cos written through complex exponentials)
+  s = 5
+  f = t^2 e^(3t)
+  assumes: f a sum of t^n e^{at} sin/cos(bt) terms; s > sigma
+```
 
 **What the worked example means:** This calculation determines the Laplace transform, denoted as F(s), for a function composed of polynomial, exponential, and trigonometric terms. By applying the table formula involving factorials and powers of the difference between s and the complex exponent, the integral from zero to infinity is converted into an algebraic expression. The result, 0.25, represents the frequency-domain equivalent of the time-domain signal t^2 e^(3t) at the specific transform variable value 5. The computed abscissa of convergence, 3, indicates that this transform exists and is valid only when s exceeds this threshold.
 
 <a id="partial_fraction_residues"></a>
 
-#### Partial fractions of a rational function (simple poles) — `partial_fraction_residues`
+#### Partial fractions of a rational function (simple poles), `partial_fraction_residues`
 
 F(s) = sum r_i/(s - p_i): the poles and residues of a strictly proper rational function with simple poles.
 
@@ -1831,10 +1892,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `F` | in | F(s), a rational function of s | — |
-| `poles` | out | poles p_i (real ascending, then complex) | — |
-| `residues` | out | residues r_i in the same order | — |
-| `count` | out | number of poles | — |
+| `F` | in | F(s), a rational function of s | - |
+| `poles` | out | poles p_i (real ascending, then complex) | - |
+| `residues` | out | residues r_i in the same order | - |
+| `count` | out | number of poles | - |
 
 **Applies when:** strictly proper; simple (distinct) poles.
 
@@ -1852,7 +1913,7 @@ count = 2
 
 <a id="ode_step_response"></a>
 
-#### Unit-step response of a second-order ODE — `ode_step_response`
+#### Unit-step response of a second-order ODE: `ode_step_response`
 
 The response of a y'' + b y' + c y = u(t) (unit step) from rest, and its final value 1/c when stable.
 
@@ -1862,12 +1923,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `t` | in | time (>= 0) | — |
-| `y` | out | step response y(t) | — |
-| `final_value` | out | limit 1/c (stable systems) | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `t` | in | time (>= 0) | - |
+| `y` | out | step response y(t) | - |
+| `final_value` | out | limit 1/c (stable systems) | - |
 
 **Applies when:** a, c != 0; t >= 0.
 
@@ -1876,10 +1937,10 @@ $ differential-equations solve ode_step_response a=1 b=2 c=5 t=1
 y = 0.1971671902
 final_value = 0.2
   by: Unit-step response of a second-order ODE  (Y(s) = 1/(s(as^2 + bs + c)): constant 1/c plus the homogeneous solution with y(0) = -1/c, y'(0) = 0)
-  a = 1   []
-  b = 2   []
-  c = 5   []
-  t = 1   []
+  a = 1
+  b = 2
+  c = 5
+  t = 1
   assumes: a, c != 0; t >= 0
 ```
 
@@ -1889,7 +1950,7 @@ final_value = 0.2
 
 <a id="phase_portrait_2x2"></a>
 
-#### Linear 2x2 system: equilibrium type and stability (trace-determinant plane) — `phase_portrait_2x2`
+#### Linear 2x2 system: equilibrium type and stability (trace-determinant plane), `phase_portrait_2x2`
 
 Classify the origin of x' = A x (node, saddle, spiral, center, star, degenerate) and its stability from the trace and determinant.
 
@@ -1899,13 +1960,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | the 2x2 coefficient matrix of x' = A x | — |
-| `type` | out | phase portrait type | — |
-| `stability` | out | stability | — |
-| `lambda1` | out | first eigenvalue | — |
-| `lambda2` | out | second eigenvalue | — |
-| `trace` | out | trace | — |
-| `det` | out | determinant | — |
+| `A` | in | the 2x2 coefficient matrix of x' = A x | - |
+| `type` | out | phase portrait type | - |
+| `stability` | out | stability | - |
+| `lambda1` | out | first eigenvalue | - |
+| `lambda2` | out | second eigenvalue | - |
+| `trace` | out | trace | - |
+| `det` | out | determinant | - |
 
 **Applies when:** A real 2x2.
 
@@ -1925,7 +1986,7 @@ det = 2
 
 <a id="linear_system_solution"></a>
 
-#### Linear system x' = A x: solution at a time — `linear_system_solution`
+#### Linear system x' = A x: solution at a time, `linear_system_solution`
 
 Solve x' = A x, x(0) = x0 (n up to 6) and give x(t) = e^{At} x0.
 
@@ -1935,21 +1996,28 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | n x n coefficient matrix | — |
-| `x0` | in | initial vector x(0) | — |
-| `t` | in | time | — |
-| `x` | out | state x(t) | — |
-| `x1` | out | first component of x(t) | — |
+| `A` | in | n x n coefficient matrix | - |
+| `x0` | in | initial vector x(0) | - |
+| `t` | in | time | - |
+| `x` | out | state x(t) | - |
+| `x1` | out | first component of x(t) | - |
 
 **Applies when:** A square, n <= 6.
 
-Run `differential-equations info linear_system_solution` for its inputs, then `differential-equations solve linear_system_solution name=value ...`.
+```shell
+$ differential-equations solve linear_system_solution "A=[[0, 1], [-2, -3]]" "x0=[1, 0]" t=1
+x = [0.600423599106,-0.46508831587]
+x1 = 0.6004235991
+  by: Linear system x' = A x: solution at a time  (matrix exponential at 30 digits (scaling and squaring of the Taylor series))
+  t = 1
+  assumes: A square, n <= 6
+```
 
 **What the worked example means:** This calculation determines the state vector of a linear system at a specific future time. It applies the matrix exponential to the coefficient matrix and initial vector provided as inputs. The resulting state [0.600424, -0.465088] represents the system's configuration, where the first component 0.600424 indicates the value of that specific variable at time 1.
 
 <a id="routh_hurwitz"></a>
 
-#### Routh-Hurwitz stability test of a characteristic polynomial — `routh_hurwitz`
+#### Routh-Hurwitz stability test of a characteristic polynomial, `routh_hurwitz`
 
 How many roots of a polynomial lie in the right half plane (Routh array), hence whether the system is asymptotically stable.
 
@@ -1959,10 +2027,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `coeffs` | in | coefficients, highest power first | — |
-| `stable` | out | all roots in the open left half plane | — |
-| `rhp_roots` | out | number of right-half-plane roots | — |
-| `first_column` | out | first column of the Routh array | — |
+| `coeffs` | in | coefficients, highest power first | - |
+| `stable` | out | all roots in the open left half plane | - |
+| `rhp_roots` | out | number of right-half-plane roots | - |
+| `first_column` | out | first column of the Routh array | - |
 
 **Applies when:** regular Routh array (no zero in the first column).
 
@@ -1979,7 +2047,7 @@ first_column = [1.0,6.0,10.0,6.0]
 
 <a id="linear_system_stability"></a>
 
-#### Stability of x' = A x (n x n) from the characteristic polynomial — `linear_system_stability`
+#### Stability of x' = A x (n x n) from the characteristic polynomial, `linear_system_stability`
 
 Whether the origin of x' = A x is asymptotically stable and how many eigenvalues have positive real part, without computing eigenvalues.
 
@@ -1989,10 +2057,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `A` | in | n x n coefficient matrix (n <= 8) | — |
-| `stable` | out | asymptotically stable (all eigenvalues Re < 0) | — |
-| `unstable_eigenvalues` | out | number of eigenvalues with Re > 0 | — |
-| `char_poly` | out | characteristic polynomial coefficients | — |
+| `A` | in | n x n coefficient matrix (n <= 8) | - |
+| `stable` | out | asymptotically stable (all eigenvalues Re < 0) | - |
+| `unstable_eigenvalues` | out | number of eigenvalues with Re > 0 | - |
+| `char_poly` | out | characteristic polynomial coefficients | - |
 
 **Applies when:** regular Routh array (no eigenvalue on the imaginary axis).
 
@@ -2011,7 +2079,7 @@ char_poly = [1.0,6.0,11.0,4.0]
 
 <a id="backward_euler_method"></a>
 
-#### Backward (implicit) Euler method — `backward_euler_method`
+#### Backward (implicit) Euler method: `backward_euler_method`
 
 Approximate y' = f(t, y), y(t0) = y0 after n implicit Euler steps: y_{k+1} = y_k + h f(t_{k+1}, y_{k+1}).
 
@@ -2021,13 +2089,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) of y' = f(t, y) | — |
-| `t0` | in | initial time | — |
-| `y0` | in | initial value y(t0) | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time t0 + n h | — |
+| `f` | in | right-hand side f(t, y) of y' = f(t, y) | - |
+| `t0` | in | initial time | - |
+| `y0` | in | initial value y(t0) | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time t0 + n h | - |
 
 **Applies when:** h > 0; h*|df/dy| < 1 at each step (unique step).
 
@@ -2036,9 +2104,9 @@ $ differential-equations solve backward_euler_method "f=-2*y + t" y0=1 h=0.1 n=2
 y_n = 0.7180555556
 t_n = 0.2
   by: Backward (implicit) Euler method  (each step solved by Newton's method from the explicit Euler predictor)
-  y0 = 1   []
-  h = 0.1   []
-  t0 = 0   []
+  y0 = 1
+  h = 0.1
+  t0 = 0
   f = -2*y + t
   assumes: h > 0; h*|df/dy| < 1 at each step (unique step)
 ```
@@ -2047,7 +2115,7 @@ t_n = 0.2
 
 <a id="cfl_condition"></a>
 
-#### CFL condition for the advection equation (upwind scheme) — `cfl_condition`
+#### CFL condition for the advection equation (upwind scheme), `cfl_condition`
 
 Courant number C = |c| dt/dx of the explicit upwind scheme for u_t + c u_x = 0, its stability (C <= 1) and the largest stable dt.
 
@@ -2057,12 +2125,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `c` | in | advection speed | — |
-| `dt` | in | time step (> 0) | — |
-| `dx` | in | grid spacing (> 0) | — |
-| `courant` | out | Courant number \|c\| dt / dx | — |
-| `stable` | out | C <= 1 | — |
-| `dt_max` | out | largest stable time step dx / \|c\| | — |
+| `c` | in | advection speed | - |
+| `dt` | in | time step (> 0) | - |
+| `dx` | in | grid spacing (> 0) | - |
+| `courant` | out | Courant number \|c\| dt / dx | - |
+| `stable` | out | C <= 1 | - |
+| `dt_max` | out | largest stable time step dx / \|c\| | - |
 
 **Applies when:** c != 0; dt, dx > 0.
 
@@ -2072,9 +2140,9 @@ courant = 0.4
 stable = true
 dt_max = 0.025
   by: CFL condition for the advection equation (upwind scheme)  (Courant-Friedrichs-Lewy condition (von Neumann: |1 - C(1 - e^{-i theta})| <= 1))
-  c = 2   []
-  dt = 0.01   []
-  dx = 0.05   []
+  c = 2
+  dt = 0.01
+  dx = 0.05
   assumes: c != 0; dt, dx > 0
 ```
 
@@ -2082,7 +2150,7 @@ dt_max = 0.025
 
 <a id="runge_kutta_4"></a>
 
-#### Classical Runge-Kutta method (RK4) — `runge_kutta_4`
+#### Classical Runge-Kutta method (RK4): `runge_kutta_4`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the classical fourth-order Runge-Kutta method.
 
@@ -2092,13 +2160,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) of y' = f(t, y) | — |
-| `t0` | in | initial time | — |
-| `y0` | in | initial value y(t0) | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time t0 + n h | — |
+| `f` | in | right-hand side f(t, y) of y' = f(t, y) | - |
+| `t0` | in | initial time | - |
+| `y0` | in | initial value y(t0) | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time t0 + n h | - |
 
 **Applies when:** h > 0; 1 <= n <= 10000; f defined along the steps.
 
@@ -2107,9 +2175,9 @@ $ differential-equations solve runge_kutta_4 "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.242805142
 t_n = 0.2
   by: Classical Runge-Kutta method (RK4)  (classical RK4 with four slope evaluations per step)
-  y0 = 1   []
-  h = 0.1   []
-  t0 = 0   []
+  y0 = 1
+  h = 0.1
+  t0 = 0
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2118,7 +2186,7 @@ t_n = 0.2
 
 <a id="crank_nicolson_steps"></a>
 
-#### Crank-Nicolson steps for the heat equation — `crank_nicolson_steps`
+#### Crank-Nicolson steps for the heat equation, `crank_nicolson_steps`
 
 Advance grid values of u_t = alpha u_xx by n Crank-Nicolson steps (unconditionally stable), ends held fixed.
 
@@ -2128,10 +2196,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `u` | in | grid values (first and last are boundary values) | — |
-| `r` | in | mesh ratio alpha dt / dx^2 (> 0) | — |
-| `n` | in | number of time steps | — |
-| `u` | out | grid values after n steps | — |
+| `u` | in | grid values (first and last are boundary values) | - |
+| `r` | in | mesh ratio alpha dt / dx^2 (> 0) | - |
+| `n` | in | number of time steps | - |
+| `u` | out | grid values after n steps | - |
 
 **Applies when:** Dirichlet ends; r > 0.
 
@@ -2139,7 +2207,7 @@ $$
 $ differential-equations solve crank_nicolson_steps "u=[0, 50, 100, 50, 0]" r=1 n=1
 u = [0.0,35.7142857143,42.8571428571,35.7142857143,0.0]
   by: Crank-Nicolson steps for the heat equation  (average of explicit and implicit steps; each step a tridiagonal solve (Thomas algorithm))
-  r = 1   []
+  r = 1
   assumes: Dirichlet ends; r > 0
 ```
 
@@ -2147,7 +2215,7 @@ u = [0.0,35.7142857143,42.8571428571,35.7142857143,0.0]
 
 <a id="euler_method"></a>
 
-#### Euler's method — `euler_method`
+#### Euler's method: `euler_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with Euler's method.
 
@@ -2157,13 +2225,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) of y' = f(t, y) | — |
-| `t0` | in | initial time | — |
-| `y0` | in | initial value y(t0) | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time t0 + n h | — |
+| `f` | in | right-hand side f(t, y) of y' = f(t, y) | - |
+| `t0` | in | initial time | - |
+| `y0` | in | initial value y(t0) | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time t0 + n h | - |
 
 **Applies when:** h > 0; 1 <= n <= 10000; f defined along the steps.
 
@@ -2172,9 +2240,9 @@ $ differential-equations solve euler_method "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.22
 t_n = 0.2
   by: Euler's method  (explicit Euler: y_{k+1} = y_k + h f(t_k, y_k))
-  y0 = 1   []
-  h = 0.1   []
-  t0 = 0   []
+  y0 = 1
+  h = 0.1
+  t0 = 0
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2183,7 +2251,7 @@ t_n = 0.2
 
 <a id="euler_error_exponential"></a>
 
-#### Euler's method error for exponential growth — `euler_error_exponential`
+#### Euler's method error for exponential growth, `euler_error_exponential`
 
 For y' = k y, y(0) = y0: the Euler approximation after n steps of size h, the exact value and the global error.
 
@@ -2193,14 +2261,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `k` | in | rate constant | — |
-| `y0` | in | initial value | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_euler` | out | Euler value y0 (1 + h k)^n | — |
-| `y_exact` | out | exact value y0 e^{k n h} | — |
-| `error` | out | global error exact - Euler | — |
-| `relative_error` | out | error / exact | — |
+| `k` | in | rate constant | - |
+| `y0` | in | initial value | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_euler` | out | Euler value y0 (1 + h k)^n | - |
+| `y_exact` | out | exact value y0 e^{k n h} | - |
+| `error` | out | global error exact - Euler | - |
+| `relative_error` | out | error / exact | - |
 
 **Applies when:** h > 0.
 
@@ -2211,9 +2279,9 @@ y_exact = 2.718281828
 error = 0.1245393684
 relative_error = 0.04581547324
   by: Euler's method error for exponential growth  (Euler on a linear equation multiplies by (1 + hk) per step)
-  k = 1   []
-  y0 = 1   []
-  h = 0.1   []
+  k = 1
+  y0 = 1
+  h = 0.1
   assumes: h > 0
 ```
 
@@ -2221,7 +2289,7 @@ relative_error = 0.04581547324
 
 <a id="heat_ftcs_steps"></a>
 
-#### Explicit finite-difference (FTCS) steps for the heat equation — `heat_ftcs_steps`
+#### Explicit finite-difference (FTCS) steps for the heat equation, `heat_ftcs_steps`
 
 Advance grid values of u_t = alpha u_xx by n explicit steps u_i <- u_i + r (u_{i+1} - 2 u_i + u_{i-1}), ends held fixed.
 
@@ -2231,11 +2299,11 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `u` | in | grid values (first and last are boundary values) | — |
-| `r` | in | mesh ratio alpha dt / dx^2 (> 0) | — |
-| `n` | in | number of time steps | — |
-| `u` | out | grid values after n steps | — |
-| `stable_ratio` | out | r <= 1/2 | — |
+| `u` | in | grid values (first and last are boundary values) | - |
+| `r` | in | mesh ratio alpha dt / dx^2 (> 0) | - |
+| `n` | in | number of time steps | - |
+| `u` | out | grid values after n steps | - |
+| `stable_ratio` | out | r <= 1/2 | - |
 
 **Applies when:** Dirichlet ends (held fixed); r > 0.
 
@@ -2244,7 +2312,7 @@ $ differential-equations solve heat_ftcs_steps "u=[0, 50, 100, 50, 0]" r=0.25 n=
 u = [0.0,50.0,75.0,50.0,0.0]
 stable_ratio = true
   by: Explicit finite-difference (FTCS) steps for the heat equation  (forward time, centred space)
-  r = 0.25   []
+  r = 0.25
   assumes: Dirichlet ends (held fixed); r > 0
 ```
 
@@ -2252,7 +2320,7 @@ stable_ratio = true
 
 <a id="midpoint_method"></a>
 
-#### Explicit midpoint method (RK2) — `midpoint_method`
+#### Explicit midpoint method (RK2): `midpoint_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the explicit midpoint method.
 
@@ -2262,13 +2330,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) of y' = f(t, y) | — |
-| `t0` | in | initial time | — |
-| `y0` | in | initial value y(t0) | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time t0 + n h | — |
+| `f` | in | right-hand side f(t, y) of y' = f(t, y) | - |
+| `t0` | in | initial time | - |
+| `y0` | in | initial value y(t0) | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time t0 + n h | - |
 
 **Applies when:** h > 0; 1 <= n <= 10000; f defined along the steps.
 
@@ -2277,9 +2345,9 @@ $ differential-equations solve midpoint_method "f=t + y" y0=1 h=0.1 n=2 t0=0
 y_n = 1.24205
 t_n = 0.2
   by: Explicit midpoint method (RK2)  (second-order Runge-Kutta, slope at the midpoint)
-  y0 = 1   []
-  h = 0.1   []
-  t0 = 0   []
+  y0 = 1
+  h = 0.1
+  t0 = 0
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2288,7 +2356,7 @@ t_n = 0.2
 
 <a id="improved_euler_method"></a>
 
-#### Improved Euler (Heun) method — `improved_euler_method`
+#### Improved Euler (Heun) method: `improved_euler_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the improved Euler (Heun) method.
 
@@ -2298,13 +2366,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | right-hand side f(t, y) of y' = f(t, y) | — |
-| `t0` | in | initial time | — |
-| `y0` | in | initial value y(t0) | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time t0 + n h | — |
+| `f` | in | right-hand side f(t, y) of y' = f(t, y) | - |
+| `t0` | in | initial time | - |
+| `y0` | in | initial value y(t0) | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time t0 + n h | - |
 
 **Applies when:** h > 0; 1 <= n <= 10000; f defined along the steps.
 
@@ -2313,9 +2381,9 @@ $ differential-equations solve improved_euler_method "f=t + y" y0=1 h=0.1 n=2 t0
 y_n = 1.24205
 t_n = 0.2
   by: Improved Euler (Heun) method  (Heun predictor-corrector: average the slopes at both ends)
-  y0 = 1   []
-  h = 0.1   []
-  t0 = 0   []
+  y0 = 1
+  h = 0.1
+  t0 = 0
   f = t + y
   assumes: h > 0; 1 <= n <= 10000; f defined along the steps
 ```
@@ -2324,7 +2392,7 @@ t_n = 0.2
 
 <a id="explicit_step_limit"></a>
 
-#### Largest stable step of an explicit method for y' = lambda y — `explicit_step_limit`
+#### Largest stable step of an explicit method for y' = lambda y, `explicit_step_limit`
 
 The absolute-stability step limit h_max of Euler, Heun, midpoint or RK4 on a decaying mode y' = lambda y (lambda < 0).
 
@@ -2334,10 +2402,10 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `method` | in | explicit method | — |
-| `lam` | in | lambda (< 0) | — |
-| `h_max` | out | largest stable step | — |
-| `z_boundary` | out | real stability boundary h lambda | — |
+| `method` | in | explicit method | - |
+| `lam` | in | lambda (< 0) | - |
+| `h_max` | out | largest stable step | - |
+| `z_boundary` | out | real stability boundary h lambda | - |
 
 **Applies when:** lambda < 0.
 
@@ -2346,7 +2414,7 @@ $ differential-equations solve explicit_step_limit lam=-20 method=rk4
 h_max = 0.1392646782
 z_boundary = -2.785293563
   by: Largest stable step of an explicit method for y' = lambda y  (bisection for |R(-x)| = 1 on the stability polynomial)
-  lam = -20   []
+  lam = -20
   method = rk4
   assumes: lambda < 0
 ```
@@ -2355,7 +2423,7 @@ z_boundary = -2.785293563
 
 <a id="runge_kutta_4_system"></a>
 
-#### RK4 for a system of two first-order equations — `runge_kutta_4_system`
+#### RK4 for a system of two first-order equations, `runge_kutta_4_system`
 
 Approximate x' = f(t, x, y), y' = g(t, x, y) with x(t0) = x0, y(t0) = y0 after n RK4 steps of size h.
 
@@ -2365,16 +2433,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `f` | in | x' = f(t, x, y) | — |
-| `g` | in | y' = g(t, x, y) | — |
-| `t0` | in | initial time | — |
-| `x0` | in | initial x | — |
-| `y0` | in | initial y | — |
-| `h` | in | step size (> 0) | — |
-| `n` | in | number of steps | — |
-| `x_n` | out | approximation of x(t0 + n h) | — |
-| `y_n` | out | approximation of y(t0 + n h) | — |
-| `t_n` | out | final time | — |
+| `f` | in | x' = f(t, x, y) | - |
+| `g` | in | y' = g(t, x, y) | - |
+| `t0` | in | initial time | - |
+| `x0` | in | initial x | - |
+| `y0` | in | initial y | - |
+| `h` | in | step size (> 0) | - |
+| `n` | in | number of steps | - |
+| `x_n` | out | approximation of x(t0 + n h) | - |
+| `y_n` | out | approximation of y(t0 + n h) | - |
+| `t_n` | out | final time | - |
 
 **Applies when:** h > 0.
 
@@ -2384,10 +2452,10 @@ x_n = 0.5403029671
 y_n = -0.8414704778
 t_n = 1
   by: RK4 for a system of two first-order equations  (classical RK4 applied to the vector (x, y))
-  x0 = 1   []
-  y0 = 0   []
-  t0 = 0   []
-  h = 0.1   []
+  x0 = 1
+  y0 = 0
+  t0 = 0
+  h = 0.1
   f = y
   g = -x
   assumes: h > 0
@@ -2397,7 +2465,7 @@ t_n = 1
 
 <a id="amplification_factor"></a>
 
-#### Stability function (amplification factor) of a one-step method — `amplification_factor`
+#### Stability function (amplification factor) of a one-step method, `amplification_factor`
 
 For y' = lambda y: the factor R(h lambda) a method multiplies by per step, its size, and whether the step is stable (|R| <= 1).
 
@@ -2407,13 +2475,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `method` | in | the one-step method | — |
-| `lam` | in | lambda (real) | — |
-| `h` | in | step size (> 0) | — |
-| `R` | out | amplification factor R(h lambda) | — |
-| `abs_R` | out | \|R\| | — |
-| `stable` | out | \|R\| <= 1 | — |
-| `z` | out | h lambda | — |
+| `method` | in | the one-step method | - |
+| `lam` | in | lambda (real) | - |
+| `h` | in | step size (> 0) | - |
+| `R` | out | amplification factor R(h lambda) | - |
+| `abs_R` | out | \|R\| | - |
+| `stable` | out | \|R\| <= 1 | - |
+| `z` | out | h lambda | - |
 
 **Applies when:** h > 0; real lambda.
 
@@ -2424,8 +2492,8 @@ abs_R = 0.3333333333
 stable = true
 z = -2
   by: Stability function (amplification factor) of a one-step method  (R(z): 1 + z (Euler), 1 + z + z^2/2 (Heun, midpoint), Taylor to z^4/24 (RK4), 1/(1 - z), (1 + z/2)/(1 - z/2))
-  lam = -10   []
-  h = 0.2   []
+  lam = -10
+  h = 0.2
   method = rk4
   assumes: h > 0; real lambda
 ```
@@ -2434,7 +2502,7 @@ z = -2
 
 <a id="explicit_heat_stability"></a>
 
-#### Stability of the explicit (FTCS) scheme for the heat equation — `explicit_heat_stability`
+#### Stability of the explicit (FTCS) scheme for the heat equation, `explicit_heat_stability`
 
 The mesh ratio r = alpha dt / dx^2 of the explicit scheme for u_t = alpha u_xx, its stability (r <= 1/2) and the largest stable dt.
 
@@ -2444,12 +2512,12 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `alpha` | in | diffusivity (> 0) | — |
-| `dt` | in | time step (> 0) | — |
-| `dx` | in | grid spacing (> 0) | — |
-| `r` | out | mesh ratio alpha dt / dx^2 | — |
-| `stable` | out | r <= 1/2 | — |
-| `dt_max` | out | largest stable time step dx^2/(2 alpha) | — |
+| `alpha` | in | diffusivity (> 0) | - |
+| `dt` | in | time step (> 0) | - |
+| `dx` | in | grid spacing (> 0) | - |
+| `r` | out | mesh ratio alpha dt / dx^2 | - |
+| `stable` | out | r <= 1/2 | - |
+| `dt_max` | out | largest stable time step dx^2/(2 alpha) | - |
 
 **Applies when:** alpha, dt, dx > 0.
 
@@ -2459,9 +2527,9 @@ r = 0.4
 stable = true
 dt_max = 0.00125
   by: Stability of the explicit (FTCS) scheme for the heat equation  (von Neumann: G = 1 - 4 r sin^2(theta/2), |G| <= 1 iff r <= 1/2)
-  alpha = 1   []
-  dt = 0.001   []
-  dx = 0.05   []
+  alpha = 1
+  dt = 0.001
+  dx = 0.05
   assumes: alpha, dt, dx > 0
 ```
 
@@ -2471,7 +2539,7 @@ dt_max = 0.00125
 
 <a id="cauchy_euler_ivp"></a>
 
-#### Cauchy-Euler (equidimensional) equation: initial value problem — `cauchy_euler_ivp`
+#### Cauchy-Euler (equidimensional) equation: initial value problem, `cauchy_euler_ivp`
 
 Solve a t^2 y'' + b t y' + c y = 0 (t > 0) with y(1) = y1, y'(1) = v1 and give y(t) and the indicial roots.
 
@@ -2481,15 +2549,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of t^2 y'' | — |
-| `b` | in | coefficient of t y' | — |
-| `c` | in | coefficient of y | — |
-| `y1` | in | value y(1) | — |
-| `v1` | in | slope y'(1) | — |
-| `t` | in | time (> 0) | — |
-| `y` | out | value y(t) | — |
-| `m1` | out | first indicial root | — |
-| `m2` | out | second indicial root | — |
+| `a` | in | coefficient of t^2 y'' | - |
+| `b` | in | coefficient of t y' | - |
+| `c` | in | coefficient of y | - |
+| `y1` | in | value y(1) | - |
+| `v1` | in | slope y'(1) | - |
+| `t` | in | time (> 0) | - |
+| `y` | out | value y(t) | - |
+| `m1` | out | first indicial root | - |
+| `m2` | out | second indicial root | - |
 
 **Applies when:** a != 0; t > 0.
 
@@ -2499,12 +2567,12 @@ y = 2.45
 m1 = -3
 m2 = 2
   by: Cauchy-Euler (equidimensional) equation: initial value problem  (t = e^x turns it into a Y'' + (b - a) Y' + c Y = 0; indicial a m(m-1) + b m + c = 0)
-  a = 1   []
-  b = 2   []
-  c = -6   []
-  y1 = 1   []
-  v1 = 0   []
-  t = 2   []
+  a = 1
+  b = 2
+  c = -6
+  y1 = 1
+  v1 = 0
+  t = 2
   assumes: a != 0; t > 0
 ```
 
@@ -2512,7 +2580,7 @@ m2 = 2
 
 <a id="practical_resonance"></a>
 
-#### Damped oscillator: resonance frequency and peak amplitude — `practical_resonance`
+#### Damped oscillator: resonance frequency and peak amplitude, `practical_resonance`
 
 For m y'' + c y' + k y = F0 cos(w t): the forcing frequency of maximum steady-state amplitude and that amplitude.
 
@@ -2522,13 +2590,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `c` | in | damping coefficient (> 0) | — |
-| `k` | in | spring constant (> 0) | — |
-| `F0` | in | forcing amplitude | — |
-| `omega_r` | out | resonance (peak) frequency, 0 when there is no peak | — |
-| `amplitude_max` | out | peak amplitude | — |
-| `has_peak` | out | c^2 < 2 m k | — |
+| `m` | in | mass (> 0) | - |
+| `c` | in | damping coefficient (> 0) | - |
+| `k` | in | spring constant (> 0) | - |
+| `F0` | in | forcing amplitude | - |
+| `omega_r` | out | resonance (peak) frequency, 0 when there is no peak | - |
+| `amplitude_max` | out | peak amplitude | - |
+| `has_peak` | out | c^2 < 2 m k | - |
 
 **Applies when:** m, c, k > 0.
 
@@ -2538,10 +2606,10 @@ omega_r = 1.979898987
 amplitude_max = 2.512594538
 has_peak = true
   by: Damped oscillator: resonance frequency and peak amplitude  (minimise (k - m w^2)^2 + (c w)^2 over w: w_r^2 = k/m - c^2/(2m^2))
-  m = 1   []
-  c = 0.4   []
-  k = 4   []
-  F0 = 2   []
+  m = 1
+  c = 0.4
+  k = 4
+  F0 = 2
   assumes: m, c, k > 0
 ```
 
@@ -2549,7 +2617,7 @@ has_peak = true
 
 <a id="steady_state_amplitude"></a>
 
-#### Forced damped oscillator: steady-state amplitude and phase — `steady_state_amplitude`
+#### Forced damped oscillator: steady-state amplitude and phase, `steady_state_amplitude`
 
 Steady-state response of a y'' + b y' + c y = F0 cos(w t): amplitude, phase lag and gain.
 
@@ -2559,14 +2627,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | mass-like coefficient (> 0) | — |
-| `b` | in | damping (> 0) | — |
-| `c` | in | stiffness (> 0) | — |
-| `F0` | in | forcing amplitude | — |
-| `w` | in | forcing angular frequency (> 0) | — |
-| `amplitude` | out | steady-state amplitude | — |
-| `phase_lag` | out | phase lag in radians (0 to pi) | — |
-| `gain` | out | amplitude per unit force | — |
+| `a` | in | mass-like coefficient (> 0) | - |
+| `b` | in | damping (> 0) | - |
+| `c` | in | stiffness (> 0) | - |
+| `F0` | in | forcing amplitude | - |
+| `w` | in | forcing angular frequency (> 0) | - |
+| `amplitude` | out | steady-state amplitude | - |
+| `phase_lag` | out | phase lag in radians (0 to pi) | - |
+| `gain` | out | amplitude per unit force | - |
 
 **Applies when:** a, b, c > 0; w > 0.
 
@@ -2576,11 +2644,11 @@ amplitude = 1.050451463
 phase_lag = 0.4048917863
 gain = 0.5252257314
   by: Forced damped oscillator: steady-state amplitude and phase  (|F0| / sqrt((c - a w^2)^2 + (b w)^2), lag atan2(b w, c - a w^2))
-  a = 1   []
-  b = 0.5   []
-  c = 4   []
-  F0 = 2   []
-  w = 1.5   []
+  a = 1
+  b = 0.5
+  c = 4
+  F0 = 2
+  w = 1.5
   assumes: a, b, c > 0; w > 0
 ```
 
@@ -2588,7 +2656,7 @@ gain = 0.5252257314
 
 <a id="boundary_value_problem"></a>
 
-#### Linear two-point boundary value problem (constant coefficients) — `boundary_value_problem`
+#### Linear two-point boundary value problem (constant coefficients), `boundary_value_problem`
 
 Solve y'' + p y' + q y = r on [xa, xb] with y(xa) = ya, y(xb) = yb; give y(x) and the slope at xa.
 
@@ -2598,16 +2666,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `p` | in | coefficient of y' | — |
-| `q` | in | coefficient of y | — |
-| `r` | in | constant right-hand side | — |
-| `xa` | in | left end | — |
-| `xb` | in | right end (> xa) | — |
-| `ya` | in | value at xa | — |
-| `yb` | in | value at xb | — |
-| `x` | in | point in [xa, xb] | — |
-| `y` | out | value y(x) | — |
-| `slope_a` | out | slope y'(xa) | — |
+| `p` | in | coefficient of y' | - |
+| `q` | in | coefficient of y | - |
+| `r` | in | constant right-hand side | - |
+| `xa` | in | left end | - |
+| `xb` | in | right end (> xa) | - |
+| `ya` | in | value at xa | - |
+| `yb` | in | value at xb | - |
+| `x` | in | point in [xa, xb] | - |
+| `y` | out | value y(x) | - |
+| `slope_a` | out | slope y'(xa) | - |
 
 **Applies when:** xa < xb; unique solution (not an eigenvalue case).
 
@@ -2616,14 +2684,14 @@ $ differential-equations solve boundary_value_problem p=0 q=-1 r=0 xa=0 xb=1 ya=
 y = 0.443409442
 slope_a = 0.8509181282
   by: Linear two-point boundary value problem (constant coefficients)  (particular + homogeneous basis; boundary conditions fix the two constants)
-  p = 0   []
-  q = -1   []
-  r = 0   []
-  xa = 0   []
-  xb = 1   []
-  ya = 0   []
-  yb = 1   []
-  x = 0.5   []
+  p = 0
+  q = -1
+  r = 0
+  xa = 0
+  xb = 1
+  ya = 0
+  yb = 1
+  x = 0.5
   assumes: xa < xb; unique solution (not an eigenvalue case)
 ```
 
@@ -2631,7 +2699,7 @@ slope_a = 0.8509181282
 
 <a id="damped_oscillator_parameters"></a>
 
-#### Mass-spring-damper: natural frequency, damping ratio, damped frequency — `damped_oscillator_parameters`
+#### Mass-spring-damper: natural frequency, damping ratio, damped frequency, `damped_oscillator_parameters`
 
 For m x'' + c x' + k x = 0: natural frequency, damping ratio, damping case and (underdamped) damped frequency and period.
 
@@ -2641,14 +2709,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `c` | in | damping coefficient (>= 0) | — |
-| `k` | in | spring constant (> 0) | — |
-| `omega0` | out | natural frequency sqrt(k/m) | — |
-| `zeta` | out | damping ratio c/(2 sqrt(mk)) | — |
-| `damping` | out | damping case | — |
-| `omega_d` | out | damped frequency (underdamped) | — |
-| `period_d` | out | damped period (underdamped) | — |
+| `m` | in | mass (> 0) | - |
+| `c` | in | damping coefficient (>= 0) | - |
+| `k` | in | spring constant (> 0) | - |
+| `omega0` | out | natural frequency sqrt(k/m) | - |
+| `zeta` | out | damping ratio c/(2 sqrt(mk)) | - |
+| `damping` | out | damping case | - |
+| `omega_d` | out | damped frequency (underdamped) | - |
+| `period_d` | out | damped period (underdamped) | - |
 
 **Applies when:** m > 0; c >= 0; k > 0.
 
@@ -2660,9 +2728,9 @@ damping = underdamped
 omega_d = 1.984313483
 period_d = 3.166427765
   by: Mass-spring-damper: natural frequency, damping ratio, damped frequency  (w0 = sqrt(k/m), zeta = c/(2 sqrt(mk)), w_d = w0 sqrt(1 - zeta^2))
-  m = 2   []
-  c = 1   []
-  k = 8   []
+  m = 2
+  c = 1
+  k = 8
   assumes: m > 0; c >= 0; k > 0
 ```
 
@@ -2670,7 +2738,7 @@ period_d = 3.166427765
 
 <a id="characteristic_roots"></a>
 
-#### Second-order constant-coefficient ODE: characteristic roots — `characteristic_roots`
+#### Second-order constant-coefficient ODE: characteristic roots, `characteristic_roots`
 
 Roots of the characteristic equation of a y'' + b y' + c y = 0, the form of the general solution and the damping case.
 
@@ -2680,15 +2748,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `r1` | out | first root (real ascending; complex: positive imaginary part first) | — |
-| `r2` | out | second root | — |
-| `discriminant` | out | b^2 - 4ac | — |
-| `roots_type` | out | distinct real / repeated / complex | — |
-| `damping` | out | overdamped / critically damped / underdamped / undamped | — |
-| `solution_form` | out | form of the general solution | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `r1` | out | first root (real ascending; complex: positive imaginary part first) | - |
+| `r2` | out | second root | - |
+| `discriminant` | out | b^2 - 4ac | - |
+| `roots_type` | out | distinct real / repeated / complex | - |
+| `damping` | out | overdamped / critically damped / underdamped / undamped | - |
+| `solution_form` | out | form of the general solution | - |
 
 **Applies when:** a != 0.
 
@@ -2701,9 +2769,9 @@ roots_type = two distinct real roots
 damping = overdamped
 solution_form = y = C1 e^(r1 t) + C2 e^(r2 t)
   by: Second-order constant-coefficient ODE: characteristic roots  (a r^2 + b r + c = 0 (stable quadratic formula); case from the exact sign of b^2 - 4ac)
-  a = 1   []
-  b = 3   []
-  c = 2   []
+  a = 1
+  b = 3
+  c = 2
   assumes: a != 0
 ```
 
@@ -2711,7 +2779,7 @@ solution_form = y = C1 e^(r1 t) + C2 e^(r2 t)
 
 <a id="second_order_homogeneous_ivp"></a>
 
-#### Second-order homogeneous linear ODE: initial value problem — `second_order_homogeneous_ivp`
+#### Second-order homogeneous linear ODE: initial value problem, `second_order_homogeneous_ivp`
 
 Solve a y'' + b y' + c y = 0 with y(0) = y0, y'(0) = v0 and give y(t) (overdamped, critical or underdamped).
 
@@ -2721,14 +2789,14 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `y0` | in | initial value y(0) | — |
-| `v0` | in | initial slope y'(0) | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `damping` | out | damping case | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `y0` | in | initial value y(0) | - |
+| `v0` | in | initial slope y'(0) | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `damping` | out | damping case | - |
 
 **Applies when:** a != 0.
 
@@ -2737,12 +2805,12 @@ $ differential-equations solve second_order_homogeneous_ivp a=1 b=3 c=2 y0=1 v0=
 y = 0.6004235991
 damping = overdamped
   by: Second-order homogeneous linear ODE: initial value problem  (y = e^{mt}[y0 C(t) + (v0 - m y0) S(t)], m = -b/(2a), C, S = cosh/sinh, 1/t or cos/sin by the sign of the discriminant)
-  a = 1   []
-  b = 3   []
-  c = 2   []
-  y0 = 1   []
-  v0 = 0   []
-  t = 1   []
+  a = 1
+  b = 3
+  c = 2
+  y0 = 1
+  v0 = 0
+  t = 1
   assumes: a != 0
 ```
 
@@ -2750,7 +2818,7 @@ damping = overdamped
 
 <a id="simple_harmonic_motion"></a>
 
-#### Simple harmonic motion: position, amplitude, period — `simple_harmonic_motion`
+#### Simple harmonic motion: position, amplitude, period, `simple_harmonic_motion`
 
 Solve m x'' + k x = 0 with x(0) = x0, x'(0) = v0: position at t, amplitude, angular frequency and period.
 
@@ -2760,15 +2828,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `k` | in | spring constant (> 0) | — |
-| `x0` | in | initial position | — |
-| `v0` | in | initial velocity | — |
-| `t` | in | time | — |
-| `x` | out | position x(t) | — |
-| `amplitude` | out | amplitude | — |
-| `omega` | out | angular frequency | — |
-| `period` | out | period | — |
+| `m` | in | mass (> 0) | - |
+| `k` | in | spring constant (> 0) | - |
+| `x0` | in | initial position | - |
+| `v0` | in | initial velocity | - |
+| `t` | in | time | - |
+| `x` | out | position x(t) | - |
+| `amplitude` | out | amplitude | - |
+| `omega` | out | angular frequency | - |
+| `period` | out | period | - |
 
 **Applies when:** m, k > 0.
 
@@ -2779,11 +2847,11 @@ amplitude = 0.1
 omega = 4
 period = 1.570796327
   by: Simple harmonic motion: position, amplitude, period  (x = x0 cos(wt) + (v0/w) sin(wt), w = sqrt(k/m))
-  m = 0.5   []
-  k = 8   []
-  x0 = 0.1   []
-  v0 = 0   []
-  t = 1   []
+  m = 0.5
+  k = 8
+  x0 = 0.1
+  v0 = 0
+  t = 1
   assumes: m, k > 0
 ```
 
@@ -2791,7 +2859,7 @@ period = 1.570796327
 
 <a id="forced_oscillator_ivp"></a>
 
-#### Sinusoidally forced linear oscillator: initial value problem — `forced_oscillator_ivp`
+#### Sinusoidally forced linear oscillator: initial value problem, `forced_oscillator_ivp`
 
 Solve a y'' + b y' + c y = F0 cos(w t), y(0) = y0, y'(0) = v0 (including pure resonance) and give y(t).
 
@@ -2801,16 +2869,16 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `F0` | in | forcing amplitude | — |
-| `w` | in | forcing angular frequency (> 0) | — |
-| `y0` | in | initial value | — |
-| `v0` | in | initial slope | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `resonant` | out | undamped forcing at the natural frequency | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `F0` | in | forcing amplitude | - |
+| `w` | in | forcing angular frequency (> 0) | - |
+| `y0` | in | initial value | - |
+| `v0` | in | initial slope | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `resonant` | out | undamped forcing at the natural frequency | - |
 
 **Applies when:** a != 0; w > 0.
 
@@ -2819,14 +2887,14 @@ $ differential-equations solve forced_oscillator_ivp a=1 b=0 c=4 F0=1 w=2 y0=0 v
 y = -0.2095616236
 resonant = true
   by: Sinusoidally forced linear oscillator: initial value problem  (complex amplitude Z = F0/(c - a w^2 + i b w); resonance: y_p = F0/(2aw) t sin(wt); plus homogeneous part)
-  a = 1   []
-  b = 0   []
-  c = 4   []
-  F0 = 1   []
-  w = 2   []
-  y0 = 0   []
-  v0 = 0   []
-  t = 3   []
+  a = 1
+  b = 0
+  c = 4
+  F0 = 1
+  w = 2
+  y0 = 0
+  v0 = 0
+  t = 3
   assumes: a != 0; w > 0
 ```
 
@@ -2834,7 +2902,7 @@ resonant = true
 
 <a id="undamped_resonance"></a>
 
-#### Undamped resonance: growing response — `undamped_resonance`
+#### Undamped resonance: growing response, `undamped_resonance`
 
 m y'' + k y = F0 cos(w0 t) forced exactly at the natural frequency, starting from rest: y(t) and its linearly growing envelope.
 
@@ -2844,13 +2912,13 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `m` | in | mass (> 0) | — |
-| `k` | in | spring constant (> 0) | — |
-| `F0` | in | forcing amplitude | — |
-| `t` | in | time | — |
-| `y` | out | displacement y(t) | — |
-| `envelope` | out | amplitude envelope F0 t / (2 m w0) | — |
-| `omega0` | out | natural frequency | — |
+| `m` | in | mass (> 0) | - |
+| `k` | in | spring constant (> 0) | - |
+| `F0` | in | forcing amplitude | - |
+| `t` | in | time | - |
+| `y` | out | displacement y(t) | - |
+| `envelope` | out | amplitude envelope F0 t / (2 m w0) | - |
+| `omega0` | out | natural frequency | - |
 
 **Applies when:** m, k > 0; y(0) = y'(0) = 0.
 
@@ -2860,10 +2928,10 @@ y = -0.4191232473
 envelope = 1.5
 omega0 = 2
   by: Undamped resonance: growing response  (particular solution t sin(w0 t)/(2 m w0) (secular term))
-  m = 1   []
-  k = 4   []
-  F0 = 2   []
-  t = 3   []
+  m = 1
+  k = 4
+  F0 = 2
+  t = 3
   assumes: m, k > 0; y(0) = y'(0) = 0
 ```
 
@@ -2871,7 +2939,7 @@ omega0 = 2
 
 <a id="undetermined_coefficients_exponential"></a>
 
-#### Undetermined coefficients: exponential forcing — `undetermined_coefficients_exponential`
+#### Undetermined coefficients: exponential forcing, `undetermined_coefficients_exponential`
 
 Solve a y'' + b y' + c y = F e^{s t}, y(0) = y0, y'(0) = v0: the particular coefficient (with resonance) and y(t).
 
@@ -2881,17 +2949,17 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `F` | in | forcing amplitude | — |
-| `s` | in | forcing exponent | — |
-| `y0` | in | initial value | — |
-| `v0` | in | initial slope | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `A` | out | coefficient of the particular solution A t^m e^{st} | — |
-| `resonance_multiplicity` | out | m: 0, or 1/2 when s is a simple/double characteristic root | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `F` | in | forcing amplitude | - |
+| `s` | in | forcing exponent | - |
+| `y0` | in | initial value | - |
+| `v0` | in | initial slope | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `A` | out | coefficient of the particular solution A t^m e^{st} | - |
+| `resonance_multiplicity` | out | m: 0, or 1/2 when s is a simple/double characteristic root | - |
 
 **Applies when:** a != 0.
 
@@ -2901,14 +2969,14 @@ y = 3.75749617
 A = 0.2
 resonance_multiplicity = 0
   by: Undetermined coefficients: exponential forcing  (y_p = A t^m e^{st}, A = F/P(s), F/P'(s) or F/(2a); plus the homogeneous solution fitted to the initial values)
-  a = 1   []
-  b = 3   []
-  c = 2   []
-  F = 4   []
-  s = 3   []
-  y0 = 0   []
-  v0 = 0   []
-  t = 1   []
+  a = 1
+  b = 3
+  c = 2
+  F = 4
+  s = 3
+  y0 = 0
+  v0 = 0
+  t = 1
   assumes: a != 0
 ```
 
@@ -2916,7 +2984,7 @@ In the worked example, a = 1, b = 3, c = 2, F = 4, s = 3, y0 = 0, v0 = 0, t = 1 
 
 <a id="undetermined_coefficients_polynomial"></a>
 
-#### Undetermined coefficients: polynomial forcing — `undetermined_coefficients_polynomial`
+#### Undetermined coefficients: polynomial forcing, `undetermined_coefficients_polynomial`
 
 Solve a y'' + b y' + c y = p0 + p1 t + ... (degree <= 4), y(0) = y0, y'(0) = v0: particular polynomial and y(t).
 
@@ -2926,15 +2994,15 @@ $$
 
 | symbol |  | meaning | SI unit |
 |---|---|---|---|
-| `a` | in | coefficient of y'' | — |
-| `b` | in | coefficient of y' | — |
-| `c` | in | coefficient of y | — |
-| `p` | in | forcing coefficients p0, p1, ... (ascending powers of t) | — |
-| `y0` | in | initial value | — |
-| `v0` | in | initial slope | — |
-| `t` | in | time | — |
-| `y` | out | value y(t) | — |
-| `particular` | out | coefficients q0, q1, ... of the particular polynomial | — |
+| `a` | in | coefficient of y'' | - |
+| `b` | in | coefficient of y' | - |
+| `c` | in | coefficient of y | - |
+| `p` | in | forcing coefficients p0, p1, ... (ascending powers of t) | - |
+| `y0` | in | initial value | - |
+| `v0` | in | initial slope | - |
+| `t` | in | time | - |
+| `y` | out | value y(t) | - |
+| `particular` | out | coefficients q0, q1, ... of the particular polynomial | - |
 
 **Applies when:** a != 0; c != 0; degree <= 4.
 
@@ -2943,15 +3011,15 @@ $ differential-equations solve undetermined_coefficients_polynomial "p=[0, 8]" a
 y = 0.6988313211
 particular = [0.0,2.0]
   by: Undetermined coefficients: polynomial forcing  (match powers of t from the top: c q_k + b (k+1) q_{k+1} + a (k+2)(k+1) q_{k+2} = p_k)
-  a = 1   []
-  b = 0   []
-  c = 4   []
-  y0 = 1   []
-  v0 = 0   []
-  t = 0.5   []
+  a = 1
+  b = 0
+  c = 4
+  y0 = 1
+  v0 = 0
+  t = 0.5
   assumes: a != 0; c != 0; degree <= 4
 ```
 
 **What the worked example means:** This calculation determines the particular polynomial solution for a linear differential equation with constant coefficients driven by a polynomial forcing term. By matching powers of time, it solves for the coefficients q0 through q4 that satisfy the equation. The resulting general solution combines this particular part with the homogeneous solution to meet initial conditions. For the given inputs, the computed value of y at time t is 0.698831, derived from the coefficient set [0, 2]. This method assumes the leading coefficient a and the constant term c are non-zero, ensuring the system can be solved uniquely for these specific polynomial degrees.
 
-Questions and reports: support@ai999x.com. AI999X — The Future Is Self-Improving.
+Questions and reports: support@ai999x.com. AI999X, The Future Is Self-Improving.

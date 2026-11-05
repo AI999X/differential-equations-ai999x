@@ -177,7 +177,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 
 <a id="exponential_growth_value"></a>
 
-### Exponential growth or decay: value at a time — `exponential_growth_value`
+### Exponential growth or decay: value at a time, `exponential_growth_value`
 
 Solve $dy/dt = k y$ with y(0) = y0 and give y(t).
 
@@ -223,7 +223,7 @@ differential_equations_ai999x.solve('exponential_growth_value', y0=50, k=-0.2, t
 
 <a id="half_life_decay"></a>
 
-### Radioactive decay from a half-life — `half_life_decay`
+### Radioactive decay from a half-life: `half_life_decay`
 
 Amount left after time t when $dN/dt = -k N$ and the half-life is T; also the decay constant k.
 
@@ -270,7 +270,7 @@ differential_equations_ai999x.solve('half_life_decay', N0=100, T=5730, t=2000)
 
 <a id="doubling_time"></a>
 
-### Doubling time or half-life from a rate constant — `doubling_time`
+### Doubling time or half-life from a rate constant, `doubling_time`
 
 For $dy/dt = k y$: the doubling time $(k > 0)$ or half-life $(k < 0)$.
 
@@ -314,7 +314,7 @@ differential_equations_ai999x.solve('doubling_time', k=-0.1)
 
 <a id="exponential_time_to_reach"></a>
 
-### Time for exponential growth or decay to reach a value — `exponential_time_to_reach`
+### Time for exponential growth or decay to reach a value, `exponential_time_to_reach`
 
 For $dy/dt = k y$, y(0) = y0: the time at which y reaches y1.
 
@@ -359,7 +359,7 @@ differential_equations_ai999x.solve('exponential_time_to_reach', y0=80, y1=10, k
 
 <a id="exponential_from_two_points"></a>
 
-### Exponential model through two measurements — `exponential_from_two_points`
+### Exponential model through two measurements, `exponential_from_two_points`
 
 The rate k and initial value y0 of $y = y_{0} e$^{k t} through (t1, y1) and (t2, y2).
 
@@ -406,7 +406,7 @@ differential_equations_ai999x.solve('exponential_from_two_points', t1=0, y1=40, 
 
 <a id="radiometric_age"></a>
 
-### Age from the fraction remaining (radioactive dating) — `radiometric_age`
+### Age from the fraction remaining (radioactive dating), `radiometric_age`
 
 The elapsed time when a fraction p of a radioactive substance with half-life T remains.
 
@@ -450,7 +450,7 @@ differential_equations_ai999x.solve('radiometric_age', T=10, p=0.6)
 
 <a id="newton_cooling_temperature"></a>
 
-### Newton's law of cooling: temperature at a time — `newton_cooling_temperature`
+### Newton's law of cooling: temperature at a time, `newton_cooling_temperature`
 
 Solve $dT/dt = -k$ (T - Ta), T(0) = T0, and give T(t).
 
@@ -491,7 +491,7 @@ differential_equations_ai999x.solve('newton_cooling_temperature', T0=90, Ta=20, 
 
 <a id="newton_cooling_time"></a>
 
-### Newton's law of cooling: time to reach a temperature — `newton_cooling_time`
+### Newton's law of cooling: time to reach a temperature, `newton_cooling_time`
 
 With $dT/dt = -k$ (T - Ta), T(0) = T0: when does the temperature reach T1?
 
@@ -532,7 +532,7 @@ differential_equations_ai999x.solve('newton_cooling_time', T0=90, Ta=20, k=0.1, 
 
 <a id="newton_cooling_constant"></a>
 
-### Newton's law of cooling: cooling constant from a measurement — `newton_cooling_constant`
+### Newton's law of cooling: cooling constant from a measurement, `newton_cooling_constant`
 
 The cooling constant k when a body at T0 in surroundings Ta reads T1 after time t1.
 
@@ -573,7 +573,7 @@ differential_equations_ai999x.solve('newton_cooling_constant', T0=90, Ta=20, T1=
 
 <a id="logistic_value"></a>
 
-### Logistic growth: population at a time — `logistic_value`
+### Logistic growth: population at a time, `logistic_value`
 
 Solve $dP/dt = r$ P $(1 - P/K)$, P(0) = P0, and give P(t).
 
@@ -614,7 +614,7 @@ differential_equations_ai999x.solve('logistic_value', P0=10, r=0.5, K=1000, t=8)
 
 <a id="logistic_inflection"></a>
 
-### Logistic growth: inflection time and maximum growth rate — `logistic_inflection`
+### Logistic growth: inflection time and maximum growth rate, `logistic_inflection`
 
 When a logistic population grows fastest: the inflection time, the population there $(K/2)$ and the maximum rate $rK/4.$
 
@@ -656,7 +656,7 @@ differential_equations_ai999x.solve('logistic_inflection', P0=10, r=0.5, K=1000)
 
 <a id="logistic_harvesting"></a>
 
-### Logistic growth with constant harvesting: equilibria — `logistic_harvesting`
+### Logistic growth with constant harvesting: equilibria, `logistic_harvesting`
 
 Equilibria of $dy/dt = r$ y $(1 - y/K) - H$, their stability, and the critical (maximum sustainable) harvest.
 
@@ -700,7 +700,7 @@ differential_equations_ai999x.solve('logistic_harvesting', r=0.5, K=1000, H=100)
 
 <a id="linear_first_order"></a>
 
-### First-order linear ODE with constant coefficients (integrating factor) — `linear_first_order`
+### First-order linear ODE with constant coefficients (integrating factor), `linear_first_order`
 
 Solve y' + a $y = b$ with y(0) = y0 and give y(t) and the equilibrium b/a.
 
@@ -742,7 +742,7 @@ differential_equations_ai999x.solve('linear_first_order', a=2, b=6, y0=1, t=1)
 
 <a id="linear_first_order_exponential_forcing"></a>
 
-### First-order linear ODE with exponential forcing — `linear_first_order_exponential_forcing`
+### First-order linear ODE with exponential forcing, `linear_first_order_exponential_forcing`
 
 Solve y' + a $y = b$ e^{c t}, y(0) = y0, and give y(t) (including the resonant case c = -a).
 
@@ -790,7 +790,7 @@ differential_equations_ai999x.solve('linear_first_order_exponential_forcing', a=
 
 <a id="mixing_tank"></a>
 
-### Mixing tank (brine): amount of salt at a time — `mixing_tank`
+### Mixing tank (brine): amount of salt at a time, `mixing_tank`
 
 A well-stirred tank of volume V with inflow = outflow rate r at concentration c_in: amount A(t) of solute.
 
@@ -834,7 +834,7 @@ differential_equations_ai999x.solve('mixing_tank', V=100, r=5, c_in=0.2, A0=0, t
 
 <a id="separable_power"></a>
 
-### Separable equation y' = a t^n y — `separable_power`
+### Separable equation y' = a t^n y, `separable_power`
 
 Solve the separable equation y' = a $t^{n}$ y with y(0) = y0 and give y(t).
 
@@ -875,7 +875,7 @@ differential_equations_ai999x.solve('separable_power', a=2, n=1, y0=3, t=1)
 
 <a id="quadratic_ode_blowup"></a>
 
-### Equation y' = k y^2: solution and blow-up time — `quadratic_ode_blowup`
+### Equation y' = k y^2: solution and blow-up time, `quadratic_ode_blowup`
 
 Solve y' = k $y^{2}$, y(0) = y0; give y(t) and the finite blow-up time 1/(k y0) when k $y_{0} > 0.$
 
@@ -916,7 +916,7 @@ differential_equations_ai999x.solve('quadratic_ode_blowup', k=1, y0=0.5, t=1)
 
 <a id="bernoulli_equation"></a>
 
-### Bernoulli equation y' + p y = q y^n — `bernoulli_equation`
+### Bernoulli equation y' + p y = q y^n, `bernoulli_equation`
 
 Solve the Bernoulli equation with constant p, q by the substitution $v = y$^{$1-n$}; give y(t).
 
@@ -958,7 +958,7 @@ differential_equations_ai999x.solve('bernoulli_equation', p=1, q=1, n=2, y0=0.5,
 
 <a id="linear_drag_velocity"></a>
 
-### Falling body with linear drag: velocity — `linear_drag_velocity`
+### Falling body with linear drag: velocity, `linear_drag_velocity`
 
 Solve m v' = m g - c v with v(0) = v0: velocity at time t and terminal velocity m g / c.
 
@@ -985,7 +985,7 @@ $$
 
 ![Velocity of a falling body with linear air drag, m = 2, c = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-drag-velocity-curve)
 
-*Velocity of a falling body with linear air drag, m = 2, c = 0.5, g = 9.81, from rest (the example) and from v₀ = 1.5 × the terminal velocity, evaluated by the package at 101 times; both approach the package's terminal velocity 39.24 m/s; marked: v(3 s) = 20.7043 m/s.*
+*Velocity of a falling body with linear air drag, m = 2, c = 0.5, g = 9.81, from v₀ = 0 m/s (the example) and from v₀ = 1.5 × the terminal velocity, evaluated by the package at 101 times; both approach the package's terminal velocity 39.24 m/s; marked: v(3 s) = 20.7043 m/s.*
 
 ```python
 differential_equations_ai999x.solve('linear_drag_velocity', m=2, c=0.5, g=9.81, v0=0, t=3)
@@ -1001,7 +1001,7 @@ differential_equations_ai999x.solve('linear_drag_velocity', m=2, c=0.5, g=9.81, 
 
 <a id="quadratic_drag_velocity"></a>
 
-### Falling body with quadratic drag: velocity — `quadratic_drag_velocity`
+### Falling body with quadratic drag: velocity, `quadratic_drag_velocity`
 
 Solve m v' = m g - c $v^{2}$ with v(0) = v0 >= 0: velocity at time t and terminal velocity sqrt(m g / c).
 
@@ -1026,9 +1026,9 @@ $$
 - **Assumes:** m, c, $g > 0$; $v_{0}  \geq  0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![v (velocity v(t)) against g (gravitational acceleration (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/quadratic-drag-velocity-curve)
+![Velocity of a falling body with quadratic air drag, m = 80, c = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/quadratic-drag-velocity-curve)
 
-*v (velocity v(t)) against g (gravitational acceleration (> 0)) from 0.981 to 98.1 on a logarithmic axis. One curve for each value of t (time (>= 0)): 5, 2.5, 10. Other inputs as in the worked example: m = 80, c = 0.25, v0 = 0. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, g = 9.81, v = 39.4514.*
+*Velocity of a falling body with quadratic air drag, m = 80, c = 0.25, g = 9.81, from v₀ = 0 m/s (the example) and from v₀ = 1.5 × the terminal velocity, evaluated by the package at 101 times; both approach the package's terminal velocity 56.0286 m/s; marked: v(5 s) = 39.4514 m/s.*
 
 ```python
 differential_equations_ai999x.solve('quadratic_drag_velocity', m=80, c=0.25, g=9.81, v0=0, t=5)
@@ -1044,7 +1044,7 @@ differential_equations_ai999x.solve('quadratic_drag_velocity', m=80, c=0.25, g=9
 
 <a id="torricelli_draining"></a>
 
-### Draining tank (Torricelli's law): height and emptying time — `torricelli_draining`
+### Draining tank (Torricelli's law): height and emptying time, `torricelli_draining`
 
 Solve $dh/dt = -k$ sqrt(h), h(0) = h0: water height at time t and the time to empty.
 
@@ -1085,7 +1085,7 @@ differential_equations_ai999x.solve('torricelli_draining', h0=4, k=0.2, t=5)
 
 <a id="gompertz_growth"></a>
 
-### Gompertz growth: value at a time — `gompertz_growth`
+### Gompertz growth: value at a time, `gompertz_growth`
 
 Solve $dy/dt = r$ y ln(K/y), y(0) = y0 (tumour and population growth) and give y(t).
 
@@ -1126,7 +1126,7 @@ differential_equations_ai999x.solve('gompertz_growth', y0=10, r=0.3, K=1000, t=5
 
 <a id="slope_field"></a>
 
-### Slope (direction) field value — `slope_field`
+### Slope (direction) field value: `slope_field`
 
 The slope $dy/dt = f$(t, y) of the direction field at a point, and its angle.
 
@@ -1167,7 +1167,7 @@ differential_equations_ai999x.solve('slope_field', f='t + y', t=1, y=2)
 
 <a id="euler_method"></a>
 
-### Euler's method — `euler_method`
+### Euler's method: `euler_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with Euler's method.
 
@@ -1194,7 +1194,7 @@ $$
 
 ![Steps of the Euler's method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-method-steps)
 
-*Steps of the Euler's method for y′ = t + y, y(0) = 1 with step h = 0.1 — each point one run of the package with n = 1 … 10 — a fourth-order solution with 100 small steps (also the package); at t = 1: Euler's method y(1) = 3.18748, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.22.*
+*Steps of the Euler's method for y′ = t + y, y(0) = 1 with step h = 0.1 (each point one run of the package with n = 1 … 10), a fourth-order solution with 100 small steps (also the package); at t = 1: Euler's method y(1) = 3.18748, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.22.*
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-method-curve)
 
@@ -1214,7 +1214,7 @@ differential_equations_ai999x.solve('euler_method', f='t + y', t0=0, y0=1, h=0.1
 
 <a id="improved_euler_method"></a>
 
-### Improved Euler (Heun) method — `improved_euler_method`
+### Improved Euler (Heun) method: `improved_euler_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the improved Euler (Heun) method.
 
@@ -1241,7 +1241,7 @@ $$
 
 ![Steps of the improved Euler method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/improved-euler-method-steps)
 
-*Steps of the improved Euler method for y′ = t + y, y(0) = 1 with step h = 0.2 — each point one run of the package with n = 1 … 5 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: improved Euler method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
+*Steps of the improved Euler method for y′ = t + y, y(0) = 1 with step h = 0.2 (each point one run of the package with n = 1 … 5), beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: improved Euler method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/improved-euler-method-curve)
 
@@ -1261,7 +1261,7 @@ differential_equations_ai999x.solve('improved_euler_method', f='t + y', t0=0, y0
 
 <a id="midpoint_method"></a>
 
-### Explicit midpoint method (RK2) — `midpoint_method`
+### Explicit midpoint method (RK2): `midpoint_method`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the explicit midpoint method.
 
@@ -1288,7 +1288,7 @@ $$
 
 ![Steps of the midpoint method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/midpoint-method-steps)
 
-*Steps of the midpoint method for y′ = t + y, y(0) = 1 with step h = 0.2 — each point one run of the package with n = 1 … 5 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: midpoint method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
+*Steps of the midpoint method for y′ = t + y, y(0) = 1 with step h = 0.2 (each point one run of the package with n = 1 … 5), beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: midpoint method y(1) = 3.40542, Euler's method 2.97664, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24205.*
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/midpoint-method-curve)
 
@@ -1308,7 +1308,7 @@ differential_equations_ai999x.solve('midpoint_method', f='t + y', t0=0, y0=1, h=
 
 <a id="runge_kutta_4"></a>
 
-### Classical Runge-Kutta method (RK4) — `runge_kutta_4`
+### Classical Runge-Kutta method (RK4): `runge_kutta_4`
 
 Approximate the solution of y' = f(t, y), y(t0) = y0, after n steps of size h with the classical fourth-order Runge-Kutta method.
 
@@ -1335,7 +1335,7 @@ $$
 
 ![Steps of the fourth-order Runge–Kutta method for y′ = t + y, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-steps)
 
-*Steps of the fourth-order Runge–Kutta method for y′ = t + y, y(0) = 1 with step h = 0.25 — each point one run of the package with n = 1 … 4 — beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: fourth-order Runge–Kutta method y(1) = 3.43642, Euler's method 2.88281, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24281.*
+*Steps of the fourth-order Runge–Kutta method for y′ = t + y, y(0) = 1 with step h = 0.25 (each point one run of the package with n = 1 … 4), beside Euler's method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: fourth-order Runge–Kutta method y(1) = 3.43642, Euler's method 2.88281, reference 3.43656. Worked example (h = 0.1, n = 2): y_n = 1.24281.*
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-curve)
 
@@ -1355,7 +1355,7 @@ differential_equations_ai999x.solve('runge_kutta_4', f='t + y', t0=0, y0=1, h=0.
 
 <a id="backward_euler_method"></a>
 
-### Backward (implicit) Euler method — `backward_euler_method`
+### Backward (implicit) Euler method: `backward_euler_method`
 
 Approximate y' = f(t, y), y(t0) = y0 after n implicit Euler steps: y_{$k+1$} = y_k + h f(t_{$k+1$}, y_{$k+1$}).
 
@@ -1380,6 +1380,10 @@ $$
 - **Assumes:** $h > 0$; h*|df/dy| < 1 at each step (unique step)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
+![Steps of the backward Euler method for y′ = -2*y + t, y(0) = 1 with step h = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/backward-euler-method-steps)
+
+*Steps of the backward Euler method for y′ = -2*y + t, y(0) = 1 with step h = 0.1 (each point one run of the package with n = 1 … 10), beside forward Euler method with the same step and a fourth-order solution with 100 small steps (also the package); at t = 1: backward Euler method y(1) = 0.451882, forward Euler method 0.384218, reference 0.419169. Worked example (h = 0.1, n = 2): y_n = 0.718056.*
+
 ![y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/backward-euler-method-curve)
 
 *y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = -2*y + t, t0 = 0, h = 0.1. 10 points per curve computed by differential-equations-ai999x; marked: the worked example, n = 2, y_n = 0.718056.*
@@ -1398,7 +1402,7 @@ differential_equations_ai999x.solve('backward_euler_method', f='-2*y + t', t0=0,
 
 <a id="euler_error_exponential"></a>
 
-### Euler's method error for exponential growth — `euler_error_exponential`
+### Euler's method error for exponential growth, `euler_error_exponential`
 
 For y' = k y, y(0) = y0: the Euler approximation after n steps of size h, the exact value and the global error.
 
@@ -1442,7 +1446,7 @@ differential_equations_ai999x.solve('euler_error_exponential', k=1, y0=1, h=0.1,
 
 <a id="runge_kutta_4_system"></a>
 
-### RK4 for a system of two first-order equations — `runge_kutta_4_system`
+### RK4 for a system of two first-order equations, `runge_kutta_4_system`
 
 Approximate x' = f(t, x, y), y' = g(t, x, y) with x(t0) = x0, y(t0) = y0 after n RK4 steps of size h.
 
@@ -1488,7 +1492,7 @@ differential_equations_ai999x.solve('runge_kutta_4_system', f='y', g='-x', t0=0,
 
 <a id="characteristic_roots"></a>
 
-### Second-order constant-coefficient ODE: characteristic roots — `characteristic_roots`
+### Second-order constant-coefficient ODE: characteristic roots, `characteristic_roots`
 
 Roots of the characteristic equation of a y'' + b y' + c $y = 0$, the form of the general solution and the damping case.
 
@@ -1521,7 +1525,7 @@ $$
 
 ![distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/characteristic-roots-decision)
 
-*distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — complex conjugate roots: 320 cells, two distinct real roots: 331 cells. Other inputs as in the worked example: c = 2. Marked: the worked example, a = 1, b = 3 → two distinct real roots.*
+*distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, complex conjugate roots: 320 cells, two distinct real roots: 331 cells. Other inputs as in the worked example: c = 2. Marked: the worked example, a = 1, b = 3 → two distinct real roots.*
 
 ```python
 differential_equations_ai999x.solve('characteristic_roots', a=1, b=3, c=2)
@@ -1549,7 +1553,7 @@ differential_equations_ai999x.solve('characteristic_roots', a=1, b=4, c=4)
 
 <a id="second_order_homogeneous_ivp"></a>
 
-### Second-order homogeneous linear ODE: initial value problem — `second_order_homogeneous_ivp`
+### Second-order homogeneous linear ODE: initial value problem, `second_order_homogeneous_ivp`
 
 Solve a y'' + b y' + c $y = 0$ with y(0) = y0, y'$(0) = v_{0}$ and give y(t) (overdamped, critical or underdamped).
 
@@ -1581,7 +1585,7 @@ $$
 
 ![damping case (damping) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-decision)
 
-*damping case (damping) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — overdamped: 331 cells, underdamped: 320 cells. Other inputs as in the worked example: c = 2, y0 = 1, v0 = 0, t = 1. Marked: the worked example, a = 1, b = 3 → overdamped.*
+*damping case (damping) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 331 cells, underdamped: 320 cells. Other inputs as in the worked example: c = 2, y0 = 1, v0 = 0, t = 1. Marked: the worked example, a = 1, b = 3 → overdamped.*
 
 ![y (value y(t)) against c (coefficient of y) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-curve-2)
 
@@ -1607,7 +1611,7 @@ differential_equations_ai999x.solve('second_order_homogeneous_ivp', a=1, b=0, c=
 
 <a id="undetermined_coefficients_exponential"></a>
 
-### Undetermined coefficients: exponential forcing — `undetermined_coefficients_exponential`
+### Undetermined coefficients: exponential forcing, `undetermined_coefficients_exponential`
 
 Solve a y'' + b y' + c $y = F$ e^{s t}, y(0) = y0, y'$(0) = v_{0}$: the particular coefficient (with resonance) and y(t).
 
@@ -1659,7 +1663,7 @@ differential_equations_ai999x.solve('undetermined_coefficients_exponential', a=1
 
 <a id="undetermined_coefficients_polynomial"></a>
 
-### Undetermined coefficients: polynomial forcing — `undetermined_coefficients_polynomial`
+### Undetermined coefficients: polynomial forcing, `undetermined_coefficients_polynomial`
 
 Solve a y'' + b y' + c $y = p_{0} + p_{1}$ t + ... (degree <= 4), y(0) = y0, y'$(0) = v_{0}$: particular polynomial and y(t).
 
@@ -1704,7 +1708,7 @@ differential_equations_ai999x.solve('undetermined_coefficients_polynomial', a=1,
 
 <a id="forced_oscillator_ivp"></a>
 
-### Sinusoidally forced linear oscillator: initial value problem — `forced_oscillator_ivp`
+### Sinusoidally forced linear oscillator: initial value problem, `forced_oscillator_ivp`
 
 Solve a y'' + b y' + c $y = F_{0}$ cos(w t), y(0) = y0, y'$(0) = v_{0}$ (including pure resonance) and give y(t).
 
@@ -1750,7 +1754,7 @@ differential_equations_ai999x.solve('forced_oscillator_ivp', a=1, b=0, c=4, F0=1
 
 <a id="steady_state_amplitude"></a>
 
-### Forced damped oscillator: steady-state amplitude and phase — `steady_state_amplitude`
+### Forced damped oscillator: steady-state amplitude and phase, `steady_state_amplitude`
 
 Steady-state response of a y'' + b y' + c $y = F_{0}$ cos(w t): amplitude, phase lag and gain.
 
@@ -1794,7 +1798,7 @@ differential_equations_ai999x.solve('steady_state_amplitude', a=1, b=0.5, c=4, F
 
 <a id="practical_resonance"></a>
 
-### Damped oscillator: resonance frequency and peak amplitude — `practical_resonance`
+### Damped oscillator: resonance frequency and peak amplitude, `practical_resonance`
 
 For m y'' + c y' + k $y = F_{0}$ cos(w t): the forcing frequency of maximum steady-state amplitude and that amplitude.
 
@@ -1837,7 +1841,7 @@ differential_equations_ai999x.solve('practical_resonance', m=1, c=0.4, k=4, F0=2
 
 <a id="undamped_resonance"></a>
 
-### Undamped resonance: growing response — `undamped_resonance`
+### Undamped resonance: growing response, `undamped_resonance`
 
 m y'' + k $y = F_{0}$ cos(w0 t) forced exactly at the natural frequency, starting from rest: y(t) and its linearly growing envelope.
 
@@ -1880,7 +1884,7 @@ differential_equations_ai999x.solve('undamped_resonance', m=1, k=4, F0=2, t=3)
 
 <a id="ode_impulse_response"></a>
 
-### Impulse response of a second-order ODE — `ode_impulse_response`
+### Impulse response of a second-order ODE: `ode_impulse_response`
 
 The response h(t) of a y'' + b y' + c $y = \delta$(t) from rest (the inverse Laplace transform of 1/(a $s^{2} + b$ s + c)).
 
@@ -1921,7 +1925,7 @@ differential_equations_ai999x.solve('ode_impulse_response', a=1, b=2, c=5, t=1)
 
 <a id="ode_step_response"></a>
 
-### Unit-step response of a second-order ODE — `ode_step_response`
+### Unit-step response of a second-order ODE: `ode_step_response`
 
 The response of a y'' + b y' + c $y = u$(t) (unit step) from rest, and its final value $1/c$ when stable.
 
@@ -1963,7 +1967,7 @@ differential_equations_ai999x.solve('ode_step_response', a=1, b=2, c=5, t=1)
 
 <a id="damped_oscillator_parameters"></a>
 
-### Mass-spring-damper: natural frequency, damping ratio, damped frequency — `damped_oscillator_parameters`
+### Mass-spring-damper: natural frequency, damping ratio, damped frequency, `damped_oscillator_parameters`
 
 For m x'' + c x' + k $x = 0$: natural frequency, damping ratio, damping case and (underdamped) damped frequency and period.
 
@@ -1991,11 +1995,11 @@ $$
 
 ![A damped oscillator m y″ + c y′ + k y = 0 with m = 2, c = 1, k = 8: the package returns ω₀ = 2, ζ = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/damped-oscillator-parameters-curve)
 
-*A damped oscillator m y″ + c y′ + k y = 0 with m = 2, c = 1, k = 8: the package returns ω₀ = 2, ζ = 0.125 (underdamped), ω_d = 1.98431 and damped period T_d = 3.16643; the motion from y(0) = 1 (161 values from the package's second-order solver) peaks once per T_d — dashed lines at multiples of the returned period.*
+*A damped oscillator m y″ + c y′ + k y = 0 with m = 2, c = 1, k = 8: the package returns ω₀ = 2, ζ = 0.125 (underdamped), ω_d = 1.98431 and damped period T_d = 3.16643; the motion from y(0) = 1 (161 values from the package's second-order solver) peaks once per T_d, dashed lines at multiples of the returned period.*
 
 ![damping case (damping) over c (damping coefficient (>= 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/damped-oscillator-parameters-decision)
 
-*damping case (damping) over c (damping coefficient (>= 0)) from 0.1 to 10 and m (mass (> 0)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — overdamped: 63 cells, underdamped: 588 cells. Other inputs as in the worked example: k = 8. Marked: the worked example, c = 1, m = 2 → underdamped.*
+*damping case (damping) over c (damping coefficient (>= 0)) from 0.1 to 10 and m (mass (> 0)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 63 cells, underdamped: 588 cells. Other inputs as in the worked example: k = 8. Marked: the worked example, c = 1, m = 2 → underdamped.*
 
 ```python
 differential_equations_ai999x.solve('damped_oscillator_parameters', m=2, c=1, k=8)
@@ -2011,7 +2015,7 @@ differential_equations_ai999x.solve('damped_oscillator_parameters', m=2, c=1, k=
 
 <a id="simple_harmonic_motion"></a>
 
-### Simple harmonic motion: position, amplitude, period — `simple_harmonic_motion`
+### Simple harmonic motion: position, amplitude, period, `simple_harmonic_motion`
 
 Solve m x'' + k $x = 0$ with x(0) = x0, x'$(0) = v_{0}$: position at t, amplitude, angular frequency and period.
 
@@ -2056,7 +2060,7 @@ differential_equations_ai999x.solve('simple_harmonic_motion', m=0.5, k=8, x0=0.1
 
 <a id="cauchy_euler_ivp"></a>
 
-### Cauchy-Euler (equidimensional) equation: initial value problem — `cauchy_euler_ivp`
+### Cauchy-Euler (equidimensional) equation: initial value problem, `cauchy_euler_ivp`
 
 Solve a $t^{2}$ y'' + b t y' + c $y = 0$ $(t > 0)$ with y(1) = y1, y'$(1) = v_{1}$ and give y(t) and the indicial roots.
 
@@ -2101,7 +2105,7 @@ differential_equations_ai999x.solve('cauchy_euler_ivp', a=1, b=2, c=-6, y1=1, v1
 
 <a id="boundary_value_problem"></a>
 
-### Linear two-point boundary value problem (constant coefficients) — `boundary_value_problem`
+### Linear two-point boundary value problem (constant coefficients), `boundary_value_problem`
 
 Solve y'' + p y' + q $y = r$ on [xa, xb] with y(xa) = ya, y(xb) = yb; give y(x) and the slope at xa.
 
@@ -2147,7 +2151,7 @@ differential_equations_ai999x.solve('boundary_value_problem', p=0, q=-1, r=0, xa
 
 <a id="laplace_transform"></a>
 
-### Laplace transform of a function at a point — `laplace_transform`
+### Laplace transform of a function at a point, `laplace_transform`
 
 F(s) = integral from 0 to infinity of e^{-st} f(t) dt for sums of $t^{n}$ e^{at} sin/cos(bt) (also sinh, cosh), and the abscissa of convergence.
 
@@ -2194,7 +2198,7 @@ differential_equations_ai999x.solve('laplace_transform', f='sin(2t)', s=1)
 
 <a id="laplace_time_shift"></a>
 
-### Laplace transform of a delayed function u(t - c) f(t - c) — `laplace_time_shift`
+### Laplace transform of a delayed function u(t - c) f(t - c), `laplace_time_shift`
 
 Second shifting theorem: the transform of u(t - c) f(t - c) is e^{-cs} F(s).
 
@@ -2235,7 +2239,7 @@ differential_equations_ai999x.solve('laplace_time_shift', f='t', c=2, s=1)
 
 <a id="inverse_laplace_transform"></a>
 
-### Inverse Laplace transform of a rational function — `inverse_laplace_transform`
+### Inverse Laplace transform of a rational function, `inverse_laplace_transform`
 
 f(t) for a strictly proper rational F(s) (any poles, repeated or complex), by residues / partial fractions.
 
@@ -2257,9 +2261,9 @@ $$
 - **Assumes:** F strictly proper with rational coefficients; denominator degree <= 10
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom) — real negative poles give decaying exponentials; marked: f(1) = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/inverse-laplace-transform-curve)
+![The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom), real negative poles give decaying exponentials; marked: f(1) = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/inverse-laplace-transform-curve)
 
-*The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom) — real negative poles give decaying exponentials; marked: f(1) = 0.600424.*
+*The inverse Laplace transform of F(s) = (s + 3)/(s^2 + 3s + 2): its poles (top, from the package) and f(t) evaluated by the package at 61 times (bottom), real negative poles give decaying exponentials; marked: f(1) = 0.600424.*
 
 ```python
 differential_equations_ai999x.solve('inverse_laplace_transform', F='(s + 3)/(s^2 + 3s + 2)', t=1)
@@ -2282,7 +2286,7 @@ differential_equations_ai999x.solve('inverse_laplace_transform', F='1/(s^2 + 4)'
 
 <a id="partial_fraction_residues"></a>
 
-### Partial fractions of a rational function (simple poles) — `partial_fraction_residues`
+### Partial fractions of a rational function (simple poles), `partial_fraction_residues`
 
 F(s) = sum r_i/(s - p_i): the poles and residues of a strictly proper rational function with simple poles.
 
@@ -2322,7 +2326,7 @@ differential_equations_ai999x.solve('partial_fraction_residues', F='(s + 3)/(s^2
 
 <a id="convolution_integral"></a>
 
-### Convolution integral (f * g)(t) — `convolution_integral`
+### Convolution integral (f * g)(t), `convolution_integral`
 
 $(f g)$(t) = integral from 0 to t of f(u) g(t - u) du, whose transform is F(s) G(s).
 
@@ -2367,7 +2371,7 @@ differential_equations_ai999x.solve('convolution_integral', f='1', g='t', t=2)
 
 <a id="phase_portrait_2x2"></a>
 
-### Linear 2x2 system: equilibrium type and stability (trace-determinant plane) — `phase_portrait_2x2`
+### Linear 2x2 system: equilibrium type and stability (trace-determinant plane), `phase_portrait_2x2`
 
 Classify the origin of x' = A x (node, saddle, spiral, center, star, degenerate) and its stability from the trace and determinant.
 
@@ -2430,7 +2434,7 @@ differential_equations_ai999x.solve('phase_portrait_2x2', A='[[-1, 0], [0, -1]]'
 
 <a id="linear_system_solution"></a>
 
-### Linear system x' = A x: solution at a time — `linear_system_solution`
+### Linear system x' = A x: solution at a time, `linear_system_solution`
 
 Solve x' = A x, x(0) = x0 (n up to 6) and give x(t) = e^{At} x0.
 
@@ -2453,13 +2457,9 @@ $$
 - **Assumes:** A square, $n  \leq  6$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The plane vectors of the worked example as arrows from the origin: input x0 = (1, 0); returned by differential-equations-ai999x: x = (0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-solution-vectors)
+![Both components of the solution of x′ = A x with A = [[0, 1], [-2, -3]], x(0) = (1, 0) (the stated start), computed by the package at 60 times up to t = 6; both decay toward the equilibrium at the origin; marked: x(1) = (0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-solution-curve)
 
-*The plane vectors of the worked example as arrows from the origin: input x0 = (1, 0); returned by differential-equations-ai999x: x = (0.600424, -0.465088); also returned x1 = 0.600424. Other inputs: A = [[0, 1], [-2, -3]], t = 1. Marked: the tip of each returned vector.*
-
-![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input); x (returned)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-system-solution-matrix)
-
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): A (input); x (returned). Returned with them by differential-equations-ai999x: x1 = 0.600424. Other inputs: x0 = 1, 0, t = 1.*
+*Both components of the solution of x′ = A x with A = [[0, 1], [-2, -3]], x(0) = (1, 0) (the stated start), computed by the package at 60 times up to t = 6; both decay toward the equilibrium at the origin; marked: x(1) = (0.600424, -0.465088).*
 
 ```python
 differential_equations_ai999x.solve('linear_system_solution', A='[[0, 1], [-2, -3]]', x0='1, 0', t=1)
@@ -2475,7 +2475,7 @@ differential_equations_ai999x.solve('linear_system_solution', A='[[0, 1], [-2, -
 
 <a id="routh_hurwitz"></a>
 
-### Routh-Hurwitz stability test of a characteristic polynomial — `routh_hurwitz`
+### Routh-Hurwitz stability test of a characteristic polynomial, `routh_hurwitz`
 
 How many roots of a polynomial lie in the right half plane (Routh array), hence whether the system is asymptotically stable.
 
@@ -2521,7 +2521,7 @@ differential_equations_ai999x.solve('routh_hurwitz', coeffs='1, 1, 2, 8')
 
 <a id="linear_system_stability"></a>
 
-### Stability of x' = A x (n x n) from the characteristic polynomial — `linear_system_stability`
+### Stability of x' = A x (n x n) from the characteristic polynomial, `linear_system_stability`
 
 Whether the origin of x' = A x is asymptotically stable and how many eigenvalues have positive real part, without computing eigenvalues.
 
@@ -2565,7 +2565,7 @@ differential_equations_ai999x.solve('linear_system_stability', A='[[-1, 2, 0], [
 
 <a id="autonomous_equilibria"></a>
 
-### Equilibria of y' = f(y) and their stability (phase line) — `autonomous_equilibria`
+### Equilibria of y' = f(y) and their stability (phase line), `autonomous_equilibria`
 
 All equilibrium solutions of an autonomous equation y' = f(y) with polynomial f and their stability from the sign of f.
 
@@ -2610,7 +2610,7 @@ differential_equations_ai999x.solve('autonomous_equilibria', f='y^2*(y - 2)')
 
 <a id="lotka_volterra_equilibrium"></a>
 
-### Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period — `lotka_volterra_equilibrium`
+### Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period, `lotka_volterra_equilibrium`
 
 For x' = a x - b x y (prey), y' = -c y + d x y (predator): the coexistence equilibrium and the period of small oscillations about it.
 
@@ -2654,7 +2654,7 @@ differential_equations_ai999x.solve('lotka_volterra_equilibrium', a=1, b=0.1, c=
 
 <a id="competing_species_equilibrium"></a>
 
-### Competing species: coexistence equilibrium and its stability — `competing_species_equilibrium`
+### Competing species: coexistence equilibrium and its stability, `competing_species_equilibrium`
 
 For x' = x($a_{1} - b11$ $x - b12$ y), y' = y($a_{2} - b21$ $x - b22$ y): the coexistence equilibrium and its type (stable coexistence or saddle).
 
@@ -2700,7 +2700,7 @@ differential_equations_ai999x.solve('competing_species_equilibrium', a1=3, b11=1
 
 <a id="nonlinear_equilibrium_type"></a>
 
-### Nonlinear 2-D system: type of an equilibrium by linearization — `nonlinear_equilibrium_type`
+### Nonlinear 2-D system: type of an equilibrium by linearization, `nonlinear_equilibrium_type`
 
 For x' = f(x, y), y' = g(x, y) and an equilibrium (x0, y0): the Jacobian there, the equilibrium type and stability (Hartman-Grobman).
 
@@ -2754,7 +2754,7 @@ differential_equations_ai999x.solve('nonlinear_equilibrium_type', f='x - x*y', g
 
 <a id="amplification_factor"></a>
 
-### Stability function (amplification factor) of a one-step method — `amplification_factor`
+### Stability function (amplification factor) of a one-step method, `amplification_factor`
 
 For y' = lambda y: the factor R(h lambda) a method multiplies by per step, its size, and whether the step is stable (|R| <= 1).
 
@@ -2785,7 +2785,7 @@ $$
 
 ![|R| <= 1 (stable) over lam (lambda (real)) from -15 to -5 and h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/amplification-factor-decision)
 
-*|R| <= 1 (stable) over lam (lambda (real)) from -15 to -5 and h (step size (> 0)) from 0.02 to 2 (logarithmic vertical axis): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 376 cells, no: 275 cells. Other inputs as in the worked example: method = rk4. Marked: the worked example, lam = -10, h = 0.2 → yes.*
+*|R| <= 1 (stable) over lam (lambda (real)) from -15 to -5 and h (step size (> 0)) from 0.02 to 2 (logarithmic vertical axis): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, yes: 376 cells, no: 275 cells. Other inputs as in the worked example: method = rk4. Marked: the worked example, lam = -10, h = 0.2 → yes.*
 
 ```python
 differential_equations_ai999x.solve('amplification_factor', method='rk4', lam=-10, h=0.2)
@@ -2807,7 +2807,7 @@ differential_equations_ai999x.solve('amplification_factor', method='euler', lam=
 
 <a id="explicit_step_limit"></a>
 
-### Largest stable step of an explicit method for y' = lambda y — `explicit_step_limit`
+### Largest stable step of an explicit method for y' = lambda y, `explicit_step_limit`
 
 The absolute-stability step limit h_max of Euler, Heun, midpoint or RK4 on a decaying mode y' = lambda y $(\lambda < 0)$.
 
@@ -2852,7 +2852,7 @@ differential_equations_ai999x.solve('explicit_step_limit', method='rk4', lam=-1)
 
 <a id="cfl_condition"></a>
 
-### CFL condition for the advection equation (upwind scheme) — `cfl_condition`
+### CFL condition for the advection equation (upwind scheme), `cfl_condition`
 
 Courant number C = |c| dt/dx of the explicit upwind scheme for u_t + c $u_x = 0$, its stability $(C  \leq  1)$ and the largest stable dt.
 
@@ -2878,7 +2878,7 @@ $$
 
 ![C <= 1 (stable) over c (advection speed) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/cfl-condition-decision)
 
-*C <= 1 (stable) over c (advection speed) from 0.2 to 20 and dt (time step (> 0)) from 0.001 to 0.1 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 434 cells, no: 217 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, c = 2, dt = 0.01 → yes.*
+*C <= 1 (stable) over c (advection speed) from 0.2 to 20 and dt (time step (> 0)) from 0.001 to 0.1 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, yes: 434 cells, no: 217 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, c = 2, dt = 0.01 → yes.*
 
 ![courant (Courant number |c| dt / dx) against dx (grid spacing (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/cfl-condition-curve)
 
@@ -2898,7 +2898,7 @@ differential_equations_ai999x.solve('cfl_condition', c=2, dt=0.01, dx=0.05)
 
 <a id="explicit_heat_stability"></a>
 
-### Stability of the explicit (FTCS) scheme for the heat equation — `explicit_heat_stability`
+### Stability of the explicit (FTCS) scheme for the heat equation, `explicit_heat_stability`
 
 The mesh ratio $r = \alpha$ $dt / dx^{2}$ of the explicit scheme for $u_t = \alpha$ u_xx, its stability $(r  \leq  1/2)$ and the largest stable dt.
 
@@ -2924,7 +2924,7 @@ $$
 
 ![r <= 1/2 (stable) over alpha (diffusivity (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/explicit-heat-stability-decision)
 
-*r <= 1/2 (stable) over alpha (diffusivity (> 0)) from 0.1 to 10 and dt (time step (> 0)) from 0.0001 to 0.01 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 351 cells, no: 300 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, alpha = 1, dt = 0.001 → yes.*
+*r <= 1/2 (stable) over alpha (diffusivity (> 0)) from 0.1 to 10 and dt (time step (> 0)) from 0.0001 to 0.01 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, yes: 351 cells, no: 300 cells. Other inputs as in the worked example: dx = 0.05. Marked: the worked example, alpha = 1, dt = 0.001 → yes.*
 
 ![r (mesh ratio alpha dt / dx^2) against dx (grid spacing (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/explicit-heat-stability-curve)
 
@@ -2944,7 +2944,7 @@ differential_equations_ai999x.solve('explicit_heat_stability', alpha=1, dt=0.001
 
 <a id="heat_ftcs_steps"></a>
 
-### Explicit finite-difference (FTCS) steps for the heat equation — `heat_ftcs_steps`
+### Explicit finite-difference (FTCS) steps for the heat equation, `heat_ftcs_steps`
 
 Advance grid values of $u_t = \alpha$ u_xx by n explicit steps u_i <- u_i + r (u_{$i+1$} - 2 u_i + u_{$i-1$}), ends held fixed.
 
@@ -2971,13 +2971,13 @@ $$
 
 *Temperatures along a rod (9 nodes, ends held at 0) from the explicit heat-equation scheme with r = 0.25, starting from 0, 0, 20, 60, 100, 60, 20, 0, 0: row k is the state after k steps, each computed by the package; the peak spreads and decays (100 → 47.79 at the centre after 7 steps).*
 
-![The explicit heat-equation scheme on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0, six steps each computed by the package: with r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-ftcs-steps-profiles)
+![The explicit heat-equation scheme on 5 nodes (ends held) from the worked example's profile 0, 50, 100, 50, 0, 1 step each computed by the package: with r = 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-ftcs-steps-profiles)
 
-*The explicit heat-equation scheme on 9 nodes (ends held at 0) from 0, 0, 20, 60, 100, 60, 20, 0, 0, six steps each computed by the package: with r = 0.25 the peak spreads smoothly; with r = 0.6 (above ½) the profile develops a growing sawtooth; centre node after 6 steps: 50.5859 and 56.0627.*
+*The explicit heat-equation scheme on 5 nodes (ends held) from the worked example's profile 0, 50, 100, 50, 0, 1 step each computed by the package: with r = 0.25 (the worked example) and, across the stability limit ½, r = 0.6, below ½ the peak spreads smoothly, above it the profile develops a growing sawtooth; middle node after the last step: 75 and 40.*
 
 ![r <= 1/2 (stable_ratio) over r (mesh ratio alpha dt / dx^2 (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/heat-ftcs-steps-decision)
 
-*r <= 1/2 (stable_ratio) over r (mesh ratio alpha dt / dx^2 (> 0)) from 0.02 to 0.98 and n (number of time steps) from 1 to 9: each of the 31 × 9 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — yes: 144 cells, no: 135 cells. Other inputs as in the worked example: u = 0, 50, 100, 50, 0. Marked: the worked example, r = 0.25, n = 1 → yes.*
+*r <= 1/2 (stable_ratio) over r (mesh ratio alpha dt / dx^2 (> 0)) from 0.02 to 0.98 and n (number of time steps) from 1 to 9: each of the 31 × 9 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, yes: 144 cells, no: 135 cells. Other inputs as in the worked example: u = 0, 50, 100, 50, 0. Marked: the worked example, r = 0.25, n = 1 → yes.*
 
 ```python
 differential_equations_ai999x.solve('heat_ftcs_steps', u='0, 50, 100, 50, 0', r=0.25, n=1)
@@ -2993,7 +2993,7 @@ differential_equations_ai999x.solve('heat_ftcs_steps', u='0, 50, 100, 50, 0', r=
 
 <a id="crank_nicolson_steps"></a>
 
-### Crank-Nicolson steps for the heat equation — `crank_nicolson_steps`
+### Crank-Nicolson steps for the heat equation, `crank_nicolson_steps`
 
 Advance grid values of $u_t = \alpha$ u_xx by n Crank-Nicolson steps (unconditionally stable), ends held fixed.
 
@@ -3033,7 +3033,7 @@ differential_equations_ai999x.solve('crank_nicolson_steps', u='0, 50, 100, 50, 0
 
 <a id="fourier_sine_coefficient"></a>
 
-### Fourier sine series coefficient (half-range expansion) — `fourier_sine_coefficient`
+### Fourier sine series coefficient (half-range expansion), `fourier_sine_coefficient`
 
 The coefficient b_n of the sine series of f(x) on [0, L], used for the heat and wave equations with fixed ends.
 
@@ -3078,7 +3078,7 @@ differential_equations_ai999x.solve('fourier_sine_coefficient', f='1', L=1, n=2)
 
 <a id="heat_equation_series"></a>
 
-### Heat equation on a rod with ends at zero: Fourier series value — `heat_equation_series`
+### Heat equation on a rod with ends at zero: Fourier series value, `heat_equation_series`
 
 u(x, t) for $u_t = \alpha$ u_xx, u(0, t) = u(L, t) = 0, u(x, 0) = f(x) (a polynomial), summed over the first N series terms.
 
@@ -3122,7 +3122,7 @@ differential_equations_ai999x.solve('heat_equation_series', f='x*(1 - x)', L=1, 
 
 <a id="wave_equation_string_series"></a>
 
-### Vibrating string with fixed ends: Fourier series value — `wave_equation_string_series`
+### Vibrating string with fixed ends: Fourier series value, `wave_equation_string_series`
 
 u(x, t) for $u_tt = c^{2}$ u_xx, u(0, t) = u(L, t) = 0, u(x, 0) = f(x), u_t(x, 0) = g(x) (polynomials), from N series terms.
 
@@ -3166,7 +3166,7 @@ differential_equations_ai999x.solve('wave_equation_string_series', f='x*(1 - x)'
 
 <a id="dalembert_solution"></a>
 
-### Wave equation on the whole line: d'Alembert's formula — `dalembert_solution`
+### Wave equation on the whole line: d'Alembert's formula, `dalembert_solution`
 
 u(x, t) for $u_tt = c^{2}$ u_xx on the real line with u(x, 0) = f(x), u_t(x, 0) = g(x).
 
@@ -3190,9 +3190,9 @@ $$
 - **Assumes:** $c > 0$; g integrable
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0) — an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/dalembert-solution-profiles)
+![D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0), an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/dalembert-solution-profiles)
 
-*D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0) — an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0.5, 1 and 2; the bump splits into two halves moving at ±c; marked: u(2, 1) = 0.5.*
+*D'Alembert's solution of the wave equation with wave speed c = 2 for an initial bump f(x) = exp(-x^2) released at rest (g = 0), an input chosen to show the travelling waves: the package's solution at 121 positions for t = 0, 0.5, 1 and 2; the bump splits into two halves moving at ±c; marked: u(2, 1) = 0.5.*
 
 ```python
 differential_equations_ai999x.solve('dalembert_solution', f='sin(x)', g='0', c=2, x=1, t=0.5)
@@ -3213,7 +3213,7 @@ differential_equations_ai999x.solve('dalembert_solution', f='0', g='1', c=2, x=1
 
 <a id="laplace_equation_rectangle"></a>
 
-### Laplace's equation on a rectangle: series value — `laplace_equation_rectangle`
+### Laplace's equation on a rectangle: series value, `laplace_equation_rectangle`
 
 Steady state $u_xx + u_yy = 0$ on [0, a] x [0, b] with $u = f$(x) on the top edge $y = b$ and 0 on the other three edges, from N terms.
 
@@ -3256,7 +3256,7 @@ differential_equations_ai999x.solve('laplace_equation_rectangle', f='100', a=1, 
 
 <a id="sturm_liouville_eigenvalues"></a>
 
-### Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends — `sturm_liouville_eigenvalues`
+### Eigenvalues of y'' + lambda y = 0 with Dirichlet/Neumann ends, `sturm_liouville_eigenvalues`
 
 The n-th eigenvalue and eigenfunction of y'' + lambda $y = 0$ on [0, L] with Dirichlet $(y = 0)$ or Neumann (y' = 0) conditions at each end.
 
@@ -3303,7 +3303,7 @@ differential_equations_ai999x.solve('sturm_liouville_eigenvalues', bc='dirichlet
 
 <a id="robin_eigenvalues"></a>
 
-### Eigenvalues with a Robin (convective) end condition — `robin_eigenvalues`
+### Eigenvalues with a Robin (convective) end condition, `robin_eigenvalues`
 
 The n-th eigenvalue of y'' + lambda $y = 0$, y(0) = 0, y'(L) + h y(L) = 0 (heat loss at one end): root of tan(mu L) = -mu/h.
 
@@ -3344,7 +3344,7 @@ differential_equations_ai999x.solve('robin_eigenvalues', L=1, h=1, n=1)
 
 <a id="logistic_map_fixed_points"></a>
 
-### Logistic map: fixed points and their stability — `logistic_map_fixed_points`
+### Logistic map: fixed points and their stability, `logistic_map_fixed_points`
 
 Fixed points of x -> r x $(1 - x)$ in [0, 1], their multipliers f'(x*) and stability.
 
@@ -3390,7 +3390,7 @@ differential_equations_ai999x.solve('logistic_map_fixed_points', r=3.2)
 
 <a id="logistic_map_two_cycle"></a>
 
-### Logistic map: period-2 cycle and its stability — `logistic_map_two_cycle`
+### Logistic map: period-2 cycle and its stability, `logistic_map_two_cycle`
 
 The 2-cycle {p, q} of x -> r x $(1 - x)$ $(3 < r  \leq  4)$, its multiplier f'(p) f'(q) and stability (stable for $3 < r < 1 + sqrt$ 6).
 
@@ -3415,7 +3415,7 @@ $$
 
 ![Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0](https://huggingface.co/AI999X/differential-equations-ai999x/resolve/main/figures/logistic-map-two-cycle-bifurcation.svg)
 
-*Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0.05 to 3.45, with their stability, all from the package; the fixed point loses stability at r = 3 where a stable 2-cycle appears — marked: r = 3.2, cycle 0.513045 ↔ 0.799455 (multiplier 0.16).*
+*Period-doubling of the logistic map x → r x(1 − x): its fixed points and 2-cycles for 69 values of r from 0.05 to 3.45, with their stability, all from the package; the fixed point loses stability at r = 3 where a stable 2-cycle appears, marked: r = 3.2, cycle 0.513045 ↔ 0.799455 (multiplier 0.16).*
 
 ![Cobweb diagram of the logistic map at r = 3](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-map-two-cycle-cobweb)
 
@@ -3435,7 +3435,7 @@ differential_equations_ai999x.solve('logistic_map_two_cycle', r=3.2)
 
 <a id="logistic_map_lyapunov"></a>
 
-### Lyapunov exponent of the logistic map (periodic regime) — `logistic_map_lyapunov`
+### Lyapunov exponent of the logistic map (periodic regime), `logistic_map_lyapunov`
 
 The Lyapunov exponent of x -> r x $(1 - x)$: the average of ln|f'(x_k)| over n iterations after the orbit settles (fixed point or 2-cycle).
 
@@ -3460,7 +3460,7 @@ $$
 
 ![attractor reached (attractor) over r (parameter (0 < r <= 4)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/logistic-map-lyapunov-decision)
 
-*attractor reached (attractor) over r (parameter (0 < r <= 4)) from 0.25 to 25 and x0 (initial value in (0, 1)) from 0.03 to 3 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — 2-cycle: 16 cells, fixed point: 112 cells, fixed point 0: 160 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: n = 1000. Marked: the worked example, r = 2.5, x0 = 0.3 → fixed point.*
+*attractor reached (attractor) over r (parameter (0 < r <= 4)) from 0.25 to 25 and x0 (initial value in (0, 1)) from 0.03 to 3 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, 2-cycle: 16 cells, fixed point: 112 cells, fixed point 0: 160 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: n = 1000. Marked: the worked example, r = 2.5, x0 = 0.3 → fixed point.*
 
 ```python
 differential_equations_ai999x.solve('logistic_map_lyapunov', r=2.5, x0=0.3, n=1000)
@@ -3476,7 +3476,7 @@ differential_equations_ai999x.solve('logistic_map_lyapunov', r=2.5, x0=0.3, n=10
 
 <a id="lorenz_equilibria"></a>
 
-### Lorenz system: equilibria and stability of the origin — `lorenz_equilibria`
+### Lorenz system: equilibria and stability of the origin, `lorenz_equilibria`
 
 Equilibria of x' = sigma(y - x), y' = x(rho - z) - y, z' = xy - beta z: the origin and C+- = (+-sqrt(beta(rho-1)), same, rho - 1).
 
@@ -3519,7 +3519,7 @@ differential_equations_ai999x.solve('lorenz_equilibria', sigma=10, rho=28, beta=
 
 <a id="lorenz_hopf_threshold"></a>
 
-### Lorenz system: Hopf threshold rho_H (loss of stability of C+-) — `lorenz_hopf_threshold`
+### Lorenz system: Hopf threshold rho_H (loss of stability of C+-), `lorenz_hopf_threshold`
 
 The Rayleigh parameter at which the equilibria C+- of the Lorenz system lose stability (subcritical Hopf; chaos follows).
 
@@ -3562,7 +3562,7 @@ differential_equations_ai999x.solve('lorenz_hopf_threshold', sigma=10, beta=2.66
 
 <a id="brusselator_hopf"></a>
 
-### Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2 — `brusselator_hopf`
+### Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2, `brusselator_hopf`
 
 For x' = $a - (b + 1)$ $x + x^{2}$ y, y' = b $x - x^{2}$ y: the equilibrium (a, b/a), its type and the critical b where a limit cycle is born.
 
@@ -3589,11 +3589,11 @@ $$
 
 ![The Brusselator x′ = 1 - 4*x + x^2*y, y′ = 3*x - x^2*y (a = 1, b = 3): two trajectories integrated by the package (RK4, step 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/brusselator-hopf-phase)
 
-*The Brusselator x′ = 1 - 4*x + x^2*y, y′ = 3*x - x^2*y (a = 1, b = 3): two trajectories integrated by the package (RK4, step 0.02, t = 0 … 24), one spiralling out of the equilibrium and one in from outside, both onto the same limit cycle; the package classifies the equilibrium (1, 3) as an unstable spiral — b exceeds its Hopf value b_c = 2.*
+*The Brusselator x′ = 1 - 4*x + x^2*y, y′ = 3*x - x^2*y (a = 1, b = 3): two trajectories integrated by the package (RK4, step 0.02, t = 0 … 24), one spiralling out of the equilibrium and one in from outside, both onto the same limit cycle; the package classifies the equilibrium (1, 3) as an unstable spiral, b exceeds its Hopf value b_c = 2.*
 
 ![equilibrium type (type) over a (parameter a (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/brusselator-hopf-decision)
 
-*equilibrium type (type) over a (parameter a (> 0)) from 0.1 to 10 and b (parameter b (> 0)) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned — stable node: 214 cells, stable spiral: 136 cells, unstable node: 244 cells, unstable spiral: 57 cells. Marked: the worked example, a = 1, b = 3 → unstable spiral.*
+*equilibrium type (type) over a (parameter a (> 0)) from 0.1 to 10 and b (parameter b (> 0)) from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, stable node: 214 cells, stable spiral: 136 cells, unstable node: 244 cells, unstable spiral: 57 cells. Marked: the worked example, a = 1, b = 3 → unstable spiral.*
 
 ```python
 differential_equations_ai999x.solve('brusselator_hopf', a=1, b=3)
@@ -3609,7 +3609,7 @@ differential_equations_ai999x.solve('brusselator_hopf', a=1, b=3)
 
 <a id="sir_epidemic"></a>
 
-### SIR epidemic: R0, peak infections and final size — `sir_epidemic`
+### SIR epidemic: R0, peak infections and final size, `sir_epidemic`
 
 For S' = -beta S I, I' = beta S I - gamma I (fractions of the population): R0, the peak infected fraction and the final susceptible fraction.
 
