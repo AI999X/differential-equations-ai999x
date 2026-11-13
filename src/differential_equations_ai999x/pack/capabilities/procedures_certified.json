@@ -14,6 +14,7 @@
   "logistic_harvesting",
   "linear_first_order",
   "linear_first_order_exponential_forcing",
+  "linear_first_order_variable",
   "mixing_tank",
   "separable_power",
   "quadratic_ode_blowup",
@@ -78,7 +79,7 @@
   "brusselator_hopf",
   "sir_epidemic"
  ],
- "generated": "2026-10-23",
+ "generated": "2026-11-13",
  "tool": "tools/certify_procedures.py",
  "report": "release/procedure_certification.json"
 }

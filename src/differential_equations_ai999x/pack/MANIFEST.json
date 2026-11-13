@@ -1,5 +1,5 @@
 {
- "package": "1.5.0",
+ "package": "1.6.0",
  "pack": "1.0.0",
  "knowledge_db": null,
  "files": {
@@ -7,8 +7,8 @@
   "dictionary/terms.json": "b2d8da1d78769f517c23c6ea61c20fc6a48166102bca0adc66f36fb5f54d905d",
   "knowledge/relations.json": "b9969317c5968afa53c159a37ee6a322f1a2d6c83be435289136e110deeff681",
   "knowledge/reference_cases.json": "7414a14e2c4202a7fae8cdd14e1a2ef7267f35a9665b0633001349c698d4e4e7",
-  "capabilities/procedures.py": "9b3bf2e69a454dc6513435a25d4f43626435f86e89d9c6d34a64d370ef77ef69",
-  "capabilities/procedures_certified.json": "e778fbd51ce4f554c69798f6287689261efe567ea58bce5f13e35e08a4244f9b",
+  "capabilities/procedures.py": "37ece1b4c0b982d848f2649ebd6ee8455ad5bfced027622b4fb20fff64a51d21",
+  "capabilities/procedures_certified.json": "0b157cf70d59b848d1d51af00ae49d267dd0bfc415ee8caa9667189f60b4ed1d",
   "differential_equations_knowledge_public.sqlite": "ece50112a5b5b79e15c5d098291be3e61607699627877957c7a9b25980e569a4"
  },
  "engine": [

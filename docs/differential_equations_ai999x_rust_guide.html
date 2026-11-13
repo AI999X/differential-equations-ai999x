@@ -21,42 +21,42 @@ figcaption{font-size:9pt;color:#555}
 .pb{page-break-after:always}
 </style></head><body>
 <h1>differential-equations: the Differential Equations program, user guide</h1>
-<p><strong>differential-equations-ai999x 1.1.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
-<p>Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. This guide is about <code>differential-equations</code>, the model as a self-contained program for Windows and Linux: 77 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/differential-equations-ai999x/); the Python package (<code>pip install differential-equations-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
+<p><strong>differential-equations-ai999x 1.6.0</strong>, Rust build: command line, desktop app and browser. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. This guide is about <code>differential-equations</code>, the model as a self-contained program for Windows and Linux: 78 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model&#x27;s page (https://www.ai999x.com/models/differential-equations-ai999x/); the Python package (<code>pip install differential-equations-ai999x</code>) has its own guide. Every command output printed here is what the program printed.</p>
 <h2>Contents</h2>
 <ul><li>1. Get it: desktop app, command line, browser, Python</li><li>2. Quick start</li><li>3. Writing inputs</li><li>4. Outcomes and exit codes</li><li>5. Scripts and agents: batch and JSON</li><li>6. Figures</li><li>7. In a web page or Node.js: WebAssembly</li><li>8. Every capability</li></ul>
 <h2>1. Get it</h2>
-<p>Version 1.5.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
-<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Differential Equations</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Differential Equations</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Version 1.6.0 of the AI999X desktop app and of the command-line bundle. Checksums for every file: https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS; the newest version is always under https://downloads.ai999x.com/desktop/latest/. Full instructions: https://www.ai999x.com/desktop-cli/</p>
+<table><thead><tr><th>what</th><th>system</th><th>download</th></tr></thead><tbody><tr><td>Desktop app: Differential Equations</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-differential-equations-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: Differential Equations</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-differential-equations-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Desktop app: all models</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-windows-x86_64.zip</td></tr><tr><td>Desktop app: all models</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz</td></tr><tr><td>Command line</td><td>Windows x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-windows-x86_64.zip</td></tr><tr><td>Command line</td><td>Linux x86-64</td><td>https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz</td></tr></tbody></table>
 <h3>Desktop app</h3>
-<p>Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<p>Differential Equations in its own app: search, questions in words, input forms, live figures and explanations. Windows: Download ai999x-differential-equations-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-differential-equations-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-differential-equations-1.5.0-linux-x86_64.tar.gz
-./ai999x-differential-equations-1.5.0-linux-x86_64/ai999x-differential-equations</code></pre>
-<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.5.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+tar xzf ai999x-differential-equations-1.6.0-linux-x86_64.tar.gz
+./ai999x-differential-equations-1.6.0-linux-x86_64/ai999x-differential-equations</code></pre>
+<p>It opens on this model: type a question or pick a capability, fill in the form and press Compute. The AI999X desktop app with every model works the same way (choose the model first). Windows: Download ai999x-1.6.0-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x.exe. If Windows SmartScreen asks, choose More info → Run anyway. Linux:</p>
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-1.5.0-linux-x86_64.tar.gz
-./ai999x-1.5.0-linux-x86_64/ai999x</code></pre>
+tar xzf ai999x-1.6.0-linux-x86_64.tar.gz
+./ai999x-1.6.0-linux-x86_64/ai999x</code></pre>
 <h3>Command line, Linux</h3>
 <p>The bundle holds one program per model; <code>differential-equations</code> is this one. The checksum line should print OK.</p>
-<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
+<pre><code class="shell">curl -LO https://downloads.ai999x.com/desktop/1.6.0/ai999x-cli-1.6.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
-echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
+mkdir -p ~/.local/share &amp;&amp; tar xzf ai999x-cli-1.6.0-linux-x86_64.tar.gz -C ~/.local/share
+echo &#x27;export PATH=&quot;$HOME/.local/share/ai999x-cli-1.6.0-linux-x86_64:$PATH&quot;&#x27; &gt;&gt; ~/.bashrc &amp;&amp; source ~/.bashrc
 differential-equations --version</code></pre>
 <h3>Command line, Windows (PowerShell)</h3>
 <p>The fourth line should print True.</p>
-<pre><code class="powershell">$F = &quot;ai999x-cli-1.5.0-windows-x86_64.zip&quot;
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/$F&quot; -OutFile $F
-Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS&quot; -OutFile SHA256SUMS
+<pre><code class="powershell">$F = &quot;ai999x-cli-1.6.0-windows-x86_64.zip&quot;
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/$F&quot; -OutFile $F
+Invoke-WebRequest &quot;https://downloads.ai999x.com/desktop/1.6.0/SHA256SUMS&quot; -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split &#x27; &#x27;)[0]
 Expand-Archive $F -DestinationPath &quot;$env:LOCALAPPDATA\AI999X&quot; -Force
-$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
+$D = &quot;$env:LOCALAPPDATA\AI999X\ai999x-cli-1.6.0-windows-x86_64&quot;; $env:Path += &quot;;$D&quot;
 [Environment]::SetEnvironmentVariable(&quot;Path&quot;, [Environment]::GetEnvironmentVariable(&quot;Path&quot;, &quot;User&quot;) + &quot;;$D&quot;, &quot;User&quot;)
 differential-equations --version</code></pre>
 <h3>In your browser</h3>
@@ -67,7 +67,7 @@ differential-equations --version</code></pre>
 <h3>2.1 Check the install</h3>
 <p>Prints the model, its version and that this is the Rust build.</p>
 <pre><code class="shell">$ differential-equations --version
-differential-equations-ai999x 1.5.0 (Rust build, ax-engine 1.5.0)</code></pre>
+differential-equations-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)</code></pre>
 <h3>2.2 Ask in words</h3>
 <p>Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.</p>
 <pre><code class="shell">$ differential-equations ask &quot;Solve y&#x27;&#x27; + 3y&#x27; + 2y = 0 with y(0) = 1, y&#x27;(0) = 0; find y(1).&quot;
@@ -105,7 +105,7 @@ boundary_value_problem                   Linear two-point boundary value problem
 brusselator_hopf                         Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2
 cauchy_euler_ivp                         Cauchy-Euler (equidimensional) equation: initial value problem
 cfl_condition                            CFL condition for the advection equation (upwind scheme)
-… 69 more</code></pre>
+… 70 more</code></pre>
 <h3>2.5 What a capability needs</h3>
 <p>The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.</p>
 <pre><code class="shell">$ differential-equations info second_order_homogeneous_ivp
@@ -436,7 +436,7 @@ attack_rate = 0.9312026352
   I0 = 0.01
   assumes: S0, I0 &gt; 0; S0 + I0 &lt;= 1</code></pre>
 <p><strong>What the worked example means:</strong> This calculation determines key metrics for a Susceptible-Infected-Recovered epidemic model using initial transmission and recovery rates along with starting population fractions. The basic reproduction number, which indicates how many secondary infections one case causes in a fully susceptible population, is computed as 3. Using conservation laws, the maximum proportion of the population that becomes infected simultaneously is found to be 0.303813. Finally, the model solves for the remaining susceptible fraction after the epidemic subsides, yielding 0.0587974, from which the total attack rate is derived.</p>
-<h3>First-order ODES (24)</h3>
+<h3>First-order ODES (25)</h3>
 <h4 id="radiometric_age">Age from the fraction remaining (radioactive dating), <code>radiometric_age</code></h4>
 <p>The elapsed time when a fraction p of a radioactive substance with half-life T remains.</p>
 <div class="math">\[t = T\,\frac{\ln(1/p)}{\ln 2}\]</div>
@@ -608,6 +608,22 @@ resonant = false
   t = 2
   assumes: any real a, b, c</code></pre>
 <p>In the worked example, a = 1, b = 2, c = 0.5, y0 = 0, t = 2 go through the equation above and give y = 3.443928727, resonant = False. It applies only when any real a, b, c: outside that it says what is wrong instead of returning a number.</p>
+<h4 id="linear_first_order_variable">First-order linear ODE y&#x27; + P(x) y = Q(x) (integrating factor), <code>linear_first_order_variable</code></h4>
+<p>Solve y&#x27; + P(x) y = Q(x), y(x0) = y0, with variable coefficients (P a sum of terms c x^k, Q a sum of terms c x^k e^(a x)) by the integrating factor mu = exp(integral of P), and give y(x), the integrating factor and the integral of mu Q.</p>
+<div class="math">\[\mu(x) = e^{\int P\,dx},\qquad y(x) = \frac{1}{\mu(x)}\left(\mu(x_0)\,y_0 + \int_{x_0}^{x}\mu(s)\,Q(s)\,ds\right)\]</div>
+<table><thead><tr><th>symbol</th><th></th><th>meaning</th><th>SI unit</th></tr></thead><tbody><tr><td><code>p_terms</code></td><td>in</td><td>P(x) as rows &#x27;c k&#x27; for the terms c x^k (k from -4 to 6), e.g. &#x27;2 -1&#x27; for 2/x</td><td>, </td></tr><tr><td><code>q_terms</code></td><td>in</td><td>Q(x) as rows &#x27;c k a&#x27; for the terms c x^k e^(a x), e.g. &#x27;1 2 0&#x27; for x^2</td><td>, </td></tr><tr><td><code>x0</code></td><td>in</td><td>initial point x0</td><td>, </td></tr><tr><td><code>y0</code></td><td>in</td><td>initial value y(x0)</td><td>, </td></tr><tr><td><code>x1</code></td><td>in</td><td>the point x where y is wanted</td><td>, </td></tr><tr><td><code>y</code></td><td>out</td><td>value y(x)</td><td>, </td></tr><tr><td><code>mu_ratio</code></td><td>out</td><td>mu(x) / mu(x0)</td><td>, </td></tr><tr><td><code>integral</code></td><td>out</td><td>integral from x0 to x of mu(s)/mu(x0) Q(s) ds</td><td>, </td></tr><tr><td><code>integrating_factor</code></td><td>out</td><td>mu(x) = exp(integral of P) (constant of integration 0)</td><td>, </td></tr></tbody></table>
+<p><strong>Applies when:</strong> powers of x are whole numbers from -4 to 6, exponent rates at most 20 in size; with a negative power of x, x0 and x are nonzero and on the same side of 0; refused when the quadrature does not settle to 1e-11 or the factor overflows.</p>
+<pre><code class="shell">$ differential-equations solve linear_first_order_variable &quot;p_terms=2 -1&quot; &quot;q_terms=1 2 0&quot; x0=1 y0=2 x1=2
+y = 2.05
+mu_ratio = 4
+integral = 6.2
+integrating_factor = |x|^2
+  by: First-order linear ODE y&#x27; + P(x) y = Q(x) (integrating factor)  (mu = exp(integral of P) in closed form; (mu y)&#x27; = mu Q, so y(x) = (y0 mu(x0) + integral of mu Q) / mu(x); the integral by composite 5-point Gauss-Legendre (128 and 256 panels must agree))
+  x0 = 1
+  y0 = 2
+  x1 = 2
+  assumes: powers of x are whole numbers from -4 to 6, exponent rates at most 20 in size; with a negative power of x, x0 and x are nonzero and on the same side of 0; refused when the quadrature does not settle to 1e-11 or the factor overflows</code></pre>
+<p>In the worked example, p_terms = [2 -1], q_terms = [1 2 0], x0 = 1, y0 = 2, x1 = 2 go through the equation above and give y = 2.05, mu_ratio = 4, integral = 6.2, integrating_factor = |x|^2. It applies only when powers of x are whole numbers from -4 to 6, exponent rates at most 20 in size; with a negative power of x, x0 and x are nonzero and on the same side of 0; refused when the quadrature does not settle to 1e-11 or the factor overflows: outside that it says what is wrong instead of returning a number.</p>
 <h4 id="gompertz_growth">Gompertz growth: value at a time, <code>gompertz_growth</code></h4>
 <p>Solve dy/dt = r y ln(K/y), y(0) = y0 (tumour and population growth) and give y(t).</p>
 <div class="math">\[y(t) = K\exp\left(\ln\frac{y_0}{K}\,e^{-rt}\right)\]</div>

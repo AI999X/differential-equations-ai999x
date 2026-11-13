@@ -913,6 +913,327 @@ add("linear_first_order_exponential_forcing", name="First-order linear ODE with 
     trig=(3, [r"y'\s*\+\s*a\s*\*?\s*y\s*=\s*b\s*\*?\s*e\^"]))
 
 
+# --- core gap (2026-11-12): y' + P(x) y = Q(x) with variable coefficients ------------------------------------------------
+# P(x) is a sum of terms c x^k and Q(x) a sum of terms c x^k e^(a x) (k a whole number from -4 to 6): the integrating
+# factor mu = exp(integral of P) is then exact (|x|^c for c/x, exp(c x^(k+1)/(k+1)) otherwise), and the one remaining
+# integral of mu Q is computed by composite 5-point Gauss-Legendre on 128 and on 256 panels; the answer is given only
+# when the two agree to 1e-11 of the size of the integrand. With a negative power of x the interval must not contain 0.
+# Plain arithmetic only (it translates to Rust).
+_GL5_X = [0.0, math.sqrt(5.0 - 2.0 * math.sqrt(10.0 / 7.0)) / 3.0, -math.sqrt(5.0 - 2.0 * math.sqrt(10.0 / 7.0)) / 3.0,
+          math.sqrt(5.0 + 2.0 * math.sqrt(10.0 / 7.0)) / 3.0, -math.sqrt(5.0 + 2.0 * math.sqrt(10.0 / 7.0)) / 3.0]
+_GL5_W = [128.0 / 225.0, (322.0 + 13.0 * math.sqrt(70.0)) / 900.0, (322.0 + 13.0 * math.sqrt(70.0)) / 900.0,
+          (322.0 - 13.0 * math.sqrt(70.0)) / 900.0, (322.0 - 13.0 * math.sqrt(70.0)) / 900.0]
+
+
+def _lfo_finite(v, name):
+    if isinstance(v, bool) or not isinstance(v, (int, float)) or not math.isfinite(v):
+        raise ValueError(name + " must be a finite number")
+    return float(v)
+
+
+def _lfo_rows(rows, width, name):
+    """The terms of P (rows c, k) or of Q (rows c, k, a), checked: k a whole number from -4 to 6, |a| <= 20."""
+    if len(rows) < 1 or len(rows) > 8:
+        raise ValueError(name + ": 1 to 8 terms")
+    out = []
+    for r in rows:
+        if len(r) != width:
+            raise ValueError(name + ": every term is a row of " + str(width) + " numbers")
+        c = _lfo_finite(r[0], name)
+        k = _lfo_finite(r[1], name)
+        if k != math.floor(k) or k < -4 or k > 6:
+            raise ValueError(name + ": the power of x is a whole number from -4 to 6")
+        if width == 3:
+            a = _lfo_finite(r[2], name)
+            if abs(a) > 20:
+                raise ValueError(name + ": the exponent rate a is at most 20 in size")
+            out.append([c, int(k), a])
+        else:
+            out.append([c, int(k)])
+    return out
+
+
+def _lfo_F(P, s):
+    """The antiderivative of P at s (no constant): c ln|s| for c/x, c s^(k+1)/(k+1) otherwise."""
+    v = 0.0
+    for r in P:
+        if r[1] == -1:
+            v += r[0] * math.log(abs(s))
+        else:
+            v += r[0] * s ** (r[1] + 1) / (r[1] + 1)
+    return v
+
+
+def _lfo_Q(Q, s):
+    v = 0.0
+    for r in Q:
+        v += r[0] * s ** r[1] * math.exp(r[2] * s)
+    return v
+
+
+def _lfo_integral(P, Q, x0, x1, panels):
+    """The integral of mu(s)/mu(x0) Q(s) from x0 to x1 (composite 5-point Gauss-Legendre) and the integral of its size."""
+    F0 = _lfo_F(P, x0)
+    h = (x1 - x0) / panels
+    total = 0.0
+    size = 0.0
+    for m in range(panels):
+        mid = x0 + (m + 0.5) * h
+        for j in range(5):
+            s = mid + 0.5 * h * _GL5_X[j]
+            g = math.exp(_lfo_F(P, s) - F0) * _lfo_Q(Q, s)
+            total += _GL5_W[j] * g
+            size += _GL5_W[j] * abs(g)
+    return 0.5 * h * total, 0.5 * abs(h) * size
+
+
+def _lfo_num(v):
+    return f"{v + 0.0:.12g}"
+
+
+def _lfo_factor_text(P):
+    """The integrating factor exp(integral of P), written with the constant of integration 0."""
+    logc = 0.0
+    poly = {}
+    for r in P:
+        if r[0] == 0:
+            continue
+        if r[1] == -1:
+            logc += r[0]
+        else:
+            poly[r[1] + 1] = poly.get(r[1] + 1, 0.0) + r[0] / (r[1] + 1)
+    parts = []
+    if logc != 0:
+        parts.append("|x|" if logc == 1 else "|x|^" + _lfo_num(logc))
+    terms = ""
+    for p in range(7, -4, -1):
+        if p not in poly or poly[p] == 0:
+            continue
+        d = poly[p]
+        mono = "x" if p == 1 else "x^" + str(p)
+        piece = mono if abs(d) == 1 else _lfo_num(abs(d)) + mono
+        if terms == "":
+            terms = ("-" if d < 0 else "") + piece
+        else:
+            terms = terms + (" - " if d < 0 else " + ") + piece
+    if terms != "":
+        parts.append("exp(" + terms + ")")
+    if len(parts) == 0:
+        return "1"
+    return " * ".join(parts)
+
+
+def linear_first_order_variable(p_terms, q_terms, x0, y0, x1):
+    x0 = _lfo_finite(x0, "x0")
+    y0 = _lfo_finite(y0, "y0")
+    x1 = _lfo_finite(x1, "x1")
+    P = _lfo_rows(p_terms, 2, "P(x)")
+    Q = _lfo_rows(q_terms, 3, "Q(x)")
+    negative = False
+    for r in P + Q:
+        if r[1] < 0:
+            negative = True
+    if negative and x0 * x1 <= 0:
+        raise ValueError("a negative power of x is undefined at x = 0: x0 and x must be nonzero and on the same side of 0")
+    try:
+        I1, _s1 = _lfo_integral(P, Q, x0, x1, 128)
+        I2, size = _lfo_integral(P, Q, x0, x1, 256)
+        ratio = math.exp(_lfo_F(P, x1) - _lfo_F(P, x0))
+    except (OverflowError, ZeroDivisionError):
+        raise ValueError("the integrating factor overflows on this interval") from None
+    if not (math.isfinite(I1) and math.isfinite(I2) and math.isfinite(size) and math.isfinite(ratio)) or ratio == 0:
+        raise ValueError("the integrating factor overflows on this interval")
+    if abs(I1 - I2) > 1e-11 * size:
+        raise ValueError("the integral does not settle: the solution changes too fast on this interval")
+    total = y0 + I2
+    big = abs(y0) + abs(I2)
+    if big > 1e5 * max(1.0, abs(total)):
+        raise ValueError("the result is lost to cancellation between large terms (ill-conditioned inputs)")
+    if abs(total) < 1e-13 * big:
+        total = 0.0
+    return {"y": _r(total / ratio), "mu_ratio": _r(ratio), "integral": _r(I2), "integrating_factor": _lfo_factor_text(P)}
+
+
+def _verify_lfo(i, o):
+    """The same solution formula on 384 panels (a different partition of the interval)."""
+    P = _lfo_rows(i["p_terms"], 2, "P(x)")
+    Q = _lfo_rows(i["q_terms"], 3, "Q(x)")
+    I, _size = _lfo_integral(P, Q, i["x0"], i["x1"], 384)
+    ratio = math.exp(_lfo_F(P, i["x1"]) - _lfo_F(P, i["x0"]))
+    total = i["y0"] + I
+    if abs(total) < 1e-13 * (abs(i["y0"]) + abs(I)):
+        total = 0.0
+    if o["integrating_factor"] != _lfo_factor_text(P):
+        return 1.0
+    return max(_diff(o["y"], total / ratio), _diff(o["mu_ratio"], ratio), _diff(o["integral"], I))
+
+
+def _ref_lfo(p_terms, q_terms, x0, y0, x1):
+    """scipy's DOP853 on y' = Q(x) - P(x) y for y; quad for mu (exp of the integral of P) and nested quad for the integral."""
+    import numpy as np
+    from scipy.integrate import quad
+    Pf = lambda s: sum(float(r[0]) * s ** int(r[1]) for r in p_terms)
+    Qf = lambda s: sum(float(r[0]) * s ** int(r[1]) * np.exp(float(r[2]) * s) for r in q_terms)
+    y = ivp_ref(lambda s, u: [Qf(s) - Pf(s) * u[0]], float(x0), float(y0), float(x1))
+    ratio = float(np.exp(quad(Pf, x0, x1, epsabs=0, epsrel=1e-13, limit=200)[0]))
+    mu = lambda s: np.exp(quad(Pf, x0, s, epsabs=0, epsrel=1e-13, limit=200)[0])
+    integral = quad(lambda s: mu(s) * Qf(s), x0, x1, epsabs=1e-15, epsrel=1e-13, limit=200)[0]
+    return {"y": y, "mu_ratio": ratio, "integral": float(integral)}
+
+
+def _wrong_lfo(p_terms, q_terms, x0, y0, x1):
+    """The integrating factor with the wrong sign, exp(-integral of P)."""
+    try:
+        return linear_first_order_variable([[-float(r[0]), r[1]] for r in p_terms], q_terms, x0, y0, x1)
+    except ValueError:
+        return {"y": 1e9, "mu_ratio": 1e9, "integral": 1e9, "integrating_factor": "?"}
+
+
+def _rand_lfo(rng):
+    P = rng.choice([[[_nz(rng, -2, 2), 0]], [[_nz(rng, -2, 2), 1]], [[float(rng.choice([1, 2, 3, -1, -2])), -1]],
+                    [[_nz(rng, -1, 1), 2]], [[float(rng.choice([1, 2, -1])), -1], [_nz(rng, -1, 1), 0]]])
+    Q = rng.choice([[[_nz(rng, -3, 3), rng.randint(0, 3), 0.0]], [[_nz(rng, -3, 3), 0, _u(rng, -1.5, 1.5)]],
+                    [[_nz(rng, -3, 3), 1, 0.0], [_nz(rng, -3, 3), 0, 0.0]], [[_nz(rng, -3, 3), 1, _u(rng, -1, 1)]],
+                    [[_nz(rng, -3, 3), -1, 0.0]]])
+    x0 = _u(rng, 0.5, 2.0)
+    side = rng.choice([1.0, 1.0, -1.0])
+    return {"p_terms": P, "q_terms": Q, "x0": side * x0, "y0": _u(rng, -5, 5), "x1": side * round(x0 + _u(rng, 0.3, 2.0), 2)}
+
+
+_LFO_TERM = re.compile(r"(?P<c>\d+(?:\.\d+)?(?:/\d+(?:\.\d+)?)?)?(?P<x>x(?:\^(?:\((?P<k1>-?\d+)\)|(?P<k2>-?\d+)))?)?"
+                       r"(?P<e>e\^(?:\((?P<a1>-?(?:\d+(?:\.\d+)?)?)x\)|(?P<a2>x)))?(?:/(?P<dx>x)(?:\^(?P<dk>\d+))?)?")
+
+
+def _lfo_text_terms(text, allow_exp):
+    """'2/x', '-(x^2 - 3)', 'x e^(2x) + 1' -> rows [c, k] (or [c, k, a] with exponentials); None if not of that form."""
+    s = text.lower().replace(" ", "").replace("**", "^").replace("*", "").replace("exp(", "e^(")
+    sign = 1.0
+    if s[:1] in ("+", "-"):
+        sign = -1.0 if s[0] == "-" else 1.0
+        s = s[1:]
+    if s.startswith("(") and s.endswith(")") and s.count("(") == 1:
+        s = s[1:-1]
+    if s == "":
+        s = "1"
+    if s[0] not in "+-":
+        s = "+" + s
+    terms, depth, cur = [], 0, ""
+    for ch in s:
+        if ch in "+-" and depth == 0 and cur and not cur.endswith("^"):
+            terms.append(cur)
+            cur = ""
+        depth += {"(": 1, ")": -1}.get(ch, 0)
+        cur += ch
+    terms.append(cur)
+    rows = []
+    for t in terms:
+        sg = -1.0 if t[0] == "-" else 1.0
+        m = _LFO_TERM.fullmatch(t[1:])
+        if not m or not t[1:] or (m.group("e") and not allow_exp):
+            return None
+        c = float(Fraction(m.group("c"))) if m.group("c") else 1.0
+        k = 0
+        if m.group("x"):
+            k = int(m.group("k1") or m.group("k2") or 1)
+        if m.group("dx"):
+            k -= int(m.group("dk") or 1)
+        a = 0.0
+        if m.group("e"):
+            a1 = m.group("a1")
+            a = 1.0 if m.group("a2") else (-1.0 if a1 == "-" else (1.0 if a1 in ("", None) else float(a1)))
+        row = [sign * sg * c, k] + ([a] if allow_exp else [])
+        rows.append(row)
+    return rows
+
+
+_LFO_NUM = r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)"
+
+
+def _lfo_pre(nq):
+    q = nq
+    m = re.search(r"(?:dy/dx|y')\s*([+-])\s*(.*?)\s*\*?\s*y\s*=\s*(.+?)" + _STOP, q, re.I)
+    if not m:
+        return None
+    ptxt, qtxt = m.group(1) + m.group(2), m.group(3)
+    q = q[:m.start()] + " ; " + q[m.end():]
+    if re.fullmatch(r"[+-]p\(x\)", ptxt.replace(" ", ""), re.I):
+        mp = re.search(r"\bp\(x\)\s*=\s*(.+?)" + _STOP, q, re.I)
+        if not mp:
+            return None
+        ptxt = "+" + mp.group(1) if ptxt.strip()[0] == "+" else "-(" + mp.group(1) + ")"
+        q = q[:mp.start()] + " ; " + q[mp.end():]
+    if re.fullmatch(r"q\(x\)", qtxt.strip(), re.I):
+        mq = re.search(r"\bq\(x\)\s*=\s*(.+?)" + _STOP, q, re.I)
+        if not mq:
+            return None
+        qtxt = mq.group(1)
+        q = q[:mq.start()] + " ; " + q[mq.end():]
+    try:
+        P, Q = _lfo_text_terms(ptxt, False), _lfo_text_terms(qtxt, True)
+    except (ValueError, ZeroDivisionError, IndexError):
+        return None
+    if P is None or Q is None:
+        return None
+    out = {"p_terms": P, "q_terms": Q}
+    mi = re.search(r"\by\(\s*(" + _LFO_NUM + r")\s*\)\s*=\s*(" + _LFO_NUM + r")", q)
+    if mi:
+        out["x0"], out["y0"] = float(mi.group(1)), float(mi.group(2))
+        q = q[:mi.start()] + " ; " + q[mi.end():]
+    else:
+        mz = re.search(r"\by0\s*=\s*(" + _LFO_NUM + r")", q)                 # y(0) = .. (read as y0 by _norm)
+        if mz:
+            out["x0"], out["y0"] = 0.0, float(mz.group(1))
+            q = q[:mz.start()] + " ; " + q[mz.end():]
+    mt = re.search(r"\by\(\s*(" + _LFO_NUM + r")\s*\)", q)
+    if mt:
+        out["x1"] = float(mt.group(1))
+        q = q[:mt.start()] + " ; " + q[mt.end():]
+    return q, out
+
+
+_LFO_P = {"symbol": "p_terms", "type": "matrix", "kind": "number", "required": True,
+          "meaning": "P(x) as rows 'c k' for the terms c x^k (k from -4 to 6), e.g. '2 -1' for 2/x"}
+_LFO_Q = {"symbol": "q_terms", "type": "matrix", "kind": "number", "required": True,
+          "meaning": "Q(x) as rows 'c k a' for the terms c x^k e^(a x), e.g. '1 2 0' for x^2"}
+
+add("linear_first_order_variable", name="First-order linear ODE y' + P(x) y = Q(x) (integrating factor)",
+    topic="first-order ODEs / linear equations",
+    purpose="Solve y' + P(x) y = Q(x), y(x0) = y0, with variable coefficients (P a sum of terms c x^k, Q a sum of terms "
+            "c x^k e^(a x)) by the integrating factor mu = exp(integral of P), and give y(x), the integrating factor and "
+            "the integral of mu Q.",
+    inputs=[_LFO_P, _LFO_Q, N("x0", "initial point x0"), N("y0", "initial value y(x0)"), N("x1", "the point x where y is wanted")],
+    outputs=[O("y", "value y(x)"), O("mu_ratio", "mu(x) / mu(x0)"), O("integral", "integral from x0 to x of mu(s)/mu(x0) Q(s) ds"),
+             O("integrating_factor", "mu(x) = exp(integral of P) (constant of integration 0)", "text")],
+    primary="y",
+    conditions=["powers of x are whole numbers from -4 to 6, exponent rates at most 20 in size",
+                "with a negative power of x, x0 and x are nonzero and on the same side of 0",
+                "refused when the quadrature does not settle to 1e-11 or the factor overflows"],
+    method="mu = exp(integral of P) in closed form; (mu y)' = mu Q, so y(x) = (y0 mu(x0) + integral of mu Q) / mu(x); the "
+           "integral by composite 5-point Gauss-Legendre (128 and 256 panels must agree)",
+    latex=r"\mu(x) = e^{\int P\,dx},\qquad y(x) = \frac{1}{\mu(x)}\left(\mu(x_0)\,y_0 + \int_{x_0}^{x}\mu(s)\,Q(s)\,ds\right)",
+    run=linear_first_order_variable, verify=_verify_lfo, reference=_ref_lfo, wrong=_wrong_lfo, rand=_rand_lfo,
+    templates=["Integrating factor: solve y' + P(x) y = Q(x) with P(x) = 2/x, Q(x) = x^2, y(1) = 2; find y(2).",
+               "Integrating factor: solve dy/dx + 2x y = x with y(0) = 1; find y(1)."],
+    examples=[({"p_terms": "2 -1", "q_terms": "1 2 0", "x0": 1, "y0": 2, "x1": 2},
+               {"y": 2.05, "mu_ratio": 4.0, "integral": 6.2, "integrating_factor": "|x|^2"}),
+              ({"p_terms": [[2, 1]], "q_terms": [[1, 1, 0]], "x0": 0, "y0": 1, "x1": 1},
+               {"y": 0.5 + 0.5 * math.exp(-1.0), "mu_ratio": math.e, "integral": (math.e - 1.0) / 2.0, "integrating_factor": "exp(x^2)"}),
+              ({"p_terms": [[1, 0]], "q_terms": [[1, 0, 2]], "x0": 0, "y0": 1, "x1": 1},
+               {"y": math.exp(2.0) / 3.0 + 2.0 / (3.0 * math.e), "mu_ratio": math.e, "integral": (math.exp(3.0) - 1.0) / 3.0,
+                "integrating_factor": "exp(x)"})],
+    questions=[{"q": "Integrating factor: solve y' + P(x) y = Q(x) with P(x) = 2/x, Q(x) = x^2, y(1) = 2; find y(2).",
+                "outputs": {"y": 2.05, "integrating_factor": "|x|^2"}},
+               {"q": "Integrating factor: solve dy/dx + 2x y = x with y(0) = 1; find y(1).", "outputs": {"y": 0.5 + 0.5 * math.exp(-1.0)}},
+               {"q": "Integrating factor: solve y' + y = e^(2x) with y(0) = 1; find y(1).",
+                "outputs": {"y": math.exp(2.0) / 3.0 + 2.0 / (3.0 * math.e)}},
+               {"q": "Integrating factor: solve y' + (1/x) y = 1 with y(-1) = 2; find y(1).", "outcome": "INVALID_INPUT"}],
+    trig=(3, [r"dy/dx", r"y'\s*\+\s*p\(x\)\s*\*?\s*y\s*=\s*q\(x\)",
+              # an equation in x named with "integrating factor"; y' + a y = b (constant coefficients) stays with
+              # linear_first_order
+              _both(r"integrating factor", r"y'\s*[+-]\s*(?!a\s*\*?\s*y\s*=\s*b)[^=]*\by\s*=")]),
+    pre=_lfo_pre, target=None)
+
+
 def mixing(V, r, c_in, A0, t):
     _fin(V, r, c_in, A0, t)
     if V <= 0 or r <= 0 or c_in < 0 or A0 < 0:

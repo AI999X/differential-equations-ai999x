@@ -32,7 +32,7 @@ result.show()
 | First-order ODEs / applications | [Newton's law of cooling: temperature at a time](#newton_cooling_temperature), [Newton's law of cooling: time to reach a temperature](#newton_cooling_time), [Newton's law of cooling: cooling constant from a measurement](#newton_cooling_constant), [Mixing tank (brine): amount of salt at a time](#mixing_tank), [Falling body with linear drag: velocity](#linear_drag_velocity), [Falling body with quadratic drag: velocity](#quadratic_drag_velocity), [Draining tank (Torricelli's law): height and emptying time](#torricelli_draining) |
 | First-order ODEs / equilibria and stability | [Logistic growth with constant harvesting: equilibria](#logistic_harvesting), [Equilibria of y' = f(y) and their stability (phase line)](#autonomous_equilibria) |
 | First-order ODEs / exponential models | [Exponential growth or decay: value at a time](#exponential_growth_value), [Radioactive decay from a half-life](#half_life_decay), [Doubling time or half-life from a rate constant](#doubling_time), [Time for exponential growth or decay to reach a value](#exponential_time_to_reach), [Exponential model through two measurements](#exponential_from_two_points), [Age from the fraction remaining (radioactive dating)](#radiometric_age) |
-| First-order ODEs / linear equations | [First-order linear ODE with constant coefficients (integrating factor)](#linear_first_order), [First-order linear ODE with exponential forcing](#linear_first_order_exponential_forcing) |
+| First-order ODEs / linear equations | [First-order linear ODE with constant coefficients (integrating factor)](#linear_first_order), [First-order linear ODE with exponential forcing](#linear_first_order_exponential_forcing), [First-order linear ODE y' + P(x) y = Q(x) (integrating factor)](#linear_first_order_variable) |
 | First-order ODEs / nonlinear equations | [Equation y' = k y^2: solution and blow-up time](#quadratic_ode_blowup), [Bernoulli equation y' + p y = q y^n](#bernoulli_equation) |
 | First-order ODEs / population models | [Logistic growth: population at a time](#logistic_value), [Logistic growth: inflection time and maximum growth rate](#logistic_inflection), [Gompertz growth: value at a time](#gompertz_growth) |
 | First-order ODEs / qualitative methods | [Slope (direction) field value](#slope_field) |
@@ -111,6 +111,7 @@ Call `solve("<id>", **inputs)` with plain numbers; the result's `values` holds e
 | logistic_harvesting | Logistic growth with constant harvesting: equilibria | r, K, H | y_high, y_low, H_critical, stability_high, stability_low |
 | linear_first_order | First-order linear ODE with constant coefficients (integrating factor) | a, b, y0, t | y, y_steady |
 | linear_first_order_exponential_forcing | First-order linear ODE with exponential forcing | a, b, c, y0, t | y, resonant |
+| linear_first_order_variable | First-order linear ODE y' + P(x) y = Q(x) (integrating factor) | p_terms, q_terms, x0, y0, x1 | y, mu_ratio, integral, integrating_factor |
 | mixing_tank | Mixing tank (brine): amount of salt at a time | V, r, c_in, A0, t | A, A_limit, concentration |
 | separable_power | Separable equation y' = a t^n y | a, n, y0, t | y |
 | quadratic_ode_blowup | Equation y' = k y^2: solution and blow-up time | k, y0, t | y, blowup_time |
@@ -787,6 +788,63 @@ differential_equations_ai999x.solve('linear_first_order_exponential_forcing', a=
 |---|---|---|
 | Solve y' + a y = b e^(c t) with a = 1, b = 2, c = 0.5, y(0) = 0; find y(2). | SOLVED | y = 3.44393, resonant = False |
 | Solve y' + a y = b e^(c t) with a = 1, b = 2, y(0) = 0; find y(2). | NEEDS_INPUT | linear_first_order_exponential_forcing needs c (forcing exponent). Example: solve('linear_first_order_exponential_forcin |
+
+<a id="linear_first_order_variable"></a>
+
+### First-order linear ODE y' + P(x) y = Q(x) (integrating factor), `linear_first_order_variable`
+
+Solve y' + P(x) $y = Q$(x), y(x0) = y0, with variable coefficients (P a sum of terms c $x^{k}$, Q a sum of terms c $x^{k}$ e^(a x)) by the integrating factor $mu = exp$(integral of P), and give y(x), the integrating factor and the integral of mu Q.
+
+$$
+\mu(x) = e^{\int P\,dx},\qquad y(x) = \frac{1}{\mu(x)}\left(\mu(x_0)\,y_0 + \int_{x_0}^{x}\mu(s)\,Q(s)\,ds\right)
+$$
+
+| input | meaning | condition |
+|---|---|---|
+| `p_terms` | P(x) as rows 'c k' for the terms c $x^{k}$ (k from -4 to 6), e.g. '$2 -1$' for $2/x$ |  |
+| `q_terms` | Q(x) as rows 'c k a' for the terms c $x^{k}$ e^(a x), e.g. '1 2 0' for $x^{2}$ |  |
+| `x0` | initial point x0 |  |
+| `y0` | initial value y(x0) |  |
+| `x1` | the point x where y is wanted |  |
+
+| output | meaning |
+|---|---|
+| `y` | value y(x) |
+| `mu_ratio` | mu(x) / mu(x0) |
+| `integral` | integral from x0 to x of mu(s)/mu(x0) Q(s) ds |
+| `integrating_factor` | mu(x) = exp(integral of P) (constant of integration 0) |
+
+- **Method:** $mu = exp$(integral of P) in closed form; (mu y)' = mu Q, so y($x) = (y_{0}$ mu(x0) + integral of mu Q) / mu(x); the integral by composite 5-point Gauss-Legendre (128 and 256 panels must agree)
+- **Assumes:** powers of x are whole numbers from -4 to 6, exponent rates at most 20 in size; with a negative power of x, x0 and x are nonzero and on the same side of 0; refused when the quadrature does not settle to $1e-11$ or the factor overflows
+- **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
+
+![y (value y(x)) against x0 (initial point x0) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-first-order-variable-curve)
+
+*y (value y(x)) against x0 (initial point x0) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (the point x where y is wanted): 2, 1, 4. Other inputs as in the worked example: p_terms = 2 -1, q_terms = 1 2 0, y0 = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, x0 = 1, y = 2.05.*
+
+```python
+differential_equations_ai999x.solve('linear_first_order_variable', p_terms='2 -1', q_terms='1 2 0', x0=1, y0=2, x1=2)
+# -> y = 2.05, mu_ratio = 4, integral = 6.2, integrating_factor = |x|^2   (SOLVED)
+```
+
+```python
+differential_equations_ai999x.solve('linear_first_order_variable', p_terms=[[2, 1]], q_terms=[[1, 1, 0]], x0=0, y0=1, x1=1)
+# -> y = 0.68394, mu_ratio = 2.71828, integral = 0.859141, integrating_factor = exp(x^2)   (SOLVED)
+```
+
+```python
+differential_equations_ai999x.solve('linear_first_order_variable', p_terms=[[1, 0]], q_terms=[[1, 0, 2]], x0=0, y0=1, x1=1)
+# -> y = 2.70827, mu_ratio = 2.71828, integral = 6.36185, integrating_factor = exp(x)   (SOLVED)
+```
+
+**Questions in words (documented forms), as executed:**
+
+| question | outcome | result |
+|---|---|---|
+| Integrating factor: solve y' + P(x) y = Q(x) with P(x) = 2/x, Q(x) = x^2, y(1) = 2; find y(2). | SOLVED | y = 2.05, mu_ratio = 4, integral = 6.2, integrating_factor = \|x\|^2 |
+| Integrating factor: solve dy/dx + 2x y = x with y(0) = 1; find y(1). | SOLVED | y = 0.68394, mu_ratio = 2.71828, integral = 0.859141, integrating_factor = exp(x^2) |
+| Integrating factor: solve y' + y = e^(2x) with y(0) = 1; find y(1). | SOLVED | y = 2.70827, mu_ratio = 2.71828, integral = 6.36185, integrating_factor = exp(x) |
+| Integrating factor: solve y' + (1/x) y = 1 with y(-1) = 2; find y(1). | INVALID_INPUT | First-order linear ODE y' + P(x) y = Q(x) (integrating factor): a negative power of x is undefined at x = 0: x0 and x mu |
 
 <a id="mixing_tank"></a>
 
