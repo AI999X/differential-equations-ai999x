@@ -820,7 +820,7 @@ $$
 
 ![y (value y(x)) against x0 (initial point x0) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/linear-first-order-variable-curve)
 
-*y (value y(x)) against x0 (initial point x0) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (the point x where y is wanted): 2, 1, 4. Other inputs as in the worked example: p_terms = 2 -1, q_terms = 1 2 0, y0 = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, x0 = 1, y = 2.05.*
+*y (value y(x)) against x0 (initial point x0) from 0.1 to 10 on a logarithmic axis. One curve for each value of x1 (the point x where y is wanted): 2, 1, 4. Other inputs as in the worked example: p_terms = 2 -1, q_terms = 1 2 0, y0 = 2.0. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, x0 = 1, y = 2.05.*
 
 ```python
 differential_equations_ai999x.solve('linear_first_order_variable', p_terms='2 -1', q_terms='1 2 0', x0=1, y0=2, x1=2)
@@ -1256,7 +1256,7 @@ $$
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/euler-method-curve)
 
-*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.22.*
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0.0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.22.*
 
 ```python
 differential_equations_ai999x.solve('euler_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1303,7 +1303,7 @@ $$
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/improved-euler-method-curve)
 
-*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0.0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
 
 ```python
 differential_equations_ai999x.solve('improved_euler_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1350,7 +1350,7 @@ $$
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/midpoint-method-curve)
 
-*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0.0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24205.*
 
 ```python
 differential_equations_ai999x.solve('midpoint_method', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1397,7 +1397,7 @@ $$
 
 ![y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/runge-kutta-4-curve)
 
-*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24281.*
+*y_n (approximation of y(t0 + n h)) against h (step size (> 0)) from 0.01 to 1 on a logarithmic axis. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = t + y, t0 = 0.0, n = 2. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, h = 0.1, y_n = 1.24281.*
 
 ```python
 differential_equations_ai999x.solve('runge_kutta_4', f='t + y', t0=0, y0=1, h=0.1, n=2)
@@ -1444,7 +1444,7 @@ $$
 
 ![y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/backward-euler-method-curve)
 
-*y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = -2*y + t, t0 = 0, h = 0.1. 10 points per curve computed by differential-equations-ai999x; marked: the worked example, n = 2, y_n = 0.718056.*
+*y_n (approximation of y(t0 + n h)) against n (number of steps) from 1 to 10. One curve for each value of y0 (initial value y(t0)): 1, 0.5, 2. Other inputs as in the worked example: f = -2*y + t, t0 = 0.0, h = 0.1. 10 points per curve computed by differential-equations-ai999x; marked: the worked example, n = 2, y_n = 0.718056.*
 
 ```python
 differential_equations_ai999x.solve('backward_euler_method', f='-2*y + t', t0=0, y0=1, h=0.1, n=2)
@@ -1583,7 +1583,7 @@ $$
 
 ![distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/characteristic-roots-decision)
 
-*distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, complex conjugate roots: 320 cells, two distinct real roots: 331 cells. Other inputs as in the worked example: c = 2. Marked: the worked example, a = 1, b = 3 → two distinct real roots.*
+*distinct real / repeated / complex (roots_type) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, complex conjugate roots: 320 cells, two distinct real roots: 331 cells. Other inputs as in the worked example: c = 2.0. Marked: the worked example, a = 1, b = 3 → two distinct real roots.*
 
 ```python
 differential_equations_ai999x.solve('characteristic_roots', a=1, b=3, c=2)
@@ -1643,11 +1643,11 @@ $$
 
 ![damping case (damping) over a (coefficient of y'') from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-decision)
 
-*damping case (damping) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 331 cells, underdamped: 320 cells. Other inputs as in the worked example: c = 2, y0 = 1, v0 = 0, t = 1. Marked: the worked example, a = 1, b = 3 → overdamped.*
+*damping case (damping) over a (coefficient of y'') from 0.1 to 10 and b (coefficient of y') from 0.3 to 30 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 331 cells, underdamped: 320 cells. Other inputs as in the worked example: c = 2.0, y0 = 1.0, v0 = 0.0, t = 1.0. Marked: the worked example, a = 1, b = 3 → overdamped.*
 
 ![y (value y(t)) against c (coefficient of y) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/second-order-homogeneous-ivp-curve-2)
 
-*y (value y(t)) against c (coefficient of y) from 0.2 to 20 on a logarithmic axis. One curve for each value of y0 (initial value y(0)): 1, 0.5, 2. Other inputs as in the worked example: a = 1, b = 3, v0 = 0, t = 1. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, c = 2, y = 0.600424.*
+*y (value y(t)) against c (coefficient of y) from 0.2 to 20 on a logarithmic axis. One curve for each value of y0 (initial value y(0)): 1, 0.5, 2. Other inputs as in the worked example: a = 1.0, b = 3.0, v0 = 0.0, t = 1.0. 41 points per curve computed by differential-equations-ai999x; marked: the worked example, c = 2, y = 0.600424.*
 
 ```python
 differential_equations_ai999x.solve('second_order_homogeneous_ivp', a=1, b=3, c=2, y0=1, v0=0, t=1)
@@ -2057,7 +2057,7 @@ $$
 
 ![damping case (damping) over c (damping coefficient (>= 0)) from 0](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/damped-oscillator-parameters-decision)
 
-*damping case (damping) over c (damping coefficient (>= 0)) from 0.1 to 10 and m (mass (> 0)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 63 cells, underdamped: 588 cells. Other inputs as in the worked example: k = 8. Marked: the worked example, c = 1, m = 2 → underdamped.*
+*damping case (damping) over c (damping coefficient (>= 0)) from 0.1 to 10 and m (mass (> 0)) from 0.2 to 20 (logarithmic axes): each of the 31 × 21 cells is one run of differential-equations-ai999x, coloured by the verdict it returned, overdamped: 63 cells, underdamped: 588 cells. Other inputs as in the worked example: k = 8.0. Marked: the worked example, c = 1, m = 2 → underdamped.*
 
 ```python
 differential_equations_ai999x.solve('damped_oscillator_parameters', m=2, c=1, k=8)
@@ -2791,7 +2791,7 @@ $$
 
 ![The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): jacobian (returned)](https://www.ai999x.com/?ax_fig=differential-equations-ai999x/nonlinear-equilibrium-type-matrix)
 
-*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): jacobian (returned). Returned with them by differential-equations-ai999x: trace = -0.5, det = 1. Other inputs: f = y, g = -sin(x) - 0.5*y, x0 = 0, y0 = 0.*
+*The matrices of the worked example as heatmaps (rows and columns numbered; each cell shaded by its magnitude, negative values in the second colour; each panel shaded by its own largest magnitude): jacobian (returned). Returned with them by differential-equations-ai999x: trace = -0.5, det = 1. Other inputs: f = y, g = -sin(x) - 0.5*y, x0 = 0.0, y0 = 0.0.*
 
 ```python
 differential_equations_ai999x.solve('nonlinear_equilibrium_type', f='y', g='-sin(x) - 0.5*y', x0=0, y0=0)
