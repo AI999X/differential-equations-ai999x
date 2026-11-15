@@ -1,6 +1,6 @@
 # differential-equations: the Differential Equations program, user guide
 
-**differential-equations-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**differential-equations-ai999x 1.6.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. This guide is about `differential-equations`, the model as a self-contained program for Windows and Linux: 78 capabilities in 7 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/differential-equations-ai999x/); the Python package (`pip install differential-equations-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ differential-equations --version
-differential-equations-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
+differential-equations-ai999x 1.6.3 (Rust build, ax-engine 1.6.3)
 ```
 
 ### 2.2 Ask in words
