@@ -1,0 +1,70 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Differential Equations: desktop app user guide</title>
+<script>window.MathJax={tex:{inlineMath:[['$','$']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"></script>
+<style>
+@page{size:A4;margin:16mm 15mm}
+body{font-family:"Segoe UI",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:#1b1f24;max-width:880px;margin:auto}
+h1{font-size:22pt;border-bottom:2px solid #2b5c8a;padding-bottom:4px;margin-top:28px;page-break-before:always}
+h1:first-of-type{page-break-before:avoid}
+h2{font-size:15pt;color:#2b5c8a;margin-top:22px;page-break-after:avoid}
+h3{font-size:12pt;margin-top:16px;page-break-after:avoid}
+pre{background:#f4f6f8;border:1px solid #dde3e8;border-radius:4px;padding:8px 10px;font-size:8.8pt;white-space:pre-wrap;page-break-inside:avoid}
+code{font-family:Consolas,monospace;font-size:9pt;background:#f4f6f8;padding:0 2px}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;margin:8px 0;font-size:9pt;width:100%;page-break-inside:auto}
+th,td{border:1px solid #cfd6dd;padding:3px 6px;vertical-align:top;text-align:left}
+th{background:#eaf0f5}
+.math{margin:6px 0;overflow-x:auto}
+.badge{display:inline-block;color:#fff;border-radius:3px;padding:0 5px;font-size:8.5pt;white-space:nowrap}
+figure{margin:10px 0;text-align:center;page-break-inside:avoid}figure img{max-width:88%}.svgfig svg{max-width:88%;height:auto}
+figcaption{font-size:9pt;color:#555}
+.pb{page-break-after:always}
+</style></head><body>
+<h1>Differential Equations: the desktop app, user guide</h1>
+<p><strong>Differential Equations</strong>, desktop app 1.6.5 for Windows and Linux. <strong>Creator / engineer:</strong> Ibnul Jaif Farabi · <strong>Company:</strong> AI999X · support@ai999x.com</p>
+<p>Differential Equations covers first- and second-order ODEs, linear systems, Laplace transforms, stability and phase portraits, numerical methods, classic PDEs (heat, wave, Laplace) and dynamical systems. Its desktop app holds all 78 calculations in 7 topics: pick one, change its inputs and the answer, a live scene and charts follow at once. It runs on your own computer with no network connection and nothing else to install. The pictures in this guide were taken in this app.</p>
+<h2>Contents</h2>
+<ul><li>1. Get it and start it</li><li>2. The window</li><li>3. Compute a calculation</li><li>4. Ask in words</li><li>5. The live scene and the charts</li><li>6. Light and dark</li><li>7. Every calculation</li><li>8. Other ways to use it</li></ul>
+<h2>1. Get it and start it</h2>
+<table><thead><tr><th>system</th><th>download</th></tr></thead><tbody><tr><td>Windows x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-differential-equations-1.6.5-windows-x86_64.zip</td></tr><tr><td>Linux x86-64</td><td>https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-differential-equations-1.6.5-linux-x86_64.tar.gz</td></tr></tbody></table>
+<p>Windows: Download ai999x-differential-equations-1.6.5-windows-x86_64.zip, right-click it → Extract All, then open the folder and start ai999x-differential-equations.exe. If Windows SmartScreen asks, choose More info → Run anyway.</p>
+<p>Linux:</p>
+<pre><code class="shell">curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-differential-equations-1.6.5-linux-x86_64.tar.gz
+curl -LO https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+tar xzf ai999x-differential-equations-1.6.5-linux-x86_64.tar.gz
+./ai999x-differential-equations-1.6.5-linux-x86_64/ai999x-differential-equations</code></pre>
+<p>Checksums of every download: https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/SHA256SUMS. Install steps for every app: https://www.ai999x.com/desktop-cli/</p>
+<h2>2. The window</h2>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/hero.webp"><figcaption>The Differential Equations app, opened on Second-order homogeneous linear ODE: initial value problem with its worked example.</figcaption></figure>
+<p>On the left, a search box and the topics with their calculations. In the middle, the chosen calculation: its answer at the top, then the live scene (or its charts), what the answer means and the formula. On the right, its inputs, each with a slider where that makes sense, and the Compute and Reset buttons. At the bottom, a box for a question in words.</p>
+<h2>3. Compute a calculation</h2>
+<p>Open Second-order ODES › Second-order homogeneous linear ODE: initial value problem (or type part of its name in the search box). It opens with a worked example filled in: “Solve y&#x27;&#x27; + 3y&#x27; + 2y = 0 with y(0) = 1, y&#x27;(0) = 0; find y(1).” The answer: y = 0.6004235991, damping = overdamped.</p>
+<p>Change any input (type a number with its unit, or drag its slider) and the answer, the scene and the charts follow; Compute recomputes after typing, Reset brings back the worked example. An input outside the range the formula holds for is refused with the reason, never answered with a guessed number.</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-1.webp"><figcaption>Second-order homogeneous linear ODE: initial value problem: the live scene of the worked example.</figcaption></figure>
+<h2>4. Ask in words</h2>
+<p>Type a question as you would say it, for example “Solve y&#x27;&#x27; + 3y&#x27; + 2y = 0 with y(0) = 1, y&#x27;(0) = 0; find y(1).” The app reads the quantities and their units, picks the calculation and answers; the command-line program reads it the same way and printed:</p>
+<pre><code class="text">Read as: Second-order homogeneous linear ODE: initial value problem
+y = 0.6004235991
+damping = overdamped</code></pre>
+<p>When a question names a quantity the app cannot place, it says what is missing instead of guessing.</p>
+<h2>5. The live scene and the charts</h2>
+<p>Every calculation draws a scene from its answer: it moves as an input changes. The Charts button shows charts that vary one input around your values; Enlarge opens one in a large view. Scenes from other topics:</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-2.webp"><figcaption>Logistic growth: population at a time</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-3.webp"><figcaption>Inverse Laplace transform of a rational function</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-4.webp"><figcaption>Classical Runge-Kutta method (RK4)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-5.webp"><figcaption>Linear 2x2 system: equilibrium type and stability (trace-determinant plane)</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-6.webp"><figcaption>Wave equation on the whole line: d&#x27;Alembert&#x27;s formula</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-7.webp"><figcaption>Competing species: coexistence equilibrium and its stability</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/scene-8.webp"><figcaption>Bernoulli equation y&#x27; + p y = q y^n</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/chart-1.webp"><figcaption>Second-order homogeneous linear ODE: initial value problem: a chart, enlarged.</figcaption></figure>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/chart-2.webp"><figcaption>Logistic growth: population at a time: a chart, enlarged.</figcaption></figure>
+<h2>6. Light and dark</h2>
+<p>The app follows a light or a dark theme (the switch is in its top bar).</p>
+<figure><img src="https://www.ai999x.com/?ax_shot=differential-equations-ai999x/hero-dark.webp"><figcaption>The Differential Equations app in the dark theme.</figcaption></figure>
+<h2>7. Every calculation</h2>
+<p>78 calculations in 7 topics; each has its own entry on the model&#x27;s page (https://www.ai999x.com/models/differential-equations-ai999x/) with its formula, worked example and charts.</p>
+<table><thead><tr><th>topic</th><th>calculations</th></tr></thead><tbody><tr><td>Classic PDES</td><td>Eigenvalues of y&#x27;&#x27; + lambda y = 0 with Dirichlet/Neumann ends, Eigenvalues with a Robin (convective) end condition, Fourier sine series coefficient (half-range expansion), Heat equation on a rod with ends at zero: Fourier series value, Laplace&#x27;s equation on a rectangle: series value, Vibrating string with fixed ends: Fourier series value, Wave equation on the whole line: d&#x27;Alembert&#x27;s formula</td></tr><tr><td>Dynamical systems</td><td>Brusselator: equilibrium, its type, and the Hopf value b = 1 + a^2, Competing species: coexistence equilibrium and its stability, Logistic map: fixed points and their stability, Logistic map: period-2 cycle and its stability, Lorenz system: equilibria and stability of the origin, Lorenz system: Hopf threshold rho_H (loss of stability of C+-), Lotka-Volterra predator-prey: coexistence equilibrium and oscillation period, Lyapunov exponent of the logistic map (periodic regime), Nonlinear 2-D system: type of an equilibrium by linearization, SIR epidemic: R0, peak infections and final size</td></tr><tr><td>First-order ODES</td><td>Age from the fraction remaining (radioactive dating), Bernoulli equation y&#x27; + p y = q y^n, Doubling time or half-life from a rate constant, Draining tank (Torricelli&#x27;s law): height and emptying time, Equation y&#x27; = k y^2: solution and blow-up time, Equilibria of y&#x27; = f(y) and their stability (phase line), Exponential growth or decay: value at a time, Exponential model through two measurements, Falling body with linear drag: velocity, Falling body with quadratic drag: velocity, First-order linear ODE with constant coefficients (integrating factor), First-order linear ODE with exponential forcing, First-order linear ODE y&#x27; + P(x) y = Q(x) (integrating factor), Gompertz growth: value at a time, Logistic growth with constant harvesting: equilibria, Logistic growth: inflection time and maximum growth rate, Logistic growth: population at a time, Mixing tank (brine): amount of salt at a time, Newton&#x27;s law of cooling: cooling constant from a measurement, Newton&#x27;s law of cooling: temperature at a time, Newton&#x27;s law of cooling: time to reach a temperature, Radioactive decay from a half-life, Separable equation y&#x27; = a t^n y, Slope (direction) field value, Time for exponential growth or decay to reach a value</td></tr><tr><td>Laplace transforms</td><td>Convolution integral (f * g)(t), Impulse response of a second-order ODE, Inverse Laplace transform of a rational function, Laplace transform of a delayed function u(t - c) f(t - c), Laplace transform of a function at a point, Partial fractions of a rational function (simple poles), Unit-step response of a second-order ODE</td></tr><tr><td>Linear systems</td><td>Linear 2x2 system: equilibrium type and stability (trace-determinant plane), Linear system x&#x27; = A x: solution at a time, Routh-Hurwitz stability test of a characteristic polynomial, Stability of x&#x27; = A x (n x n) from the characteristic polynomial</td></tr><tr><td>Numerical methods</td><td>Backward (implicit) Euler method, CFL condition for the advection equation (upwind scheme), Classical Runge-Kutta method (RK4), Crank-Nicolson steps for the heat equation, Euler&#x27;s method, Euler&#x27;s method error for exponential growth, Explicit finite-difference (FTCS) steps for the heat equation, Explicit midpoint method (RK2), Improved Euler (Heun) method, Largest stable step of an explicit method for y&#x27; = lambda y, RK4 for a system of two first-order equations, Stability function (amplification factor) of a one-step method, Stability of the explicit (FTCS) scheme for the heat equation</td></tr><tr><td>Second-order ODES</td><td>Cauchy-Euler (equidimensional) equation: initial value problem, Damped oscillator: resonance frequency and peak amplitude, Forced damped oscillator: steady-state amplitude and phase, Linear two-point boundary value problem (constant coefficients), Mass-spring-damper: natural frequency, damping ratio, damped frequency, Second-order constant-coefficient ODE: characteristic roots, Second-order homogeneous linear ODE: initial value problem, Simple harmonic motion: position, amplitude, period, Sinusoidally forced linear oscillator: initial value problem, Undamped resonance: growing response, Undetermined coefficients: exponential forcing, Undetermined coefficients: polynomial forcing</td></tr></tbody></table>
+<h2>8. Other ways to use it</h2>
+<p>The same engine runs on the command line (<code>differential-equations</code>, its own guide), in Python (<code>pip install differential-equations-ai999x</code>, <code>import differential_equations_ai999x</code>, its own guide) and in the browser on https://www.ai999x.com/models/differential-equations-ai999x/.</p>
+<p>Licence: Apache-2.0 · AI999X · https://www.ai999x.com/models/differential-equations-ai999x/</p></body></html>
