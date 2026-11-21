@@ -10,8 +10,8 @@ Differential Equations covers first- and second-order ODEs, linear systems, Lapl
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-differential-equations-1.6.5-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.5/ai999x-differential-equations-1.6.5-linux-x86_64.tar.gz) |
-| **Command line** `differential-equations` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-differential-equations-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-differential-equations-1.6.6-linux-x86_64.tar.gz) |
+| **Command line** `differential-equations` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install differential-equations-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -218,107 +218,6 @@ $ differential-equations solve fourier_sine_coefficient "f=x*(1 - x)" L=1 n=1
 b_n = 0.2580122755
 ```
 
-## Rust library: 15 examples
-
-The crate `differential-equations-ai999x` (in `rust/` of the GitHub repository) answers a JSON request with `differential_equations_ai999x::solve_json`. Each call below was compiled and run on this release; the comment under it is what it printed. The whole program is `rust/differential-equations/examples/readme.rs`: `cd rust && cargo run --release --example readme -p differential-equations-ai999x`.
-
-```rust
-use serde_json::{json, Value};
-
-fn show(request: Value) {
-    let answer: Value = serde_json::from_str(&differential_equations_ai999x::solve_json(&request.to_string())).unwrap();
-    println!("{}", answer["outcome"].as_str().unwrap_or(""));
-    for v in answer["values"].as_array().into_iter().flatten() {
-        let unit = v[2].as_str().unwrap_or("");
-        let unit = if unit.is_empty() || unit == "1" { String::new() } else { format!(" {unit}") };
-        println!("{} = {}{}", v[0].as_str().unwrap_or(""), v[1], unit);
-    }
-}
-
-show(json!({"key": "sturm_liouville_eigenvalues", "inputs": {"L": "1", "n": "2", "bc": "dirichlet-dirichlet"}}));
-// SOLVED
-// lambda_n = 39.4784176044
-// sqrt_lambda = 6.28318530718
-// eigenfunction = "sin(6.28318530718 x)"
-
-show(json!({"key": "brusselator_hopf", "inputs": {"a": "1", "b": "3"}}));
-// SOLVED
-// x_eq = 1.0
-// y_eq = 3.0
-// b_critical = 2.0
-// type = "unstable spiral"
-// stability = "unstable"
-
-show(json!({"key": "radiometric_age", "inputs": {"T": "5730", "p": "0.25"}}));
-// SOLVED
-// t = 11460.0
-
-show(json!({"key": "convolution_integral", "inputs": {"f": "exp(-t)", "g": "sin(t)", "t": "2"}}));
-// SOLVED
-// value = 0.730389773305
-
-show(json!({"key": "phase_portrait_2x2", "inputs": {"A": [[0, 1], [-2, -3]]}}));
-// SOLVED
-// type = "stable node"
-// stability = "asymptotically stable"
-// lambda1 = -2.0
-// lambda2 = -1.0
-// trace = -3.0
-// det = 2.0
-
-show(json!({"key": "backward_euler_method", "inputs": {"f": "-2*y + t", "y0": "1", "h": "0.1", "n": "2", "t0": "0"}}));
-// SOLVED
-// y_n = 0.718055555556
-// t_n = 0.2
-
-show(json!({"key": "cauchy_euler_ivp", "inputs": {"a": "1", "b": "2", "c": "-6", "y1": "1", "v1": "0", "t": "2"}}));
-// SOLVED
-// y = 2.45
-// m1 = -3.0
-// m2 = 2.0
-
-show(json!({"key": "robin_eigenvalues", "inputs": {"L": "1", "h": "1", "n": "1"}}));
-// SOLVED
-// lambda_n = 4.11585836569
-// sqrt_lambda = 2.02875783811
-
-show(json!({"key": "competing_species_equilibrium", "inputs": {"a1": "3", "b11": "1", "b12": "1", "a2": "2", "b21": "0.5", "b22": "1"}}));
-// SOLVED
-// x_eq = 2.0
-// y_eq = 1.0
-// type = "stable node"
-// stability = "asymptotically stable"
-
-show(json!({"key": "bernoulli_equation", "inputs": {"p": "1", "q": "1", "n": "2", "y0": "0.5", "t": "1"}}));
-// SOLVED
-// y = 0.26894142137
-
-show(json!({"key": "ode_impulse_response", "inputs": {"a": "1", "b": "2", "c": "5", "t": "1"}}));
-// SOLVED
-// h = 0.16725591462
-
-show(json!({"key": "linear_system_solution", "inputs": {"A": [[0, 1], [-2, -3]], "x0": [1, 0], "t": "1"}}));
-// SOLVED
-// x = [0.600423599106,-0.46508831587]
-// x1 = 0.600423599106
-
-show(json!({"key": "cfl_condition", "inputs": {"c": "2", "dt": "0.01", "dx": "0.05"}}));
-// SOLVED
-// courant = 0.4
-// stable = true
-// dt_max = 0.025
-
-show(json!({"key": "practical_resonance", "inputs": {"m": "1", "c": "0.4", "k": "4", "F0": "2"}}));
-// SOLVED
-// omega_r = 1.97989898732
-// amplitude_max = 2.51259453815
-// has_peak = true
-
-show(json!({"key": "fourier_sine_coefficient", "inputs": {"f": "x*(1 - x)", "L": "1", "n": "1"}}));
-// SOLVED
-// b_n = 0.258012275466
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.md)
@@ -327,7 +226,7 @@ show(json!({"key": "fourier_sine_coefficient", "inputs": {"f": "x*(1 - x)", "L":
 
 Every calculation, with its formula, a worked example and its figures: **[Differential Equations on ai999x.com](https://www.ai999x.com/models/differential-equations-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
