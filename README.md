@@ -10,8 +10,8 @@ Differential Equations covers first- and second-order ODEs, linear systems, Lapl
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-differential-equations-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-differential-equations-1.6.6-linux-x86_64.tar.gz) |
-| **Command line** `differential-equations` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.6/ai999x-cli-1.6.6-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-differential-equations-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-differential-equations-1.6.7-linux-x86_64.tar.gz) |
+| **Command line** `differential-equations` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.7/ai999x-cli-1.6.7-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/differential-equations-ai999x/#capabilities) |
 | **Python** 3.10+ | `pip install differential-equations-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
@@ -144,80 +144,6 @@ print(a.outcome, a.values)
 # SOLVED {'y': 0.443409441985, 'slope_a': 0.850918128239}
 ```
 
-## Command line: 15 examples
-
-Each command below was run with `differential-equations` of this release; the lines under it are the answer it printed (the full answer goes on with the method, every input in SI units and the conditions it assumes).
-
-```text
-$ differential-equations solve sturm_liouville_eigenvalues L=1 n=2 bc=dirichlet-dirichlet
-lambda_n = 39.4784176
-sqrt_lambda = 6.283185307
-eigenfunction = sin(6.28318530718 x)
-
-$ differential-equations solve brusselator_hopf a=1 b=3
-x_eq = 1
-y_eq = 3
-b_critical = 2
-type = unstable spiral
-stability = unstable
-
-$ differential-equations solve radiometric_age T=5730 p=0.25
-t = 11460
-
-$ differential-equations solve convolution_integral "f=exp(-t)" "g=sin(t)" t=2
-value = 0.7303897733
-
-$ differential-equations solve phase_portrait_2x2 "A=[[0, 1], [-2, -3]]"
-type = stable node
-stability = asymptotically stable
-lambda1 = -2
-lambda2 = -1
-trace = -3
-det = 2
-
-$ differential-equations solve backward_euler_method "f=-2*y + t" y0=1 h=0.1 n=2 t0=0
-y_n = 0.7180555556
-t_n = 0.2
-
-$ differential-equations solve cauchy_euler_ivp a=1 b=2 c=-6 y1=1 v1=0 t=2
-y = 2.45
-m1 = -3
-m2 = 2
-
-$ differential-equations solve robin_eigenvalues L=1 h=1 n=1
-lambda_n = 4.115858366
-sqrt_lambda = 2.028757838
-
-$ differential-equations solve competing_species_equilibrium a1=3 b11=1 b12=1 a2=2 b21=0.5 b22=1
-x_eq = 2
-y_eq = 1
-type = stable node
-stability = asymptotically stable
-
-$ differential-equations solve bernoulli_equation p=1 q=1 n=2 y0=0.5 t=1
-y = 0.2689414214
-
-$ differential-equations solve ode_impulse_response a=1 b=2 c=5 t=1
-h = 0.1672559146
-
-$ differential-equations solve linear_system_solution "A=[[0, 1], [-2, -3]]" "x0=[1, 0]" t=1
-x = [0.600423599106,-0.46508831587]
-x1 = 0.6004235991
-
-$ differential-equations solve cfl_condition c=2 dt=0.01 dx=0.05
-courant = 0.4
-stable = true
-dt_max = 0.025
-
-$ differential-equations solve practical_resonance m=1 c=0.4 k=4 F0=2
-omega_r = 1.979898987
-amplitude_max = 2.512594538
-has_peak = true
-
-$ differential-equations solve fourier_sine_coefficient "f=x*(1 - x)" L=1 n=1
-b_n = 0.2580122755
-```
-
 ## Guides
 
 - Desktop app guide: the window, every calculation, scenes and charts: [PDF](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.pdf) · [HTML](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.html) · [Markdown](https://huggingface.co/AI999X/differential-equations-ai999x/blob/main/docs/differential_equations_ai999x_desktop_guide.md)
@@ -226,13 +152,13 @@ b_n = 0.2580122755
 
 Every calculation, with its formula, a worked example and its figures: **[Differential Equations on ai999x.com](https://www.ai999x.com/models/differential-equations-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.6 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.7 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/differential-equations-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.6`; the [GitHub release](https://github.com/AI999X/differential-equations-ai999x/releases/tag/v1.6.6) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/differential-equations-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.7`; the [GitHub release](https://github.com/AI999X/differential-equations-ai999x/releases/tag/v1.6.7) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
